@@ -67,13 +67,11 @@ nix flake update
 
 
 export PS1="\[\e[1;36m\] \[\e[1;34m\]\w \[\e[1;32m\]\$(get_git) \n\[\e[1;37m\]   \[\e[0m\]"
-
 source "$HOME/.cache/wal/colors.sh"
 #(cat $HOME/.cache/wal/sequences)
 printf "\e]11;%s\a" "$color0"
 pokeget random --hide-name
 eval "$(direnv hook bash)"
-eval "$(starship init bash)"
 '';
 };
 }
