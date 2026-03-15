@@ -25,9 +25,10 @@ in
     ".config/hypr/hyprsunset.conf".source = ./hypr/hyprsunset.conf;
     ".config/waybar".source = ./waybar; 
     ".config/ghostty".source = ./ghostty;
-    ".config/starship.toml".source = ./starship/starship.toml;
+    ".config/starship.toml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.cache/wal/colors-starship.toml;
     ".config/rofi".source = ./rofi; 
     ".config/wlogout".source = ./wlogout;
+    ".config/wal".source = ./wal;
 };
 
 home.sessionVariables = {

@@ -1,6 +1,7 @@
 { config, pkgs, ... }:{
 nixpkgs.config.allowUnfree = true;
 programs.steam.enable = true;
+programs.starship.enable = true;
 programs.direnv.enable = true;
 programs.direnv.silent = true;
 environment.systemPackages = with pkgs; [
@@ -44,7 +45,6 @@ ghostty
 kitty
 firefox
 git
-starship
 lsd
 dtrx
 blender
@@ -55,7 +55,12 @@ pokeget-rs
 nmap
 pywal16
 pywalfox-native
-riseup-vpn
+mullvad-browser
+protonvpn-gui
+proton-vpn-cli
+android-studio-tools
+android-studio-full
+wireguard-tools
 ];
 
 fonts.packages = with pkgs;[
@@ -67,7 +72,7 @@ noto-fonts-cjk-sans
 fonts.fontconfig = {
 enable = true;
 antialias = true;
-hinting.enable = true;
+hinting.enable = false;
 subpixel.rgba = "rgb";
 defaultFonts.monospace = [ "Maple Mono CN" "Maple Mono NF" "Noto Sans Mono CJK SC" ];
 
