@@ -29,7 +29,6 @@ in
     ".config/starship.toml".source = config.lib.file.mkOutOfStoreSymlink "/home/ranger/.cache/wal/starship.toml";
     ".config/rofi".source = ./rofi; 
     ".config/wlogout".source = ./wlogout;
-    ".config/wal".source = ./wal;
 };
 
 home.sessionVariables = {
