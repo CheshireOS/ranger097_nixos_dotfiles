@@ -4,6 +4,7 @@ programs.steam.enable = true;
 programs.starship.enable = true;
 programs.direnv.enable = true;
 programs.direnv.silent = true;
+android_sdk.accept_license = true;
 environment.systemPackages = with pkgs; [
 sbctl
 ani-cli
