@@ -26,7 +26,7 @@ in
     ".config/waybar".source = ./waybar; 
     ".config/ghostty".source = ./ghostty;
     ".config/wal/templates/starship.toml".source = config.lib.file.mkOutOfStoreSymlink "/home/ranger/ranger097_nixos_dotfiles/wal/templates/colors-starship.toml";
-    ".config/starship.toml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.cache/wal/starship.toml";
+    ".config/starship.toml".source = config.lib.file.mkOutOfStoreSymlink "/home/ranger/.cache/wal/starship.toml";
     ".config/rofi".source = ./rofi; 
     ".config/wlogout".source = ./wlogout;
     ".config/wal".source = ./wal;
