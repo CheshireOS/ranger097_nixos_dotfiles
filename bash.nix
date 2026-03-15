@@ -66,12 +66,12 @@ nix flake update
 
 
 
-export PS1="ranger097"
 source "$HOME/.cache/wal/colors.sh"
 #(cat $HOME/.cache/wal/sequences)
 printf "\e]11;%s\a" "$color0"
 pokeget random --hide-name
 eval "$(direnv hook bash)"
+export PS1="ranger097"
 '';
 };
 }
