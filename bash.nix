@@ -71,7 +71,7 @@ eval "$(direnv hook bash)"
 };
 
 programs.bash.promptInit = ''
-  PS1="╭─\u \n╰─〉"
+  PS1="╭──\u─\n╰─〉"
 '';
 
 }
