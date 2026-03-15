@@ -1,0 +1,3 @@
+{foreach color}
+\033]4;{index};{color}\007
+{end}
