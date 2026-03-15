@@ -65,7 +65,6 @@ nix flake update
 
 source "$HOME/.cache/wal/colors.sh"
 (cat $HOME/.cache/wal/sequences &)
-#printf "\e]11;%s\a" "$color0"
 pokeget random --hide-name
 eval "$(direnv hook bash)"
 '';

@@ -19,7 +19,7 @@ background-image-opacity = 0.00
 background-image-position = center
 background-image-fit = cover
 background-image-repeat = false
-
+config-file = /home/ranger/.cache/wal/ghostty.conf
 
 #CURSOR
 cursor-style = underline
