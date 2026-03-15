@@ -103,4 +103,4 @@ style = "bg:#1d2230"
 format = '[[$time](fg:#CAAE48)]($style)'
 
 [character]
-format = "[󰳟 ](fg:#bcbcbc bg:#none)"
+format = "[󰳟 ](fg:{color3} bg:#none)"
