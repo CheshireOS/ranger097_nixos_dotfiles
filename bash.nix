@@ -64,7 +64,7 @@ nix flake update
 }
 
 source "$HOME/.cache/wal/colors.sh"
-#(cat $HOME/.cache/wal/sequences)
+(cat $HOME/.cache/wal/sequences &)
 printf "\e]11;%s\a" "$color0"
 pokeget random --hide-name
 eval "$(direnv hook bash)"
@@ -72,7 +72,7 @@ eval "$(direnv hook bash)"
 };
 
 programs.bash.promptInit = ''
-PS1='\n╭──$(case "$PWD" in "$HOME") echo "home" ;; "/") echo "root" ;; */ranger097_nixos_dotfiles) echo "dotfiles" ;; */.config) echo "configs" ;; * ) echo "\W" ;; esac)\n╰─〉'
+PS1='\n[$color4\]╭──$(case "$PWD" in "$HOME") echo "home" ;; "/") echo "root" ;; */ranger097_nixos_dotfiles) echo "dotfiles" ;; */.config) echo "configs" ;; * ) echo "\W" ;; esac)\n╰─〉'
 
 '';
 
