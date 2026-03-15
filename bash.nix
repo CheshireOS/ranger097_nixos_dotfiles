@@ -62,7 +62,7 @@ cd ~/ranger097_nixos_dotfiles
 echo " Upgrading Nixos System"
 nix flake update
 }
-
+export XDG_CONFIG_HOME="$HOME/.cache"
 source "$HOME/.cache/wal/colors.sh"
 (cat $HOME/.cache/wal/sequences &)
 pokeget random --hide-name
@@ -71,8 +71,6 @@ eval "$(direnv hook bash)"
 };
 
 programs.bash.promptInit = ''
-(cat "$HOME/.cache/wal/sequences" &)
-source "$HOME/.cache/wal/colors.sh"
 PS1="\n\[\e[33m\]╭──\[\e[36m\]$(case "$PWD" in "$HOME") echo "home" ;; "/") echo "root" ;; */ranger097_nixos_dotfiles) echo "dotfiles" ;; */.config) echo "configs" ;; * ) echo "\W" ;; esac)\n\[\e[33m\]╰─\[\e[31m\]〉\[\e[0m\]"
 
 '';
