@@ -1,13 +1,11 @@
 { config, pkgs, ... }:{
 nixpkgs.config.allowUnfree = true;
 programs.steam.enable = true;
-programs.starship.enable = true;
 programs.direnv.enable = true;
 programs.direnv.silent = true;
 nixpkgs.config.android_sdk.accept_license = true;
 environment.systemPackages = with pkgs; [
 sbctl
-starship
 ani-cli
 steam
 blueman
