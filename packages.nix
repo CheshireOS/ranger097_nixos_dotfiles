@@ -16,7 +16,7 @@ kdePackages.kdenlive
 kdePackages.qtstyleplugin-kvantum
 waybar
 swww
-rofi
+walker
 networkmanager
 networkmanagerapplet
 home-manager
@@ -34,7 +34,6 @@ bluez
 gimp
 kdePackages.qtsvg
 kdePackages.ffmpegthumbs
-kdePackages.konsole
 usbutils
 yt-dlp
 foliate
