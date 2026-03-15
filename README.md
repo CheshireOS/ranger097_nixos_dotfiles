@@ -198,10 +198,8 @@ If you are like me and enjoy a good __[nerd font](https://www.nerdfonts.com/font
 [Hyprlock](https://github.com/hyprwm/hyprlock): Fast, GPU-accelerated screen locker.<br/>
 [Hypridle](https://github.com/hyprwm/hypridle): Automated idle management daemon.<br/>
 [Hyprsunset](https://github.com/hyprwm/hyprsunset): Simple blue light filter utility.<br/>
-[Rofi](https://github.com): Searchable application launcher and switcher.<br/>
 [Waybar](https://github.com): Highly customizable status bar for Wayland.<br/>
 [wlogout](https://github.com): Graphical power management menu.<br/>
-[Starship](https://github.com): Fast, universal shell prompt for any shell.<br/>
 [NixOS Home-Manager](https://github.com): Declarative user configuration management tool.<br/>
 [Direnv](https://github.com): Automatic environment variable loader per directory.<br/>
 [Qmmp](https://github.com): Audio player with a classic Winamp-style interface.<br/>
@@ -217,7 +215,8 @@ Complete list of [packages](https://github.com/ranger097/ranger097_nixos_dotfile
 The cursor depicted in the screenshots above is a __[Pokemon Cursor](https://store.kde.org/p/1701595)__ (*you might be noticing a theme here.*) from the __[KDE Store](https://store.kde.org/browse/)__.
 
 ## New Features:
-* Theme switcher 
+* Theme switcher
+* Switched Starship for pure Bash and Pywal
 
 ## Coming Soon:
 * A website.    
