@@ -1,4 +1,0 @@
-@define-color waybar-bg rgba({color5.rgb}, 0.25);
-@define-color accent-color rgba({color10.rgb}, 0.8);
-@define-color blurblack rgba(0,0,0, 1.0);
-@define-color nice-border rgba({color4.rgb}, 0.5);

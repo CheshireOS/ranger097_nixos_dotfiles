@@ -27,7 +27,6 @@ in
     ".config/ghostty".source = ./ghostty;
     ".config/rofi".source = ./rofi; 
     ".config/wlogout".source = ./wlogout;
-    ".config/wal".source = ./wal;
 };
 
 home.sessionVariables = {
