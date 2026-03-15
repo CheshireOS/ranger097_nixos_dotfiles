@@ -72,7 +72,7 @@ eval "$(direnv hook bash)"
 };
 
 programs.bash.promptInit = ''
-PS1="\n\e[34m\]╭──\e[33m\]$(case "$PWD" in "$HOME") echo "home" ;; "/") echo "root" ;; */ranger097_nixos_dotfiles) echo "dotfiles" ;; */.config) echo "configs" ;; * ) echo "\W" ;; esac)\n\e[34m\]╰─\e[38m\]〉\e[0m"
+PS1="\n\e[33m\]╭──\e[310m\]$(case "$PWD" in "$HOME") echo "home" ;; "/") echo "root" ;; */ranger097_nixos_dotfiles) echo "dotfiles" ;; */.config) echo "configs" ;; * ) echo "\W" ;; esac)\n\e[33m\]╰─\e[31m\]〉\e[0m"
 
 '';
 
