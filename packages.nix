@@ -60,7 +60,7 @@ proton-vpn-cli
 android-studio-tools
 android-studio-full
 wireguard-tools
-bash-git-prompt
+elephant
 ];
 
 fonts.packages = with pkgs;[
