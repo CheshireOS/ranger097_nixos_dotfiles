@@ -69,18 +69,15 @@ source "$HOME/.cache/wal/colors.sh"
 pokeget random --hide-name
 eval "$(direnv hook bash)"
 
-
-
 get_dir_name() {
     case "$PWD" in
       "$HOME") echo "home" ;;
       "/") echo "root" ;;
       */ranger097_nixos_dotfiles) echo "dotfiles" ;;
       */.config) echo "configs" ;;
-      *) echo "\W" ;;
+      *) echo "$(basename "PWD")" ;;
     esac
   }
-
 
 parse_git_branch() {
   local branch=$(git branch --show-current 2> /dev/null)
