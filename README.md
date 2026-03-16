@@ -215,8 +215,11 @@ Complete list of [packages](https://github.com/ranger097/ranger097_nixos_dotfile
 The cursor depicted in the screenshots above is a __[Pokemon Cursor](https://store.kde.org/p/1701595)__ (*you might be noticing a theme here.*) from the __[KDE Store](https://store.kde.org/browse/)__.
 
 ## New Features:
-* Theme switcher
-* Switched Starship for pure Bash and Pywal
+* Theme switcher utilizing Python, Pywal, and Swww.
+* Swapped starship for Pure Bash + Pywal; Included a really cool prompt.
+* Swapped rofi for walker.
+* Updated the shell.nix
+* Updated Bash to show git branches, and langauge versions when you enter a project file.
 
 ## Coming Soon:
 * A website.    
