@@ -66,13 +66,18 @@ cd ~/ranger097_nixos_dotfiles
 echo " Upgrading Nixos System"
 nix flake update
 }
-source ${pkgs.git}/share/bash-completion/completions/git-prompt.sh
+
 export XDG_CONFIG_HOME="$HOME/.cache"
 source "$HOME/.cache/wal/colors.sh"
 (cat $HOME/.cache/wal/sequences &)
 pokeget random --hide-name
 eval "$(direnv hook bash)"
-export PS1="\n\[\e[31m\]╭──\[\e[36m\]$(case "$PWD" in "$HOME") echo "home" ;; "/") echo "root" ;; */ranger097_nixos_dotfiles) echo "dotfiles" ;; */.config) echo "configs" ;; * ) echo "\W" ;; esac)\[\e[35m\]$(__git_ps1 \" (%s)\")\n\[\e[31m\]╰─\[\e[36m\]〉\[\e[0m\]"
+GIT_PROMPT_ONLY_IN_REPO=1
+source ${pkgs.bash-git-prompt}/share/bash-git-prompt/gitprompt.sh
+'';
+
+promptInit = ''
+PS1="\n\[\e[31m\]╭──\[\e[36m\]$(case "$PWD" in "$HOME") echo "home" ;; "/") echo "root" ;; */ranger097_nixos_dotfiles) echo "dotfiles" ;; */.config) echo "configs" ;; * ) echo "\W" ;; esac)\[\e[35m\]$(__git_ps1 \" (%s)\")\n\[\e[31m\]╰─\[\e[36m\]〉\[\e[0m\]"
 '';
 
 };
