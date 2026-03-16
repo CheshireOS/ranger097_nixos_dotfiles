@@ -77,7 +77,7 @@ source ${pkgs.bash-git-prompt}/share/bash-git-prompt/gitprompt.sh
 '';
 
 promptInit = ''
-PS1="\n\[\e[31m\]╭──\[\e[36m\]$(case "$PWD" in "$HOME") echo "home" ;; "/") echo "root" ;; */ranger097_nixos_dotfiles) echo "dotfiles" ;; */.config) echo "configs" ;; * ) echo "\W" ;; esac)\[\e[35m\]$(__git_ps1 \" (%s)\")\n\[\e[31m\]╰─\[\e[36m\]〉\[\e[0m\]"
+PS1="\n\[\e[31m\]╭──\[\e[36m\]$(case "$PWD" in "$HOME") echo "home" ;; "/") echo "root" ;; */ranger097_nixos_dotfiles) echo "dotfiles" ;; */.config) echo "configs" ;; * ) echo "\W" ;; esac)\[\e[35m\]\n\[\e[31m\]╰─\[\e[36m\]〉\[\e[0m\]"
 '';
 
 };
