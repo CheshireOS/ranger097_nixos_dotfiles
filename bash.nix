@@ -99,7 +99,7 @@ get_lang_info() {
     echo " \[\e[31m\] v$(java -version 2>&1 | awk -F '"' '/version/ {print $2}')"
 
   elif ls *.sh >/dev/null 2>&1; then
-    echo " \[\e[32m\]   v${BASH_VERSION%%(*}"
+    echo " \[\e[32m\]   v''${BASH_VERSION%%(*}"
 
   elif ls *.cpp >/dev/null 2>&1 || ls *.hpp >/dev/null 2>&1; then
     echo " \[\e[34m\] C++"
@@ -134,7 +134,6 @@ get_lang_info() {
 }
 
 
-
 get_dir_name() {
     case "$PWD" in
       "$HOME") echo "home" ;;
@@ -160,3 +159,4 @@ PS1="\n\[\e[31m\]╭──\[\e[36m\]\$(get_dir_name)\$(parse_git_branch)\[\e[32m
 
 };
 }
+
