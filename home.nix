@@ -63,7 +63,7 @@ exec-once = hyprsunset
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec-once = systemctl --user start hyprpolkitagent
 exec-once = hyprctl setcursor Pokemon 32
-
+exec-once = elephant
 #ENVIRONMENT
 #env = HYPRCURSOR_THEME,Pokemon
 #env = HYPRCURSOR_SIZE, 32
@@ -221,7 +221,7 @@ sensitivity = -0.5
 bind = SUPER, Return, exec, /run/current-system/sw/bin/ghostty
 bind = SUPER, Q, killactive,
 bind = SUPER, Z, togglefloating,
-bind = SUPER, A, exec, /run/current-system/sw/bin/rofi -show drun || pkill rofi
+bind = SUPER, A, exec, /run/current-system/sw/bin/walker || pkill walker
 bind = SUPER, J, togglesplit, # dwindle
 bind = SUPER, B, exec, firefox
 bind = SUPER, D, exec, dolphin
