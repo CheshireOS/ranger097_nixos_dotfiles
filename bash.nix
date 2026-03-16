@@ -71,10 +71,24 @@ export XDG_CONFIG_HOME="$HOME/.cache"
 source "$HOME/.cache/wal/colors.sh"
 (cat $HOME/.cache/wal/sequences &)
 pokeget random --hide-name
- if [ -f "${pkgs.bash-git-prompt}/share/bash-git-prompt/gitprompt.sh" ]; then
+  if [ -f "${pkgs.bash-git-prompt}/share/bash-git-prompt/gitprompt.sh" ]; then
+    GIT_PROMPT_ONLY_IN_REPO=0
+    
+    get_custom_dir() {
+      case "$PWD" in 
+        "$HOME") echo "home" ;; 
+        "/") echo "root" ;; 
+        */ranger097_nixos_dotfiles) echo "dotfiles" ;; 
+        */.config) echo "configs" ;; 
+        * ) echo "\W" ;; 
+      esac
+    }
+
+    GIT_PROMPT_START="\n\[\e[31m\]╭──\[\e[36m\]\$(get_custom_dir)\[\e[35m\]"
+    GIT_PROMPT_END="\n\[\e[31m\]╰─\[\e[36m\]〉\[\e[0m\]"
+    
     source "${pkgs.bash-git-prompt}/share/bash-git-prompt/gitprompt.sh"
   fi
-
 eval "$(direnv hook bash)"
 '';
 
