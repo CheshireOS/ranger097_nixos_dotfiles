@@ -70,15 +70,70 @@ pokeget random --hide-name
 eval "$(direnv hook bash)"
 
 
-get_go_version() {
- if ls *.go >/dev/null 2>&1; then
-    if command -v go >/dev/null 2>&1; then
-      local go_ver=$(go version | awk '{print $3}' | sed 's/go//')
-      echo "  v$go_ver"
-    fi
-  fi
+get_lang_info() {
+  if ls *.go >/dev/null 2>&1 && command -v go >/dev/null 2>&1; then
+    echo " \[\e[32m\] v$(go version | awk '{print $3}' | sed 's/go//')"
+  
+  elif ls *.py >/dev/null 2>&1 && command -v python >/dev/null 2>&1; then
+    echo " \[\e[34m\] v$(python --version | awk '{print $2}')"
 
+  elif ls *.rs >/dev/null 2>&1 && command -v rustc >/dev/null 2>&1; then
+    echo " \[\e[31m\] v$(rustc --version | awk '{print $2}')"
+
+  elif ls *.ts >/dev/null 2>&1 && command -v tsc >/dev/null 2>&1; then
+    echo " \[\e[34m\] v$(tsc -v | awk '{print $2}')"
+
+  elif { ls *.js >/dev/null 2>&1 || [[ -f package.json ]]; } && command -v node >/dev/null 2>&1; then
+    echo " \[\e[33m\]   v$(node -v | sed 's/v//')"
+
+  elif ls *.ex* >/dev/null 2>&1 && command -v elixir >/dev/null 2>&1; then
+    echo " \[\e[35m\] v$(elixir -v | grep Elixir | awk '{print $2}')"
+
+  elif { ls *.clj >/dev/null 2>&1 || [[ -f deps.edn ]]; } && command -v clojure >/dev/null 2>&1; then
+    echo " \[\e[36m\] v$(clojure --version 2>&1 | awk '{print $3}')"
+
+  elif ls *.kt >/dev/null 2>&1 && command -v kotlinc >/dev/null 2>&1; then
+    echo " \[\e[35m\] v$(kotlinc -version 2>&1 | awk '{print $3}' | cut -d'-' -f1)"
+
+  elif ls *.java >/dev/null 2>&1 && command -v java >/dev/null 2>&1; then
+    echo " \[\e[31m\] v$(java -version 2>&1 | awk -F '"' '/version/ {print $2}')"
+
+  elif ls *.sh >/dev/null 2>&1; then
+    echo " \[\e[32m\]   v${BASH_VERSION%%(*}"
+
+  elif ls *.cpp >/dev/null 2>&1 || ls *.hpp >/dev/null 2>&1; then
+    echo " \[\e[34m\] C++"
+
+  elif ls *.c >/dev/null 2>&1 && command -v gcc >/dev/null 2>&1; then
+    echo " \[\e[36m\] v$(gcc -dumpversion)"
+
+  elif ls *.hs >/dev/null 2>&1 && command -v ghc >/dev/null 2>&1; then
+    echo " \[\e[35m\] v$(ghc --version | awk '{print $8}')"
+
+  elif ls *.scala >/dev/null 2>&1 && command -v scala >/dev/null 2>&1; then
+    echo " \[\e[31m\] v$(scala -version 2>&1 | awk '{print $4}')"
+
+  elif ls *.ml >/dev/null 2>&1 && command -v ocaml >/dev/null 2>&1; then
+    echo " \[\e[33m\] v$(ocaml -vnum)"
+
+  elif ls *.dart >/dev/null 2>&1 && command -v dart >/dev/null 2>&1; then
+    echo " \[\e[36m\] v$(dart --version 2>&1 | awk '{print $4}')"
+
+  elif ls *.zig >/dev/null 2>&1 && command -v zig >/dev/null 2>&1; then
+    echo " \[\e[33m\] v$(zig version)"
+
+  elif ls *.nix >/dev/null 2>&1; then
+    echo " \[\e[34m\] nix"
+
+  elif [[ -f Dockerfile ]]; then
+    echo " \[\e[34m\]   docker"
+
+  elif ls *.md >/dev/null 2>&1; then
+    echo " \[\e[0m\] md"
+  fi
 }
+
+
 
 get_dir_name() {
     case "$PWD" in
