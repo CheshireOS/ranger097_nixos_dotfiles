@@ -147,7 +147,7 @@ get_dir_name() {
 parse_git_branch() {
   local branch=$(git branch --show-current 2> /dev/null)
   if [ -n "$branch" ]; then
-    echo " on $branch  "
+    echo " on $branch  branch"
   fi
 }
 
