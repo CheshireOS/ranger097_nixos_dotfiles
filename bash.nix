@@ -123,7 +123,7 @@ get_lang_info() {
     echo "  v$(zig version)"
 
   elif ls *.nix >/dev/null 2>&1; then
-    echo "  nix"
+    echo "   nix v$(nix --version | awk '{print $3}')"
 
   elif [[ -f Dockerfile ]]; then
     echo "   docker"
