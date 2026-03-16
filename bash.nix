@@ -71,12 +71,14 @@ eval "$(direnv hook bash)"
 
 
 get_go_version() {
-if ls *.go >/dev/null 2>&1; then
-local go_ver=$(go version 2>/dev/null | awk '{print $3}' | sed 's/go//')
-if  [ -n "$go-ver" ]; then
-echo "  v$go_ver"
-fi
-fi
+if compgen -G "*.go" > /dev/null; then
+if command -v go >/dev/null 2>&1; then
+local go_ver=$(go version | awk '{print $3}' | sed 's/go//')
+    echo "  v$go_ver"
+    fi
+  fi
+
+
 }
 
 get_dir_name() {
