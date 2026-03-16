@@ -63,7 +63,7 @@ echo " Upgrading Nixos System"
 nix flake update
 }
 
-export XDG_CONFIG_HOME="$HOME/.cache"
+#export XDG_CONFIG_HOME="$HOME/.cache"
 source "$HOME/.cache/wal/colors.sh"
 (cat $HOME/.cache/wal/sequences &)
 pokeget random --hide-name
