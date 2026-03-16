@@ -75,7 +75,7 @@ get_dir_name() {
       "/") echo "root" ;;
       */ranger097_nixos_dotfiles) echo "dotfiles" ;;
       */.config) echo "configs" ;;
-      *) basename "PWD" ;;
+      *) basename "$PWD" ;;
     esac
   }
 
