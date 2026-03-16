@@ -72,8 +72,11 @@ source "$HOME/.cache/wal/colors.sh"
 (cat $HOME/.cache/wal/sequences &)
 pokeget random --hide-name
 eval "$(direnv hook bash)"
-GIT_PROMPT_ONLY_IN_REPO=1
-source ${pkgs.bash-git-prompt}/share/bash-git-prompt/gitprompt.sh
+if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
+    GIT_PROMPT_ONLY_IN_REPO=1
+    source "$HOME/.bash-git-prompt/gitprompt.sh"
+fi
+
 '';
 
 promptInit = ''
