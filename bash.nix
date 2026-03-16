@@ -71,10 +71,11 @@ export XDG_CONFIG_HOME="$HOME/.cache"
 source "$HOME/.cache/wal/colors.sh"
 (cat $HOME/.cache/wal/sequences &)
 pokeget random --hide-name
-eval "$(direnv hook bash)"
  if [ -f "${pkgs.bash-git-prompt}/share/bash-git-prompt/gitprompt.sh" ]; then
     source "${pkgs.bash-git-prompt}/share/bash-git-prompt/gitprompt.sh"
   fi
+
+eval "$(direnv hook bash)"
 '';
 
 #promptInit = ''
