@@ -70,9 +70,11 @@ pokeget random --hide-name
 eval "$(direnv hook bash)"
 
 parse_git_branch() {
-echo " on " & git branch --show-current 2> /dev/null 
+  local branch=$(git branch --show-current 2> /dev/null)
+  if [ -n "$branch" ]; then
+    echo " on $branch"
+  fi
 }
-
 
 '';
 
