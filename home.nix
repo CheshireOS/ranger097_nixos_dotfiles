@@ -25,7 +25,7 @@ in
     ".config/hypr/hyprsunset.conf".source = ./hypr/hyprsunset.conf;
     ".config/waybar".source = ./waybar; 
     ".config/ghostty".source = ./ghostty;
-    ".config/rofi".source = ./rofi; 
+    ".config/walker".source = ./walker; 
     ".config/wlogout".source = ./wlogout;
 };
 
