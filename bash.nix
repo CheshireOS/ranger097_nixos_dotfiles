@@ -71,13 +71,12 @@ eval "$(direnv hook bash)"
 
 
 get_go_version() {
-if compgen -G "*.go" > /dev/null; then
-if command -v go >/dev/null 2>&1; then
-local go_ver=$(go version | awk '{print $3}' | sed 's/go//')
-    echo "  v$go_ver"
+ if ls *.go >/dev/null 2>&1; then
+    if command -v go >/dev/null 2>&1; then
+      local go_ver=$(go version | awk '{print $3}' | sed 's/go//')
+      echo "  v$go_ver"
     fi
   fi
-
 
 }
 
@@ -101,7 +100,7 @@ parse_git_branch() {
 '';
 
 promptInit = ''
-PS1="\n\[\e[31m\]╭──\[\e[36m\]\$(get_dir_name)\$(parse_git_branch)\[\e[32m\]$(get_go_version)\[\e[35m\]\n\[\e[31m\]╰─\[\e[36m\]〉\[\e[0m\]"
+PS1="\n\[\e[31m\]╭──\[\e[36m\]\$(get_dir_name)\$(parse_git_branch)\[\e[32m\]\$(get_go_version)\[\e[35m\]\n\[\e[31m\]╰─\[\e[36m\]〉\[\e[0m\]"
 '';
 
 };
