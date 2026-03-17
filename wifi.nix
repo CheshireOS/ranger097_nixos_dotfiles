@@ -33,12 +33,21 @@ psk = "$WIFI_PW"; };
   };
 };
 
+xdg.portal = {
+  enable = true;
+  extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  config.common.default = "*"; 
+};
+
 systemd.user.services.riseup-vpn = {
   description = "RiseupVPN Autostart";
   wantedBy = [ "graphical-session.target" ];
+  after = [ "graphical-session.target" "dbus.service" ]; 
+  
   serviceConfig = {
-    ExecStart = "${pkgs.riseup-vpn}/bin/riseup-vpn --start-vpn on";
+    ExecStart = "${pkgs.riseup-vpn}/bin/riseup-vpn --enable-autostart";
     Restart = "on-failure";
+    RestartSec = 5;
   };
 };
 
