@@ -156,36 +156,36 @@ parse_git_branch() {
 song_playing=$(playerctl metadata --format "{{ artist }}" 2>/dev/null)
 function Music_fetch {
 if [ $? -eq 0 ]; then
-   echo "  $song_playing"
+   echo "\e[32m  \e[36m$song_playing"
 else
-   echo "  No Music Playing."
+   echo "\e[32m  \e[36mNo Music Playing."
 fi
 }
 
 host_name=$(hostnamectl | awk 'NR==1 {print $3}')
 function Host_fetch {
 if [ $? -eq 0 ]; then
-   echo "󰐝  $host_name"
+   echo "\e[32m󰐝  \e[36m$host_name"
 else
-   echo "󰐝  How the fuck you dont have a host name"
+   echo "\e[32m󰐝  \e[36mHow the fuck you dont have a host name"
 fi
 }
 
 Operating_system=$(hostnamectl | awk 'NR==6 {print $3, $4, $5 }')
 function OS_fetch {
 if [ $? -eq 0 ]; then
-   echo "  $Operating_system"
+   echo "\e[32m  \e[36m$Operating_system"
 else
-   echo "  How the fuck do you not have an operating system"
+   echo "\e[32m  \e[36mHow the fuck do you not have an operating system"
 fi
 }
 
 Kernel_version=$(hostnamectl | awk 'NR==8 {print $2, $3}')
 function kernel_fetch {
 if [ $? -eq 0 ]; then
-   echo "  $Kernel_version"
+   echo "\e[32m  $Kernel_version"
 else
-   echo "  Bro really"
+   echo "\e[32m  Bro really"
 fi
 }
 
