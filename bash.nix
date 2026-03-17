@@ -194,7 +194,7 @@ function IP_fetch {
 if [ $? -eq 0 ]; then
    echo -e "\[\e[36m\]󰖩  $IP_address"
 else
-   echo -e "\[\e[36m\]󰖩  NO IP ADDRESS"
+   echo -e "\e[36m 󰖩  NO IP ADDRESS"
 fi
 }
 
