@@ -14,7 +14,7 @@ networking.nameservers = [ "9.9.9.9" "1.1.1.1"];
 services.resolved.enable = false;
 networking.enableIPv6 = false;
 networking.firewall.checkReversePath = false;
-
+networking.nftables.enable = true;
 networking.networkmanager.ensureProfiles = {
 environmentFiles = ["${homeDir}/ranger097_nixos_dotfiles/wifi.env"];
 profiles = {
