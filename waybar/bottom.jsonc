@@ -11,8 +11,8 @@
     "margin-right" : 0,
     "modules-left": [
     "custom/power",
-    "custom/themes",
-    "tray"
+    "custom/themes"
+    //"tray"
     ],
     "modules-center": [
     "custom/qmmp",
