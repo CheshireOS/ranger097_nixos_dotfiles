@@ -210,11 +210,11 @@ function ascii_art {
 #fmt_top=$(printf "%-35.35s" "$top_ascii")
 #fmt_mid=$(printf "%-35.35s" "$mid_ascii")
 #fmt_bot=$(printf "%-35.35s" "$bot_ascii")
-echo -e "\e[31m│                             \e[31m│"
-echo -e "\e[31m│        \e[36m$top_ascii     \e[31m│"
-echo -e "\e[31m│        \e[36m$mid_ascii     \e[31m│"
-echo -e "\e[31m│        \e[36m$bot_ascii     \e[31m│"
-echo -e "\e[31m│                             \e[31m│"
+echo -e "\e[31m│                                       \e[31m│"
+echo -e "\e[31m│        \e[36m$top_ascii      \e[31m│"
+echo -e "\e[31m│        \e[36m$mid_ascii      \e[31m│"
+echo -e "\e[31m│        \e[36m$bot_ascii      \e[31m│"
+echo -e "\e[31m│                                       \e[31m│"
 }
 
 
