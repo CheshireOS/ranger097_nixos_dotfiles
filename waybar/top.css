@@ -28,7 +28,7 @@ font-family: Maple Mono NF;
 font-size: 12px;
 font-weight: 500;
 background-color: rgba(0,0,0,0);
-color: @color10;
+color: @accent-color;
 margin-right: 7px;
 border-radius: 0px;
 border: 0px solid #000000;
