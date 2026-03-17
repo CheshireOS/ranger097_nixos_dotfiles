@@ -108,6 +108,7 @@ pulse.enable = true;
 #jack.enable = true;
 #media-session.enable = true;
 };
+services.gnome.gnome-keyring.enable = true;
 
 services.gvfs.enable = true;
 }
