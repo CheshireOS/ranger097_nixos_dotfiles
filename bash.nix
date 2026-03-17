@@ -215,6 +215,8 @@ OS_fetch
 Nix_fetch
 IP_fetch
 }
+
+ranger_fetch
 '';
 
 promptInit = ''
