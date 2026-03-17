@@ -11,7 +11,7 @@ min-height: 0;
 }
 
 window#waybar {
-background: linear-gradient(0deg,rgba(0,0,0,0.8));
+background: linear-gradient(0deg, @waybar-bg);
 border-bottom: 1px solid #000000;
 }
 
@@ -27,7 +27,7 @@ margin-bottom: 7px;
 font-family: Maple Mono NF;
 font-size: 12px;
 font-weight: 500;
-background-color: @color0;
+background-color: rgba(0,0,0,0);
 color: @color10;
 margin-right: 7px;
 border-radius: 0px;
