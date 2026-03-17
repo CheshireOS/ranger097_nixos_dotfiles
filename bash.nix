@@ -149,7 +149,7 @@ get_dir_name() {
 parse_git_branch() {
   local branch=$(git branch --show-current 2> /dev/null)
   if [ -n "$branch" ]; then
-    echo " on $branch  branch"
+    echo -e "\e[34mon \e[35m$branch \e[33m \e[35mbranch"
   fi
 }
 
