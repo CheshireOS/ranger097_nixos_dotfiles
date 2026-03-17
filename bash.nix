@@ -183,9 +183,9 @@ fi
 Kernel_version=$(hostnamectl | awk 'NR==8 {print $2, $3}')
 function kernel_fetch {
 if [ $? -eq 0 ]; then
-   echo -e "\e[32m  $Kernel_version"
+   echo -e "\e[32m  \e[36m$Kernel_version"
 else
-   echo -e "\e[32m  Bro really"
+   echo -e "\e[32m  \e[36mBro really"
 fi
 }
 
