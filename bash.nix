@@ -203,13 +203,16 @@ else
 fi
 }
 
+top_ascii="┏┓╻   ╻   ╻ ╻   ┏━┓   ┏━┓"
+mid_ascii="┃┗┫   ┃   ┏╋┛   ┃ ┃   ┗━┓"
+bot_ascii="╹ ╹   ╹   ╹ ╹   ┗━┛   ┗━┛"
 function ascii_art {
-echo -e "\e[36m"
-cat <<- "EOF"
-      ┏┓╻   ╻   ╻ ╻   ┏━┓   ┏━┓
-      ┃┗┫   ┃   ┏╋┛   ┃ ┃   ┗━┓
-      ╹ ╹   ╹   ╹ ╹   ┗━┛   ┗━┛                                                                                      
-EOF
+fmt_top=$(printf "%-35.35s" "$top_ascii")
+fmt_mid=$(printf "%-35.35s" "$mid_ascii")
+fmt_bot=$(printf "%-35.35s" "$mid_ascii")
+echo -e "\e[36m$fmt_top"
+echo -e "\e[36m$fmt_mid"
+echo -e "\e[36m$fmt_bot"
 
 }
 
