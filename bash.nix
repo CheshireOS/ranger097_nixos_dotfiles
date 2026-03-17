@@ -158,7 +158,7 @@ function Music_fetch {
 if [ $? -eq 0 ]; then
    echo "  $song_playing"
 else
-   echo "No Music Playing."
+   echo "  No Music Playing."
 fi
 }
 
@@ -167,7 +167,7 @@ function Host_fetch {
 if [ $? -eq 0 ]; then
    echo "󰐝  $host_name"
 else
-   echo "How the fuck you dont have a host name"
+   echo "󰐝  How the fuck you dont have a host name"
 fi
 }
 
@@ -176,7 +176,7 @@ function OS_fetch {
 if [ $? -eq 0 ]; then
    echo "  $Operating_system"
 else
-   echo "How the fuck do you not have an operating system"
+   echo "  How the fuck do you not have an operating system"
 fi
 }
 
@@ -185,7 +185,7 @@ function kernel_fetch {
 if [ $? -eq 0 ]; then
    echo "  $Kernel_version"
 else
-   echo "Bro really"
+   echo "  Bro really"
 fi
 }
 
@@ -194,7 +194,7 @@ function IP_fetch {
 if [ $? -eq 0 ]; then
    echo "󰖩  $IP_address"
 else
-   echo "NO IP ADDRESS"
+   echo "󰖩  NO IP ADDRESS"
 fi
 }
 
