@@ -154,7 +154,7 @@ parse_git_branch() {
 }
 
 song_playing=$(playerctl metadata --format "{{ artist }} - {{ title }}" 2>/dev/null)
-Music_fetch() {
+function Music_fetch {
 if [ $? -eq 0 ]; then
    echo "Now Playing: $song_playing"
 else
@@ -163,7 +163,7 @@ fi
 }
 
 system_version=$(nix --version | awk '{print $3}')
-Nix_fetch() {
+function Nix_fetch {
 if [ $? -eq 0 ]; then
    echo "Nix Version: $system_version"
 else
@@ -172,7 +172,7 @@ fi
 }
 
 host_name=$(hostnamectl | awk 'NR==1 {print $3}')
-Host_fetch() {
+function Host_fetch {
 if [ $? -eq 0 ]; then
    echo "Hostname: $host_name"
 else
@@ -190,7 +190,7 @@ fi
 }
 
 Kernel_version=$(hostnamectl | awk 'NR==8 {print $1, $2, $3}')
-kernel_fetch() {
+function kernel_fetch {
 if [ $? -eq 0 ]; then
    echo "$Kernel_version"
 else
@@ -199,7 +199,7 @@ fi
 }
 
 IP_address=$(curl icanhazip.com 2> /dev/null )
-IP_fetch() {
+function IP_fetch {
 if [ $? -eq 0 ]; then
    echo "IP: $IP_address"
 else
@@ -208,10 +208,12 @@ fi
 }
 
 ranger_fetch() {
+Music_fetch
+Host_fetch
+Kernel_fetch
 OS_fetch
-
-
-
+Nix_fetch
+IP_fetch
 }
 
 
