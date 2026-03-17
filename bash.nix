@@ -199,12 +199,13 @@ fi
 }
 
 ranger_fetch() {
-echo " "
+echo "╭─────────────────────────────────────"
 Music_fetch
 Host_fetch
 kernel_fetch
 OS_fetch
 IP_fetch
+echo "╰─────────────────────────────"
 }
 
 ranger_fetch
