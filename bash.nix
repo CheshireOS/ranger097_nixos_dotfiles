@@ -204,7 +204,9 @@ fi
 }
 
 ranger_fetch() {
-echo " "
+local img_path="/home/ranger/ranger097_nixos_dotfiles/wallpapers/Transparent/Metagross.png"
+echo ""
+timg -g 12x12 "$img_path"
 echo -e "\e[31m╭───────────────────────────────────────╮"
 Music_fetch
 Host_fetch
