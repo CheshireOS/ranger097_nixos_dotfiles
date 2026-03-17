@@ -179,31 +179,27 @@ fmt_os=$(printf "%-35.35s" "$Operating_system")
 if [ $? -eq 0 ]; then
    echo -e "\e[31m│ \e[32m  \e[36m$fmt_os\e[31m│"
 else
-   echo -e "\e[31m│ \e[32m  \e[36mHow the fuck do you not have an operating system $Padding\e[31m│"
+   echo -e "\e[31m│ \e[32m  \e[36mHow the fuck do you not have an operating system$fmt_os\e[31m│"
 fi
 }
 
 Kernel_version=$(hostnamectl | awk 'NR==8 {print $2, $3}')
 function kernel_fetch {
-local Spaces
-Spaces=$(echo " ")
-Padding=$(printf "%-22.22s" "$Spaces")
+fmt_kernel=$(printf "%-35.35s" "$Kernel_version")
 if [ $? -eq 0 ]; then
-   echo -e "\e[31m│ \e[32m  \e[36m$Kernel_version $Padding\e[31m│"
+   echo -e "\e[31m│ \e[32m  \e[36m$fmt_kernel\e[31m│"
 else
-   echo -e "\e[31m│ \e[32m  \e[36mBro really $Padding\e[31m│"
+   echo -e "\e[31m│ \e[32m  \e[36mBro really$fmt_kernel\e[31m│"
 fi
 }
 
 IP_address=$(curl icanhazip.com 2> /dev/null )
 function IP_fetch {
-local Spaces
-Spaces=$(echo " ")
-Padding=$(printf "%-20.20s" "$Spaces")
+fmt_ip=$(printf "%-35.35s" "$IP_address")
 if [ $? -eq 0 ]; then
-   echo -e "\e[31m│ \e[32m󰖩  \e[36m$IP_address $Padding\e[31m│"
+   echo -e "\e[31m│ \e[32m󰖩  \e[36m$fmt_ip\e[31m│"
 else
-   echo -e "\e[31m│ \e[32m󰖩  \e[36mNO IP ADDRESS $Padding\e[31m│"
+   echo -e "\e[31m│ \e[32m󰖩  \e[36mNO IP ADDRESS$fmt_ip\e[31m│"
 fi
 }
 
