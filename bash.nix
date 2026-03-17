@@ -71,7 +71,7 @@ source "$HOME/.cache/wal/colors.sh"
 #pokeget random --hide-name
 eval "$(direnv hook bash)"
 echo -e "\e]11;#000000\a"
-
+printf "\e]10;%s\a" "$(sed -n '5p' ~/.cache/wal/colors)"
 
   get_lang_info() {
       if ls *.go >/dev/null 2>&1 && command -v go >/dev/null 2>&1; then
