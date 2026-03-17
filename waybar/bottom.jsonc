@@ -131,8 +131,8 @@
 "spacing": 10,
 "icons":{
 "nm-applet":"󰤨 "
-
-}
+},
+"show-passive-items": true
 }
 
 
