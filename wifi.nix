@@ -36,12 +36,15 @@ psk = "$WIFI_PW"; };
 
 networking.firewall = {
   enable = true;
-  extraCommands = ''
-    iptables -I OUTPUT ! -o proton0 ! -o lo -m addrtype ! --dst-type LOCAL -j REJECT
-  '';
-  extraStopCommands = ''
-    iptables -D OUTPUT ! -o proton0 ! -o lo -m addrtype ! --dst-type LOCAL -j REJECT
-  '';
 };
+networking.nftables.ruleset = ''
+  table inet protonvpn_killswitch {
+    chain output {
+      type filter hook output priority 0; policy accept;
+      oifname { "lo", "proton0" } accept
+      reject
+    }
+  }
+'';
 
 }
