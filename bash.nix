@@ -204,8 +204,8 @@ fi
 }
 
 ranger_fetch() {
-local img_path="/home/ranger/Downloads/JJK_1.jpeg"
-timg -g 35x35 "$img_path"
+local img_path="/home/ranger/ranger097_nixos_dotfiles/wallpapers/wallpapers/wallhaven-o5zy1p.jpg"
+chafa --format kitty --size 35x10 "$img_path"
 echo -e "\e[31m╭───────────────────────────────────────╮"
 Music_fetch 
 Host_fetch 
