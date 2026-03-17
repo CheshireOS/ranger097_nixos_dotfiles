@@ -203,13 +203,13 @@ fi
 
 ranger_fetch() {
 echo " "
-echo -e "\e[32m╭───────────────────────────────────────"
+echo -e "\e[32m╭───────────────────────────────────────╮"
 Music_fetch
 Host_fetch
 kernel_fetch
 OS_fetch
 IP_fetch
-echo -e "\e[32m╰───────────────────────────────────────"
+echo -e "\e[32m╰───────────────────────────────────────╯"
 }
 
 ranger_fetch
