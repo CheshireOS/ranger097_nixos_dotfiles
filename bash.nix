@@ -218,7 +218,7 @@ echo -e "\e[31m│                                       \e[31m│"
 
 
 ranger_fetch() {
-echo -e "\e[31m╭───────────────────────────────────────╮"
+echo -e "\e[31m╭─────────────────────────────────╮"
 ascii_art
 Music_fetch 
 Host_fetch 
@@ -226,7 +226,7 @@ kernel_fetch
 OS_fetch 
 IP_fetch 
 echo -e "\e[31m│                                       \e[31m│"
-echo -e "\e[31m╰───────────────────────────────────────╯"
+echo -e "\e[31m╰─────────────────────────────────╯"
 }
 
 ranger_fetch
