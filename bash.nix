@@ -169,7 +169,7 @@ host_name=$(hostnamectl | awk 'NR==1 {print $3}')
 function Host_fetch {
 local Spaces
 Spaces=$(echo " ")
-Padding=$(printf "%-20.20s" "$Spaces")
+Padding=$(printf "%-28.28s" "$Spaces")
 if [ $? -eq 0 ]; then
    echo -e "\e[31m│ \e[32m󰐝  \e[36m$host_name $Padding\e[31m│"
 else
@@ -181,7 +181,7 @@ Operating_system=$(hostnamectl | awk 'NR==6 {print $3, $4, $5 }')
 function OS_fetch {
 local Spaces
 Spaces=$(echo " ")
-Padding=$(printf "%-20.20s" "$Spaces")
+Padding=$(printf "%-27.27s" "$Spaces")
 if [ $? -eq 0 ]; then
    echo -e "\e[31m│ \e[32m  \e[36m$Operating_system $Padding\e[31m│"
 else
@@ -193,7 +193,7 @@ Kernel_version=$(hostnamectl | awk 'NR==8 {print $2, $3}')
 function kernel_fetch {
 local Spaces
 Spaces=$(echo " ")
-Padding=$(printf "%-20.20s" "$Spaces")
+Padding=$(printf "%-23.23s" "$Spaces")
 if [ $? -eq 0 ]; then
    echo -e "\e[31m│ \e[32m  \e[36m$Kernel_version $Padding\e[31m│"
 else
