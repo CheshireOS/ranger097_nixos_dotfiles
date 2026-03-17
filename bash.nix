@@ -68,7 +68,7 @@ nix flake update
 #export XDG_CONFIG_HOME="$HOME/.cache"
 source "$HOME/.cache/wal/colors.sh"
 (cat $HOME/.cache/wal/sequences &)
-pokeget random --hide-name
+#pokeget random --hide-name
 eval "$(direnv hook bash)"
 
 
@@ -205,8 +205,7 @@ fi
 
 ranger_fetch() {
 local img_path="/home/ranger/ranger097_nixos_dotfiles/wallpapers/Transparent/Metagross.png"
-echo ""
-#timg -g 12x12 "$img_path"
+timg -g 35x35 "$img_path"
 echo -e "\e[31m╭───────────────────────────────────────╮"
 Music_fetch 
 Host_fetch 
