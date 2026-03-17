@@ -155,11 +155,9 @@ parse_git_branch() {
 
 song_playing=$(playerctl metadata --format "{{ artist }}" 2>/dev/null)
 function Music_fetch {
-local Spaces
-Spaces=$(echo " ")
-Padding=$(printf "%-25.25s" "$Spaces")
+fmt_song=$(printf "%-25.25s" "$song_playing")
 if [ $? -eq 0 ]; then
-   echo -e "\e[31m│ \e[32m  \e[36m$song_playing $Padding\e[31m│"
+   echo -e "\e[31m│ \e[32m  \e[36m$fmt_song\e[31m│"
 else
    echo -e "\e[31m│ \e[32m  \e[36mNo Music Playing. $Padding\e[31m│"
 fi
