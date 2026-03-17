@@ -198,7 +198,7 @@ else
 fi
 }
 
-IP_address=$(curl icanhazip.com)
+IP_address=$(curl icanhazip.com 2>/dev/null)
 if [ $? -eq 0 ]; then
    echo "IP: $IP_address"
 else
