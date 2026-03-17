@@ -225,6 +225,7 @@ Host_fetch
 kernel_fetch 
 OS_fetch 
 IP_fetch 
+echo -e "\e[31m│     \e[32m                           \e[31m│"
 echo -e "\e[31m│                                 \e[31m│"
 echo -e "\e[31m╰─────────────────────────────────╯"
 }
