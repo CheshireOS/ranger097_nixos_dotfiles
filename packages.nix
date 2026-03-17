@@ -63,6 +63,7 @@ elephant
 timg
 networkmanagerapplet
 xdg-desktop-portal-gtk
+polkit_gnome
 ];
 
 fonts.packages = with pkgs;[
