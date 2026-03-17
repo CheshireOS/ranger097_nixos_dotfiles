@@ -194,7 +194,6 @@ function IP_fetch {
 local Spaces
 Spaces=$(echo " ")
 Padding=$(printf "%-10.10s" "$Spaces")
-printf "%-40.40s" "$"
 if [ $? -eq 0 ]; then
    echo -e "\e[32m│ \e[32m󰖩  \e[36m$IP_address $Padding\e[32m│"
 else
