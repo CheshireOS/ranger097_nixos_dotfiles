@@ -64,7 +64,8 @@ exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CUR
 exec-once = systemctl --user start hyprpolkitagent
 exec-once = hyprctl setcursor Pokemon 32
 exec-once = elephant
-exec-once = /run/current-system/sw/libexec/polkit-gnome-authentication-agent-1
+exec-once = systemctl --user start hyprpolkitagent
+exec-once = systemctl --user start riseup-vpn
 
 #ENVIRONMENT
 #env = HYPRCURSOR_THEME,Pokemon

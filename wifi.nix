@@ -37,7 +37,6 @@ security.polkit.enable = true;
 
   xdg.portal = {
     enable = true;
-    # Add the hyprland portal alongside gtk
     extraPortals = [ 
       pkgs.xdg-desktop-portal-gtk 
       pkgs.xdg-desktop-portal-hyprland 
@@ -45,17 +44,19 @@ security.polkit.enable = true;
     config.common.default = "*";
   };
 
-systemd.user.services.riseup-vpn = {
-  description = "RiseupVPN Autostart";
-  wantedBy = [ "graphical-session.target" ];
-  partOf = [ "graphical-session.target" ];
-  serviceConfig = {
-    ExecStart = "${pkgs.riseup-vpn}/bin/riseup-vpn --enable-autostart";
-    Restart = "on-failure";
-    RestartSec = "5";
+  systemd.user.services.hyprpolkitagent = {
+    description = "Hyprland Polkit Authentication Agent";
+    wantedBy = [ "graphical-session.target" ];
+    wants = [ "graphical-session.target" ];
+    after = [ "graphical-session.target" ];
+    serviceConfig = {
+      Type = "simple";
+      ExecStart = "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent";
+      Restart = "on-failure";
+      RestartSec = 1;
+      TimeoutStopSec = 10;
+    };
   };
-};
-
 
 networking.firewall = {
   enable = true;
