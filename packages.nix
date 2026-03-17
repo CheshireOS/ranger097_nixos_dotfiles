@@ -61,7 +61,7 @@ android-studio-tools
 android-studio-full
 wireguard-tools
 elephant
-timg
+chafa
 ];
 
 fonts.packages = with pkgs;[
