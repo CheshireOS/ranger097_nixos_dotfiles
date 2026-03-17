@@ -128,9 +128,9 @@
 
 "tray": { 
 "icon-size": 21,
-"spacing": 10
+"spacing": 10,
 "icons":{
-"nm-applet":"󰤨 ",
+"nm-applet":"󰤨 "
 
 }
 }
