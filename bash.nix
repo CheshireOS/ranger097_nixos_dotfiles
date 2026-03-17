@@ -162,8 +162,14 @@ else
 fi
 }
 
-
-
+version=$(nix --version | awk '{print $3}')
+nix_version() {
+if [ $? -eq 0 ]; then
+   echo "Nix Version: $nix_version"
+else
+   echo "How the fuck you dont have a nix version?"
+fi
+}
 
 '';
 
