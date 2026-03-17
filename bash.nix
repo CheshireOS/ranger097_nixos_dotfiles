@@ -210,13 +210,11 @@ fi
 ranger_fetch() {
 Music_fetch
 Host_fetch
-Kernel_fetch
+kernel_fetch
 OS_fetch
 Nix_fetch
 IP_fetch
 }
-
-
 '';
 
 promptInit = ''
