@@ -206,9 +206,9 @@ fi
 function ascii_art {
 echo -e "\e[36m"
 cat <<- "EOF"
-┏┓╻   ╻   ╻ ╻   ┏━┓   ┏━┓
-┃┗┫   ┃   ┏╋┛   ┃ ┃   ┗━┓
-╹ ╹   ╹   ╹ ╹   ┗━┛   ┗━┛                                                                                      
+    ┏┓╻   ╻   ╻ ╻   ┏━┓   ┏━┓
+    ┃┗┫   ┃   ┏╋┛   ┃ ┃   ┗━┓
+    ╹ ╹   ╹   ╹ ╹   ┗━┛   ┗━┛                                                                                      
 EOF
 
 }
@@ -217,8 +217,8 @@ EOF
 
 
 ranger_fetch() {
-ascii_art
 echo -e "\e[31m╭───────────────────────────────────────╮"
+ascii_art
 Music_fetch 
 Host_fetch 
 kernel_fetch 
