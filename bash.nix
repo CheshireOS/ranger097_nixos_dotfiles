@@ -214,7 +214,6 @@ kernel_fetch
 OS_fetch 
 IP_fetch 
 echo -e "\e[31m╰───────────────────────────────────────╯"
-echo -e "\n"
 }
 
 ranger_fetch
