@@ -155,37 +155,49 @@ parse_git_branch() {
 
 song_playing=$(playerctl metadata --format "{{ artist }}" 2>/dev/null)
 function Music_fetch {
+local Spaces
+Spaces=$(echo " ")
+Padding=$(printf "%-20.20s" "$Spaces")
 if [ $? -eq 0 ]; then
-   echo -e "\e[31m│ \e[32m  \e[36m$song_playing"
+   echo -e "\e[31m│ \e[32m  \e[36m$song_playing $Padding\e[31m│"
 else
-   echo -e "\e[31m│ \e[32m  \e[36mNo Music Playing."
+   echo -e "\e[31m│ \e[32m  \e[36mNo Music Playing. $Padding\e[31m│"
 fi
 }
 
 host_name=$(hostnamectl | awk 'NR==1 {print $3}')
 function Host_fetch {
+local Spaces
+Spaces=$(echo " ")
+Padding=$(printf "%-20.20s" "$Spaces")
 if [ $? -eq 0 ]; then
-   echo -e "\e[31m│ \e[32m󰐝  \e[36m$host_name"
+   echo -e "\e[31m│ \e[32m󰐝  \e[36m$host_name $Padding\e[31m│"
 else
-   echo -e "\e[31m│ \e[32m󰐝  \e[36mHow the fuck you dont have a host name"
+   echo -e "\e[31m│ \e[32m󰐝  \e[36mHow the fuck you dont have a host name $Padding\e[31m│"
 fi
 }
 
 Operating_system=$(hostnamectl | awk 'NR==6 {print $3, $4, $5 }')
 function OS_fetch {
+local Spaces
+Spaces=$(echo " ")
+Padding=$(printf "%-20.20s" "$Spaces")
 if [ $? -eq 0 ]; then
-   echo -e "\e[31m│ \e[32m  \e[36m$Operating_system"
+   echo -e "\e[31m│ \e[32m  \e[36m$Operating_system $Padding\e[31m│"
 else
-   echo -e "\e[31m│ \e[32m  \e[36mHow the fuck do you not have an operating system"
+   echo -e "\e[31m│ \e[32m  \e[36mHow the fuck do you not have an operating system $Padding\e[31m│"
 fi
 }
 
 Kernel_version=$(hostnamectl | awk 'NR==8 {print $2, $3}')
 function kernel_fetch {
+local Spaces
+Spaces=$(echo " ")
+Padding=$(printf "%-20.20s" "$Spaces")
 if [ $? -eq 0 ]; then
-   echo -e "\e[31m│ \e[32m  \e[36m$Kernel_version"
+   echo -e "\e[31m│ \e[32m  \e[36m$Kernel_version $Padding\e[31m│"
 else
-   echo -e "\e[31m│ \e[32m  \e[36mBro really"
+   echo -e "\e[31m│ \e[32m  \e[36mBro really $Padding\e[31m│"
 fi
 }
 
