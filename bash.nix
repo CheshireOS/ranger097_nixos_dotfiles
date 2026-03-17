@@ -191,21 +191,26 @@ fi
 
 IP_address=$(curl icanhazip.com 2> /dev/null )
 function IP_fetch {
+local Spaces
+Spaces=$(echo " ")
+Padding=$(printf "%-40.40s" "$Spaces")
+printf "%-40.40s" "$"
 if [ $? -eq 0 ]; then
-   echo -e "\e[32m│ \e[32m󰖩  \e[36m$IP_address"
+   echo -e "\e[32m│ \e[32m󰖩  \e[36m$IP_address $Padding\e[32m│"
 else
-   echo -e "\e[32m│ \e[32m󰖩  \e[36mNO IP ADDRESS"
+   echo -e "\e[32m│ \e[32m󰖩  \e[36mNO IP ADDRESS $Padding\e[32m│"
 fi
 }
 
 ranger_fetch() {
-echo -e "\e[32m╭─────────────────────────────────────"
+echo " "
+echo -e "\e[32m╭───────────────────────────────────────"
 Music_fetch
 Host_fetch
 kernel_fetch
 OS_fetch
 IP_fetch
-echo -e "\e[32m╰─────────────────────────────"
+echo -e "\e[32m╰───────────────────────────────────────"
 }
 
 ranger_fetch
