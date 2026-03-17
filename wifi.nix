@@ -37,14 +37,5 @@ psk = "$WIFI_PW"; };
 networking.firewall = {
   enable = true;
 };
-networking.nftables.ruleset = ''
-  table inet protonvpn_killswitch {
-    chain output {
-      type filter hook output priority 0; policy accept;
-      oifname { "lo", "proton0" } accept
-      reject
-    }
-  }
-'';
 
 }

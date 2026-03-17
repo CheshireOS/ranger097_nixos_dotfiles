@@ -55,7 +55,7 @@ nmap
 pywal16
 pywalfox-native
 mullvad-browser
-proton-vpn-cli
+protonvpn-gui
 android-studio-tools
 android-studio-full
 wireguard-tools
