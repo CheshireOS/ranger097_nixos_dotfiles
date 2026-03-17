@@ -12,7 +12,7 @@ min-height: 0;
 
 window#waybar {
 /*background-color: @waybar-bg;*/
-background-color: rgba(0, 0, 0, 0.8);
+background-color: rgba(0, 0, 0, 1);
 border-bottom: 0px solid #000000;
 }
 
@@ -116,7 +116,6 @@ margin-left: 10px;
 #battery {
 margin-right: 10px;
 }
-
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces { margin-left: 0px; }
