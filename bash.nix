@@ -207,14 +207,13 @@ ranger_fetch() {
 local img_path="/home/ranger/ranger097_nixos_dotfiles/wallpapers/Transparent/Metagross.png"
 echo ""
 #timg -g 12x12 "$img_path"
-echo -ne "\e[20A\e[25C"
 echo -e "\e[31m╭───────────────────────────────────────╮"
-Music_fetch | sed 's/^/\e[25C/'
-Host_fetch  | sed 's/^/\e[25C/'
-kernel_fetch | sed 's/^/\e[25C/'
-OS_fetch | sed 's/^/\e[25C/'
-IP_fetch | sed 's/^/\e[25C/'
-echo -e "\e[25C\e[31m╰───────────────────────────────────────╯"
+Music_fetch 
+Host_fetch 
+kernel_fetch 
+OS_fetch 
+IP_fetch 
+echo -e "\e[31m╰───────────────────────────────────────╯"
 echo -e "\n"
 }
 
