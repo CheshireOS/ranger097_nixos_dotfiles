@@ -156,45 +156,45 @@ parse_git_branch() {
 song_playing=$(playerctl metadata --format "{{ artist }}" 2>/dev/null)
 function Music_fetch {
 if [ $? -eq 0 ]; then
-   echo -e "︱\e[32m  \e[36m$song_playing"
+   echo -e "│ \e[32m  \e[36m$song_playing"
 else
-   echo -e "\e[32m  \e[36mNo Music Playing."
+   echo -e "│ \e[32m  \e[36mNo Music Playing."
 fi
 }
 
 host_name=$(hostnamectl | awk 'NR==1 {print $3}')
 function Host_fetch {
 if [ $? -eq 0 ]; then
-   echo -e "︱\e[32m󰐝  \e[36m$host_name"
+   echo -e "│ \e[32m󰐝  \e[36m$host_name"
 else
-   echo -e "\e[32m󰐝  \e[36mHow the fuck you dont have a host name"
+   echo -e "│ \e[32m󰐝  \e[36mHow the fuck you dont have a host name"
 fi
 }
 
 Operating_system=$(hostnamectl | awk 'NR==6 {print $3, $4, $5 }')
 function OS_fetch {
 if [ $? -eq 0 ]; then
-   echo -e "︱\e[32m  \e[36m$Operating_system"
+   echo -e "│ \e[32m  \e[36m$Operating_system"
 else
-   echo -e "\e[32m  \e[36mHow the fuck do you not have an operating system"
+   echo -e "│ \e[32m  \e[36mHow the fuck do you not have an operating system"
 fi
 }
 
 Kernel_version=$(hostnamectl | awk 'NR==8 {print $2, $3}')
 function kernel_fetch {
 if [ $? -eq 0 ]; then
-   echo -e "︱\e[32m  \e[36m$Kernel_version"
+   echo -e "│ \e[32m  \e[36m$Kernel_version"
 else
-   echo -e "\e[32m  \e[36mBro really"
+   echo -e "│ \e[32m  \e[36mBro really"
 fi
 }
 
 IP_address=$(curl icanhazip.com 2> /dev/null )
 function IP_fetch {
 if [ $? -eq 0 ]; then
-   echo -e "\e[32m󰖩  \e[36m$IP_address"
+   echo -e "│ \e[32m󰖩  \e[36m$IP_address"
 else
-   echo -e "\e[32m󰖩  \e[36mNO IP ADDRESS"
+   echo -e "│ \e[32m󰖩  \e[36mNO IP ADDRESS"
 fi
 }
 
