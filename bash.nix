@@ -155,21 +155,21 @@ parse_git_branch() {
 
 song_playing=$(playerctl metadata --format "{{ artist }}" 2>/dev/null)
 function Music_fetch {
-fmt_song=$(printf "%-30.30s" "$song_playing")
+fmt_song=$(printf "%-31.31s" "$song_playing")
 if [ $? -eq 0 ]; then
    echo -e "\e[31m│      \e[32m  \e[36m$fmt_song\e[31m│"
 else
-   echo -e "\e[31m│ \e[32m  \e[36mNo Music Playing.$fmt_song\e[31m│"
+   echo -e "\e[31m│      \e[32m  \e[36mNo Music Playing.$fmt_song\e[31m│"
 fi
 }
 
 host_name=$(hostnamectl | awk 'NR==1 {print $3}')
 function Host_fetch {
-fmt_host=$(printf "%-35.35s" "$host_name")
+fmt_host=$(printf "%-31.31s" "$host_name")
 if [ $? -eq 0 ]; then
-   echo -e "\e[31m│ \e[32m󰐝  \e[36m$fmt_host\e[31m│"
+   echo -e "\e[31m│     \e[32m󰐝  \e[36m$fmt_host\e[31m│"
 else
-   echo -e "\e[31m│ \e[32m󰐝  \e[36mHow the fuck you dont have a host name$fmt_host\e[31m│"
+   echo -e "\e[31m│     \e[32m󰐝  \e[36mHow the fuck you dont have a host name$fmt_host\e[31m│"
 fi
 }
 
@@ -207,9 +207,9 @@ top_ascii="┏┓╻   ╻   ╻ ╻   ┏━┓   ┏━┓"
 mid_ascii="┃┗┫   ┃   ┏╋┛   ┃ ┃   ┗━┓"
 bot_ascii="╹ ╹   ╹   ╹ ╹   ┗━┛   ┗━┛"
 function ascii_art {
-echo -e "\e[31m│     \e[32m$top_ascii     \e[31m│"
-echo -e "\e[31m│     \e[32m$mid_ascii     \e[31m│"
-echo -e "\e[31m│     \e[32m$bot_ascii     \e[31m│"
+echo -e "\e[31m│    \e[32m$top_ascii    \e[31m│"
+echo -e "\e[31m│    \e[32m$mid_ascii    \e[31m│"
+echo -e "\e[31m│    \e[32m$bot_ascii    \e[31m│"
 echo -e "\e[31m│                                       \e[31m│"
 }
 
