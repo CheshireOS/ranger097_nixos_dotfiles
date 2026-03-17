@@ -57,13 +57,14 @@ exec-once = /home/ranger/ranger097_nixos_dotfiles/wallpapers/Guweiz/1116508.jpg
 #exec-once = LD_LIBRARY_PATH=/run/opengl-driver/lib mpvpaper -o "no-audio --loop-playlist --panscan=1.0 hwdec=auto" eDP-1 /home/ranger/Videos/wallpapers/guweiz.mp4
 exec-once = waybar -c ~/.config/waybar/top.jsonc -s ~/.config/waybar/top.css
 exec-once = waybar -c ~/.config/waybar/bottom.jsonc -s ~/.config/waybar/bottom.css
-exec-once = protonvpn-app
+exec-once = protonvpn connect
 exec-once = hypridle
 exec-once = hyprsunset
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec-once = systemctl --user start hyprpolkitagent
 exec-once = hyprctl setcursor Pokemon 32
 exec-once = elephant
+
 #ENVIRONMENT
 #env = HYPRCURSOR_THEME,Pokemon
 #env = HYPRCURSOR_SIZE, 32

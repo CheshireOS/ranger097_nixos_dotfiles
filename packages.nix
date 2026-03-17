@@ -55,13 +55,12 @@ nmap
 pywal16
 pywalfox-native
 mullvad-browser
-protonvpn-gui
 proton-vpn-cli
 android-studio-tools
 android-studio-full
 wireguard-tools
 elephant
-chafa
+timg
 ];
 
 fonts.packages = with pkgs;[
