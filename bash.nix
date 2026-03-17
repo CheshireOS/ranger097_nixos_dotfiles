@@ -15,6 +15,8 @@ ytdownload = "yt-dlp -x --audio-format mp3 --audio-quality 0 --cookies-from-brow
 };
    
 interactiveShellInit = ''
+#!/bin/bash
+
 dgit() {
 echo " Entering dotfiles  on main."
 cd ~/ranger097_nixos_dotfiles
@@ -151,9 +153,9 @@ parse_git_branch() {
   fi
 }
 
-song_playing=$(playerctl metadata --format "{{ artist }} - {{ title }}"2>/dev/null)
+song_playing=$(playerctl metadata --format "{{ artist }} - {{ title }}" 2>/dev/null)
 fetch() {
-if [ -n "$song_playing" ]; then
+if [ -n $? -eq 0 ]; then
    echo "Now Playing: $song_playing"
 else
    echo "No Music Playing."
