@@ -157,7 +157,7 @@ song_playing=$(playerctl metadata --format "{{ artist }}" 2>/dev/null)
 function Music_fetch {
 local Spaces
 Spaces=$(echo " ")
-Padding=$(printf "%-20.20s" "$Spaces")
+Padding=$(printf "%-20.26s" "$Spaces")
 if [ $? -eq 0 ]; then
    echo -e "\e[31m│ \e[32m  \e[36m$song_playing $Padding\e[31m│"
 else
