@@ -156,36 +156,36 @@ parse_git_branch() {
 song_playing=$(playerctl metadata --format "{{ artist }}" 2>/dev/null)
 function Music_fetch {
 if [ $? -eq 0 ]; then
-   echo -e "\e[32m│ \e[32m  \e[36m$song_playing"
+   echo -e "\e[31m│ \e[32m  \e[36m$song_playing"
 else
-   echo -e "\e[32m│ \e[32m  \e[36mNo Music Playing."
+   echo -e "\e[31m│ \e[32m  \e[36mNo Music Playing."
 fi
 }
 
 host_name=$(hostnamectl | awk 'NR==1 {print $3}')
 function Host_fetch {
 if [ $? -eq 0 ]; then
-   echo -e "\e[32m│ \e[32m󰐝  \e[36m$host_name"
+   echo -e "\e[31m│ \e[32m󰐝  \e[36m$host_name"
 else
-   echo -e "\e[32m│ \e[32m󰐝  \e[36mHow the fuck you dont have a host name"
+   echo -e "\e[31m│ \e[32m󰐝  \e[36mHow the fuck you dont have a host name"
 fi
 }
 
 Operating_system=$(hostnamectl | awk 'NR==6 {print $3, $4, $5 }')
 function OS_fetch {
 if [ $? -eq 0 ]; then
-   echo -e "\e[32m│ \e[32m  \e[36m$Operating_system"
+   echo -e "\e[31m│ \e[32m  \e[36m$Operating_system"
 else
-   echo -e "\e[32m│ \e[32m  \e[36mHow the fuck do you not have an operating system"
+   echo -e "\e[31m│ \e[32m  \e[36mHow the fuck do you not have an operating system"
 fi
 }
 
 Kernel_version=$(hostnamectl | awk 'NR==8 {print $2, $3}')
 function kernel_fetch {
 if [ $? -eq 0 ]; then
-   echo -e "\e[32m│ \e[32m  \e[36m$Kernel_version"
+   echo -e "\e[31m│ \e[32m  \e[36m$Kernel_version"
 else
-   echo -e "\e[32m│ \e[32m  \e[36mBro really"
+   echo -e "\e[31m│ \e[32m  \e[36mBro really"
 fi
 }
 
@@ -195,21 +195,21 @@ local Spaces
 Spaces=$(echo " ")
 Padding=$(printf "%-20.20s" "$Spaces")
 if [ $? -eq 0 ]; then
-   echo -e "\e[32m│ \e[32m󰖩  \e[36m$IP_address $Padding\e[32m│"
+   echo -e "\e[31m│ \e[32m󰖩  \e[36m$IP_address $Padding\e[31m│"
 else
-   echo -e "\e[32m│ \e[32m󰖩  \e[36mNO IP ADDRESS $Padding\e[32m│"
+   echo -e "\e[31m│ \e[32m󰖩  \e[36mNO IP ADDRESS $Padding\e[31m│"
 fi
 }
 
 ranger_fetch() {
 echo " "
-echo -e "\e[32m╭───────────────────────────────────────╮"
+echo -e "\e[31m╭───────────────────────────────────────╮"
 Music_fetch
 Host_fetch
 kernel_fetch
 OS_fetch
 IP_fetch
-echo -e "\e[32m╰───────────────────────────────────────╯"
+echo -e "\e[31m╰───────────────────────────────────────╯"
 }
 
 ranger_fetch
