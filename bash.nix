@@ -70,6 +70,7 @@ source "$HOME/.cache/wal/colors.sh"
 (cat $HOME/.cache/wal/sequences &)
 #pokeget random --hide-name
 eval "$(direnv hook bash)"
+echo -e "\e]11;#000000\a"
 
 
   get_lang_info() {
