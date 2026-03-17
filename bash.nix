@@ -128,7 +128,7 @@ eval "$(direnv hook bash)"
       elif ls *.swift >/dev/null 2>&1 && command -v swift >/dev/null 2>&1; then
         echo "  v$(swift --version | head -n 1 | awk '{print $4}')"
       elif ls *.nix >/dev/null 2>&1; then
-        echo -e "\e[33m  nix v$(nix --version | awk '{print $3}')"
+        echo -e "\e[35m  nix v$(nix --version | awk '{print $3}')"
       elif [[ -f Dockerfile ]]; then
         echo "   docker"
       elif ls *.md >/dev/null 2>&1; then
@@ -149,7 +149,7 @@ get_dir_name() {
 parse_git_branch() {
   local branch=$(git branch --show-current 2> /dev/null)
   if [ -n "$branch" ]; then
-    echo -e "\e[37m  \e[36m$branch"
+    echo -e "\e[33m  \e[36m$branch"
   fi
 }
 
