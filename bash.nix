@@ -208,6 +208,7 @@ fi
 }
 
 ranger_fetch() {
+echo "\n"
 Music_fetch
 Host_fetch
 kernel_fetch
