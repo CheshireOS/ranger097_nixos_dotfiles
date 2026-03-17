@@ -154,7 +154,7 @@ parse_git_branch() {
 }
 
 song_playing=$(playerctl metadata --format "{{ artist }} - {{ title }}" 2>/dev/null)
-fetch() {
+Music_fetch() {
 if [ $? -eq 0 ]; then
    echo "Now Playing: $song_playing"
 else
@@ -162,14 +162,55 @@ else
 fi
 }
 
-Nix_version=$(nix --version | awk '{print $3}')
-Nnix_version() {
+system_version=$(nix --version | awk '{print $3}')
+Nix_fetch() {
 if [ $? -eq 0 ]; then
-   echo "Nix Version: $Nix_version"
+   echo "Nix Version: $system_version"
 else
    echo "How the fuck you dont have a nix version?"
 fi
 }
+
+host_name=$(hostnamectl | awk 'NR==1 {print $3}')
+Host_fetch() {
+if [ $? -eq 0 ]; then
+   echo "Hostname: $host_name"
+else
+   echo "How the fuck you dont have a host name"
+fi
+}
+
+Operating_system=$(hostnamectl | awk 'NR==6 {print $3, $4, $5 }')
+OS_fetch() {
+if [ $? -eq 0 ]; then
+   echo "Operating System: $Operating_system"
+else
+   echo "How the fuck do you not have an operating system"
+fi
+}
+
+Kernel_version=$(hostnamectl | awk 'NR==8 {print $1, $2, $3}')
+kernel_fetch() {
+if [ $? -eq 0 ]; then
+   echo "$Kernel_version"
+else
+   echo "Bro really"
+fi
+}
+
+IP_address=$(curl icanhazip.com)
+if [ $? -eq 0 ]; then
+   echo "IP: $IP_address"
+else
+   echo "NO IP ADDRESS"
+fi
+
+
+
+
+
+
+
 
 '';
 
