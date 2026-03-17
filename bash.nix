@@ -165,7 +165,7 @@ fi
 system_version=$(nix --version | awk '{print $3}')
 function Nix_fetch {
 if [ $? -eq 0 ]; then
-   echo "NV: $system_version"
+   echo "NV: NixOS $system_version"
 else
    echo "How the fuck you dont have a nix version?"
 fi
