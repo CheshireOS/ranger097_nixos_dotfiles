@@ -32,12 +32,12 @@ psk = "$WIFI_PW"; };
     };
   };
 };
+
 systemd.user.services.riseup-vpn = {
-  description = "RiseupVPN Autostart and Autoconnect";
+  description = "RiseupVPN Autostart";
   wantedBy = [ "graphical-session.target" ];
-  partOf = [ "graphical-session.target" ];
   serviceConfig = {
-    ExecStart = "${pkgs.riseup-vpn}/bin/riseup-vpn --start";
+    ExecStart = "${pkgs.riseup-vpn}/bin/riseup-vpn --start-vpn on";
     Restart = "on-failure";
   };
 };
