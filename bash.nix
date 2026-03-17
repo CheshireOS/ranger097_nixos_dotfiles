@@ -181,7 +181,7 @@ fi
 }
 
 Operating_system=$(hostnamectl | awk 'NR==6 {print $3, $4, $5 }')
-OS_fetch() {
+function OS_fetch {
 if [ $? -eq 0 ]; then
    echo "Operating System: $Operating_system"
 else
@@ -208,7 +208,7 @@ fi
 }
 
 ranger_fetch() {
-$OS_fetch
+OS_fetch
 
 
 
