@@ -11,7 +11,8 @@ min-height: 0;
 }
 
 window#waybar {
-background: linear-gradient(0deg, @waybar-bg);
+#background-color: @waybar-bg;
+background-color: rgba(0,0,0,0.8);
 border-bottom: 1px solid #000000;
 }
 
