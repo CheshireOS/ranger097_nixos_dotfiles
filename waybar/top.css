@@ -30,7 +30,7 @@ font-weight: 500;
 background-color: @color0;
 color: @color10;
 margin-right: 7px;
-border-radius: 8px;
+border-radius: 0px;
 border: 1px solid @waybar-bg;
 box-shadow: -1px 1px 4px rgba(0,0,0,0.0);
 text-shadow: none;
