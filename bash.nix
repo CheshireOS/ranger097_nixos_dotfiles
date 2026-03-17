@@ -205,9 +205,21 @@ fi
 
 function ascii_art {
 cat <<- "EOF"
- ┬┬┬─┐┌─┐┌─┐┬ ┬┬
- ││├┬┘├─┤│  ├─┤│
-└┘┴┴└─┴ ┴└─┘┴ ┴┴
+    .S   .S   .S_sSSs     .S_SSSs      sSSs   .S    S.    .S  
+   .SS  .SS  .SS~YS%%b   .SS~SSSSS    d%%SP  .SS    SS.  .SS  
+   S%S  S%S  S%S   `S%b  S%S   SSSS  d%S'    S%S    S%S  S%S  
+   S%S  S%S  S%S    S%S  S%S    S%S  S%S     S%S    S%S  S%S  
+   S&S  S&S  S%S    d*S  S%S SSSS%S  S&S     S%S SSSS%S  S&S  
+   S&S  S&S  S&S   .S*S  S&S  SSS%S  S&S     S&S  SSS&S  S&S  
+   S&S  S&S  S&S_sdSSS   S&S    S&S  S&S     S&S    S&S  S&S  
+   S&S  S&S  S&S~YSY%b   S&S    S&S  S&S     S&S    S&S  S&S  
+   d*S  S*S  S*S   `S%b  S*S    S&S  S*b     S*S    S*S  S*S  
+  .S*S  S*S  S*S    S%S  S*S    S*S  S*S.    S*S    S*S  S*S  
+sdSSS   S*S  S*S    S&S  S*S    S*S   SSSbs  S*S    S*S  S*S  
+YSSY    S*S  S*S    SSS  SSS    S*S    YSSP  SSS    S*S  S*S  
+        SP   SP                 SP                  SP   SP   
+        Y    Y                  Y                   Y    Y    
+                                                              
 EOF
 
 }
