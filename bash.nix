@@ -177,9 +177,9 @@ Operating_system=$(hostnamectl | awk 'NR==6 {print $3, $4, $5 }')
 function OS_fetch {
 fmt_os=$(printf "%-26.26s" "$Operating_system")
 if [ $? -eq 0 ]; then
-   echo -e "\e[31m│     \e[32m  \e[36m$fmt_os\e[31m│"
+   echo -e "\e[31m│    \e[32m  \e[36m$fmt_os\e[31m│"
 else
-   echo -e "\e[31m│     \e[32m  \e[36mHow the fuck do you not have an operating system$fmt_os\e[31m│"
+   echo -e "\e[31m│    \e[32m  \e[36mHow the fuck do you not have an operating system$fmt_os\e[31m│"
 fi
 }
 
@@ -187,9 +187,9 @@ Kernel_version=$(hostnamectl | awk 'NR==8 {print $2, $3}')
 function kernel_fetch {
 fmt_kernel=$(printf "%-26.26s" "$Kernel_version")
 if [ $? -eq 0 ]; then
-   echo -e "\e[31m│     \e[32m  \e[36m$fmt_kernel\e[31m│"
+   echo -e "\e[31m│    \e[32m  \e[36m$fmt_kernel\e[31m│"
 else
-   echo -e "\e[31m│     \e[32m  \e[36mBro really$fmt_kernel\e[31m│"
+   echo -e "\e[31m│    \e[32m  \e[36mBro really$fmt_kernel\e[31m│"
 fi
 }
 
@@ -197,9 +197,9 @@ IP_address=$(curl icanhazip.com 2> /dev/null )
 function IP_fetch {
 fmt_ip=$(printf "%-26.26s" "$IP_address")
 if [ $? -eq 0 ]; then
-   echo -e "\e[31m│     \e[32m󰖩  \e[36m$fmt_ip\e[31m│"
+   echo -e "\e[31m│    \e[32m󰖩  \e[36m$fmt_ip\e[31m│"
 else
-   echo -e "\e[31m│     \e[32m󰖩  \e[36mNO IP ADDRESS$fmt_ip\e[31m│"
+   echo -e "\e[31m│    \e[32m󰖩  \e[36mNO IP ADDRESS$fmt_ip\e[31m│"
 fi
 }
 
@@ -225,7 +225,7 @@ Host_fetch
 kernel_fetch 
 OS_fetch 
 IP_fetch 
-echo -e "\e[31m│                                       \e[31m│"
+echo -e "\e[31m│                                 \e[31m│"
 echo -e "\e[31m╰─────────────────────────────────╯"
 }
 
