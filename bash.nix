@@ -206,6 +206,15 @@ else
    echo "NO IP ADDRESS"
 fi
 }
+
+ranger_fetch() {
+$OS_fetch
+
+
+
+}
+
+
 '';
 
 promptInit = ''
