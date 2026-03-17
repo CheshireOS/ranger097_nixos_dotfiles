@@ -155,7 +155,7 @@ parse_git_branch() {
 
 song_playing=$(playerctl metadata --format "{{ artist }} - {{ title }}" 2>/dev/null)
 fetch() {
-if [ -n $? -eq 0 ]; then
+if [ $? -eq 0 ]; then
    echo "Now Playing: $song_playing"
 else
    echo "No Music Playing."
