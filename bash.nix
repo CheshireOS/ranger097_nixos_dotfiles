@@ -156,7 +156,7 @@ parse_git_branch() {
 song_playing=$(playerctl metadata --format "{{ artist }} - {{ title }}" 2>/dev/null)
 function Music_fetch {
 if [ $? -eq 0 ]; then
-   echo "Now Playing: $song_playing"
+   echo "NP: $song_playing"
 else
    echo "No Music Playing."
 fi
@@ -165,7 +165,7 @@ fi
 system_version=$(nix --version | awk '{print $3}')
 function Nix_fetch {
 if [ $? -eq 0 ]; then
-   echo "Nix Version: $system_version"
+   echo "NV: $system_version"
 else
    echo "How the fuck you dont have a nix version?"
 fi
@@ -174,7 +174,7 @@ fi
 host_name=$(hostnamectl | awk 'NR==1 {print $3}')
 function Host_fetch {
 if [ $? -eq 0 ]; then
-   echo "Hostname: $host_name"
+   echo "HN: $host_name"
 else
    echo "How the fuck you dont have a host name"
 fi
@@ -183,16 +183,16 @@ fi
 Operating_system=$(hostnamectl | awk 'NR==6 {print $3, $4, $5 }')
 function OS_fetch {
 if [ $? -eq 0 ]; then
-   echo "Operating System: $Operating_system"
+   echo "OS: $Operating_system"
 else
    echo "How the fuck do you not have an operating system"
 fi
 }
 
-Kernel_version=$(hostnamectl | awk 'NR==8 {print $1, $2, $3}')
+Kernel_version=$(hostnamectl | awk 'NR==8 {print $2, $3}')
 function kernel_fetch {
 if [ $? -eq 0 ]; then
-   echo "$Kernel_version"
+   echo "KN: $Kernel_version"
 else
    echo "Bro really"
 fi
