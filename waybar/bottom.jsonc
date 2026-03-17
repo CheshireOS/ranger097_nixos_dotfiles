@@ -26,6 +26,7 @@
     "custom/volume"
     ],
     "modules-right": [
+    "tray",
     "wireplumber",
     "network", 
     "bluetooth"
@@ -129,6 +130,12 @@
 "format": "{icon}Bluetooth",
 "format-icons": [ " ", "󰂱 "],
 "on-click": "blueman-manager"
+},
+
+"tray": { 
+"icon-size": 21,
+"spacing": 10
 }
+
 
 }
