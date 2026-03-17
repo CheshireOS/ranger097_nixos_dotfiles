@@ -207,11 +207,11 @@ top_ascii="┏┓╻   ╻   ╻ ╻   ┏━┓   ┏━┓"
 mid_ascii="┃┗┫   ┃   ┏╋┛   ┃ ┃   ┗━┓"
 bot_ascii="╹ ╹   ╹   ╹ ╹   ┗━┛   ┗━┛"
 function ascii_art {
-echo -e "\e[31m│                                       \e[31m│"
+echo -e "\e[31m│                                 \e[31m│"
 echo -e "\e[31m│    \e[32m$top_ascii    \e[31m│"
 echo -e "\e[31m│    \e[32m$mid_ascii    \e[31m│"
 echo -e "\e[31m│    \e[32m$bot_ascii    \e[31m│"
-echo -e "\e[31m│                                       \e[31m│"
+echo -e "\e[31m│                                 \e[31m│"
 }
 
 
