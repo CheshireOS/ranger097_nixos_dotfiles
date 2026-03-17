@@ -175,11 +175,9 @@ fi
 
 Operating_system=$(hostnamectl | awk 'NR==6 {print $3, $4, $5 }')
 function OS_fetch {
-local Spaces
-Spaces=$(echo " ")
-Padding=$(printf "%-14.14s" "$Spaces")
+fmt_os=$(printf "%-35.35s" "$Operating_system")
 if [ $? -eq 0 ]; then
-   echo -e "\e[31m│ \e[32m  \e[36m$Operating_system $Padding\e[31m│"
+   echo -e "\e[31m│ \e[32m  \e[36m$fmt_os\e[31m│"
 else
    echo -e "\e[31m│ \e[32m  \e[36mHow the fuck do you not have an operating system $Padding\e[31m│"
 fi
