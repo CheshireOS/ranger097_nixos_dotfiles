@@ -198,20 +198,14 @@ else
 fi
 }
 
-IP_address=$(curl icanhazip.com 2>/dev/null)
+IP_address=$(curl icanhazip.com 2> /dev/null )
+IP_fetch() {
 if [ $? -eq 0 ]; then
    echo "IP: $IP_address"
 else
    echo "NO IP ADDRESS"
 fi
-
-
-
-
-
-
-
-
+}
 '';
 
 promptInit = ''
