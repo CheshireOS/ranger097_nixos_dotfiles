@@ -11,22 +11,16 @@
     "margin-right" : 0,
     "modules-left": [
     "custom/power",
-   // "custom/nixos",
-    "custom/themes"
+    "custom/themes",
+    "tray"
     ],
     "modules-center": [
     "custom/qmmp",
     "custom/code",
-   // "custom/firefox",
     "custom/ghostty",
-   // "custom/blender",
-   // "custom/dolphin",
-   // "custom/steam",
-   // "custom/discord",
     "custom/volume"
     ],
     "modules-right": [
-    "tray",
     "wireplumber",
     "network", 
     "bluetooth"
