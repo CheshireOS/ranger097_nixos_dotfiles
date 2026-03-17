@@ -61,7 +61,7 @@ android-studio-full
 wireguard-tools
 elephant
 timg
-
+nm-applet
 ];
 
 fonts.packages = with pkgs;[
