@@ -192,9 +192,9 @@ fi
 IP_address=$(curl icanhazip.com 2> /dev/null )
 function IP_fetch {
 if [ $? -eq 0 ]; then
-   echo "󰖩  $IP_address"
+   echo "\[\e[36m\]󰖩  $IP_address"
 else
-   echo "󰖩  NO IP ADDRESS"
+   echo "\[\e[36m\]󰖩  NO IP ADDRESS"
 fi
 }
 
