@@ -159,19 +159,17 @@ fmt_song=$(printf "%-35.35s" "$song_playing")
 if [ $? -eq 0 ]; then
    echo -e "\e[31m│ \e[32m  \e[36m$fmt_song\e[31m│"
 else
-   echo -e "\e[31m│ \e[32m  \e[36mNo Music Playing. $Padding\e[31m│"
+   echo -e "\e[31m│ \e[32m  \e[36mNo Music Playing.$fmt_song\e[31m│"
 fi
 }
 
 host_name=$(hostnamectl | awk 'NR==1 {print $3}')
 function Host_fetch {
-local Spaces
-Spaces=$(echo " ")
-Padding=$(printf "%-27.27s" "$Spaces")
+fmt_host=$(printf "%-35.35s" "$host_name")
 if [ $? -eq 0 ]; then
-   echo -e "\e[31m│ \e[32m󰐝  \e[36m$host_name $Padding\e[31m│"
+   echo -e "\e[31m│ \e[32m󰐝  \e[36m$fmt_host\e[31m│"
 else
-   echo -e "\e[31m│ \e[32m󰐝  \e[36mHow the fuck you dont have a host name $Padding\e[31m│"
+   echo -e "\e[31m│ \e[32m󰐝  \e[36mHow the fuck you dont have a host name$fmt_host\e[31m│"
 fi
 }
 
