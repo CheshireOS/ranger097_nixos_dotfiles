@@ -62,6 +62,7 @@ wireguard-tools
 elephant
 timg
 networkmanagerapplet
+xdg-desktop-portal-gtk
 ];
 
 fonts.packages = with pkgs;[
