@@ -204,7 +204,7 @@ fi
 }
 
 ranger_fetch() {
-local img_path="/home/ranger/ranger097_nixos_dotfiles/wallpapers/Transparent/Metagross.png"
+local img_path="/home/ranger/Downloads/4ef7748aae1eee9f9140c5ebf1649bcb.gif"
 timg -g 35x35 "$img_path"
 echo -e "\e[31m╭───────────────────────────────────────╮"
 Music_fetch 
