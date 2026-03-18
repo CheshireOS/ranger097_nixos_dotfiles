@@ -2,7 +2,7 @@
 
 #FONT_SETTINGS
 font-family = Maple Mono NF
-font-size = 13
+font-size = 14
 font-style-bold = Bold
 font-style = Regular
 
@@ -25,4 +25,4 @@ background-image-repeat = false
 cursor-style = underline
 #cursor-color = #DBBA95
 cursor-style-blink = true
-adjust-cursor-thickness = 400%
+adjust-cursor-thickness = 600%
