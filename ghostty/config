@@ -2,16 +2,16 @@
 
 #FONT_SETTINGS
 font-family = Maple Mono NF
-font-size = 12
+font-size = 13
 font-style-bold = Bold
 font-style = Regular
 
 #WINDOW_SETTINGS
 window-padding-x = 20
-window-padding-y = 20
+window-padding-y = 30
 
 #BACKGROUND_SETTINGS
-background-opacity = 0.8
+background-opacity = 0.9
 background = #000000
 #foreground = #909090
 #background-image = /home/ranger/ranger097_nixos_dotfiles/wallpapers/Guweiz/893152-digital-art-women-smoking-Bad-guys-legs-artwork.jpg
