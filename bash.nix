@@ -257,7 +257,7 @@ line_pad=$(( (term_width - line_len) / 2 ))
 printf "%''${line_pad}s%b\n" "" "$line"
 done
 
-color_line="\e[31m│    \e[32m  \e[31m󰟪 \e[32m󰟪 \e[33m󰟪 \e[34m󰟪 \e[35m󰟪 \e[36m󰟪 \e[37m󰟪             \e[31m│""
+color_line="\e[31m│    \e[32m  \e[31m󰟪 \e[32m󰟪 \e[33m󰟪 \e[34m󰟪 \e[35m󰟪 \e[36m󰟪 \e[37m󰟪             \e[31m│"
 color_line_len=$(echo -ne "$top_line" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
 top_pad=$(( (term_width - color_line_len) / 2 ))
 printf "%''${top_pad}s%b\n" "" "\e[31m$color_line\e[0m"
