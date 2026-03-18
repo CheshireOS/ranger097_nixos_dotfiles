@@ -279,10 +279,11 @@ echo -e "\n"
 }
 
 ranger_fetch
+printf '\033[3 q'
 '';
 
 promptInit = ''
-PS1="\n\[\e[31m\]╭─\[\e[36m\]\$(get_dir_name)\$(parse_git_branch)\[\e[32m\]\$(get_lang_info)\[\e[35m\]\n\[\e[31m\]╰─\[\e[36m\]〉\[\e[0m\]"
+PS1="\n\[\e[31m\]╭──\[\e[36m\]\$(get_dir_name)\$(parse_git_branch)\[\e[32m\]\$(get_lang_info)\[\e[35m\]\n\[\e[31m\]╰─\[\e[36m\]〉\[\e[0m\]"
 '';
 
 };
