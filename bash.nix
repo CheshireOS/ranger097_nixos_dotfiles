@@ -221,10 +221,18 @@ top_line_len=$(echo -ne "$top_line" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
 top_pad=$(( (term_width - top_line_len) / 2 ))
 printf "%''${top_pad}s%b\n" "" "\e[31m$top_line\e[0m"
 
+ascii_art | while read -r line; do
+line_len=$(echo -ne "$line" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
+line_pad=$(( (term_width - line_len) / 2 ))
+printf "%''${line_pad}s%b\n" "" "$line"
+done
 
-ascii_line_len=$(echo -ne "$ascii_art" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
-ascii_pad=$(( (term_width - ascii_line_len) / 2 ))
-printf "%''${ascii_pad}s%b\n" "" "\e[31m$ascii_art"
+
+
+
+
+
+
 
 ranger_fetch() {
 echo -e "\e[31m╭─────────────────────────────────╮"
