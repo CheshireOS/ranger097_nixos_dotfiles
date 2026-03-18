@@ -215,9 +215,9 @@ echo -e "\e[31m│    \e[32m$bot_ascii    \e[31m│"
 echo -e "\e[31m│                                 \e[31m│"
 }
 
-local term_width=$(tput cols)
-local top_len=${"╭─────────────────────────────────╮"}
-local top_pad=$(( (term_width - line_line) / 2 ))
+term_width=$(tput cols)
+top_len=${"╭─────────────────────────────────╮"}
+top_pad=$(( (term_width - line_line) / 2 ))
 echo "Top_pad: $top_pad"
 
 ranger_fetch() {
