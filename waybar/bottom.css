@@ -3,8 +3,12 @@
 @import "../../.cache/wal/colors-waybar-rgba.css";
 
 window#waybar {
-background: linear-gradient(rgba(0,0,0,0.0));
+background: linear-gradient(rgba(0,0,0,1));
 border-top: 0px solid @nice-border;
+}
+
+window#waybar:hover {
+background-color: @color0;
 }
 
 #tray,
@@ -28,7 +32,7 @@ border-top: 0px solid @nice-border;
 padding-top: 4px;
 padding-bottom: 4px;
 margin-top: 0px;
-margin-bottom: 7px;
+margin-bottom: 0px;
 margin-right: 7px;
 border: 0px solid @color9;
 border-radius: 0px;
@@ -43,11 +47,11 @@ padding-right: 10px;
 }
 
 #bluetooth {
-margin-right: 7px;
+margin-right: 10px;
 }
 
 #custom-power {
-margin-left: 7px;
+margin-left: 10px;
 }
 
 #wireplumber:hover,
@@ -71,6 +75,3 @@ color: @accent-color;
 background: @color0;
 }
 
-#custom-volume {
-margin-right: 5px;
-}

@@ -16,6 +16,10 @@ background-color: rgba(0, 0, 0, 1);
 border-bottom: 0px solid #000000;
 }
 
+window#waybar:hover {
+background-color: @color0;
+}
+
 #window, #workspaces,
 #clock, #custom-vpn_ip,
 #battery, #mpris {
