@@ -265,12 +265,10 @@ color_line_len=$(echo -ne "$top_line" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
 top_pad=$(( (term_width - color_line_len) / 2 ))
 printf "%''${top_pad}s%b\n" "" "\e[31m$color_line\e[0m"
 
-
 space_line="\e[31m│                                 \e[31m│"
 space_line_len=$(echo -ne "$space_line" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
 top_pad=$(( (term_width - space_line_len) / 2 ))
 printf "%''${top_pad}s%b\n" "" "\e[31m$space_line\e[0m"
-
 
 bottom_line="\e[31m╰─────────────────────────────────╯"
 bottom_line_len=$(echo -ne "$bottom_line" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
@@ -284,7 +282,7 @@ ranger_fetch
 '';
 
 promptInit = ''
-PS1="\n\[\e[31m\]╭──\[\e[36m\]\$(get_dir_name)\$(parse_git_branch)\[\e[32m\]\$(get_lang_info)\[\e[35m\]\n\[\e[31m\]╰─\[\e[36m\]〉\[\e[0m\]"
+PS1="\n\[\e[31m\]   ╭──\[\e[36m\]\$(get_dir_name)\$(parse_git_branch)\[\e[32m\]\$(get_lang_info)\[\e[35m\]\n\[\e[31m\]   ╰─\[\e[36m\]〉\[\e[0m\]"
 '';
 
 };
