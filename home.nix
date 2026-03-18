@@ -97,11 +97,11 @@ general {
 #GAPS
 gaps_in = 6
 gaps_out = 30
-border_size = 2
+border_size = 1
 
 #BORDER
-col.active_border = $color3 $color10 45deg
-col.inactive_border = $color3 $color10 45deg
+col.active_border = #000000
+col.inactive_border = #000000
 
 #BORDER_ANIMATION
 animations {
