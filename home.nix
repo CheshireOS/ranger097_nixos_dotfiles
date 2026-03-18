@@ -95,9 +95,9 @@ permission = /usr/(bin|local/bin)/hyprpm, plugin, allow
 #SETTINGS_START
 general {
 #GAPS
-gaps_in = 5
+gaps_in = 6
 gaps_out = 30
-border_size = 1
+border_size = 2
 
 #BORDER
 col.active_border = $color3 $color10 45deg
