@@ -216,9 +216,10 @@ echo -e "\e[31m│                                 \e[31m│"
 }
 
 term_width=$(tput cols)
-top_len=${"╭─────────────────────────────────╮"}
-top_pad=$(( (term_width - line_line) / 2 ))
-echo "Top_pad: $top_pad"
+top_line="╭─────────────────────────────────╮"
+top_line_len=$(echo -e "$top_line" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
+top_pad=$(( (term_width - top_line_len) / 2 ))
+printf "%${top_pad}s%s\n" "" "$top_line"
 
 ranger_fetch() {
 echo -e "\e[31m╭─────────────────────────────────╮"
