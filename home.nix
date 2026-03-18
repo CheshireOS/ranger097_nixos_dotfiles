@@ -100,8 +100,8 @@ gaps_out = 30
 border_size = 1
 
 #BORDER
-col.active_border = $color3 $color0 45deg
-col.inactive_border = $color3 $color0 45deg
+col.active_border = $color3 $color10 45deg
+col.inactive_border = $color3 $color10 45deg
 
 #BORDER_ANIMATION
 animations {
