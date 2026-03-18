@@ -215,6 +215,7 @@ echo -e "\e[31m│    \e[32m$bot_ascii    \e[31m│"
 echo -e "\e[31m│                                 \e[31m│"
 }
 
+ranger_fetch() {
 term_width=$(tput cols)
 top_line="╭─────────────────────────────────╮"
 top_line_len=$(echo -ne "$top_line" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
@@ -262,17 +263,18 @@ color_line_len=$(echo -ne "$top_line" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
 top_pad=$(( (term_width - color_line_len) / 2 ))
 printf "%''${top_pad}s%b\n" "" "\e[31m$color_line\e[0m"
 
-ranger_fetch() {
-echo -e "\e[31m╭─────────────────────────────────╮"
-ascii_art
-Music_fetch 
-Host_fetch 
-kernel_fetch 
-OS_fetch 
-IP_fetch 
-echo -e "\e[31m│    \e[32m  \e[31m󰟪 \e[32m󰟪 \e[33m󰟪 \e[34m󰟪 \e[35m󰟪 \e[36m󰟪 \e[37m󰟪             \e[31m│"
-echo -e "\e[31m│                                 \e[31m│"
-echo -e "\e[31m╰─────────────────────────────────╯"
+
+space_line="\e[31m│                                 \e[31m│"
+space_line_len=$(echo -ne "$space_line" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
+top_pad=$(( (term_width - space_line_len) / 2 ))
+printf "%''${top_pad}s%b\n" "" "\e[31m$space_line\e[0m"
+
+
+bottom_line="\e[31m╰─────────────────────────────────╯"
+bottom_line_len=$(echo -ne "$bottom_line" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
+top_pad=$(( (term_width - space_line_len) / 2 ))
+printf "%''${top_pad}s%b\n" "" "\e[31m$bottom_line\e[0m"
+
 }
 
 ranger_fetch
