@@ -31,8 +31,8 @@ background-color: @color0;
 #custom-volume {
 padding-top: 4px;
 padding-bottom: 4px;
-margin-top: 0px;
-margin-bottom: 0px;
+margin-top: 2px;
+margin-bottom: 2px;
 margin-right: 7px;
 border: 0px solid @color9;
 border-radius: 0px;

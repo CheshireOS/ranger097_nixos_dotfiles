@@ -97,7 +97,7 @@ general {
 #GAPS
 gaps_in = 6
 gaps_out = 30
-border_size = 1
+border_size = 2
 
 #BORDER
 col.active_border = rgba(0,0,0,1)
