@@ -216,7 +216,7 @@ echo -e "\e[31m│                                 \e[31m│"
 }
 
 local term_width=$(tput cols)
-local top_len=${╭─────────────────────────────────╮}
+local top_len=${"╭─────────────────────────────────╮"}
 local top_pad=$(( (term_width - line_line) / 2 ))
 echo "Top_pad: $top_pad"
 
