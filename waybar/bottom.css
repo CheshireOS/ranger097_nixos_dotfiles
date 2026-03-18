@@ -27,10 +27,10 @@ border-top: 0px solid @nice-border;
 #custom-volume {
 padding-top: 4px;
 padding-bottom: 4px;
-margin-top: 7px;
+margin-top: 0px;
 margin-bottom: 7px;
 margin-right: 7px;
-border: 2px solid @color9;
+border: 0px solid @color9;
 border-radius: 0px;
 font-family: Maple Mono NF;
 font-size: 12px;
