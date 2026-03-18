@@ -100,8 +100,8 @@ gaps_out = 30
 border_size = 1
 
 #BORDER
-col.active_border = #000000
-col.inactive_border = #000000
+col.active_border = rgba(0,0,0,1)
+col.inactive_border = rgba(0,0,0,1)
 
 #BORDER_ANIMATION
 animations {
