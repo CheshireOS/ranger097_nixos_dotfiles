@@ -11,6 +11,7 @@ hii = "sudo nano ~/ranger097_nixos_dotfiles/home.nix";
 wii = "cd ~/ranger097_nixos_dotfiles/waybar";
 cii = "cd ~/.config";
 ls = "lsd -a";
+clear = "clear && ranger_fetch";
 ytdownload = "yt-dlp -x --audio-format mp3 --audio-quality 0 --cookies-from-browser firefox --embed-metadata --embed-thumbnail --add-metadata";
 };
    
