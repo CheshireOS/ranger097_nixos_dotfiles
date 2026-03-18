@@ -95,19 +95,19 @@ permission = /usr/(bin|local/bin)/hyprpm, plugin, allow
 #SETTINGS_START
 general {
 #GAPS
-gaps_in = 3
+gaps_in = 4
 gaps_out = 30
 border_size = 1
 
 #BORDER
-col.active_border = rgba(0,0,0,1.0)
-col.inactive_border = rgba(0,0,0,1.0)
+col.active_border = $color11 $color9 45deg
+col.inactive_border = $color11 $color9 45deg
 
 #BORDER_ANIMATION
-#animations {
-#bezier = linear, 0.0, 0.0, 0.0, 0.0
-#animation = borderangle, 1, 200, linear, loop
-#}
+animations {
+bezier = linear, 0.0, 0.0, 0.0, 0.0
+animation = borderangle, 1, 200, linear, loop
+}
 
 #ALTERNATIVE
 resize_on_border = true
