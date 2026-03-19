@@ -3,7 +3,7 @@
 @import "../../.cache/wal/colors-waybar-rgba.css";
 
 window#waybar {
-background: linear-gradient(rgba(0,0,0,1));
+background: linear-gradient(rgba(0,0,0,0.7));
 border-top: 2px solid @color6;
 }
 
