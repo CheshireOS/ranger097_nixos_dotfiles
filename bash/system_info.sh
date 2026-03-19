@@ -102,6 +102,8 @@ line_pad=$(( (term_width - line_len) / 2 ))
 printf "%''${line_pad}s%b\n" "" "$line"
 done
 
+echo -e "\e[31m│                                     \e[31m│"
+
 Music_fetch | while read -r line; do
 line_len=$(echo -ne "$line" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
 line_pad=$(( (term_width - line_len) / 2 ))
