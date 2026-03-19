@@ -2,11 +2,11 @@
 
 {
   imports = [ 
-    ./cosmic.nix
-    ./hyprland.nix
+    ./desktops/cosmic.nix
+    ./desktops/hyprland.nix
     ./packages.nix
-    ./bash.nix
-    ./wifi.nix
+    ./bash/bash.nix
+    ./wifi/wifi.nix
   ];
 
   # Bootloader & Kernel
