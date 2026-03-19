@@ -100,8 +100,8 @@ gaps_out = 12
 border_size = 2
 
 #BORDER
-col.active_border = rgba(0,0,0,1)
-col.inactive_border = rgba(0,0,0,1)
+col.active_border = $color3
+col.inactive_border = $color5
 
 #BORDER_ANIMATION
 animations {
@@ -125,13 +125,13 @@ inactive_opacity = 1.0
 
 #SHADOW
 shadow {
-enabled = false
-range = 14
+enabled = true
+range = 3
 render_power = 4
-color = rgba(0,0,0,0.6)
+color = rgba(0,0,0,1)
 offset = -3 1
-sharp = false
-scale = 0.99
+sharp = true
+scale = 1.0
 }
 
 #BLUR
