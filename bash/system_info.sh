@@ -173,12 +173,10 @@ elif [[ $(tput lines) -ge 12 && $(tput cols) -ge 48 ]]; then
    clear
    tput cnorm
 else
-tput civis
-gomatrix >/dev/null
-echo -e "\e]11;#000000\a"
-read -s -n 1 -p ""
-pkill gomatrix
-tput cnorm
+(cat $HOME/.cache/wal/sequences &)
+cmatrix -x -s -a -o -n -C blue
+(cat $HOME/.cache/wal/sequences &)
 fi
 
 
+ 
