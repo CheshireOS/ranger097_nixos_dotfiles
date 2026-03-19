@@ -2,7 +2,7 @@
 
 song_playing=$(playerctl metadata --format "{{ artist }}" 2>/dev/null)
 function Music_fetch {
-fmt_song=$(printf "%-26.26s" "$song_playing")
+fmt_song=$(printf "%-30.30s" "$song_playing")
 if [ $? -eq 0 ]; then
    echo -e "\e[31m│    \e[32m  \e[36m$fmt_song\e[31m│"
 else
