@@ -19,7 +19,7 @@ echo " Building system flake..."
 sudo nixos-rebuild switch --flake .#deoxy --quiet 
 wait
 echo " Updated dotfiles and system flake."
-}
+} >/dev/null
 
 jgit() {
 echo " Entering dotfiles  on main."
@@ -43,7 +43,7 @@ if ! sudo nixos-rebuild switch --flake .#jirachi --quiet; then
 fi
 wait
 echo " Updated dotfiles and system flake."
-}
+} >/dev/null
 
 get_dir_name() {
     case "$PWD" in
