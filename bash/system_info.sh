@@ -54,11 +54,11 @@ top_ascii="┏┓╻   ╻   ╻ ╻   ┏━┓   ┏━┓"
 mid_ascii="┃┗┫   ┃   ┏╋┛   ┃ ┃   ┗━┓"
 bot_ascii="╹ ╹   ╹   ╹ ╹   ┗━┛   ┗━┛"
 function ascii_art {
-echo -e "\e[31m│                                 \e[31m│"
+echo -e "\e[31m│                                     \e[31m│"
 echo -e "\e[31m│      \e[32m$top_ascii      \e[31m│"
 echo -e "\e[31m│      \e[32m$mid_ascii      \e[31m│"
 echo -e "\e[31m│      \e[32m$bot_ascii      \e[31m│"
-echo -e "\e[31m│                                 \e[31m│"
+echo -e "\e[31m│                                     \e[31m│"
 }
 
 function github_info {
@@ -71,9 +71,9 @@ fmt_update=$(printf "%-30.30s" "Last updated $update_time")
 fmt_forks=$(printf "%-30.30s" "Forks $forks_count")
 fmt_stars=$(printf "%-30.30s" "Stars $stars_count")
 echo -e "\e[31m│    \e[32m  \e[36m$fmt_name\e[31m│"
-echo -e "\e[31m│    \e[32m  \e[36m$fmt_update\e[31m│"
+echo -e "\e[31m│    \e[32m  \e[36m$fmt_stars\e[31m│"
 echo -e "\e[31m│    \e[32m  \e[36m$fmt_forks\e[31m│"
-echo -e "\e[31m│    \e[32m  \e[36m$fmt_stars\e[31m│"
+echo -e "\e[31m│    \e[32m  \e[36m$fmt_update\e[31m│"
 
 }
 
@@ -132,7 +132,7 @@ line_pad=$(( (term_width - line_len) / 2 ))
 printf "%''${line_pad}s%b\n" "" "$line"
 done
 
-color_line="\e[31m│    \e[32m  \e[31m󰟪 \e[32m󰟪 \e[33m󰟪 \e[34m󰟪 \e[35m󰟪 \e[36m󰟪 \e[37m󰟪             \e[31m│"
+color_line="\e[31m│    \e[32m  \e[31m󰟪 \e[32m󰟪 \e[33m󰟪 \e[34m󰟪 \e[35m󰟪 \e[36m󰟪 \e[37m󰟪                 \e[31m│"
 color_line_len=$(echo -ne "$top_line" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
 top_pad=$(( (term_width - color_line_len) / 2 ))
 printf "%''${top_pad}s%b\n" "" "\e[31m$color_line\e[0m"
