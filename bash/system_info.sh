@@ -12,7 +12,7 @@ fi
 
 host_name=$(hostnamectl | awk 'NR==1 {print $3}')
 function Host_fetch {
-fmt_host=$(printf "%-26.26s" "$host_name")
+fmt_host=$(printf "%-30.30s" "$host_name")
 if [ $? -eq 0 ]; then
    echo -e "\e[31m│    \e[32m󰐝  \e[36m$fmt_host\e[31m│"
 else
@@ -22,7 +22,7 @@ fi
 
 Operating_system=$(hostnamectl | awk 'NR==6 {print $3, $4, $5 }')
 function OS_fetch {
-fmt_os=$(printf "%-26.26s" "$Operating_system")
+fmt_os=$(printf "%-30.30s" "$Operating_system")
 if [ $? -eq 0 ]; then
    echo -e "\e[31m│    \e[32m  \e[36m$fmt_os\e[31m│"
 else
@@ -32,7 +32,7 @@ fi
 
 Kernel_version=$(hostnamectl | awk 'NR==8 {print $2, $3}')
 function kernel_fetch {
-fmt_kernel=$(printf "%-26.26s" "$Kernel_version")
+fmt_kernel=$(printf "%-30.30s" "$Kernel_version")
 if [ $? -eq 0 ]; then
    echo -e "\e[31m│    \e[32m  \e[36m$fmt_kernel\e[31m│"
 else
@@ -42,7 +42,7 @@ fi
 
 IP_address=$(curl icanhazip.com 2> /dev/null )
 function IP_fetch {
-fmt_ip=$(printf "%-26.26s" "$IP_address")
+fmt_ip=$(printf "%-30.30s" "$IP_address")
 if [ $? -eq 0 ]; then
    echo -e "\e[31m│    \e[32m󰖩  \e[36m$fmt_ip\e[31m│"
 else
@@ -66,10 +66,10 @@ repo_name="ranger097"
 update_time=$(gh repo view ranger097_nixos_dotfiles --json updatedAt --template '{{.updatedAt | timeago}}')
 forks_count=$(gh repo view ranger097_nixos_dotfiles --json forkCount --jq '.forkCount')
 stars_count=$(gh repo view ranger097_nixos_dotfiles --json stargazerCount --jq '.stargazerCount')
-fmt_name=$(printf "%-26.26s" "$repo_name")
-fmt_update=$(printf "%-26.26s" "Last updated $update_time")
-fmt_forks=$(printf "%-26.26s" "Forks $forks_count")
-fmt_stars=$(printf "%-26.26s" "Stars $stars_count")
+fmt_name=$(printf "%-30.30s" "$repo_name")
+fmt_update=$(printf "%-30.30s" "Last updated $update_time")
+fmt_forks=$(printf "%-30.30s" "Forks $forks_count")
+fmt_stars=$(printf "%-30.30s" "Stars $stars_count")
 echo -e "\e[31m│    \e[32m  \e[36m$fmt_name\e[31m│"
 echo -e "\e[31m│    \e[32m  \e[36m$fmt_update\e[31m│"
 echo -e "\e[31m│    \e[32m  \e[36m$fmt_forks\e[31m│"
@@ -85,7 +85,7 @@ echo -e "\e[31m│    \e[32m  \e[36m$fmt_stars\e[31m│"
 ranger_fetch() {
 echo -e "\n"
 term_width=$(tput cols)
-top_line="╭─────────────────────────────────╮"
+top_line="╭─────────────────────────────────────╮"
 top_line_len=$(echo -ne "$top_line" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
 top_pad=$(( (term_width - top_line_len) / 2 ))
 printf "%''${top_pad}s%b\n" "" "\e[31m$top_line\e[0m"
@@ -142,7 +142,7 @@ space_line_len=$(echo -ne "$space_line" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
 top_pad=$(( (term_width - space_line_len) / 2 ))
 printf "%''${top_pad}s%b\n" "" "\e[31m$space_line\e[0m"
 
-bottom_line="\e[31m╰─────────────────────────────────╯"
+bottom_line="\e[31m╰─────────────────────────────────────╯"
 bottom_line_len=$(echo -ne "$bottom_line" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
 top_pad=$(( (term_width - space_line_len) / 2 ))
 printf "%''${top_pad}s%b\n" "" "\e[31m$bottom_line\e[0m"
