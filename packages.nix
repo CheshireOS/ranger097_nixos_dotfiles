@@ -70,6 +70,7 @@ yq
 xq
 pokeget-rs
 gomatrix
+tailscale
 ];
 
 fonts.packages = with pkgs;[
