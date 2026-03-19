@@ -24,14 +24,6 @@ source ~/ranger097_nixos_dotfiles/bash/update.sh
 source ~/ranger097_nixos_dotfiles/bash/git.sh
 source ~/ranger097_nixos_dotfiles/bash/wal.sh
 ranger_fetch
-
-function git_stars() {
-  gh repo view --json stargazerCount --template '{{.stargazerCount}}{{"\n"}}'
-}
-
-function git_forks() {
-  gh repo view --json forkCount --template '{{.forkCount}}{{"\n"}}'
-}
 printf "\e]10;%s\a" "$(sed -n '5p' ~/.cache/wal/colors)"
 echo -e "\e]11;#000000\a"
 '';
