@@ -97,11 +97,11 @@ general {
 #GAPS
 gaps_in = 6
 gaps_out = 12
-border_size = 1
+border_size = 3
 
 #BORDER
-col.active_border = $color4
-col.inactive_border = $color1
+col.active_border = rgba(0,0,0,1)
+col.inactive_border = rgba(0,0,0,1)
 
 #BORDER_ANIMATION
 animations {
@@ -128,7 +128,7 @@ shadow {
 enabled = true
 range = 2
 render_power = 4
-color = rgba(0,0,0,1)
+color = $color1
 offset = 0 0
 sharp = true
 scale = 1.0
