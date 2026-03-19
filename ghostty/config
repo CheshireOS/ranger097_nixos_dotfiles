@@ -9,6 +9,8 @@ font-style = Regular
 #WINDOW_SETTINGS
 window-padding-x = 10
 window-padding-y = 10
+confirm-close-surface = false
+
 
 #BACKGROUND_SETTINGS
 background-opacity = 1.0
@@ -26,3 +28,4 @@ cursor-style = underline
 #cursor-color = #DBBA95
 cursor-style-blink = true
 adjust-cursor-thickness = 600%
+
