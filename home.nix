@@ -94,7 +94,7 @@ general {
 #GAPS
 gaps_in = 6
 gaps_out = 12
-border_size = 5
+border_size = 7
 
 #BORDER
 col.active_border = rgba(0,0,0,1)
@@ -123,9 +123,9 @@ inactive_opacity = 1.0
 #SHADOW
 shadow {
 enabled = true
-range = 1
+range = 2
 render_power = 4
-color = $color1
+color = $color12
 offset = 0 0
 sharp = true
 scale = 1.0
