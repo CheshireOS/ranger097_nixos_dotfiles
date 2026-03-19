@@ -68,10 +68,10 @@ stars_count=$(gh repo view ranger097_nixos_dotfiles --json stargazerCount --jq '
 
 
 
-echo "Name: ranger097_nixos_dotfiles"
-echo "Stars: $stars_count"
-echo "Forks: $forks_count"
-echo "Updated: $update_time"
+echo "  ranger097_nixos_dotfiles"
+echo "  $stars_count"
+echo "  $forks_count"
+echo "  $update_time"
 }
 
 
