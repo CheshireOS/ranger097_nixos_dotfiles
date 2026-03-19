@@ -10,10 +10,23 @@ with open(toggle_file, 'r') as f:
 try:
     if x == 0:
         subprocess.Popen(["waybar", "-c", "/home/ranger/ranger097_nixos_dotfiles/waybar/top.jsonc", "-s", "/home/ranger/ranger097_nixos_dotfiles/waybar/top.css"])
-        subprocess.Popen(["waybar", "-c", "/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.jsonc", "-s", "/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.css"])
+        #subprocess.Popen(["waybar", "-c", "/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.jsonc", "-s", "/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.css"])
         with open(toggle_file, 'w') as f:
             f.write("1")
-    else:
+
+    elif x == 1:
+        subprocess.run(["pkill", "waybar"])
+        #subprocess.Popen(["waybar", "-c", "/home/ranger/ranger097_nixos_dotfiles/waybar/top.jsonc", "-s", "/home/ranger/ranger097_nixos_dotfiles/waybar/top.css"])
+        subprocess.Popen(["waybar", "-c", "/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.jsonc", "-s", "/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.css"])
+        with open(toggle_file, 'w') as f:
+            f.write("2")
+    elif x == 2:
+        subprocess.run(["pkill", "waybar"])
+        subprocess.Popen(["waybar", "-c", "/home/ranger/ranger097_nixos_dotfiles/waybar/top.jsonc", "-s", "/home/ranger/ranger097_nixos_dotfiles/waybar/top.css"])
+        subprocess.Popen(["waybar", "-c", "/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.jsonc", "-s", "/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.css"])
+        with open(toggle_file, 'w') as f:
+            f.write("3")
+    elif x == 3:
         subprocess.run(["pkill", "waybar"])
         with open(toggle_file, 'w') as f:
             f.write("0")
