@@ -25,9 +25,6 @@ source ~/ranger097_nixos_dotfiles/bash/git.sh
 source ~/ranger097_nixos_dotfiles/bash/wal.sh
 
 
-if [[$(tput lines) -ge 12 && $(tput cols) -ge 48 ]]; then
-   ranger_page
-fi
 
 printf "\e]10;%s\a" "$(sed -n '5p' ~/.cache/wal/colors)"
 echo -e "\e]11;#000000\a"
