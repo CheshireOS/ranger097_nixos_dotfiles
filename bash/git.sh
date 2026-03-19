@@ -37,7 +37,7 @@ wait
 echo " Github changes complete."
 wait
 echo " Building system flake..."
-if ! sudo nixos-rebuild switch --flake .#jirachi --quiet; then
+if ! sudo nixos-rebuild switch --flake .#jirachi --quiet >dev/null; then
    echo "FAILURE"
    return 1
 else
