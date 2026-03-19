@@ -100,8 +100,8 @@ gaps_out = 12
 border_size = 2
 
 #BORDER
-col.active_border = $color3
-col.inactive_border = $color5
+col.active_border = $color4
+col.inactive_border = $color1
 
 #BORDER_ANIMATION
 animations {
@@ -126,10 +126,10 @@ inactive_opacity = 1.0
 #SHADOW
 shadow {
 enabled = true
-range = 3
+range = 1
 render_power = 4
 color = rgba(0,0,0,1)
-offset = -3 1
+offset = 0 0
 sharp = true
 scale = 1.0
 }
