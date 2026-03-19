@@ -29,7 +29,7 @@ ranger_fetch
 
 function fns {
 stars=$(gh repo view --json stargazerCount,forkCount | awk "NR==3 {print $2}")
-echo "$stars"
+echo $stars
 
 }
 
