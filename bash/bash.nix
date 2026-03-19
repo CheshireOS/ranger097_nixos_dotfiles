@@ -31,6 +31,9 @@ function git_stars() {
   gh repo view --json stargazerCount --template '{{.stargazerCount}}{{"\n"}}'
 }
 
+function git_forks() {
+  gh repo view --json stargazerCount --template '{{.forkCount}}{{"\n"}}'
+}
 '';
 
 promptInit = ''
