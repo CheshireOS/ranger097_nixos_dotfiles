@@ -68,7 +68,7 @@ update_time=$(gh repo view ranger097_nixos_dotfiles --json updatedAt --template 
 forks_count=$(gh repo view ranger097_nixos_dotfiles --json forkCount --jq '.forkCount')
 stars_count=$(gh repo view ranger097_nixos_dotfiles --json stargazerCount --jq '.stargazerCount')
 fmt_name=$(printf "%-30.30s" "$repo_name")
-fmt_update=$(printf "%-30.30s" "Last updated $update_time")
+fmt_update=$(printf "%-30.30s" "Last push $update_time")
 fmt_forks=$(printf "%-30.30s" "Forks $forks_count")
 fmt_stars=$(printf "%-30.30s" "Stars $stars_count")
 echo -e "\e[31m│    \e[32m  \e[36m$fmt_name\e[31m│"
