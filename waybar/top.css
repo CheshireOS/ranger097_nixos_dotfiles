@@ -12,7 +12,7 @@ min-height: 0;
 
 window#waybar {
 /*background-color: @waybar-bg;*/
-background-color: rgba(0, 0, 0, 0.7);
+background: linear-gradient(rgba(0,0,0,0.7));
 border-bottom: 2px solid @color6;
 }
 
@@ -33,7 +33,7 @@ color: @accent-color;
 margin-right: 7px;
 border-radius: 0px;
 border: 0px solid #000000;
-box-shadow: -1px 1px 4px rgba(0,0,0,0.0);
+box-shadow: none;
 text-shadow: none;
 }
 
@@ -42,7 +42,7 @@ text-shadow: none;
 #battery:hover, #workspaces:hover {
 color: @accent-color;
 background: #000000;
-box-shadow: -2px 2px 4px rgba(0,0,0,0.6);
+box-shadow: none;
 text-shadow: none;
 -gtk-icon-shadow: none;    
 transition: none;

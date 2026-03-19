@@ -39,9 +39,9 @@ border-radius: 0px;
 font-family: Maple Mono NF;
 font-size: 12px;
 font-weight: 500;
-background: #000000;
+background: linear-gradient(rgba(0,0,0,0.0));
 color: @color10;
-box-shadow: -1px 1px 4px rgba(0,0,0,0.0);
+box-shadow: none;
 padding-left: 10px;
 padding-right: 10px;
 }
@@ -72,6 +72,6 @@ margin-left: 10px;
 #custom-dolphin:hover,
 #custom-volume:hover {
 color: @accent-color;
-background: #000000;
+background: linear-gradient(rgba(0,0,0,0.0));
 }
 
