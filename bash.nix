@@ -27,7 +27,7 @@ source ~/ranger097_nixos_dotfiles/bash/wal.sh
 #pokeget random --hide-name
 ranger_fetch
 
-forks_and_stars() {
+function fns {
 stars=$(gh repo view --json stargazerCount,forkCount | awk "NR==3 {print $2}")
 echo "$stars"
 
