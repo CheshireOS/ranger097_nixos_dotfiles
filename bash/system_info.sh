@@ -6,7 +6,7 @@ if [ playerctl metadata > /dev/null 2>&1 ]; then
    fmt_song=$(printf "%-30.30s" "$song_playing")
    echo -e "\e[31m│    \e[32m  \e[36m$fmt_song\e[31m│"
 else
-   fmt_song=$(printf "%-30.30s" "No Music Playing.")
+   fmt_song=$(printf "%-30.30s" "No music playing")
    echo -e "\e[31m│    \e[32m  \e[36m$fmt_song\e[31m│"
 fi
 }
