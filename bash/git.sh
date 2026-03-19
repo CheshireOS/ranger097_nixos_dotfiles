@@ -41,7 +41,7 @@ if ! sudo nixos-rebuild switch --flake .#jirachi --quiet; then
    echo "FAILURE"
    return 1
 else
-   sudo nixos-rebuild switch --flake .#jirachi --quiet > /dev/null
+   sudo nixos-rebuild switch --flake .#jirachi --quiet 
 fi
 wait
 echo " Updated dotfiles and system flake."
