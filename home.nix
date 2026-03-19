@@ -274,9 +274,6 @@ bind = SUPER, mouse_up, workspace, e-1
 bindm = SUPER, mouse:272, movewindow
 bindm = SUPER, mouse:273, resizewindow
 
-#hyprlock
-#bindl =, switch:on:Lid Switch, exec, hyprlock & systemctl suspend
-
 # Laptop multimedia keys for volume and LCD brightness
 bindel = ,XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
 bindel = ,XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
@@ -303,8 +300,8 @@ windowrule = match:class .blueman-manager-wrapped, opacity 1.0
 #WINDOW_RULE_SETTINGS_END
 
 #LAYER_RULE_SETTINGS_START
-layerrule = blur on, match:namespace rofi
-layerrule = match:namespace rofi, ignore_alpha 0.0
+layerrule = blur on, match:namespace walker
+layerrule = match:namespace walker, ignore_alpha 0.0
 layerrule = match:namespace waybar, ignore_alpha 0.1
 layerrule = blur on, match:namespace waybar
 layerrule = blur on, match:namespace wlogout

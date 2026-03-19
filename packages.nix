@@ -23,7 +23,7 @@ libsForQt5.qtstyleplugin-kvantum
 kdePackages.kio-extras
 kdePackages.qt6ct
 brightnessctl
-discord
+vesktop
 libreoffice-fresh
 wlogout
 playerctl
