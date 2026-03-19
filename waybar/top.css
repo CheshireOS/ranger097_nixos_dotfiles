@@ -14,7 +14,7 @@ window#waybar {
 background-color: @waybar-bg;
 /*background: linear-gradient(rgba(0,0,0,0.5));*/
 /*background-color: @color0;*/
-border-bottom: 2px solid #000000;
+border-bottom: 1px solid #000000;
 }
 
 #window, #workspaces,
@@ -28,7 +28,7 @@ margin-top: 0px;
 margin-bottom: 0px;
 font-family: Maple Mono NF;
 font-size: 12px;
-font-weight: 500;
+font-weight: 300;
 background-color: rgba(0,0,0,0);
 color: @accent-color;
 margin-right: 7px;
