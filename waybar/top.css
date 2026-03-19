@@ -12,7 +12,8 @@ min-height: 0;
 
 window#waybar {
 /*background-color: @waybar-bg;*/
-background: linear-gradient(rgba(0,0,0,0.5));
+/*background: linear-gradient(rgba(0,0,0,0.5));*/
+background-color: @color0;
 border-bottom: 2px solid @color6;
 }
 
@@ -41,7 +42,7 @@ text-shadow: none;
 #clock:hover, #custom-vpn_ip:hover,
 #battery:hover, #workspaces:hover {
 color: @accent-color;
-background: #000000;
+background: rgba(0,0,0,0);
 box-shadow: none;
 text-shadow: none;
 -gtk-icon-shadow: none;    
