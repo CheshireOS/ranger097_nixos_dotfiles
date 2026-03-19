@@ -19,7 +19,7 @@ interactiveShellInit = ''
 
 source ~/ranger097_nixos_dotfiles/bash/development.sh
 source ~/ranger097_nixos_dotfiles/bash/system_info.sh
-source ~/ranger097_nixos_dotfiles/bash/langauge_info.sh
+source ~/ranger097_nixos_dotfiles/bash/language_info.sh
 source ~/ranger097_nixos_dotfiles/bash/update.sh
 source ~/ranger097_nixos_dotfiles/bash/git.sh
 source ~/ranger097_nixos_dotfiles/bash/wal.sh
