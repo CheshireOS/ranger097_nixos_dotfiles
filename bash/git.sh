@@ -40,10 +40,12 @@ echo " Building system flake..."
 if ! sudo nixos-rebuild switch --flake .#jirachi --quiet; then
    echo "FAILURE"
    return 1
+else
+   sudo nixos-rebuild switch --flake .#jirachi --quiet >/dev/null
 fi
 wait
 echo " Updated dotfiles and system flake."
-} >/dev/null
+}
 
 get_dir_name() {
     case "$PWD" in
