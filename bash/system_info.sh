@@ -62,7 +62,7 @@ echo -e "\e[31m│                                 \e[31m│"
 }
 
 function github_info {
-update_time=$(git log -1 --date=relative | awk 'NR==3 {print $2, $3, $4}')
+update_time=$(gh repo view ranger097_nixos_dotfiles --json updatedAt --template '{{.updatedAt | timeago}}')
 forks_count=$(gh repo view ranger097_nixos_dotfiles --json forkCount --jq '.forkCount')
 stars_counts=$(gh repo view ranger097_nixos_dotfiles --json stargazerCount --jq '.stargazerCount')
 
