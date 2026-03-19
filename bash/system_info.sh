@@ -63,12 +63,13 @@ echo -e "\e[31m│                                 \e[31m│"
 
 function github_info {
 update_time=$(git log -1 --date=relative | awk 'NR==3 {print $2, $3, $4}')
-forks_count=$(gh search repos ranger097_nixos_dotfiles --json forksCount | awk 'NR==3 {print $1}')
-
+forks_count=$(gh search repos ranger097_nixos_dotfiles --json forksCount --jq '.[0].forksCount')
+stars_counts=$(gh search repos ranger097_nixos_dotfiles --json starsCount --jq '.[0].starsCount')
 
 
 
 echo "Name: ranger097_nixos_dotfiles"
+echo "Stars: $stars_count"
 echo "Forks: $forks_count"
 echo "Updated: $update_time"
 }

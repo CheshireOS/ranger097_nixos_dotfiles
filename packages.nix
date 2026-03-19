@@ -65,6 +65,9 @@ networkmanagerapplet
 xdg-desktop-portal-gtk
 hyprpolkitagent
 gh
+jq
+yq
+xq
 ];
 
 fonts.packages = with pkgs;[
