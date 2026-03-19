@@ -32,7 +32,7 @@ function git_stars() {
 }
 
 function git_forks() {
-  gh repo view --json stargazerCount --template '{{.forkCount}}{{"\n"}}'
+  gh repo view --json forkCount --template '{{.forkCount}}{{"\n"}}'
 }
 '';
 
