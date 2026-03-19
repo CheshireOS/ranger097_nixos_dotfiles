@@ -23,7 +23,20 @@ source ~/ranger097_nixos_dotfiles/bash/language_info.sh
 source ~/ranger097_nixos_dotfiles/bash/update.sh
 source ~/ranger097_nixos_dotfiles/bash/git.sh
 source ~/ranger097_nixos_dotfiles/bash/wal.sh
-ranger_fetch
+
+function ranger_page() {
+    tput civis 
+    ranger_fetch
+    read -s -n 1 -p ""
+    tput cnorm 
+}
+
+ranger_page
+
+
+
+
+
 printf "\e]10;%s\a" "$(sed -n '5p' ~/.cache/wal/colors)"
 echo -e "\e]11;#000000\a"
 '';
