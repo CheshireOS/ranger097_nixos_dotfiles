@@ -151,3 +151,15 @@ printf "%''${top_pad}s%b\n" "" "\e[31m$bottom_line\e[0m"
 
 printf '\033[3 q'
 
+echo -e "\e]11;#000000\a"
+function ranger_page() {
+    tput civis
+    ranger_fetch
+    echo -e "\e]11;#000000\a"
+    read -s -n 1 -p ""
+    clear
+    pokeget random --hide-name
+    tput cnorm
+}
+
+ranger_page
