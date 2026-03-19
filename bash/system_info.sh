@@ -162,7 +162,7 @@ function ranger_page() {
     tput cnorm
 }
 
-if [[ $(tput lines) -ge 12 && $(tput cols) -ge 48 ]]; then
+if [[ $(tput lines) -ge 20 && $(tput cols) -ge 48 ]]; then
    ranger_page
 else
    tput civis
