@@ -162,6 +162,15 @@ function ranger_page() {
     tput cnorm
 }
 
-if [[$(tput lines) -ge 12 && $(tput cols) -ge 48 ]]; then
+if [[ $(tput lines) -ge 12 && $(tput cols) -ge 48 ]]; then
    ranger_page
+else
+   tput civis
+   pokeget random --hide-name
+   echo -e "\e]11;#000000\a"
+   read -s -n 1 -p ""
+   clear
+   tput cnorm
 fi
+
+
