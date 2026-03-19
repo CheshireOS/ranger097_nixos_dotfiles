@@ -33,7 +33,7 @@ psk = "$WIFI_PW"; };
   };
 };
 
-services.tailscale.enable = true;
+
 security.polkit.enable = true;
 
   xdg.portal = {

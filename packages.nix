@@ -70,7 +70,7 @@ yq
 xq
 pokeget-rs
 gomatrix
-tailscale
+protonvpn-gui
 ];
 
 fonts.packages = with pkgs;[
