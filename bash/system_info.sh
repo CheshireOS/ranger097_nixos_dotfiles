@@ -1,6 +1,6 @@
 #!/bin/bash
 
-song_playing=$(playerctl metadata --format "{{ artist }}" 2>/dev/null)
+song_playing=$(playerctl metadata --format "{{ artist }}")
 function Music_fetch {
 if [ playerctl metadata > /dev/null 2>&1 ]; then
    fmt_song=$(printf "%-32.32s" "$song_playing")
@@ -173,10 +173,13 @@ elif [[ $(tput lines) -ge 12 && $(tput cols) -ge 48 ]]; then
    clear
    tput cnorm
 else
+
 (cat $HOME/.cache/wal/sequences &)
-cmatrix -x -s -a -o -n -C blue
-(cat $HOME/.cache/wal/sequences &)
+echo -e "\e]11;#000000\a"
+gomatrix --fps=60 >/dev/null
+echo -e "\e]11;#000000\a"
+clear
 fi
 
 
- 
+

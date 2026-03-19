@@ -69,7 +69,6 @@ jq
 yq
 xq
 pokeget-rs
-cmatrix
 gomatrix
 ];
 
