@@ -63,7 +63,7 @@ echo -e "\e[31m│                                 \e[31m│"
 
 function github_info {
 update_time=$(git log -1 --date=relative | awk 'NR==3 {print $2, $3, $4}')
-forks_count=$(gh search repos ranger097_nixos_dotfiles --json forksCount | awk 'NR==3 {print $2}')
+forks_count=$(gh search repos ranger097_nixos_dotfiles --json forksCount | awk 'NR==3 {print $1}')
 
 
 
