@@ -27,7 +27,6 @@ in
     ".config/ghostty".source = ./ghostty;
     ".config/walker".source = ./walker; 
     ".config/wlogout".source = ./wlogout;
-    "/home/${config.home.username}.mozilla".source = ./mozilla;
 };
 
 home.sessionVariables = {
