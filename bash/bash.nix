@@ -23,15 +23,15 @@ source ~/ranger097_nixos_dotfiles/bash/language_info.sh
 source ~/ranger097_nixos_dotfiles/bash/update.sh
 source ~/ranger097_nixos_dotfiles/bash/git.sh
 source ~/ranger097_nixos_dotfiles/bash/wal.sh
-
+echo -e "\e]11;#000000\a"
 function ranger_page() {
     tput civis 
     ranger_fetch
     echo -e "\e]11;#000000\a"
     read -s -n 1 -p ""
     clear
-    pokeget random    
-tput cnorm 
+    pokeget random --hide-name    
+    tput cnorm 
 }
 
 ranger_page
