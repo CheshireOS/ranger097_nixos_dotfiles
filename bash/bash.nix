@@ -23,7 +23,8 @@ source ~/ranger097_nixos_dotfiles/bash/language_info.sh
 source ~/ranger097_nixos_dotfiles/bash/update.sh
 source ~/ranger097_nixos_dotfiles/bash/git.sh
 source ~/ranger097_nixos_dotfiles/bash/wal.sh
-
+echo -e "\e]11;#000000\a"
+printf "\e]10;%s\a" "$(sed -n '5p' ~/.cache/wal/colors)"
 #pokeget random --hide-name
 ranger_fetch
 
