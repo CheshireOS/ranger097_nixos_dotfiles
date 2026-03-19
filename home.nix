@@ -97,7 +97,7 @@ general {
 #GAPS
 gaps_in = 6
 gaps_out = 12
-border_size = 2
+border_size = 1
 
 #BORDER
 col.active_border = $color4
