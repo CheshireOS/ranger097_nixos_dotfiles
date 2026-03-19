@@ -37,7 +37,7 @@ wait
 echo " Github changes complete."
 wait
 echo " Building system flake..."
-if ! sudo nixos-rebuild switch --flake .#jirachi --quiet | grep -vE "building the system flake|Done|The new configuration is" > /dev/null; then
+if ! sudo nixos-rebuild switch --flake .#jirachi --quiet > /dev/null; then
    echo "FAILURE"
    return 1
 fi
