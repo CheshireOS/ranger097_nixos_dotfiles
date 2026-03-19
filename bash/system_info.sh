@@ -62,14 +62,14 @@ echo -e "\e[31m│                                 \e[31m│"
 }
 
 function github_info {
-repo_name="ranger097_nixos_dotfiles"
+repo_name="ranger097"
 update_time=$(gh repo view ranger097_nixos_dotfiles --json updatedAt --template '{{.updatedAt | timeago}}')
 forks_count=$(gh repo view ranger097_nixos_dotfiles --json forkCount --jq '.forkCount')
 stars_count=$(gh repo view ranger097_nixos_dotfiles --json stargazerCount --jq '.stargazerCount')
 fmt_name=$(printf "%-26.26s" "$repo_name")
-fmt_update=$(printf "%-26.26s" "$update_time")
-fmt_forks=$(printf "%-26.26s" "$forks_count")
-fmt_stars=$(printf "%-26.26s" "$stars_count")
+fmt_update=$(printf "%-26.26s" "Last updated $update_time")
+fmt_forks=$(printf "%-26.26s" "Forks $forks_count")
+fmt_stars=$(printf "%-26.26s" "Stars $stars_count")
 echo -e "\e[31m│    \e[32m  \e[36m$fmt_name\e[31m│"
 echo -e "\e[31m│    \e[32m  \e[36m$fmt_update\e[31m│"
 echo -e "\e[31m│    \e[32m  \e[36m$fmt_forks\e[31m│"
