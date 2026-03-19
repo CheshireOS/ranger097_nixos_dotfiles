@@ -53,12 +53,9 @@ ecosystem:no_update_news = true
 #AUTOSTART
 #exec-once = hyprlock
 exec-once = swww-daemon
-exec-once = /home/ranger/ranger097_nixos_dotfiles/wallpapers/Guweiz/1116508.jpg
 #exec-once = LD_LIBRARY_PATH=/run/opengl-driver/lib mpvpaper -o "no-audio --loop-playlist --panscan=1.0 hwdec=auto" eDP-1 /home/ranger/Videos/wallpapers/guweiz.mp4
-exec-once = waybar -c ~/.config/waybar/top.jsonc -s ~/.config/waybar/top.css
-exec-once = waybar -c ~/.config/waybar/bottom.jsonc -s ~/.config/waybar/bottom.css
-exec-once = protonvpn connect
-exec-once = hypridle
+#exec-once = waybar -c ~/.config/waybar/top.jsonc -s ~/.config/waybar/top.css
+#exec-once = waybar -c ~/.config/waybar/bottom.jsonc -s ~/.config/waybar/bottom.css
 exec-once = hyprsunset
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec-once = systemctl --user start hyprpolkitagent
@@ -125,10 +122,10 @@ inactive_opacity = 1.0
 
 #SHADOW
 shadow {
-enabled = false
+enabled = true
 range = 1
 render_power = 4
-color = $color14
+color = $color1
 offset = 0 0
 sharp = true
 scale = 1.0
@@ -230,10 +227,7 @@ bind = SUPER, B, exec, firefox
 bind = SUPER, D, exec, dolphin
 bind = SUPER, C, exec, code
 bind = SUPER, F, fullscreenstate, 2
-bind = SUPER, M, exec, waybar -c ~/ranger097_nixos_dotfiles/waybar/top.jsonc -s ~/ranger097_nixos_dotfiles/waybar/top.css
-bind = SUPER, Space, exec,  waybar -c ~/ranger097_nixos_dotfiles/waybar/bottom.jsonc -s ~/ranger097_nixos_dotfiles/waybar/bottom.css
 bind = SUPER, X, exec, direnv exec /home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/ python /home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/waybar_switcher.py
-bind = SUPER, V, exec, freetube
 bind = SUPER, H, exec, hyprshot -m output -m eDP-1
 bind = SUPER, P, exec, systemctl --user restart pipewire
 
