@@ -4,8 +4,8 @@
 
 window#waybar {
 /*background: linear-gradient(rgba(0,0,0,0.5));*/
-background-color: @color0;
-border-top: 2px solid @color6;
+background-color: @waybar-bg;
+border-top: 2px solid #000000;
 }
 
 window#waybar:hover {
@@ -41,7 +41,7 @@ font-family: Maple Mono NF;
 font-size: 12px;
 font-weight: 500;
 background: linear-gradient(rgba(0,0,0,0.0));
-color: @color10;
+color: @accent-color;
 box-shadow: none;
 padding-left: 10px;
 padding-right: 10px;

@@ -11,10 +11,10 @@ min-height: 0;
 }
 
 window#waybar {
-/*background-color: @waybar-bg;*/
+background-color: @waybar-bg;
 /*background: linear-gradient(rgba(0,0,0,0.5));*/
-background-color: @color0;
-border-bottom: 2px solid @color6;
+/*background-color: @color0;*/
+border-bottom: 2px solid #000000;
 }
 
 #window, #workspaces,
