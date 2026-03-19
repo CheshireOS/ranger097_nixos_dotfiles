@@ -61,6 +61,16 @@ echo -e "\e[31m│    \e[32m$bot_ascii    \e[31m│"
 echo -e "\e[31m│                                 \e[31m│"
 }
 
+function github_info {
+update_time=$(git log -1 --date=relative)
+
+}
+
+
+
+
+
+
 ranger_fetch() {
 echo -e "\n"
 term_width=$(tput cols)
