@@ -63,7 +63,7 @@ echo -e "\e[31m│                                 \e[31m│"
 
 function github_info {
 update_time=$(git log -1 --date=relative | awk 'NR==3 {print $2, $3, $4}')
-echo "$Updated: update_time"
+echo "Updated: $update_time"
 }
 
 
