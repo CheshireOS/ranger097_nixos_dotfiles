@@ -147,8 +147,6 @@ bottom_line="\e[31m╰───────────────────�
 bottom_line_len=$(echo -ne "$bottom_line" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
 top_pad=$(( (term_width - space_line_len) / 2 ))
 printf "%''${top_pad}s%b\n" "" "\e[31m$bottom_line\e[0m"
-
-echo -e "\n\n\n"
 }
 
 printf '\033[3 q'

@@ -29,7 +29,9 @@ function ranger_page() {
     ranger_fetch
     echo -e "\e]11;#000000\a"
     read -s -n 1 -p ""
-    tput cnorm 
+    clear
+    pokeget random    
+tput cnorm 
 }
 
 ranger_page

@@ -68,6 +68,7 @@ gh
 jq
 yq
 xq
+pokeget-rs
 ];
 
 fonts.packages = with pkgs;[
