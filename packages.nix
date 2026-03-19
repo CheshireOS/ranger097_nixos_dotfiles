@@ -69,7 +69,7 @@ jq
 yq
 xq
 pokeget-rs
-gomatrix
+cmatrix
 ];
 
 fonts.packages = with pkgs;[
