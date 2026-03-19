@@ -1,8 +1,8 @@
 #!/bin/bash
 
-function Music_fetch {
 song_playing=$(playerctl metadata --format "{{ artist }}" 2>/dev/null)
-if [ "$song_playing" != "No players found" ] && [ -n "$song_playing" ]; then
+function Music_fetch {
+if [ playerctl metadata > /dev/null 2>&1 ]; then
    fmt_song=$(printf "%-32.32s" "$song_playing")
    echo -e "\e[31m│    \e[32m  \e[36m$fmt_song\e[31m│"
 else
@@ -177,7 +177,6 @@ else
 (cat $HOME/.cache/wal/sequences &)
 echo -e "\e]11;#000000\a"
 gomatrix --fps=60 >/dev/null
-echo -e "\e]11;#000000\a"
 clear
 fi
 
