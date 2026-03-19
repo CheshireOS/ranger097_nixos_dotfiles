@@ -14,7 +14,7 @@ host_name=$(hostnamectl | awk 'NR==1 {print $3}')
 function Host_fetch {
 fmt_host=$(printf "%-30.30s" "$host_name")
 if [ $? -eq 0 ]; then
-   echo -e "\e[31m│    \e[32m󰐝  \e[36m$fmt_host\e[31m│"
+   echo -e "\e[31m│    \e[32m󰐝  \e[36mHost $fmt_host\e[31m│"
 else
    echo -e "\e[31m│    \e[32m󰐝  \e[36mHow the fuck you dont have a host name$fmt_host\e[31m│"
 fi
@@ -70,10 +70,10 @@ fmt_name=$(printf "%-30.30s" "$repo_name")
 fmt_update=$(printf "%-30.30s" "Last updated $update_time")
 fmt_forks=$(printf "%-30.30s" "Forks $forks_count")
 fmt_stars=$(printf "%-30.30s" "Stars $stars_count")
-echo -e "\e[31m│    \e[32m  \e[36m$fmt_name\e[31m│"
-echo -e "\e[31m│    \e[32m  \e[36m$fmt_stars\e[31m│"
-echo -e "\e[31m│    \e[32m  \e[36m$fmt_forks\e[31m│"
-echo -e "\e[31m│    \e[32m  \e[36m$fmt_update\e[31m│"
+echo -e "\e[31m│    \e[32m  \e[36m$fmt_name\e[31m│"
+echo -e "\e[31m│    \e[32m  \e[36m$fmt_stars\e[31m│"
+echo -e "\e[31m│    \e[32m  \e[36m$fmt_forks\e[31m│"
+echo -e "\e[31m│    \e[32m  \e[36m$fmt_update\e[31m│"
 
 }
 
