@@ -25,7 +25,7 @@
       elif ls *.java >/dev/null 2>&1 && command -v java >/dev/null 2>&1; then
         echo "  v$(java -version 2>&1 | awk -F '"' '/version/ {print $2}')"
       elif ls *.sh >/dev/null 2>&1; then
-        echo "   v''${BASH_VERSION%%(*}"
+        echo "  v''${BASH_VERSION%%(*}"
       elif ls *.cpp >/dev/null 2>&1 || ls *.hpp >/dev/null 2>&1; then
         echo "  C++"
       elif ls *.c >/dev/null 2>&1 && command -v gcc >/dev/null 2>&1; then
