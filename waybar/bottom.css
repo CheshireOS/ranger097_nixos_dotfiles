@@ -72,7 +72,7 @@ margin-left: 10px;
 #custom-blender:hover,
 #custom-dolphin:hover,
 #custom-volume:hover {
-color: @accent-color;
+color: @color4;
 background: linear-gradient(rgba(0,0,0,0.0));
 }
 

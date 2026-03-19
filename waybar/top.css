@@ -41,7 +41,7 @@ text-shadow: none;
 #window:hover, #mpris:hover,
 #clock:hover, #custom-vpn_ip:hover,
 #battery:hover, #workspaces:hover {
-color: @accent-color;
+color: @color4;
 background: rgba(0,0,0,0);
 box-shadow: none;
 text-shadow: none;
