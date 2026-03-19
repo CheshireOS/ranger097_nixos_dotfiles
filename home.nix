@@ -92,8 +92,8 @@ permission = /usr/(bin|local/bin)/hyprpm, plugin, allow
 #SETTINGS_START
 general {
 #GAPS
-gaps_in = 8
-gaps_out = 30
+gaps_in = 10
+gaps_out = 20
 border_size = 2
 
 #BORDER
@@ -123,9 +123,9 @@ inactive_opacity = 1.0
 #SHADOW
 shadow {
 enabled = true
-range = 20
-render_power = 5
-color = rgba(0,0,0,0.6)
+range = 25
+render_power = 7
+color = rgba(0,0,0,0.5)
 offset = -4 3
 sharp = false
 scale = 0.99
