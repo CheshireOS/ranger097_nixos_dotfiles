@@ -25,7 +25,7 @@ source ~/ranger097_nixos_dotfiles/bash/git.sh
 source ~/ranger097_nixos_dotfiles/bash/wal.sh
 
 
-if [[$(tput lines) -eq 12 && $(tput cols) -eq 48 ]]; then
+if [[$(tput lines) -ge 12 && $(tput cols) -ge 48 ]]; then
    ranger_page
 fi
 
