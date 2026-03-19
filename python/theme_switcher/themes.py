@@ -1,6 +1,5 @@
 import os
 import subprocess
-import sys
 
 toggle_file = "/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/toggle.txt"
 wallpaper_directory = os.listdir("/home/ranger/ranger097_nixos_dotfiles/wallpapers/wallpapers")
@@ -27,5 +26,4 @@ subprocess.run(["hyprctl","reload"])
 subprocess.run(["pkill", "waybar"])
 subprocess.Popen(["waybar", "-c", os.path.expanduser("~/.config/waybar/top.jsonc"), "-s", os.path.expanduser("~/.config/waybar/top.css")], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 subprocess.Popen(["waybar", "-c", os.path.expanduser("~/.config/waybar/bottom.jsonc"), "-s", os.path.expanduser("~/.config/waybar/bottom.css")], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-sys.stdout.write("\033]11;#000000\007")
-sys.stdout.flush()
+
