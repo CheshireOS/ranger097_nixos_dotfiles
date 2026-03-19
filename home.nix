@@ -62,7 +62,6 @@ exec-once = systemctl --user start hyprpolkitagent
 exec-once = hyprctl setcursor Pokemon 32
 exec-once = elephant
 exec-once = systemctl --user start hyprpolkitagent
-exec-once = systemctl --user start riseup-vpn
 
 #ENVIRONMENT
 #env = HYPRCURSOR_THEME,Pokemon

@@ -16,7 +16,7 @@ networking.enableIPv6 = false;
 networking.firewall.checkReversePath = false;
 networking.nftables.enable = true;
 networking.networkmanager.ensureProfiles = {
-environmentFiles = ["${homeDir}/ranger097_nixos_dotfiles/wifi.env"];
+environmentFiles = ["${homeDir}/ranger097_nixos_dotfiles/wifi/wifi.env"];
 profiles = {
 Home = {
 connection = { 
@@ -44,19 +44,6 @@ security.polkit.enable = true;
     config.common.default = "*";
   };
 
-  systemd.user.services.hyprpolkitagent = {
-    description = "Hyprland Polkit Authentication Agent";
-    wantedBy = [ "graphical-session.target" ];
-    wants = [ "graphical-session.target" ];
-    after = [ "graphical-session.target" ];
-    serviceConfig = {
-      Type = "simple";
-      ExecStart = "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent";
-      Restart = "on-failure";
-      RestartSec = 1;
-      TimeoutStopSec = 10;
-    };
-  };
 
 networking.firewall = {
   enable = true;
