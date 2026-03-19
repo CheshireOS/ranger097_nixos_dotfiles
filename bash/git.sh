@@ -16,7 +16,7 @@ wait
 echo " Github changes complete."
 wait
 echo " Building system flake..."
-sudo nixos-rebuild switch --flake .#deoxy
+sudo nixos-rebuild switch --flake .#deoxy --quiet >/dev/null
 wait
 echo " Updated dotfiles and system flake."
 }
@@ -37,7 +37,7 @@ wait
 echo " Github changes complete."
 wait
 echo " Building system flake..."
-sudo nixos-rebuild switch --flake .#jirachi
+sudo nixos-rebuild switch --flake .#jirachi --quiet > /dev/null
 wait
 echo " Updated dotfiles and system flake."
 }
