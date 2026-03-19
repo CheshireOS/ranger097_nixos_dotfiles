@@ -11,11 +11,11 @@
       elif ls *.ts >/dev/null 2>&1 && command -v tsc >/dev/null 2>&1; then
         echo "  v$(tsc -v | awk '{print $2}')"
       elif { ls *.js >/dev/null 2>&1 || [[ -f package.json ]]; } && command -v node >/dev/null 2>&1; then
-        echo "   v$(node -v | sed 's/v//')"
+        echo "  v$(node -v | sed 's/v//')"
       elif ls *.rb >/dev/null 2>&1 && command -v ruby >/dev/null 2>&1; then
         echo "  v$(ruby -v | awk '{print $2}')"
       elif ls *.php >/dev/null 2>&1 && command -v php >/dev/null 2>&1; then
-        echo "    v$(php -v | head -n 1 | awk '{print $2}')"
+        echo "  v$(php -v | head -n 1 | awk '{print $2}')"
       elif ls *.ex* >/dev/null 2>&1 && command -v elixir >/dev/null 2>&1; then
         echo "  v$(elixir -v | grep Elixir | awk '{print $2}')"
       elif { ls *.clj >/dev/null 2>&1 || [[ -f deps.edn ]]; } && command -v clojure >/dev/null 2>&1; then
@@ -41,11 +41,11 @@
       elif ls *.zig >/dev/null 2>&1 && command -v zig >/dev/null 2>&1; then
         echo "  v$(zig version)"
       elif ls *.cs >/dev/null 2>&1 && command -v dotnet >/dev/null 2>&1; then
-        echo "    v$(dotnet --version | head -n 1)"
+        echo "  v$(dotnet --version | head -n 1)"
       elif ls *.lua >/dev/null 2>&1 && command -v lua >/dev/null 2>&1; then
         echo "  v$(lua -v | awk '{print $2}')"
       elif ls *.r >/dev/null 2>&1 && command -v R >/dev/null 2>&1; then
-        echo "    v$(R --version | head -n 1 | awk '{print $3}')"
+        echo "  v$(R --version | head -n 1 | awk '{print $3}')"
       elif ls *.jl >/dev/null 2>&1 && command -v julia >/dev/null 2>&1; then
         echo "  v$(julia --version | awk '{print $3}')"
       elif ls *.nim >/dev/null 2>&1 && command -v nim >/dev/null 2>&1; then
@@ -59,7 +59,7 @@
       elif ls *.nix >/dev/null 2>&1; then
         echo -e "\e[35m   \e[36mnix v$(nix --version | awk '{print $3}')"
       elif [[ -f Dockerfile ]]; then
-        echo "   docker"
+        echo " 󰡨 docker"
       elif ls *.md >/dev/null 2>&1; then
         echo " \[\e[0m\] md"
       fi
