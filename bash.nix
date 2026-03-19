@@ -28,7 +28,7 @@ source ~/ranger097_nixos_dotfiles/bash/wal.sh
 ranger_fetch
 
 function fns {
-stars=$(gh repo view --json stargazerCount,forkCount | awk "NR==3 {print $2}")
+stars=$(gh repo view --json stargazerCount,forkCount | awk 'NR==3 {print $2}')
 echo $stars
 
 }
