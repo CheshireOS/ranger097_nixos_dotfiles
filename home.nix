@@ -92,13 +92,13 @@ permission = /usr/(bin|local/bin)/hyprpm, plugin, allow
 #SETTINGS_START
 general {
 #GAPS
-gaps_in = 6
+gaps_in = 8
 gaps_out = 30
 border_size = 2
 
 #BORDER
-col.active_border = rgba(0,0,0,1)
-col.inactive_border = rgba(0,0,0,1)
+col.active_border = $color3
+col.inactive_border = $color3
 
 #BORDER_ANIMATION
 animations {
@@ -123,12 +123,12 @@ inactive_opacity = 1.0
 #SHADOW
 shadow {
 enabled = true
-range = 1
-render_power = 4
+range = 5
+render_power = 5
 color = $color3
-offset = 0 0
-sharp = true
-scale = 1.0
+offset = -4 3
+sharp = false
+scale = 0.99
 }
 
 #BLUR
