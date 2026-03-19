@@ -27,6 +27,7 @@ source ~/ranger097_nixos_dotfiles/bash/wal.sh
 function ranger_page() {
     tput civis 
     ranger_fetch
+    echo -e "\e]11;#000000\a"
     read -s -n 1 -p ""
     tput cnorm 
 }
