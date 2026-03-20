@@ -57,7 +57,6 @@ nvim-lint
 nvim-dap
 nvim-dap-ui
 nvim-dap-python
-fish_indent
 markdown-toc
 markdownlint-cli2
 nixfmt
