@@ -74,7 +74,6 @@ pokeget-rs
 gomatrix
 protonvpn-gui
 sioyek
-neovim
 gnumake
 gcc
 ripgrep     
