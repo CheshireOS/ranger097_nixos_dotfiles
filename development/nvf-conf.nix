@@ -1,7 +1,6 @@
 { config, pkgs, lib, ... }:{
 programs.nvf = {
    enable = true;
-   settings = {
    vim = {
        status.lualine.enable = true;
        telescope.enable = true;        
@@ -41,7 +40,6 @@ programs.nvf = {
        };
    };
 
-};
 };
 
 
