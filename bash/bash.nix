@@ -25,7 +25,9 @@ source ~/ranger097_nixos_dotfiles/bash/update.sh
 source ~/ranger097_nixos_dotfiles/bash/git.sh
 source ~/ranger097_nixos_dotfiles/bash/wal.sh
 
-
+function hello() {
+echo "Hello, World!"
+}
 
 printf "\e]10;%s\a" "$(sed -n '5p' ~/.cache/wal/colors)"
 echo -e "\e]11;#000000\a"

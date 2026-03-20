@@ -1,4 +1,8 @@
 { config, pkgs, lib, ... }:{
+
+environment.variables.EDITOR = "nvim";
+environment.variables.VISUAL = "nvim";
+
 programs.nvf = {
    enable = true;
    settings.vim = {
@@ -6,7 +10,8 @@ programs.nvf = {
        statusline.lualine.enable = true;
        telescope.enable = true;        
        lsp.enable = true;
-
+       viAlias = false;
+       vimAlias = true;
        theme = {
          enable = false;
          name = "gruvbox";
