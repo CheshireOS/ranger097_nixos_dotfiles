@@ -3,16 +3,15 @@ programs.nvf = {
    enable = true;
    settings = {
    vim = {
+       status.lualine.enable = true;
+       telescope.enable = true;        
+       autocomplete.nvim-cmp.enable = true;       
        theme = {
          enable = true;
          name = "gruvbox";
          style = "dark";
        };
        
-       status.lualine.enable = true;
-       telescope.enable = true;
-       autocomplete.nvim-cmp.enable = true;    
-      
        
        languages = {
        enableLSP = true;
