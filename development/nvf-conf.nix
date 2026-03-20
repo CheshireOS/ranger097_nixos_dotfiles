@@ -16,8 +16,6 @@ programs.nvf = {
        vimAlias = true;
        theme = {
          enable = false;
-         name = "base16";
-         style = "";
        };
        
        extraPlugins = with pkgs.vimPlugins; {
@@ -26,14 +24,14 @@ programs.nvf = {
           };
        }; 
 
-       luaConfigRC.post = ''
-       vim.cmd('colorscheme wal')
-       local highlights = {
+       luaConfigRC.pywal-transparency = ''
+       local hl_groups = {
          "Normal", "NormalFloat", "FloatBorder", "Pmenu", 
-         "SignColumn", "LineNr", "CursorLine", "EndOfBuffer"
+         "SignColumn", "LineNr", "CursorLine", "EndOfBuffer",
+         "NonText", "NormalNC", "TelescopeBorder", "TelescopeNormal"
        }
-       
-       for _, group in ipairs(highlights) do
+
+       for _, group in ipairs(hl_groups) do
        vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
        end
        '';
