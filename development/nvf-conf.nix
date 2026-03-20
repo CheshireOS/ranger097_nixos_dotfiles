@@ -16,7 +16,7 @@ programs.nvf = {
        vimAlias = true;
        theme = {
          enable = false;
-         name = "";
+         name = "base16";
          style = "";
        };
        
