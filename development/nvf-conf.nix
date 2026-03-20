@@ -22,9 +22,12 @@ programs.nvf = {
           wal-vim = {
              package = wal-vim;
           };
-
-
        }; 
+
+       luaConfigRC.post = ''
+          vim.cmd('colorscheme wal')
+       '';
+
        languages = {
        enableTreesitter = true;
        rust.enable = true;
@@ -50,9 +53,6 @@ programs.nvf = {
        yaml.enable = true; 
        ocaml.enable = true;       
        };
+     };
    };
-
-};
-
-
-}
+ }
