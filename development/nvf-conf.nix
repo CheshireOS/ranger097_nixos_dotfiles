@@ -8,7 +8,7 @@ programs.nvf = {
        lsp.enable = true;
 
        theme = {
-         enable = true;
+         enable = false;
          name = "gruvbox";
          style = "dark";
        };
