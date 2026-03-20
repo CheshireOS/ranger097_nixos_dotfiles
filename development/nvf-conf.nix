@@ -6,6 +6,8 @@ environment.variables.VISUAL = "nvim";
 programs.nvf = {
    enable = true;
    settings.vim = {
+       options.termguicolors = false;
+       options.background = "dark";
        autocomplete.nvim-cmp.enable = true;
        statusline.lualine.enable = true;
        telescope.enable = true;        
@@ -14,8 +16,8 @@ programs.nvf = {
        vimAlias = true;
        theme = {
          enable = false;
-         name = "gruvbox";
-         style = "dark";
+         name = "";
+         style = "";
        };
        
        extraPlugins = with pkgs.vimPlugins; {
