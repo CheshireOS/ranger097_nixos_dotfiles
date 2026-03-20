@@ -1,11 +1,12 @@
 { config, pkgs, lib, ... }:{
 programs.nvf = {
    enable = true;
-   vim.autocomplete.nvim-cmp.enable = true;
-
-    vim = {
+   settings.vim = {
+       autocomplete.nvim-cmp.enable = true;
        status.lualine.enable = true;
        telescope.enable = true;        
+       
+
        theme = {
          enable = true;
          name = "gruvbox";
