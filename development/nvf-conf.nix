@@ -10,7 +10,7 @@
        status.lualine.enable = true;
        telescope.enable = true;
        autocomplete.nvim-cpm.enable = true;    
-       };
+      
        
        languages = {
        enableLSP = true;
