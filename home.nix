@@ -57,7 +57,7 @@ nvim-lint
 nvim-dap
 nvim-dap-ui
 nvim-dap-python
-charpier
+csharpier
 erb_format
 fantomas
 fish_indent
