@@ -15,7 +15,7 @@ programs.nvf = {
        
        
        languages = {
-       enableLSP = true;
+       lsp.enable = true;
        enableTreesitter = true;
        rust.enable = true;
        nix.enable = true;
