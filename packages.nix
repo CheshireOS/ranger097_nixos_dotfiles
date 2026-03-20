@@ -1,7 +1,10 @@
 { config, pkgs, ... }:{
 nixpkgs.config.allowUnfree = true;
 programs.steam.enable = true;
-programs.direnv.enable = true;
+programs.direnv = {
+enable = true;
+nix-direnv.enable = true;
+};
 programs.direnv.silent = true;
 nixpkgs.config.android_sdk.accept_license = true;
 environment.systemPackages = with pkgs; [
@@ -71,8 +74,13 @@ pokeget-rs
 gomatrix
 protonvpn-gui
 sioyek
-vim
-vimPlugins.LazyVim
+neovim
+gnumake
+gcc
+ripgrep     
+fd          
+unzip   
+fzf      
 ];
 
 fonts.packages = with pkgs;[
