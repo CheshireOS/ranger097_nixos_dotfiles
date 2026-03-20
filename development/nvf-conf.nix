@@ -40,12 +40,4 @@
        };
    };
 
-    settings = {
-       vim.viAlias = false;
-       vim.vimAlias = true;
-       vim.lsp = {
-          enable = true;
-       };
-    };
-
 }
