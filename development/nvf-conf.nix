@@ -18,7 +18,13 @@ programs.nvf = {
          style = "dark";
        };
        
-       
+       extraPlugins = with pkgs.vimPlugins; {
+          wal-vim = {
+             package = wal-vim;
+          };
+
+
+       }; 
        languages = {
        enableTreesitter = true;
        rust.enable = true;
