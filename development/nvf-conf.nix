@@ -1,5 +1,7 @@
 { config, pkgs, lib, ... }:{
-
+programs.nvf = {
+   enable = true;
+   settings = {
    vim = {
        theme = {
          enable = true;
@@ -39,5 +41,9 @@
        ocaml.enable = true;       
        };
    };
+
+};
+};
+
 
 }
