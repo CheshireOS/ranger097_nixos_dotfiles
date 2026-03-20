@@ -5,7 +5,7 @@ programs.nvf = {
        autocomplete.nvim-cmp.enable = true;
        statusline.lualine.enable = true;
        telescope.enable = true;        
-       
+       lsp.enable = true;
 
        theme = {
          enable = true;
@@ -15,7 +15,6 @@ programs.nvf = {
        
        
        languages = {
-       lsp.enable = true;
        enableTreesitter = true;
        rust.enable = true;
        nix.enable = true;
