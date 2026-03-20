@@ -34,7 +34,6 @@ kdePackages.qtsvg
 kdePackages.ffmpegthumbs
 usbutils
 yt-dlp
-foliate
 qmmp
 mpvpaper
 mpv
@@ -71,6 +70,7 @@ xq
 pokeget-rs
 gomatrix
 protonvpn-gui
+sioyek
 ];
 
 fonts.packages = with pkgs;[
