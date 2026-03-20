@@ -81,6 +81,7 @@ fd
 unzip   
 fzf      
 nix-direnv
+tmux
 ];
 
 
