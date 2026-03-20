@@ -57,7 +57,6 @@ nvim-lint
 nvim-dap
 nvim-dap-ui
 nvim-dap-python
-erb_format
 fantomas
 fish_indent
 markdown-toc
