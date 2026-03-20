@@ -56,7 +56,7 @@ conform-nvim
 nvim-lint
 nvim-dap
 nvim-dap-ui
-nvim-dap-python
+#nvim-dap-python
 fantomas
 fish_indent
 markdown-toc
