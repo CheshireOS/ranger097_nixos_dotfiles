@@ -298,7 +298,7 @@ windowrule = match:class .blueman-manager-wrapped, opacity 1.0
 
 #LAYER_RULE_SETTINGS_START
 layerrule = blur on, match:namespace walker
-layerrule = match:namespace walker, ignore_alpha 0.0
+layerrule = match:namespace walker, ignore_alpha 0.7
 layerrule = match:namespace waybar, ignore_alpha 0.1
 layerrule = blur on, match:namespace waybar
 layerrule = blur on, match:namespace wlogout
