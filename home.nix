@@ -57,9 +57,7 @@ nvim-lint
 nvim-dap
 nvim-dap-ui
 nvim-dap-python
-chafa
-ueberzugpp
-lazygit
+lazygit-nvim
 ];
 
 
