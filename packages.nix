@@ -82,6 +82,7 @@ unzip
 fzf      
 nix-direnv
 tmux
+wezterm
 ];
 
 
