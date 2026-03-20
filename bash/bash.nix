@@ -13,6 +13,7 @@ ls = "lsd --tree --icon=always --depth 1";
 lsa = "lsd -a --tree --icon=always --depth 1";
 clear = "clear && ranger_fetch";
 ytdownload = "yt-dlp -x --audio-format mp3 --audio-quality 0 --cookies-from-browser firefox --embed-metadata --embed-thumbnail --add-metadata";
+edit = "sudo nvim"
 };
    
 interactiveShellInit = ''
@@ -28,6 +29,11 @@ source ~/ranger097_nixos_dotfiles/bash/wal.sh
 function hello() {
 echo "Hello, World!"
 }
+
+
+
+export EDITOR=nvim
+export VISUAL=nvim
 
 printf "\e]10;%s\a" "$(sed -n '5p' ~/.cache/wal/colors)"
 echo -e "\e]11;#000000\a"
