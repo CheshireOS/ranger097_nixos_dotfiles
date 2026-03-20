@@ -57,7 +57,23 @@ nvim-lint
 nvim-dap
 nvim-dap-ui
 nvim-dap-python
+charpier
+erb_format
+fantomas
+fish_indent
+markdown-toc
+markdownlint-cli2
+nixfmt
+prettier
+rubocop
+sqlfluff
+viu
+chafa
+ueberzugpp
+lazygit
 ];
+
+
 
 };
 
