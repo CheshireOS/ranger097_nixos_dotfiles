@@ -57,7 +57,6 @@ nvim-lint
 nvim-dap
 nvim-dap-ui
 nvim-dap-python
-markdownlint-cli2
 nixfmt
 prettier
 rubocop
