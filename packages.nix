@@ -71,6 +71,8 @@ pokeget-rs
 gomatrix
 protonvpn-gui
 sioyek
+vim
+vimPlugins.LazyVim
 ];
 
 fonts.packages = with pkgs;[
