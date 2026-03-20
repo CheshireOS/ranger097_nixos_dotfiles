@@ -3,7 +3,7 @@ programs.nvf = {
    enable = true;
    settings.vim = {
        autocomplete.nvim-cmp.enable = true;
-       status.lualine.enable = true;
+       statusline.lualine.enable = true;
        telescope.enable = true;        
        
 
