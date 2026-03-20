@@ -25,7 +25,15 @@ programs.nvf = {
        }; 
 
        luaConfigRC.post = ''
-          vim.cmd('colorscheme wal')
+       vim.cmd('colorscheme wal')
+       local highlights = {
+         "Normal", "NormalFloat", "FloatBorder", "Pmenu", 
+         "SignColumn", "LineNr", "CursorLine", "EndOfBuffer"
+       }
+       
+       for _, group in ipairs(highlights) do
+       vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+       end
        '';
 
        languages = {
