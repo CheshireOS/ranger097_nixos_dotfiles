@@ -13,7 +13,7 @@ ls = "lsd --tree --icon=always --depth 1";
 lsa = "lsd -a --tree --icon=always --depth 1";
 clear = "clear && ranger_fetch";
 ytdownload = "yt-dlp -x --audio-format mp3 --audio-quality 0 --cookies-from-browser firefox --embed-metadata --embed-thumbnail --add-metadata";
-edit = "sudo nvim"
+edit = "sudo nvim";
 };
    
 interactiveShellInit = ''
