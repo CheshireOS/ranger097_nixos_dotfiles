@@ -84,6 +84,13 @@ fzf
 nix-direnv
 ];
 
+programs.nvf = {
+enable = true;
+   settings = {
+      vim.languages.nix.enable = true;
+   };
+};
+
 
 
 fonts.packages = with pkgs;[

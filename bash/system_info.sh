@@ -84,7 +84,7 @@ echo -e "\e[31m│                                       \e[31m│"
 
 
 ranger_fetch() {
-echo -e "\n\n\n"
+echo -e "\n\n"
 term_width=$(tput cols)
 top_line="╭───────────────────────────────────────╮"
 top_line_len=$(echo -ne "$top_line" | sed 's/\x1b\[[0-9;]*m//g' | wc -m)
