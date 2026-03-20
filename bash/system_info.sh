@@ -167,7 +167,7 @@ if [[ $(tput lines) -ge 25 && $(tput cols) -ge 60 ]]; then
 
 elif [[ $(tput lines) -ge 12 && $(tput cols) -ge 48 ]]; then
    tput civis
-   pokeget random --hide-name
+   pokeget --mega random --hide-name
    echo -e "\e]11;#000000\a"
    read -s -n 1 -p ""
    clear
