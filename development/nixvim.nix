@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:{
-  
-    let 
+
+    let
        pywal = pkgs.vimPlugins.pywal-nvim;
 
 
@@ -136,6 +136,7 @@
     };
     
     extraConfigVim = ''
+    require('pywal').setup()
     '';
 
     extraPlugins = [
