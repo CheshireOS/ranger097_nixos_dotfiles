@@ -23,6 +23,7 @@
         };
       }
     ];
+     
     globals.mapleader = " "; 
     plugins.treesitter = {
     enable = true;
