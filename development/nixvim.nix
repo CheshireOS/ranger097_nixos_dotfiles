@@ -136,7 +136,7 @@
       };
     };
     
-    extraConfigVim = ''
+    extraConfigLua = ''
     require('pywal').setup()
     '';
 
