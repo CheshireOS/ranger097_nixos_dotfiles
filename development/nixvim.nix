@@ -20,6 +20,15 @@
     nixGrammars = false;
     };
     
+    plugins.nvim-tree = {
+    enable = true;
+    openOnSetup = true;
+    view = {
+      width = 30;
+      side = "left";
+      };
+    };
+
     plugins.web-devicons.enable = true;    
     plugins.telescope.enable = true; 
     plugins.lualine.enable = true;
