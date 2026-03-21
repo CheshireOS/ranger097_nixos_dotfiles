@@ -80,6 +80,10 @@ fd
 unzip   
 fzf      
 nix-direnv
+viu
+chafa
+ueberzugpp
+tree-sitter
 ];
 
 
