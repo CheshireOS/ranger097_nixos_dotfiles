@@ -16,7 +16,8 @@ programs.nvf = {
        vimAlias = true;
        theme = {
          enable = false;
-       };
+         transparent = true;       
+};
        
        extraPlugins = with pkgs.vimPlugins; {
           wal-vim = {
