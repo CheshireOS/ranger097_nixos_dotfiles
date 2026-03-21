@@ -36,40 +36,6 @@ home.sessionVariables = {
 };
 
 
-programs.neovim = {
-enable = true;
-plugins = with pkgs.vimPlugins; [
-direnv-vim
-wal-vim
-nvim-lspconfig
-nvim-treesitter
-rustaceanvim
-nvim-jdtls
-go-nvim
-vim-rails
-tailwind-tools-nvim
-nvim-cmp
-cmp-nvim-lsp
-luasnip
-fidget-nvim
-conform-nvim
-nvim-lint
-nvim-dap
-nvim-dap-ui
-nvim-dap-python
-lazygit-nvim
-];
-
-
-
-};
-
-
-
-
-
-
-
 
 
 wayland.windowManager.hyprland = {
