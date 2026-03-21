@@ -5,7 +5,9 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     
-    nvf.url = "github:notashelf/nvf";
+    nixvim = {
+       url = "github:nix-community/nixvim";
+    };
     
     lanzaboote = {
     url = "github:nix-community/lanzaboote/v1.0.0";
@@ -21,7 +23,7 @@
   };
  
 
-  outputs = { self, nixpkgs, nvf, home-manager, lanzaboote, ... }@inputs: {
+  outputs = { self, nixpkgs, nixvim, home-manager, lanzaboote, ... }@inputs: {
    
 
   nixosConfigurations = {
@@ -34,7 +36,6 @@
       ./configuration.nix
         home-manager.nixosModules.home-manager
         lanzaboote.nixosModules.lanzaboote
-        nvf.nixosModules.default
     
      ({ pkgs, lib, ... }: {
         networking.hostName = "deoxy";
@@ -65,7 +66,6 @@
        ./configuration.nix
          home-manager.nixosModules.home-manager
          lanzaboote.nixosModules.lanzaboote
-         nvf.nixosModules.default
 
    ({ pkgs, lib, ... }: {
       networking.hostName = "jirachi";
