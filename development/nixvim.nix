@@ -1,5 +1,15 @@
 { config, pkgs, lib, ... }:{
  
+    programs.neovim = {
+    enable = true;
+     plugins = with pkgs; [
+     vimPlugins.nvim-treesitter.withAllGrammars
+    ];
+    };
+
+
+
+
     programs.nixvim = {
     enable = true;
     defaultEditor = true;
