@@ -7,7 +7,6 @@
     ./packages.nix
     ./bash/bash.nix
     ./wifi/wifi.nix
-    ./development/nvf-conf.nix 
  ];
 
   # Bootloader & Kernel
