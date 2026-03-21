@@ -10,7 +10,15 @@
     programs.nixvim = {
     enable = true;
     defaultEditor = true;
-    colorscheme = "pywal";
+    colorschemes.kanagawa = {
+    enable = true;
+    settings = {
+    theme = "wave"; # "wave", "dragon", "lotus"
+    terminalColors = true;
+    transparent = true;
+    };
+ 
+    };
         
     plugins.treesitter = {
     enable = true;
@@ -71,23 +79,9 @@
       relativenumber = true; 
       shiftwidth = 2;   
       termguicolors = true;
-    };
+      background = "";    
+};
     
-    highlight = {
-      Normal = {
-      bg = "none";
-      ctermbg = "none";
-      };
-      NonText.bg = "none";
-      NormalFloat ={ 
-      bg = "none";
-      ctermbg = "none";
-      };
-      SignColumn.bg = "none";
-      StatusLine.bg = "none";
-      VertSplit.bg = "none";
-    };
-
       plugins.lsp.servers = {
       pyright.enable = true;
       nixd.enable = true;
@@ -137,11 +131,10 @@
     };
     
     extraConfigLua = ''
-    require('pywal').setup()
     '';
 
     extraPlugins = [
-    pywal
+   
     ];
         
     extraPackages = with pkgs; [
