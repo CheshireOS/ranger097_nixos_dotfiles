@@ -16,22 +16,9 @@
     enable = true;
     settings.highlight.enable = true;
     settings.indent.enable = true;
-    grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
-    javascript
-    typescript
-    tsx
-    svelte
-    html
-    css
-    go
-    python
-    rust
-    java
-    gdscript
-    nix
-    kotlin
-    ];
+    package = pkgs.vimPlugins.nvim-treesitter.withAllGrammars;
     };
+    
     plugins.web-devicons.enable = true;    
     plugins.telescope.enable = true; 
     plugins.lualine.enable = true;
@@ -130,6 +117,7 @@
     
     extraConfigLua = ''
     require('pywal').setup()
+    require('transparent').clear_prefix('lualine')
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
     vim.api.nvim_set_hl(0, "NonText", { bg = "none" })
