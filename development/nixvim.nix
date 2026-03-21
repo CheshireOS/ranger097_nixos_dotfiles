@@ -104,12 +104,18 @@
     plugins.transparent = {
       enable = true;
       settings.extra_groups = [
-        "NormalFloat"
+         "NormalFloat"
         "NvimTreeNormal"
+        "NvimTreeNormalNC"
         "TelescopeNormal"
         "TelescopeBorder"
         "LspFloatWinNormal"
+        "MsgArea"
+        "StatusLine"
+        "StatusLineNC"
+        "WinSeparator"
         "Folded"
+        "EndOfBuffer"
       ];
     };
    
@@ -129,21 +135,21 @@
     require('pywal').setup()
     require('transparent').clear_prefix('lualine')
     require('transparent').clear_prefix('NvimTree')
+    local bg_groups = {
+    "Normal", "NormalNC", "Comment", "Constant", "Special", "Identifier",
+    "Statement", "PreProc", "Type", "Underlined", "Todo", "String",
+    "Function", "Conditional", "Repeat", "Operator", "Structure",
+    "LineNr", "CursorLineNr", "StatusLine", "StatusLineNC",
+    "Pmenu", "PmenuSel", "SignColumn", "CursorLine", "FoldColumn",
+    "MsgArea", "EndOfBuffer", "WinSeparator", "VertSplit"
+    }
 
-    
-    vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NvimTreeNormalNC", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NvimTreeEndOfBuffer", { bg = "none" })
+    for _, group in ipairs(bg_groups) do
+    vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+    end
 
-    
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NonText", { bg = "none" })
-    vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
-    vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none" })
-    vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
-    vim.api.nvim_set_hl(0, "MsgArea", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none", ctermbg = "none" })
+    vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none", ctermbg = "none" })
     '';
 
     extraPlugins = [
