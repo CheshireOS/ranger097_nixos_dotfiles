@@ -67,9 +67,15 @@
     };
     
     highlight = {
-      Normal.bg = "none";
+      Normal = {
+      bg = "none";
+      ctermbg = "none";
+      };
       NonText.bg = "none";
-      NormalFloat.bg = "none";
+      NormalFloat ={ 
+      bg = "none";
+      ctermbg = "none";
+      };
       SignColumn.bg = "none";
       StatusLine.bg = "none";
       VertSplit.bg = "none";
