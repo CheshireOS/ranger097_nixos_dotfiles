@@ -10,18 +10,15 @@
     programs.nixvim = {
     enable = true;
     defaultEditor = true;
-    colorscheme = "kanagawa";
-    colorschemes.kanagawa = {
-    enable = true;
-    autoLoad = true;
-    settings = {
-    theme = "wave"; # "wave", "dragon", "lotus"
+    colorscheme = "pywal";
     terminalColors = true;
-    transparent = true;
-    
-    };
- 
-    };
+    plugins.transparent = {
+    enable = true;
+      settings.extra_groups = [
+        "NormalFloat" "NvimTreeNormal" "TelescopeNormal" 
+        "TelescopeBorder" "LspFloatWinNormal" "Folded"
+        ];
+      };
         
     plugins.treesitter = {
     enable = true;
@@ -134,10 +131,14 @@
     };
     
     extraConfigLua = ''
+    require('pywal').setup()
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NonText", { bg = "none" })
     '';
 
     extraPlugins = [
-   
+    pywal   
     ];
         
     extraPackages = with pkgs; [
