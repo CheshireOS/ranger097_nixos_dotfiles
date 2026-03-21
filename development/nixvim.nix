@@ -22,9 +22,11 @@
     java
     gdscript
     nix
+    kotlin
     ];
     };
     
+
     plugins.lualine.enable = true;
     plugins.luasnip.enable = true;
     plugins.rustaceanvim.enable = true;
@@ -79,6 +81,8 @@
       emmet_ls.enable = true;
       jdtls.enable = true; 
       gdscript.enable = true;
+      kotlin_lsp.enable = true;
+      sqls.enable = true;
 };
 
     plugins.transparent = {
