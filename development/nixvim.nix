@@ -12,6 +12,18 @@
     colorscheme = "pywal";
     terminalColors = true;
         
+    keymaps = [
+      {
+        mode = "n";
+        key = "<leader>e";
+        action = "<cmd>NvimTreeToggle<CR>";
+        options = {
+          silent = true;
+          desc = "Toggle NvimTree";
+        };
+      }
+    ];
+
     plugins.treesitter = {
     enable = true;
     settings.highlight.enable = true;
