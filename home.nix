@@ -289,7 +289,7 @@ bindl = , XF86AudioPrev, exec, playerctl previous
 #KEYBINDING_SETTINGS_END
 
 #WINDOW_RULE_SETTINGS_START
-windowrule = match:class com.mitchellh.ghostty, opacity 0.7
+windowrule = match:class com.mitchellh.ghostty, opacity 1.0
 windowrule = match:class code, opacity 0.7
 windowrule = match:class firefox, opacity 1.0
 windowrule = match:class discord, opacity 1.0
