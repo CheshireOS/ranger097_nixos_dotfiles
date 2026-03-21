@@ -128,6 +128,15 @@
     extraConfigLua = ''
     require('pywal').setup()
     require('transparent').clear_prefix('lualine')
+    require('transparent').clear_prefix('NvimTree')
+
+    
+    vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NvimTreeNormalNC", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NvimTreeEndOfBuffer", { bg = "none" })
+
+    
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
     vim.api.nvim_set_hl(0, "NonText", { bg = "none" })
