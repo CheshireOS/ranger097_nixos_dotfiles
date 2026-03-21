@@ -130,7 +130,17 @@
     };
     
     extraConfigVim = ''
-      set t_Co=16
+    local function set_transparency()
+      vim.api.nvim_set_hl(0, "Normal", { bg = "none", ctermbg = "none" })
+      vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none", ctermbg = "none" })
+      vim.api.nvim_set_hl(0, "NormalNC", { bg = "none", ctermbg = "none" })
+    end
+
+    set_transparency()
+
+    vim.api.nvim_create_autocmd("ColorScheme", {
+      callback = set_transparency,
+    })
     '';
     
     extraPackages = with pkgs; [
