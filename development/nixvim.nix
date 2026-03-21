@@ -17,6 +17,7 @@
     settings.highlight.enable = true;
     settings.indent.enable = true;
     package = pkgs.vimPlugins.nvim-treesitter.withAllGrammars;
+    nixGrammars = false;
     };
     
     plugins.web-devicons.enable = true;    
