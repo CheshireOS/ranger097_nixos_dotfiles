@@ -25,7 +25,7 @@ programs.nvf = {
           };
        }; 
 
-       vim.luaConfigRC.pywal-transparency = ''
+       luaConfigRC.pywal-transparency = ''
        local function set_transparency()
        local hl_groups = {
         "Normal", "NormalFloat", "FloatBorder", "Pmenu", 
