@@ -63,7 +63,7 @@
       number = true;         
       relativenumber = true; 
       shiftwidth = 2;   
-      termguicolors = true;
+      termguicolors = false;
     };
     
     highlight = {
