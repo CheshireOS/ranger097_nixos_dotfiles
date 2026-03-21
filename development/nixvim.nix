@@ -88,10 +88,13 @@
       tailwindcss.enable = true; 
       emmet_ls.enable = true;
       jdtls.enable = true; 
-      gdscript.enable = true;
-      kotlin_lsp.enable = true;
-      sqls.enable = true;
-};
+      gdscript = {
+         enable = true;
+         package = null; 
+        };
+        kotlin_lsp.enable = true;
+        sqls.enable = true;
+      };
 
     plugins.transparent = {
       enable = true;
@@ -104,9 +107,12 @@
     plugins.none-ls = {
     enable = true;
     sources.formatting = {
-    prettier.enable = true; # Handles HTML, CSS, JS, React, Svelte
-    gofmt.enable = true;    # Handles Go
-    black.enable = true;    # Handles Python
+    prettier = {
+    enable = true; 
+    disableTsServerFormatter = true; 
+    };
+    gofmt.enable = true;
+    black.enable = true;
       };
     };
     
