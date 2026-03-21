@@ -92,7 +92,10 @@
          enable = true;
          package = null; 
         };
-        kotlin_lsp.enable = true;
+      kotlin_lsp = {
+      enable = true;
+      package = null;
+      };
         sqls.enable = true;
       };
 
