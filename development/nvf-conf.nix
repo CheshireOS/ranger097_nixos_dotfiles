@@ -6,7 +6,6 @@ environment.variables.VISUAL = "nvim";
 programs.nvf = {
    enable = true;
    settings.vim = {
-       visuals.transparent.enable = true;
        options.termguicolors = false;
        options.background = "dark";
        autocomplete.nvim-cmp.enable = true;
@@ -16,7 +15,7 @@ programs.nvf = {
        viAlias = false;
        vimAlias = true;
        theme = {
-         enable = false;
+         enable = true;
          transparent = true;
 	 name = "base16";
 };
