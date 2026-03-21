@@ -36,6 +36,7 @@
       ./configuration.nix
         home-manager.nixosModules.home-manager
         lanzaboote.nixosModules.lanzaboote
+        nixvim.nixosModules.nixvim
     
      ({ pkgs, lib, ... }: {
         networking.hostName = "deoxy";
@@ -66,6 +67,7 @@
        ./configuration.nix
          home-manager.nixosModules.home-manager
          lanzaboote.nixosModules.lanzaboote
+         nixvim.nixosModules.nixvim
 
    ({ pkgs, lib, ... }: {
       networking.hostName = "jirachi";
