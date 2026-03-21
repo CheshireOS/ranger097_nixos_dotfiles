@@ -35,7 +35,6 @@
     plugins.auto-save.enable = true;
     plugins.dotnet.enable = true;
     plugins.fzf-lua.enable = true;
-    plugins.gdscript-extended-lsp.enable = true;
     plugins.git-conflict.enable = true;
     plugins.git-worktree.enable = true;
     plugins.git-worktree.enableTelescope = true;
