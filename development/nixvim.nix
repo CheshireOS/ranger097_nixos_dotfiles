@@ -1,10 +1,11 @@
-{ config, pkgs, lib, ... }:{
+{ config, pkgs, lib, ... }:
 
     let
        pywal = pkgs.vimPlugins.pywal-nvim;
 
 
-    in
+    in 
+      {
  
     programs.nixvim = {
     enable = true;
