@@ -82,7 +82,7 @@
       relativenumber = true; 
       shiftwidth = 2;   
       termguicolors = true;
-      background = "";    
+      background = "dark";    
 };
     
       plugins.lsp.servers = {
