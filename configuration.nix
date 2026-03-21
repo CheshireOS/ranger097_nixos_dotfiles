@@ -7,12 +7,11 @@
     ./packages.nix
     ./bash/bash.nix
     ./wifi/wifi.nix
-    <nixvim>.nixosModules.nixvim
+    ./development/nixvim.nix
  ];
   
 
 
-  programs.nixvim.enable = true;
   # Bootloader & Kernel
   boot.loader.systemd-boot.enable = false;
   boot.lanzaboote.enable = true;
