@@ -10,7 +10,7 @@
     programs.nixvim = {
     enable = true;
     defaultEditor = true;
-    colorschemes.gruvbox.enable = false;
+    colorscheme = "pywal";
         
     plugins.treesitter = {
     enable = true;
