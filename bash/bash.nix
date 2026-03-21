@@ -4,18 +4,21 @@ enable = true;
 shellAliases = {
 bye = "shutdown -h now";
 nii = "cd ~/ranger097_nixos_dotfiles";
-bii = "cd ~/ranger097_nixos_dotfiles/bash";
-gii = "sudo nvim ~/ranger097_nixos_dotfiles/ghostty/config";
-hii = "sudo nvim ~/ranger097_nixos_dotfiles/home.nix";
-wii = "cd ~/ranger097_nixos_dotfiles/waybar";
-cii = "cd ~/.config";
+bii = "cd ~/ranger097_nixos_dotfiles/bash && nvim .";
+gii = "nvim ~/ranger097_nixos_dotfiles/ghostty/config";
+hii = "nvim ~/ranger097_nixos_dotfiles/home.nix";
+wii = "cd ~/ranger097_nixos_dotfiles/waybar && nvim .";
+cii = "cd ~/.config && nvim .";
 ls = "lsd --tree --icon=always --depth 1";
 lsa = "lsd -a --tree --icon=always --depth 1";
 clear = "clear && ranger_fetch";
-ytdownload = "yt-dlp -x --audio-format mp3 --audio-quality 0 --cookies-from-browser firefox --embed-metadata --embed-thumbnail --add-metadata";
-edit = "sudo nvim";
-nvii = "sudo nvim ~/ranger097_nixos_dotfiles/development/nixvim.nix";
-};
+ytd = "yt-dlp -x --audio-format mp3 --audio-quality 0 --cookies-from-browser firefox --embed-metadata --embed-thumbnail --add-metadata";
+edit = "nvim";
+nvii = "nvim ~/ranger097_nixos_dotfiles/development/nixvim.nix";
+vim = "nvim";
+vi = "nvim";
+anime = "ani-cli --dub";
+    };
    
 interactiveShellInit = ''
 #!/bin/bash
