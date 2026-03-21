@@ -8,9 +8,9 @@ font-style = Regular
 
 #WINDOW_SETTINGS
 window-padding-x = 20
-window-padding-y = 20
+window-padding-y = 20,0
 confirm-close-surface = false
-
+window-step-resize = false
 
 #BACKGROUND_SETTINGS
 background-opacity = 0.7
