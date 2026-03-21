@@ -6,7 +6,7 @@ environment.variables.VISUAL = "nvim";
 programs.nvf = {
    enable = true;
    settings.vim = {
-       options.termguicolors = true;
+       options.termguicolors = false;
        options.background = "dark";
        autocomplete.nvim-cmp.enable = true;
        statusline.lualine.enable = true;
@@ -25,17 +25,26 @@ programs.nvf = {
           };
        }; 
 
-       luaConfigRC.pywal-transparency = ''
+       vim.luaConfigRC.pywal-transparency = ''
+       local function set_transparency()
        local hl_groups = {
-         "Normal", "NormalFloat", "FloatBorder", "Pmenu", 
-         "SignColumn", "LineNr", "CursorLine", "EndOfBuffer",
-         "NonText", "NormalNC", "TelescopeBorder", "TelescopeNormal"
+        "Normal", "NormalFloat", "FloatBorder", "Pmenu", 
+        "SignColumn", "LineNr", "CursorLine", "EndOfBuffer",
+        "NonText", "NormalNC", "TelescopeBorder", "TelescopeNormal"
        }
 
-       for _, group in ipairs(hl_groups) do
-       vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-       end
-       '';
+      for _, group in ipairs(hl_groups) do
+        vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+      end
+      end
+
+      set_transparency()
+
+  
+      vim.api.nvim_create_autocmd("ColorScheme", {
+      callback = set_transparency,
+      })
+      '';
 
        languages = {
        enableTreesitter = true;
