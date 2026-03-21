@@ -12,10 +12,12 @@
     defaultEditor = true;
     colorschemes.kanagawa = {
     enable = true;
+    autoLoad = true;
     settings = {
     theme = "wave"; # "wave", "dragon", "lotus"
     terminalColors = true;
     transparent = true;
+    
     };
  
     };
