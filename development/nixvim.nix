@@ -106,7 +106,7 @@
       };
 
     plugins.transparent = {
-      enable = true;
+      enable = false;
       settings.extra_groups = [
         "NormalFloat"
         "NvimTreeNormal"
@@ -130,17 +130,17 @@
     };
     
     extraConfigVim = ''
-    local function set_transparency()
-      vim.api.nvim_set_hl(0, "Normal", { bg = "none", ctermbg = "none" })
-      vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none", ctermbg = "none" })
-      vim.api.nvim_set_hl(0, "NormalNC", { bg = "none", ctermbg = "none" })
-    end
+      local function set_transparency()
+        vim.api.nvim_set_hl(0, "Normal", { bg = "NONE", ctermbg = "NONE" })
+        vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE", ctermbg = "NONE" })
+        vim.api.nvim_set_hl(0, "NormalNC", { bg = "NONE", ctermbg = "NONE" })
+      end
 
-    set_transparency()
+      set_transparency()
 
-    vim.api.nvim_create_autocmd("ColorScheme", {
-      callback = set_transparency,
-    })
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        callback = set_transparency,
+      })
     '';
     
     extraPackages = with pkgs; [
