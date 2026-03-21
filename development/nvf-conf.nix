@@ -16,7 +16,8 @@ programs.nvf = {
        vimAlias = true;
        theme = {
          enable = false;
-         transparent = true;       
+         transparent = true;
+	 name = "base16";
 };
        
        extraPlugins = with pkgs.vimPlugins; {
