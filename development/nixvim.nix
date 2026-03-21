@@ -65,7 +65,7 @@
           "<CR>" = "cmp.mapping.confirm({ select = true })";
           "<Tab>" = "cmp.mapping.select_next_item()";
           "<S-Tab>" = "cmp.mapping.select_prev_item()";
-	  "<Leader-E>" = "<cmd>NvimTreeToggle<CR>";
+	  "<leader>e" = "<cmd>NvimTreeToggle<CR>";
 
         };
 
@@ -135,7 +135,7 @@
     
     extraConfigLua = ''
     require('pywal').setup()
-    require('transparent').clear_prefix('lualine')
+    require('pywal').clear_prefix('lualine')
     require('transparent').clear_prefix('NvimTree')
     local bg_groups = {
     "Normal", "NormalNC", "Comment", "Constant", "Special", "Identifier",
