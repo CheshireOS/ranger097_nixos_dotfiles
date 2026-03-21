@@ -104,6 +104,10 @@
       settings.extra_groups = [
         "NormalFloat"
         "NvimTreeNormal"
+        "TelescopeNormal"
+        "TelescopeBorder"
+        "LspFloatWinNormal"
+        "Folded"
       ];
     };
    
@@ -122,7 +126,12 @@
     extraConfigVim = ''
       set t_Co=16
     '';
-
+    
+    extraPackages = with pkgs; [
+    tree-sitter
+    nodePackages.prettier
+    black
+    ];
   };
 
 
