@@ -2,10 +2,9 @@
 
     let
        pywal = pkgs.vimPlugins.pywal-nvim;
-
-
     in 
-      {
+
+{
  
     programs.nixvim = {
     enable = true;
@@ -40,7 +39,7 @@
     plugins.rustaceanvim.enable = true;
     plugins.lsp.enable = true;
     plugins.java = { 
-    enable = true;
+    enable = false;
        settings = {
           spring_boot.enable = false;
        };
