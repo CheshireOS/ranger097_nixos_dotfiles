@@ -4,7 +4,7 @@
     enable = true;
     defaultEditor = true;
     colorschemes.gruvbox.enable = false;
-    
+        
     plugins.treesitter = {
     enable = true;
     settings.highlight.enable = true;
@@ -26,7 +26,7 @@
     ];
     };
     
-
+    plugins.telescope.enable = true; 
     plugins.lualine.enable = true;
     plugins.luasnip.enable = true;
     plugins.rustaceanvim.enable = true;
