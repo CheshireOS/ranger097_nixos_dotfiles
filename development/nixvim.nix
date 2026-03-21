@@ -12,13 +12,6 @@
     defaultEditor = true;
     colorscheme = "pywal";
     terminalColors = true;
-    plugins.transparent = {
-    enable = true;
-      settings.extra_groups = [
-        "NormalFloat" "NvimTreeNormal" "TelescopeNormal" 
-        "TelescopeBorder" "LspFloatWinNormal" "Folded"
-        ];
-      };
         
     plugins.treesitter = {
     enable = true;
@@ -107,7 +100,7 @@
       };
 
     plugins.transparent = {
-      enable = false;
+      enable = true;
       settings.extra_groups = [
         "NormalFloat"
         "NvimTreeNormal"
