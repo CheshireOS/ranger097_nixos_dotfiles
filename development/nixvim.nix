@@ -42,6 +42,8 @@
       };
     };
 
+    plugins.noice.enable = true;
+    plugins.noice.autoLoad = true;
     plugins.web-devicons.enable = true;    
     plugins.telescope.enable = true; 
     plugins.lualine.enable = true;
