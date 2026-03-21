@@ -39,7 +39,13 @@
     plugins.luasnip.enable = true;
     plugins.rustaceanvim.enable = true;
     plugins.lsp.enable = true;
-    plugins.java.enable = true;
+    plugins.java = { 
+    enable = true;
+       settings = {
+          spring_boot.enable = false;
+       };
+    };
+    
     plugins.auto-save.enable = true;
     plugins.dotnet.enable = true;
     plugins.fzf-lua.enable = true;
