@@ -57,7 +57,6 @@ nmap
 pywal16
 pywalfox-native
 mullvad-browser
-riseup-vpn
 android-studio-tools
 android-studio-full
 wireguard-tools
@@ -81,7 +80,6 @@ fd
 unzip   
 fzf      
 nix-direnv
-alacritty
 ];
 
 
