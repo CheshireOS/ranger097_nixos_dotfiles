@@ -23,7 +23,7 @@
     plugins.nvim-tree = {
     enable = true;
     openOnSetup = true;
-    view = {
+    settings.view = {
       width = 30;
       side = "left";
       };
@@ -143,6 +143,7 @@
     vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
     vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none" })
     vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+    vim.api.nvim_set_hl(0, "MsgArea", { bg = "none" })
     '';
 
     extraPlugins = [
