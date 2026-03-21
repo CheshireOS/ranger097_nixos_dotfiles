@@ -10,6 +10,7 @@
     programs.nixvim = {
     enable = true;
     defaultEditor = true;
+    colorscheme = "kanagawa";
     colorschemes.kanagawa = {
     enable = true;
     autoLoad = true;
