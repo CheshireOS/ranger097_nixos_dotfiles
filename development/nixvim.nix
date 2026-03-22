@@ -174,9 +174,9 @@
     
     extraConfigLua = ''
     require('pywal').setup()
-    require('mini.statusline').setup()
+    --require('mini.statusline').setup()
     require('toggleterm').setup()
-    --require('transparent').clear_prefix('lualine')
+    require('transparent').clear_prefix('lualine')
     require('transparent').clear_prefix('NvimTree')
     local bg_groups = {
     "Normal", "NormalNC", "Comment", "Constant", "Special", "Identifier",
