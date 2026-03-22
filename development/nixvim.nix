@@ -37,7 +37,7 @@
     enable = true;
     openOnSetup = true;
     settings.view = {
-      width = 20;
+      width = 40;
       side = "right";
       };
     };
