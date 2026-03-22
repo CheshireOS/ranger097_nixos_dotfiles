@@ -134,12 +134,12 @@ scale = 0.99
 blur {
 enabled = true
 size = 3
-passes = 2
+passes = 3
 contrast = 1.0
 vibrancy = 0
 vibrancy_darkness = 0
 brightness = 1.0
-noise = 0.02
+noise = 0.07
 popups = true
 }
 }
