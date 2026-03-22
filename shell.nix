@@ -33,7 +33,7 @@ ripgrep
 fd
 fzf
 jq
-chsharpier
+csharpier
 erb_format
 fantomas
 fish_indent
