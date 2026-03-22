@@ -5,7 +5,6 @@
     in 
 
 {
- 
     programs.nixvim = {
     enable = true;
     defaultEditor = true;
@@ -53,6 +52,15 @@
     start_in_insert = true;
       };
     };
+
+    plugins.mini-statusline ={
+    enable = true;
+    autoLoad = true;
+    settings  = {
+    use_icons = false;
+      };
+    };
+
     plugins.image.autoLoad = true;
     plugins.image.enable = true;
     plugins.noice.enable = true;
@@ -88,24 +96,24 @@
         { name = "buffer"; }
       ];
     
-       mapping = {
-          "<C-Space>" = "cmp.mapping.complete()";
-          "<CR>" = "cmp.mapping.confirm({ select = true })";
-          "<Tab>" = "cmp.mapping.select_next_item()";
-          "<S-Tab>" = "cmp.mapping.select_prev_item()";
-	  "<leader>e" = "<cmd>NvimTreeToggle<CR>";
-
+     mapping = {
+        "<C-Space>" = "cmp.mapping.complete()";
+        "<CR>" = "cmp.mapping.confirm({ select = true })";
+        "<Tab>" = "cmp.mapping.select_next_item()";
+        "<S-Tab>" = "cmp.mapping.select_prev_item()";
+	"<leader>e" = "<cmd>NvimTreeToggle<CR>";
         };
 
         snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
     };   
+
     opts = {
       number = true;         
       relativenumber = false; 
       shiftwidth = 2;   
       termguicolors = true;
       background = "dark";    
-};
+    };
     
       plugins.lsp.servers = {
       pyright.enable = true;
@@ -120,32 +128,35 @@
       tailwindcss.enable = true; 
       emmet_ls.enable = true;
       jdtls.enable = true; 
+
       gdscript = {
          enable = true;
          package = null; 
         };
+
       kotlin_lsp = {
       enable = true;
       package = null;
       };
+
         sqls.enable = true;
       };
 
-    plugins.transparent = {
+      plugins.transparent = {
       enable = true;
       settings.extra_groups = [
-         "NormalFloat"
-        "NvimTreeNormal"
-        "NvimTreeNormalNC"
-        "TelescopeNormal"
-        "TelescopeBorder"
-        "LspFloatWinNormal"
-        "MsgArea"
-        "StatusLine"
-        "StatusLineNC"
-        "WinSeparator"
-        "Folded"
-        "EndOfBuffer"
+      "NormalFloat"
+      "NvimTreeNormal"
+      "NvimTreeNormalNC"
+      "TelescopeNormal"
+      "TelescopeBorder"
+      "LspFloatWinNormal"
+      "MsgArea"
+      "StatusLine"
+      "StatusLineNC"
+      "WinSeparator"
+      "Folded"
+      "EndOfBuffer"
       ];
     };
    
@@ -163,6 +174,7 @@
     
     extraConfigLua = ''
     require('pywal').setup()
+    require('mini.statusline').setup()
     require('toggleterm').setup()
     --require('transparent').clear_prefix('lualine')
     require('transparent').clear_prefix('NvimTree')
