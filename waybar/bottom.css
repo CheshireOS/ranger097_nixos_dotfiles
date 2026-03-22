@@ -5,7 +5,7 @@
 window#waybar {
 /*background: linear-gradient(rgba(0,0,0,0.5));*/
 background-color: @waybar-bg;
-border-top: 1px solid #000000;
+border-top: 2px solid #000000;
 }
 
 window#waybar:hover {
