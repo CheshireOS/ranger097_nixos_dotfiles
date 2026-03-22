@@ -105,7 +105,7 @@
       shiftwidth = 2;   
       termguicolors = true;
       background = "dark";   
-      signColumn = "yes"; 
+      signColumn = true; 
 };
     
       plugins.lsp.servers = {
