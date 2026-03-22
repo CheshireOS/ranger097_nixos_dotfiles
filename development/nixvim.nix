@@ -42,13 +42,24 @@
       };
     };
 
+    plugins.toggleterm = {
+    enable = true;
+    settings = {
+    size = 20;
+    open_mapping = "[[<Space><CR>]]";
+    direction = "tab"; # vertical, float, tab, horizontal
+    shade_terminals = true;
+    persist_size = true;
+    start_in_insert = true;
+      };
+    };
     plugins.image.autoLoad = true;
     plugins.image.enable = true;
     plugins.noice.enable = true;
     plugins.noice.autoLoad = true;
     plugins.web-devicons.enable = true;    
     plugins.telescope.enable = true; 
-    plugins.lualine.enable = true;
+    plugins.lualine.enable = false;
     plugins.luasnip.enable = true;
     plugins.rustaceanvim.enable = true;
     plugins.lsp.enable = true;
@@ -90,10 +101,11 @@
     };   
     opts = {
       number = true;         
-      relativenumber = true; 
+      relativenumber = false; 
       shiftwidth = 2;   
       termguicolors = true;
-      background = "dark";    
+      background = "dark";   
+      signColumn = "yes"; 
 };
     
       plugins.lsp.servers = {
@@ -152,6 +164,7 @@
     
     extraConfigLua = ''
     require('pywal').setup()
+    require('toggleterm').setup()
     --require('transparent').clear_prefix('lualine')
     require('transparent').clear_prefix('NvimTree')
     local bg_groups = {

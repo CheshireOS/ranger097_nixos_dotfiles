@@ -4,7 +4,11 @@
 font-family = Maple Mono NF
 font-size = 14
 font-style-bold = Bold
+font-style-italic = Italic
 font-style = Regular
+font-feature = "calt"
+font-feature = "liga"
+font-feature = "ss01"
 
 #WINDOW_SETTINGS
 window-padding-x = 0
@@ -12,8 +16,6 @@ window-padding-y = 0,0
 confirm-close-surface = false
 window-step-resize = false
 adjust-cell-height = 30%
-
-
 
 #BACKGROUND_SETTINGS
 background-opacity = 0.7
