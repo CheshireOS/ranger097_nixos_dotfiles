@@ -18,7 +18,7 @@ startup_mode = "Windowed"
 
 normal = { family = "Jetbrains Mono NF", style = "Regular" }
 bold = { family = "Jetbrains Mono NF", style = "Bold" }
-italic = { family = "Maple Mono NF", style = "SemiBold Italic" }
+italic = { family = "Maple Mono NF CN unhinted", style = "SemiBold Italic" }
 
 #normal = { family = "Maple Mono NF", style = "Regular" }
 #bold = { family = "Maple Mono NF", style = "Bold" }

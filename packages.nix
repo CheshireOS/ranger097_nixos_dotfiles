@@ -92,7 +92,6 @@ nerd-fonts.victor-mono
 nerd-fonts.caskaydia-cove
 maple-mono.NF-CN-unhinted
 nerd-fonts.jetbrains-mono
-texlivePackages.brushscr
 ];
 
 fonts.fontconfig = {
@@ -104,8 +103,7 @@ defaultFonts.monospace = [
 "Jetbrains Mono NF" 
 "Maple Mono NF" 
 "Victor Mono NF" 
-"CaskaydiaCove Nerd Font Mono" 
-"Brush Script"
+"CaskaydiaCove Nerd Font Mono"
 ];
 };
 
