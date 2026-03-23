@@ -42,8 +42,6 @@ mpvpaper
 mpv
 wget
 ranger
-ghostty
-kitty
 firefox
 git
 lsd

@@ -113,7 +113,7 @@ layout = dwindle
 #SETTINGS_END
 
 #WINDOW_SETTINGS_START
-decoration {
+decoration { 
 rounding = 0
 rounding_power = 2
 active_opacity = 1.0
@@ -137,7 +137,7 @@ size = 3
 passes = 4
 contrast = 1.0
 vibrancy = 0
-vibrancy_darkness = 0
+vibrancy_darkness = 0 e
 brightness = 1.0
 noise = 0.07
 popups = true
@@ -222,7 +222,7 @@ bind = SUPER, Q, killactive,
 bind = SUPER, Z, togglefloating,
 bind = SUPER, A, exec, /run/current-system/sw/bin/walker || pkill walker
 bind = SUPER, J, togglesplit, # dwindle
-bind = SUPER, B, exec, firefox
+bind = SUPER, B, exec, mullvad-browser
 bind = SUPER, D, exec, dolphin
 bind = SUPER, C, exec, code
 bind = SUPER, F, fullscreenstate, 2
@@ -291,7 +291,7 @@ bindl = , XF86AudioPrev, exec, playerctl previous
 #WINDOW_RULE_SETTINGS_START
 windowrule = match:class com.mitchellh.ghostty, opacity 1.0
 windowrule = match:class code, opacity 0.7
-windowrule = match:class firefox, opacity 1.0
+windowrule = match:class Mullvad Browser, opacity 1.0
 windowrule = match:class discord, opacity 1.0
 windowrule = match:fullscreen opacity 1.0 override
 windowrule = match:class libreoffice-writer, opacity 1.0
