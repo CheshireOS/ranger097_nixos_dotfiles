@@ -18,7 +18,7 @@ startup_mode = "Windowed"
 
 normal = { family = "Iosevka Nerd Font Propo", style = "Regular" }
 bold = { family = "Iosevka Nerd Font Propo", style = "Bold" }
-italic = { family = "Maple Mono NF CN", style = "Bold Italic" }
+italic = { family = "CaskaydiaCove Nerd Font Mono", style = "SemiBold Italic" }
 
 #normal = { family = "Maple Mono NF CN", style = "Regular" }
 #bold = { family = "Maple Mono NF CN", style = "Bold" }
