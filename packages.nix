@@ -83,6 +83,7 @@ chafa
 ueberzugpp
 tree-sitter
 alacritty
+ghostty
 ];
 
 fonts.packages = with pkgs;[

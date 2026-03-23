@@ -217,7 +217,7 @@ sensitivity = -0.5
 #DEVICE_SETTINGS_END
 
 #KEYBINDINGS_SETTINGS_START
-bind = SUPER, Return, exec, /run/current-system/sw/bin/ghostty
+bind = SUPER, Return, exec, alacritty
 bind = SUPER, Q, killactive,
 bind = SUPER, Z, togglefloating,
 bind = SUPER, A, exec, /run/current-system/sw/bin/walker || pkill walker
