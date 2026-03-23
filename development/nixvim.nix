@@ -8,7 +8,7 @@ in
     programs.nixvim = {
     enable = true;
     defaultEditor = true;
-    colorscheme = "pywal";
+    colorscheme = "kanagawa";
     terminalColors = true;
         
     keymaps = [
@@ -61,6 +61,10 @@ in
       };
     };
 
+    colorschemes.kanagawa = { 
+    enable = true;
+    autoLoad = true;
+    };
     plugins.image.autoLoad = true;
     plugins.image.enable = true;
     plugins.noice.enable = true;
@@ -112,7 +116,7 @@ in
       relativenumber = false; 
       shiftwidth = 2;   
       termguicolors = true;
-      background = "dark";    
+      background = "";    
     };
     
       plugins.lsp.servers = {
@@ -173,7 +177,7 @@ in
     };
     
     extraConfigLua = ''
-    require('pywal').setup()
+    --require('pywal').setup()
     --require('mini.statusline').setup()
     require('toggleterm').setup()
     --require('transparent').clear_prefix('lualine')
