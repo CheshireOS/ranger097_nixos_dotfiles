@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 
-    let
+let
   pywal = pkgs.vimPlugins.pywal-nvim;
 in 
 
@@ -36,7 +36,7 @@ in
     enable = true;
     openOnSetup = true;
     settings.view = {
-      width = 40;
+      width = 50;
       side = "right";
       };
     };
@@ -46,7 +46,7 @@ in
     settings = {
     size = 20;
     open_mapping = "[[<Space><CR>]]";
-    direction = "tab"; # vertical, float, tab, horizontal
+    direction = "vertical"; # vertical, float, tab, horizontal
     shade_terminals = true;
     persist_size = true;
     start_in_insert = true;

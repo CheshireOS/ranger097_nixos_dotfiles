@@ -84,6 +84,7 @@ ueberzugpp
 tree-sitter
 alacritty
 ghostty
+bc
 ];
 
 fonts.packages = with pkgs;[
