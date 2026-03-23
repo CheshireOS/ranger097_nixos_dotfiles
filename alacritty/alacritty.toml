@@ -18,14 +18,14 @@ startup_mode = "Windowed"
 
 normal = { family = "Iosevka Nerd Font Mono", style = "Regular" }
 bold = { family = "Iosevka Nerd Font Mono", style = "Bold" }
-italic = { family = "DepartureMono Nerd Font Mono", style = "SemiBold Italic" }
+italic = { family = "DepartureMono Nerd Font Mono", style = "Regular" }
 
 #normal = { family = "Maple Mono NF CN", style = "Regular" }
 #bold = { family = "Maple Mono NF CN", style = "Bold" }
 #italic = { family = "Maple Mono NF CN", style = "SemiBold Italic" }
 
-offset = { x = 0, y = 10 }
+offset = { x = 0, y = 20 }
 size = 14.0
 
 [colors]
-transparent_background_colors = true 
+transparent_background_colors = false 
