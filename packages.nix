@@ -94,6 +94,8 @@ maple-mono.NF-CN-unhinted
 nerd-fonts.jetbrains-mono
 nerd-fonts.iosevka
 nerd-fonts.departure-mono
+nerd-fonts.fira-code
+nerd-fonts.recursive 
 ];
 
 fonts.fontconfig = {
