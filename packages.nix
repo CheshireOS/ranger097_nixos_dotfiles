@@ -100,7 +100,13 @@ enable = true;
 antialias = true;
 hinting.enable = false;
 subpixel.rgba = "rgb";
-defaultFonts.monospace = [ "Jetbrains Mono NF" "Maple Mono NF" "Victor Mono NF" "CaskaydiaCove Nerd Font Mono" ];
+defaultFonts.monospace = [ 
+"Jetbrains Mono NF" 
+"Maple Mono NF" 
+"Victor Mono NF" 
+"CaskaydiaCove Nerd Font Mono" 
+"Brush Script"
+];
 };
 
 hardware.bluetooth.enable = true;
