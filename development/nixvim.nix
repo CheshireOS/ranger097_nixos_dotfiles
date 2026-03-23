@@ -8,7 +8,7 @@ in
     programs.nixvim = {
     enable = true;
     defaultEditor = true;
-    colorscheme = "kanagawa-dragon";
+    colorscheme = "kanagawa-wave"; #dragon
     terminalColors = true;
         
     keymaps = [
@@ -177,11 +177,11 @@ in
     };
     
     extraConfigLua = ''
-    require("kanagawa").load("dragon")
+    require("kanagawa").load("wave")
     --require('pywal').setup()
     --require('mini.statusline').setup()
     require('toggleterm').setup()
-    --require('transparent').clear_prefix('lualine')
+    require('transparent').clear_prefix('lualine')
     require('transparent').clear_prefix('NvimTree')
     local bg_groups = {
     "Normal", "NormalNC", "Comment", "Constant", "Special", "Identifier",
