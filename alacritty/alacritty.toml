@@ -8,9 +8,9 @@ opacity = 0.5
 startup_mode = "Windowed"
 
 [font]
-normal = { family = "Victor Mono NF", style = "Regular" }
-bold = { family = "Victor Mono NF", style = "Bold" }
-italic = { family = "Victor Mono NF", style = "SemiBold Italic" }
+normal = { family = "Caskaydia Cove Mono NF", style = "Regular" }
+bold = { family = "Caskaydia Cove Mono NF", style = "Bold" }
+italic = { family = "Caskaydia Cove Mono NF", style = "SemiBold Italic" }
 offset = { x = 0, y = 10 }
 size = 14.0
 
