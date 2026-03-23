@@ -101,7 +101,8 @@ enable = true;
 antialias = true;
 hinting.enable = false;
 subpixel.rgba = "rgb";
-defaultFonts.monospace = [ 
+defaultFonts.monospace = [
+"DepartureMono Nerd Font Mono"
 "Jetbrains Mono NF" 
 "Maple Mono NF CN" 
 "Victor Mono NF" 
