@@ -2,7 +2,7 @@
 
 width=$(tput cols)
 math=$(( width /  2 ))
-percent=$(( width / 7 ))
+percent=$(( width / 8 ))
 padding=$(( math - percent ))
 
 function pokemon() {
@@ -74,7 +74,7 @@ local stars_count=$(gh repo view ranger097_nixos_dotfiles --json stargazerCount 
 printf "%*s\e[32m  \e[36m%s\e[0m\n" "$padding" "" "$repo_name" 
 printf "%*s\e[32m  \e[36m%s\e[0m\n" "$padding" "" "Stars $stars_count" 
 printf "%*s\e[32m  \e[36m%s\e[0m\n" "$padding" "" "Forks $forks_count" 
-printf "%*s\e[32m  \e[36m%s\e[0m\n" "$padding" "" "Last update was $update_time"
+printf "%*s\e[32m  \e[36m%s\e[0m\n" "$padding" "" "Updated $update_time"
 }
 
 colors() {
@@ -83,7 +83,6 @@ printf "%*s%s\e[0m\n" "$padding" "" "$color_line"
 }
 
 ranger_fetch() {
-echo -e "\n"
 ascii_art
 github_info
 Music_fetch
@@ -103,14 +102,13 @@ function ranger_page() {
     echo -e "\e]11;#000000\a"
     read -s -n 1 -p ""
     clear
-    pokemon
     tput cnorm
 }
 
-if [[ $(tput lines) -ge 25 && $(tput cols) -ge 60 ]]; then
+if [[ $(tput lines) -ge 15 && $(tput cols) -ge 60 ]]; then
    ranger_page
 
-else [[ $(tput lines) -ge 12 && $(tput cols) -ge 48 ]];
+else [[ $(tput lines) -le 14 && $(tput cols) -le 59 ]];
    pokemon
     echo -e "\e]11;#000000\a"
    read -s -n 1 -p ""

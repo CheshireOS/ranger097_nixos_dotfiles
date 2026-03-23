@@ -11,7 +11,7 @@ startup_mode = "Windowed"
 normal = { family = "Victor Mono NF", style = "Regular" }
 bold = { family = "Victor Mono NF", style = "Bold" }
 italic = { family = "Victor Mono NF", style = "SemiBold Italic" }
-offset = { x = 0, y = 20 }
+offset = { x = 0, y = 30 }
 size = 14.0
 
 [colors]
