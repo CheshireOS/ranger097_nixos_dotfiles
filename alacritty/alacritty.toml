@@ -8,7 +8,7 @@ opacity = 0.5
 startup_mode = "Windowed"
 
 [font]
-normal = { family = "Victor Mono NF", style = "SemiBold" }
+normal = { family = "Victor Mono NF", style = "Regular" }
 bold = { family = "Victor Mono NF", style = "Bold" }
 italic = { family = "Victor Mono NF", style = "Bold Italic" }
 size = 14.0
