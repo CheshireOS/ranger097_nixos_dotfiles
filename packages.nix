@@ -95,7 +95,7 @@ nerd-fonts.jetbrains-mono
 nerd-fonts.iosevka
 nerd-fonts.departure-mono
 nerd-fonts.fira-code
-nerd-fonts.recursive 
+nerd-fonts.recursive-mono 
 ];
 
 fonts.fontconfig = {
