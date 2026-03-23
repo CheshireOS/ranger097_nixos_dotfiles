@@ -89,7 +89,9 @@ bc
 
 fonts.packages = with pkgs;[
 nerd-fonts.victor-mono
+nerd-fonts.caskaydia-cove
 maple-mono.NF-CN-unhinted
+nerd-fonts.jetbrains-mono
 ];
 
 fonts.fontconfig = {
@@ -97,7 +99,7 @@ enable = true;
 antialias = true;
 hinting.enable = false;
 subpixel.rgba = "rgb";
-defaultFonts.monospace = [ "Victor Mono NF" "Maple Mono NF" ];
+defaultFonts.monospace = [ "Caskaydia Cove Mono NF" "Jetbrains Mono NF" "Maple Mono NF" "Victor Mono NF" ];
 };
 
 hardware.bluetooth.enable = true;
