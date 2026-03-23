@@ -99,7 +99,7 @@ enable = true;
 antialias = true;
 hinting.enable = false;
 subpixel.rgba = "rgb";
-defaultFonts.monospace = [ "Caskaydia Cove Mono NF" "Jetbrains Mono NF" "Maple Mono NF" "Victor Mono NF" ];
+defaultFonts.monospace = [ "CaskaydiaCove Nerd Font Mono" "Jetbrains Mono NF" "Maple Mono NF" "Victor Mono NF" ];
 };
 
 hardware.bluetooth.enable = true;
