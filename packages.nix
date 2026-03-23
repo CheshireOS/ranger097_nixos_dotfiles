@@ -93,6 +93,7 @@ nerd-fonts.caskaydia-cove
 maple-mono.NF-CN-unhinted
 nerd-fonts.jetbrains-mono
 nerd-fonts.iosevka
+nerd-fonts.departure-mono
 ];
 
 fonts.fontconfig = {
