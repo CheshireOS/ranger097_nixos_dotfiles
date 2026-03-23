@@ -8,7 +8,7 @@ in
     programs.nixvim = {
     enable = true;
     defaultEditor = true;
-    colorscheme = "kanagawa";
+    colorscheme = "kanagawa-dragon";
     terminalColors = true;
         
     keymaps = [
@@ -177,6 +177,7 @@ in
     };
     
     extraConfigLua = ''
+    require("kanagawa").load("wave")
     --require('pywal').setup()
     --require('mini.statusline').setup()
     require('toggleterm').setup()
