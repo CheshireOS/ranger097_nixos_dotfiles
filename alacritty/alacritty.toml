@@ -1,16 +1,17 @@
 [general]
 import = []
-working_directory = "None"
+working_directory = "~/ranger097_nixos_dotfiles"
 
 [window]
-padding = { x = 10, y = 10 }
+padding = { x = 20, y = 20 }
 opacity = 0.5
 startup_mode = "Windowed"
 
 [font]
+offset = { x = 0, y = 2 }
 normal = { family = "Victor Mono NF", style = "Regular" }
 bold = { family = "Victor Mono NF", style = "Bold" }
 italic = { family = "Victor Mono NF", style = "SemiBold Italic" }
 size = 14.0
 [colors]
-transparent_background_colors = true
+transparent_background_colors = true 
