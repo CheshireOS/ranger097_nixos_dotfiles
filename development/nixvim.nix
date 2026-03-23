@@ -54,8 +54,8 @@
     };
 
     plugins.mini-statusline ={
-    enable = true;
-    autoLoad = true;
+    enable = false;
+    autoLoad = false;
     settings  = {
     use_icons = false;
       };
@@ -67,7 +67,7 @@
     plugins.noice.autoLoad = true;
     plugins.web-devicons.enable = true;    
     plugins.telescope.enable = true; 
-    plugins.lualine.enable = false;
+    plugins.lualine.enable = true;
     plugins.luasnip.enable = true;
     plugins.rustaceanvim.enable = true;
     plugins.lsp.enable = true;
