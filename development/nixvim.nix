@@ -67,7 +67,7 @@ in
     plugins.noice.autoLoad = true;
     plugins.web-devicons.enable = true;    
     plugins.telescope.enable = true; 
-    plugins.lualine.enable = true;
+    plugins.lualine.enable = false;
     plugins.luasnip.enable = true;
     plugins.rustaceanvim.enable = true;
     plugins.lsp.enable = true;
@@ -176,7 +176,7 @@ in
     require('pywal').setup()
     --require('mini.statusline').setup()
     require('toggleterm').setup()
-    require('transparent').clear_prefix('lualine')
+    --require('transparent').clear_prefix('lualine')
     require('transparent').clear_prefix('NvimTree')
     local bg_groups = {
     "Normal", "NormalNC", "Comment", "Constant", "Special", "Identifier",
