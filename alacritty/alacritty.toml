@@ -4,14 +4,14 @@ working_directory = "~/ranger097_nixos_dotfiles"
 
 [window]
 padding = { x = 20, y = 20 }
-opacity = 0.6
+opacity = 0.5
 startup_mode = "Windowed"
 
 [font]
 normal = { family = "Victor Mono NF", style = "Regular" }
 bold = { family = "Victor Mono NF", style = "Bold" }
 italic = { family = "Victor Mono NF", style = "SemiBold Italic" }
-offset = { x = 0, y = 30 }
+offset = { x = 0, y = 15 }
 size = 14.0
 
 [colors]
