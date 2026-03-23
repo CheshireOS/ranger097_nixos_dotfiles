@@ -83,6 +83,7 @@ printf "%*s%s\e[0m\n" "$padding" "" "$color_line"
 }
 
 ranger_fetch() {
+echo -e "\n"
 ascii_art
 github_info
 Music_fetch

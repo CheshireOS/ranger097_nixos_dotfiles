@@ -92,6 +92,7 @@ nerd-fonts.victor-mono
 nerd-fonts.caskaydia-cove
 maple-mono.NF-CN-unhinted
 nerd-fonts.jetbrains-mono
+nerd-fonts.isoveka
 ];
 
 fonts.fontconfig = {
@@ -101,8 +102,9 @@ hinting.enable = false;
 subpixel.rgba = "rgb";
 defaultFonts.monospace = [ 
 "Jetbrains Mono NF" 
-"Maple Mono NF" 
+"Maple Mono NF CN" 
 "Victor Mono NF" 
+"Iosevka  Mono  NF"
 "CaskaydiaCove Nerd Font Mono"
 ];
 };
