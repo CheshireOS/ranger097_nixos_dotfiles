@@ -1,8 +1,8 @@
 { config, pkgs, lib, ... }:
 
     let
-       pywal = pkgs.vimPlugins.pywal-nvim;
-    in 
+  pywal = pkgs.vimPlugins.pywal-nvim;
+in 
 
 {
     programs.nixvim = {
@@ -26,8 +26,8 @@
     globals.mapleader = " "; 
     plugins.treesitter = {
     enable = true;
-    settings.highlight.enable = true;
-    settings.indent.enable = true;
+      settings.highlight.enable = true;
+      settings.indent.enable = true;
     package = pkgs.vimPlugins.nvim-treesitter.withAllGrammars;
     nixGrammars = false;
     };
