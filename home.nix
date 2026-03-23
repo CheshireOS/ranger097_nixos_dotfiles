@@ -24,10 +24,10 @@ in
     ".config/hypr/hyprlock.conf".source = ./hypr/hyprlock.conf;
     ".config/hypr/hyprsunset.conf".source = ./hypr/hyprsunset.conf;
     ".config/waybar".source = ./waybar; 
-    ".config/ghostty".source = ./ghostty;
+    ".config/alacritty".source = ./alacritty;
     ".config/walker".source = ./walker; 
     ".config/wlogout".source = ./wlogout;
-};
+ };
 
 home.sessionVariables = {
   GBM_BACKEND = "nvidia-drm";
