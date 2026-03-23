@@ -1,5 +1,5 @@
 [general]
-import = [~/ranger097_nixos_dotfiles/alacritty/kanagawa_dragon.toml]
+import = ["~/ranger097_nixos_dotfiles/alacritty/kanagawa_dragon.toml"]
 working_directory = "~/ranger097_nixos_dotfiles"
 
 [window]
