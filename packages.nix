@@ -88,10 +88,8 @@ alacritty
 ];
 
 fonts.packages = with pkgs;[
-victor-mono.NF
-maple-mono.CN
-maple-mono.NF
-noto-fonts-cjk-sans
+nerd-fonts.victor-mono
+maple-mono.NF-CN-unhinted
 ];
 
 fonts.fontconfig = {
@@ -99,8 +97,7 @@ enable = true;
 antialias = true;
 hinting.enable = false;
 subpixel.rgba = "rgb";
-defaultFonts.monospace = [ "Victor Mono NF" "Maple Mono CN" "Maple Mono NF" "Noto Sans Mono CJK SC" ];
-
+defaultFonts.monospace = [ "Victor Mono NF" "Maple Mono NF" ];
 };
 
 hardware.bluetooth.enable = true;
