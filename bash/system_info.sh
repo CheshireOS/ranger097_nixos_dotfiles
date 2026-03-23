@@ -94,13 +94,12 @@ IP_fetch
 colors
 }
 
-printf '\033[3 q'
+#printf '\033[3 q'
+#echo -e "\e]11;#000000\a"
 
-echo -e "\e]11;#000000\a"
 function ranger_page() {
     tput civis
     ranger_fetch
-    echo -e "\e]11;#000000\a"
     read -s -n 1 -p ""
     clear
     tput cnorm
@@ -111,7 +110,6 @@ if [[ $(tput lines) -ge 15 && $(tput cols) -ge 60 ]]; then
 
 else [[ $(tput lines) -le 14 && $(tput cols) -le 59 ]];
    pokemon
-    echo -e "\e]11;#000000\a"
    read -s -n 1 -p ""
    clear
 fi

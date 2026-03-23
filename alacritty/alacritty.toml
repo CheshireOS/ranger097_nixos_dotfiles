@@ -1,5 +1,5 @@
 [general]
-import = []
+import = [~/ranger097_nixos_dotfiles/alacritty/kanagawa_dragon.toml]
 working_directory = "~/ranger097_nixos_dotfiles"
 
 [window]
@@ -28,4 +28,5 @@ offset = { x = 0, y = 20 }
 size = 16.0
 
 [colors]
-transparent_background_colors = false 
+transparent_background_colors = true
+
