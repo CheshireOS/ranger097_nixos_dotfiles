@@ -8,9 +8,22 @@ opacity = 0.5
 startup_mode = "Windowed"
 
 [font]
-normal = { family = "CaskaydiaCove Nerd Font Mono", style = "Regular" }
-bold = { family = "CaskaydiaCove Nerd Font Mono", style = "Bold" }
-italic = { family = "CaskaydiaCove Nerd Font Mono", style = "SemiBold Italic" }
+#normal = { family = "CaskaydiaCove Nerd Font Mono", style = "Regular" }
+#bold = { family = "CaskaydiaCove Nerd Font Mono", style = "Bold" }
+#italic = { family = "CaskaydiaCove Nerd Font Mono", style = "SemiBold Italic" }
+
+#normal = { family = "Victor Mono NF", style = "Regular" }
+#bold = { family = "Victor Mono NF", style = "Bold" }
+#italic = { family = "Victor Mono NF", style = "SemiBold Italic" }
+
+normal = { family = "Jetbrains Mono NF", style = "Regular" }
+bold = { family = "Jetbrains Mono NF", style = "Bold" }
+italic = { family = "Victor Mono NF", style = "SemiBold Italic" }
+
+#normal = { family = "Maple Mono NF", style = "Regular" }
+#bold = { family = "Maple Mono NF", style = "Bold" }
+#italic = { family = "Maple Mono NF", style = "SemiBold Italic" }
+
 offset = { x = 0, y = 10 }
 size = 14.0
 
