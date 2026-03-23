@@ -147,7 +147,7 @@ in
       };
 
       plugins.transparent = {
-      enable = false;
+      enable = true;
       settings.extra_groups = [
       "NormalFloat"
       "NvimTreeNormal"
