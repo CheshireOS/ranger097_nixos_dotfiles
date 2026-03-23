@@ -92,6 +92,7 @@ nerd-fonts.victor-mono
 nerd-fonts.caskaydia-cove
 maple-mono.NF-CN-unhinted
 nerd-fonts.jetbrains-mono
+texlivePackages.brushscr
 ];
 
 fonts.fontconfig = {
