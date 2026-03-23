@@ -4,7 +4,7 @@ working_directory = "~/ranger097_nixos_dotfiles"
 
 [window]
 padding = { x = 20, y = 20 }
-opacity = 0.5
+opacity = 0.9
 startup_mode = "Windowed"
 
 [font]
@@ -18,7 +18,7 @@ startup_mode = "Windowed"
 
 normal = { family = "Iosevka Nerd Font Propo", style = "Regular" }
 bold = { family = "Iosevka Nerd Font Propo", style = "Bold" }
-italic = { family = "Maple Mono NF CN", style = "Bold Italic" }
+italic = { family = "Victor Mono NF", style = "SemiBold Italic" }
 
 #normal = { family = "Maple Mono NF CN", style = "Regular" }
 #bold = { family = "Maple Mono NF CN", style = "Bold" }

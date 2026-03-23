@@ -147,7 +147,7 @@ in
       };
 
       plugins.transparent = {
-      enable = true;
+      enable = false;
       settings.extra_groups = [
       "NormalFloat"
       "NvimTreeNormal"
@@ -177,7 +177,7 @@ in
     };
     
     extraConfigLua = ''
-    require("kanagawa").load("wave")
+    require("kanagawa").load("dragon")
     --require('pywal').setup()
     --require('mini.statusline').setup()
     require('toggleterm').setup()
