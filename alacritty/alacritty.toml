@@ -8,10 +8,11 @@ opacity = 0.6
 startup_mode = "Windowed"
 
 [font]
-offset = { x = 0, y = 8 }
 normal = { family = "Victor Mono NF", style = "Regular" }
 bold = { family = "Victor Mono NF", style = "Bold" }
 italic = { family = "Victor Mono NF", style = "SemiBold Italic" }
+offset = { x = 0, y = 20 }
 size = 14.0
+
 [colors]
 transparent_background_colors = true 
