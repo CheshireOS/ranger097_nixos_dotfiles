@@ -11,17 +11,17 @@ min-height: 0;
 }
 
 window#waybar {
-background-color: @waybar-bg;
-/*background: linear-gradient(rgba(0,0,0,0.5));*/
+/*background-color: @waybar-bg;*/
+background: linear-gradient(rgba(0,0,0,1.0));
 /*background-color: @color0;*/
 border-bottom: 1px solid #000000;
 }
 
-#window, #workspaces,
-#clock, #custom-vpn_ip,
-#battery, #mpris {
-padding-left: 10px;
-padding-right: 10px;
+  #window, #workspaces,
+  #clock, #custom-vpn_ip,
+  #battery, #mpris {
+  padding-left: 10px;
+  padding-right: 10px;
 padding-top: 7px;
 padding-bottom: 7px;
 margin-top: 0px;
