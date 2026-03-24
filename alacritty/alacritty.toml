@@ -14,7 +14,7 @@ startup_mode = "Windowed"
 
 normal = { family = "Victor Mono NF", style = "Regular" }
 bold = { family = "Victor Mono NF", style = "Bold" }
-italic = { family = "GohuFont uni14 Nerd Font Mono", style = "Bold" }
+italic = { family = "DejaVu Serif Condensed", style = "Bold Italic" }
 
 #normal = { family = "Maple Mono NF CN", style = "Regular" }
 #bold = { family = "Maple Mono NF CN", style = "Bold" }
