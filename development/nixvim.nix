@@ -200,7 +200,7 @@ in
     vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none", ctermbg = "none" })
     vim.cmd('highlight Keyword gui=italic')
     vim.cmd('highlight Function gui=italic')
-    vim.cmd('highlight Comment gui=bold')
+    vim.cmd('highlight Comment gui=italic')
     '';
 
     extraPlugins = [
