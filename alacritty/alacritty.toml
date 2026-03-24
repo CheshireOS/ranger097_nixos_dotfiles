@@ -1,5 +1,5 @@
 [general]
-import = ["kanagawa_dragon.toml"]
+import = ["~/ranger097_nixos_dotfiles/alacritty/kanagawa_dragon.toml"]
 working_directory = "~/ranger097_nixos_dotfiles"
 
 [window]
@@ -12,9 +12,9 @@ startup_mode = "Windowed"
 #bold = { family = "CaskaydiaCove Nerd Font Mono", style = "Bold" }
 #italic = { family = "CaskaydiaCove Nerd Font Mono", style = "SemiBold Italic" }
 
-#normal = { family = "Victor Mono NF", style = "Regular" }
-#bold = { family = "Victor Mono NF", style = "Bold" }
-#italic = { family = "Victor Mono NF", style = "SemiBold Italic" }
+normal = { family = "Victor Mono NF", style = "Regular" }
+bold = { family = "Victor Mono NF", style = "Bold" }
+italic = { family = "Victor Mono NF", style = "Bold Italic" }
 
 #normal = { family = "Maple Mono NF CN", style = "Regular" }
 #bold = { family = "Maple Mono NF CN", style = "Bold" }
@@ -24,13 +24,13 @@ startup_mode = "Windowed"
 #bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
 #italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
 
-normal = { family = "SpaceMono Nerd Font Mono", style = "Regular" }
-bold = { family = "SpaceMono Nerd Font Mono", style = "Bold" }
-italic = { family = "Victor Mono NF", style = "SemiBold Italic" }
+#normal = { family = "SpaceMono Nerd Font Mono", style = "Regular" }
+#bold = { family = "SpaceMono Nerd Font Mono", style = "Bold" }
+#italic = { family = "SpaceMono Nerd Font Mono", style = "Bold Italic" }
 
 offset = { x = 0, y = 0 }
 size = 14.0
 
 [colors]
-transparent_background_colors = true
+transparent_background_colors = false
 
