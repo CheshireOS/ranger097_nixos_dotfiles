@@ -7,19 +7,15 @@ wait
 echo " Adding files to dotfiles  on main"
 git add . &> /dev/null
 wait
-echo " Saving changes to dotfiles  on main"
-git commit -m "updated configs" &> /dev/null
-wait
-echo " Pushing changes now."
-git push origin main &> /dev/null
-wait
-echo " Github changes complete."
-wait
 echo " Building system flake..."
 sudo nixos-rebuild switch --flake .#deoxy --quiet 
 wait
 echo " Updated dotfiles and system flake."
-} >/dev/null
+if ! sudo nixos-rebuild switch --flake .#jirachi --quiet > /dev/null; then
+   echo "FAILURE"
+   return 1
+fi
+}
 
 jgit() {
 echo " Entering dotfiles  on main."
@@ -27,14 +23,6 @@ cd ~/ranger097_nixos_dotfiles
 wait
 echo " Adding files to dotfiles  on main"
 git add . &> /dev/null
-wait
-echo " Saving changes to dotfiles  on main"
-git commit -m "updated configs" &> /dev/null
-wait
-echo " Pushing changes now."
-git push origin main &> /dev/null
-wait
-echo " Github changes complete."
 wait
 echo " Building system flake..."
 if ! sudo nixos-rebuild switch --flake .#jirachi --quiet > /dev/null; then
