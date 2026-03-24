@@ -88,17 +88,11 @@ fontpreview
 ];
 
 fonts.packages = with pkgs;[
-nerd-fonts.victor-mono
-nerd-fonts.caskaydia-cove
 maple-mono.NF-CN-unhinted
+nerd-fonts.victor-mono
 nerd-fonts.jetbrains-mono
-nerd-fonts.iosevka
-nerd-fonts.bigblue-terminal
-nerd-fonts.fira-code
-nerd-fonts.recursive-mono 
-nerd-fonts.space-mono
-nerd-fonts.gohufont
-nerd-fonts.heavy-data
+nerd-fonts.departure-mono
+nerd-fonts.dejavu-sans-mono
 ];
 
 fonts.fontconfig = {
@@ -108,12 +102,8 @@ hinting.enable = false;
 subpixel.rgba = "rgb";
 defaultFonts.monospace = [
 "Maple Mono NF CN"
-"GohuFont uni14 Nerd Font Mono"
 "VictorMono Nerd Font Mono"
-"DepartureMono Nerd Font Mono"
 "Jetbrains Mono NF" 
-"Iosevka  Mono  NF"
-"CaskaydiaCove Nerd Font Mono"
 ];
 };
 
