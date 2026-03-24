@@ -53,25 +53,16 @@ in
       };
     };
 
-    plugins.mini-statusline ={
-    enable = false;
-    autoLoad = false;
-    settings  = {
-    use_icons = false;
-      };
-    };
-
     colorschemes.kanagawa = { 
     enable = true;
     autoLoad = true;
     };
-    plugins.image.autoLoad = true;
-    plugins.image.enable = true;
+
     plugins.noice.enable = true;
     plugins.noice.autoLoad = true;
     plugins.web-devicons.enable = true;    
     plugins.telescope.enable = true; 
-    plugins.lualine.enable = false;
+    plugins.lualine.enable = true;
     plugins.luasnip.enable = true;
     plugins.rustaceanvim.enable = true;
     plugins.lsp.enable = true;
@@ -108,7 +99,7 @@ in
 	"<leader>e" = "<cmd>NvimTreeToggle<CR>";
         };
 
-        snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
+     snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
     };   
 
     opts = {
@@ -147,7 +138,7 @@ in
       };
 
       plugins.transparent = {
-      enable = true;
+      enable = false;
       settings.extra_groups = [
       "NormalFloat"
       "NvimTreeNormal"
@@ -179,22 +170,21 @@ in
     extraConfigLua = ''
     require("kanagawa").load("dragon")
     --require('pywal').setup()
-    --require('mini.statusline').setup()
     require('toggleterm').setup()
-    require('transparent').clear_prefix('lualine')
-    require('transparent').clear_prefix('NvimTree')
-    local bg_groups = {
-    "Normal", "NormalNC", "Comment", "Constant", "Special", "Identifier",
-    "Statement", "PreProc", "Type", "Underlined", "Todo", "String",
-    "Function", "Conditional", "Repeat", "Operator", "Structure",
-    "LineNr", "CursorLineNr", "StatusLine", "StatusLineNC",
-    "Pmenu", "PmenuSel", "SignColumn", "CursorLine", "FoldColumn",
-    "MsgArea", "EndOfBuffer", "WinSeparator", "VertSplit"
-    }
+    --require('transparent').clear_prefix('lualine')
+    --require('transparent').clear_prefix('NvimTree')
 
-    for _, group in ipairs(bg_groups) do
-    vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-    end
+    --local bg_groups = {
+    --"Normal", "NormalNC", "Comment", "Constant", "Special", "Identifier",
+    --"Statement", "PreProc", "Type", "Underlined", "Todo", "String",
+    --"Function", "Conditional", "Repeat", "Operator", "Structure",
+    --"LineNr", "CursorLineNr", "StatusLine", "StatusLineNC",
+    --"Pmenu", "PmenuSel", "SignColumn", "CursorLine", "FoldColumn",
+    --"MsgArea", "EndOfBuffer", "WinSeparator", "VertSplit"
+    --}
+    --for _, group in ipairs(bg_groups) do
+    --vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+    --end
 
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none", ctermbg = "none" })
     vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none", ctermbg = "none" })
