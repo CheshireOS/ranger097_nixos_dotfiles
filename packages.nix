@@ -96,6 +96,7 @@ nerd-fonts.bigblue-terminal
 nerd-fonts.fira-code
 nerd-fonts.recursive-mono 
 nerd-fonts.space-mono
+nerd-fonts.*
 ];
 
 fonts.fontconfig = {
