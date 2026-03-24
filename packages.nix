@@ -84,6 +84,7 @@ ueberzugpp
 tree-sitter
 alacritty
 bc
+fontmatrix
 ];
 
 fonts.packages = with pkgs;[
@@ -97,6 +98,7 @@ nerd-fonts.fira-code
 nerd-fonts.recursive-mono 
 nerd-fonts.space-mono
 nerd-fonts.gohufont
+nerd-fonts.heavy-data
 ];
 
 fonts.fontconfig = {
@@ -105,11 +107,11 @@ antialias = true;
 hinting.enable = false;
 subpixel.rgba = "rgb";
 defaultFonts.monospace = [
+"Maple Mono NF CN"
 "GohuFont uni14 Nerd Font Mono"
 "VictorMono Nerd Font Mono"
 "DepartureMono Nerd Font Mono"
 "Jetbrains Mono NF" 
-"Maple Mono NF CN" 
 "Iosevka  Mono  NF"
 "CaskaydiaCove Nerd Font Mono"
 ];
