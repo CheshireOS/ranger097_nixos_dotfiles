@@ -686,3 +686,105 @@ libva info: Trying to open /run/opengl-driver/lib/dri/nvidia_drv_video.so
 libva info: Found init function __vaDriverInit_1_0
 libva error: /run/opengl-driver/lib/dri/nvidia_drv_video.so init failed
 libva info: va_openDriver() returns 1
+[Parent 14175, Main Thread] WARNING: Couldn't map window 0x7f020a79b0a0 as subsurface because its parent is not mapped.: 'glib warning', file /build/firefox-148.0.2/toolkit/xre/nsSigHandlers.cpp:201
+
+(librewolf:14175): Gdk-WARNING **: 00:06:31.486: Couldn't map window 0x7f020a79b0a0 as subsurface because its parent is not mapped.
+[Parent 14175, Main Thread] WARNING: Couldn't map window 0x7f0205bfb160 as subsurface because its parent is not mapped.: 'glib warning', file /build/firefox-148.0.2/toolkit/xre/nsSigHandlers.cpp:201
+
+(librewolf:14175): Gdk-WARNING **: 00:06:31.486: Couldn't map window 0x7f0205bfb160 as subsurface because its parent is not mapped.
+[Parent 14175, Main Thread] WARNING: Couldn't map window 0x7f020a79b0a0 as subsurface because its parent is not mapped.: 'glib warning', file /build/firefox-148.0.2/toolkit/xre/nsSigHandlers.cpp:201
+
+(librewolf:14175): Gdk-WARNING **: 00:06:31.486: Couldn't map window 0x7f020a79b0a0 as subsurface because its parent is not mapped.
+[Parent 14175, Main Thread] WARNING: Couldn't map window 0x7f0205bfb160 as subsurface because its parent is not mapped.: 'glib warning', file /build/firefox-148.0.2/toolkit/xre/nsSigHandlers.cpp:201
+
+(librewolf:14175): Gdk-WARNING **: 00:06:31.486: Couldn't map window 0x7f0205bfb160 as subsurface because its parent is not mapped.
+libva info: VA-API version 1.23.0
+libva info: User environment variable requested driver 'nvidia'
+libva info: Trying to open /run/opengl-driver/lib/dri/nvidia_drv_video.so
+libva info: Found init function __vaDriverInit_1_0
+libva error: /run/opengl-driver/lib/dri/nvidia_drv_video.so init failed
+libva info: va_openDriver() returns 1
+libva info: VA-API version 1.23.0
+libva info: User environment variable requested driver 'nvidia'
+libva info: Trying to open /run/opengl-driver/lib/dri/nvidia_drv_video.so
+libva info: Found init function __vaDriverInit_1_0
+libva error: /run/opengl-driver/lib/dri/nvidia_drv_video.so init failed
+libva info: va_openDriver() returns 1
+libva info: VA-API version 1.23.0
+libva info: User environment variable requested driver 'nvidia'
+libva info: Trying to open /run/opengl-driver/lib/dri/nvidia_drv_video.so
+libva info: Found init function __vaDriverInit_1_0
+libva error: /run/opengl-driver/lib/dri/nvidia_drv_video.so init failed
+libva info: va_openDriver() returns 1
+libva info: VA-API version 1.23.0
+libva info: User environment variable requested driver 'nvidia'
+libva info: Trying to open /run/opengl-driver/lib/dri/nvidia_drv_video.so
+libva info: Found init function __vaDriverInit_1_0
+libva error: /run/opengl-driver/lib/dri/nvidia_drv_video.so init failed
+libva info: va_openDriver() returns 1
+libva info: VA-API version 1.23.0
+libva info: User environment variable requested driver 'nvidia'
+libva info: Trying to open /run/opengl-driver/lib/dri/nvidia_drv_video.so
+libva info: Found init function __vaDriverInit_1_0
+libva error: /run/opengl-driver/lib/dri/nvidia_drv_video.so init failed
+libva info: va_openDriver() returns 1
+libva info: VA-API version 1.23.0
+libva info: User environment variable requested driver 'nvidia'
+libva info: Trying to open /run/opengl-driver/lib/dri/nvidia_drv_video.so
+libva info: Found init function __vaDriverInit_1_0
+libva error: /run/opengl-driver/lib/dri/nvidia_drv_video.so init failed
+libva info: va_openDriver() returns 1
+libva info: VA-API version 1.23.0
+libva info: User environment variable requested driver 'nvidia'
+libva info: Trying to open /run/opengl-driver/lib/dri/nvidia_drv_video.so
+libva info: Found init function __vaDriverInit_1_0
+libva error: /run/opengl-driver/lib/dri/nvidia_drv_video.so init failed
+libva info: va_openDriver() returns 1
+libva info: VA-API version 1.23.0
+libva info: User environment variable requested driver 'nvidia'
+libva info: Trying to open /run/opengl-driver/lib/dri/nvidia_drv_video.so
+libva info: Found init function __vaDriverInit_1_0
+libva error: /run/opengl-driver/lib/dri/nvidia_drv_video.so init failed
+libva info: va_openDriver() returns 1
+libva info: VA-API version 1.23.0
+libva info: User environment variable requested driver 'nvidia'
+libva info: Trying to open /run/opengl-driver/lib/dri/nvidia_drv_video.so
+libva info: Found init function __vaDriverInit_1_0
+libva error: /run/opengl-driver/lib/dri/nvidia_drv_video.so init failed
+libva info: va_openDriver() returns 1
+libva info: VA-API version 1.23.0
+libva info: User environment variable requested driver 'nvidia'
+libva info: Trying to open /run/opengl-driver/lib/dri/nvidia_drv_video.so
+libva info: Found init function __vaDriverInit_1_0
+libva error: /run/opengl-driver/lib/dri/nvidia_drv_video.so init failed
+libva info: va_openDriver() returns 1
+libva info: VA-API version 1.23.0
+libva info: User environment variable requested driver 'nvidia'
+libva info: Trying to open /run/opengl-driver/lib/dri/nvidia_drv_video.so
+libva info: Found init function __vaDriverInit_1_0
+libva error: /run/opengl-driver/lib/dri/nvidia_drv_video.so init failed
+libva info: va_openDriver() returns 1
+libva info: VA-API version 1.23.0
+libva info: User environment variable requested driver 'nvidia'
+libva info: Trying to open /run/opengl-driver/lib/dri/nvidia_drv_video.so
+libva info: Found init function __vaDriverInit_1_0
+libva error: /run/opengl-driver/lib/dri/nvidia_drv_video.so init failed
+libva info: va_openDriver() returns 1
+libva info: VA-API version 1.23.0
+libva info: User environment variable requested driver 'nvidia'
+libva info: Trying to open /run/opengl-driver/lib/dri/nvidia_drv_video.so
+libva info: Found init function __vaDriverInit_1_0
+libva error: /run/opengl-driver/lib/dri/nvidia_drv_video.so init failed
+libva info: va_openDriver() returns 1
+libva info: VA-API version 1.23.0
+libva info: User environment variable requested driver 'nvidia'
+libva info: Trying to open /run/opengl-driver/lib/dri/nvidia_drv_video.so
+libva info: Found init function __vaDriverInit_1_0
+libva error: /run/opengl-driver/lib/dri/nvidia_drv_video.so init failed
+libva info: va_openDriver() returns 1
+libva info: VA-API version 1.23.0
+libva info: User environment variable requested driver 'nvidia'
+libva info: Trying to open /run/opengl-driver/lib/dri/nvidia_drv_video.so
+libva info: Found init function __vaDriverInit_1_0
+libva error: /run/opengl-driver/lib/dri/nvidia_drv_video.so init failed
+libva info: va_openDriver() returns 1

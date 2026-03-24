@@ -10,7 +10,7 @@
     ./development/nixvim.nix
  ];
   
-
+nix.gc.automatic = true;
 
   # Bootloader & Kernel
   boot.loader.systemd-boot.enable = false;
