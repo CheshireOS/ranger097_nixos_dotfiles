@@ -54,7 +54,7 @@ pokeget-rs
 nmap
 pywal16
 pywalfox-native
-mullvad-browser
+librewolf
 android-studio-tools
 android-studio-full
 wireguard-tools
@@ -96,6 +96,7 @@ nerd-fonts.iosevka
 nerd-fonts.departure-mono
 nerd-fonts.fira-code
 nerd-fonts.recursive-mono 
+nerd-fonts.space-mono
 ];
 
 fonts.fontconfig = {
