@@ -84,7 +84,7 @@ ueberzugpp
 tree-sitter
 alacritty
 bc
-fontmatrix
+fontpreview
 ];
 
 fonts.packages = with pkgs;[
