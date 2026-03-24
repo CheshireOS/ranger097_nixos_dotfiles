@@ -10,7 +10,11 @@
     ./development/nixvim.nix
  ];
   
-nix.gc.automatic = true;
+  nix.gc = {
+  automatic = true;
+  dates = "weekly";
+  options = "--delete-older-than 3d";
+  };
 
   # Bootloader & Kernel
   boot.loader.systemd-boot.enable = false;
