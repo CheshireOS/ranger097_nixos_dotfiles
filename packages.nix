@@ -91,8 +91,8 @@ fonts.packages = with pkgs;[
 maple-mono.NF-CN-unhinted
 nerd-fonts.victor-mono
 nerd-fonts.jetbrains-mono
+nerd-fonts.tinos
 nerd-fonts.departure-mono
-nerd-fonts.dejavu-sans-mono
 ];
 
 fonts.fontconfig = {

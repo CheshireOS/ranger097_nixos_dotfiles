@@ -96,8 +96,10 @@ gaps_out = 20
 border_size = 2
 
 #BORDER
-col.active_border = $color3
-col.inactive_border = $color3
+#col.active_border = $color3
+#col.inactive_border = $color3
+col.active_border = rgba(0,0,0,0)
+col.inactive_border = rgba(0,0,0,0)
 
 #BORDER_ANIMATION
 animations {
