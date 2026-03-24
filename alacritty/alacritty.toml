@@ -1,10 +1,10 @@
 [general]
-import = ["~/ranger097_nixos_dotfiles/alacritty/kanagawa_dragon.toml"]
+import = []
 working_directory = "~/ranger097_nixos_dotfiles"
 
 [window]
-padding = { x = 20, y = 20 }
-opacity = 0.9
+padding = { x = 0, y = 0 }
+opacity = 0.8
 startup_mode = "Windowed"
 
 [font]
@@ -32,5 +32,7 @@ offset = { x = 0, y = 10 }
 size = 14.0
 
 [colors]
-transparent_background_colors = false
+transparent_background_colors = true
 
+[colors.primary]
+background = '#000000'

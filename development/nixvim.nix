@@ -8,8 +8,30 @@ in
     programs.nixvim = {
     enable = true;
     defaultEditor = true;
-    colorscheme = "kanagawa-dragon"; #wave
-    terminalColors = true;
+    
+    colorscheme = "moonfly";
+
+    colorschemes.oxocarbon = {
+    enable = false;
+    autoLoad = false;
+    };
+
+    colorschemes.moonfly = {
+    enable = true;
+    autoLoad = true;
+       settings = {
+       Italics = true;
+       NormalFloat = false;
+       TerminalColors = false;
+       Transparent = false;
+       Undercurls = true;
+       UnderlineMatchParen = false;
+       VirtualTextColor = false;
+       WinSeparator = 1;
+       };
+    };
+
+    terminalColors = false;
         
     keymaps = [
       {
@@ -26,8 +48,8 @@ in
     globals.mapleader = " "; 
     plugins.treesitter = {
     enable = true;
-      settings.highlight.enable = true;
-      settings.indent.enable = true;
+    settings.highlight.enable = true;
+    settings.indent.enable = true;
     package = pkgs.vimPlugins.nvim-treesitter.withAllGrammars;
     nixGrammars = false;
     };
@@ -36,24 +58,17 @@ in
     enable = true;
     openOnSetup = true;
     settings.view = {
-      width = 50;
-      side = "right";
+      width = 30;
+      side = "left";
       };
     };
 
-    plugins.toggleterm = {
+    plugins.barbar = {
     enable = true;
-    settings = {
-    size = 20;
-    open_mapping = "[[<Space><CR>]]";
-    direction = "vertical"; # vertical, float, tab, horizontal
-    shade_terminals = true;
-    persist_size = true;
-    start_in_insert = true;
-      };
+    autoLoad = true;
     };
 
-    colorschemes.kanagawa = { 
+    plugins.floaterm = {
     enable = true;
     autoLoad = true;
     };
@@ -138,7 +153,7 @@ in
       };
 
       plugins.transparent = {
-      enable = true;
+      enable = false;
       settings.extra_groups = [
       "NormalFloat"
       "NvimTreeNormal"
@@ -168,26 +183,6 @@ in
     };
     
     extraConfigLua = ''
-    require("kanagawa").load("dragon")
-    --require('pywal').setup()
-    require('toggleterm').setup()
-    --require('transparent').clear_prefix('lualine')
-    --require('transparent').clear_prefix('NvimTree')
-
-    local bg_groups = {
-    "Normal", "NormalNC", "Comment", "Constant", "Special", "Identifier",
-    "Statement", "PreProc", "Type", "Underlined", "Todo", "String",
-    "Function", "Conditional", "Repeat", "Operator", "Structure",
-    "LineNr", "CursorLineNr", "StatusLine", "StatusLineNC",
-    "Pmenu", "PmenuSel", "SignColumn", "CursorLine", "FoldColumn",
-    "MsgArea", "EndOfBuffer", "WinSeparator", "VertSplit"
-    }
-    for _, group in ipairs(bg_groups) do
-    vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-    end
-
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none", ctermbg = "none" })
-    vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none", ctermbg = "none" })
     vim.cmd('highlight Keyword gui=italic')
     vim.cmd('highlight Function gui=italic')
     vim.cmd('highlight Comment gui=italic')
@@ -203,8 +198,4 @@ in
     black
     ];
   };
-
-
-
-
 }

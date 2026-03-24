@@ -1,42 +1,39 @@
 {
   description = "System flake";
 
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     
     nixvim = {
        url = "github:nix-community/nixvim";
+       inputs.nixpkgs.follows = "nixpkgs"; 
     };
     
     lanzaboote = {
-    url = "github:nix-community/lanzaboote/v1.0.0";
-    inputs.nixpkgs.follows = "nixpkgs";
+       url = "github:nix-community/lanzaboote/v1.0.0";
+       inputs.nixpkgs.follows = "nixpkgs";
     };
     
     home-manager = {
-    url = "github:nix-community/home-manager";
-    inputs.nixpkgs.follows = "nixpkgs";
+       url = "github:nix-community/home-manager";
+       inputs.nixpkgs.follows = "nixpkgs";
     };
   
-
   };
  
-
   outputs = { self, nixpkgs, nixvim, home-manager, lanzaboote, ... }@inputs: {
    
-
   nixosConfigurations = {
      deoxy = nixpkgs.lib.nixosSystem {
      system = "x86_64-linux";
-     specialArgs = { inherit inputs; };
+     specialArgs = { inherit inputs nixvim; };
      
      modules = [
       ./hosts/deoxy/hardware-configuration.nix
       ./configuration.nix
         home-manager.nixosModules.home-manager
         lanzaboote.nixosModules.lanzaboote
-        nixvim.nixosModules.nixvim
+	nixvim.nixosModules.nixvim
     
      ({ pkgs, lib, ... }: {
         networking.hostName = "deoxy";
@@ -61,13 +58,13 @@
 
    jirachi = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
+      specialArgs = { inherit inputs nixvim; };
       modules = [
        ./hosts/jirachi/hardware-configuration.nix
        ./configuration.nix
          home-manager.nixosModules.home-manager
          lanzaboote.nixosModules.lanzaboote
-         nixvim.nixosModules.nixvim
+	  nixvim.nixosModules.nixvim
 
    ({ pkgs, lib, ... }: {
       networking.hostName = "jirachi";
@@ -84,7 +81,6 @@
       home-manager.users.ranger = import ./home.nix;
       home-manager.backupFileExtension = "backup";
    }
-
 
    ];
 };
