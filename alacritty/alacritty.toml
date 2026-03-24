@@ -14,7 +14,7 @@ startup_mode = "Windowed"
 
 normal = { family = "Victor Mono NF", style = "Regular" }
 bold = { family = "Victor Mono NF", style = "Bold" }
-italic = { family = "DejaVu Sans Condensed", style = "Bold Oblique" }
+italic = { family = "DejaVu Sans Mono", style = "Bold Oblique" }
 
 #normal = { family = "Maple Mono NF CN", style = "Regular" }
 #bold = { family = "Maple Mono NF CN", style = "Bold" }
