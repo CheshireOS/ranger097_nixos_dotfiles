@@ -141,13 +141,13 @@ in
       enable = true;
       settings.extra_groups = [
       "NormalFloat"
-      --"NvimTreeNormal"
-      --"NvimTreeNormalNC"
+      "NvimTreeNormal"
+      "NvimTreeNormalNC"
       "TelescopeNormal"
       "TelescopeBorder"
       "LspFloatWinNormal"
       "MsgArea"
-      --"StatusLine"
+      "StatusLine"
       "StatusLineNC"
       "WinSeparator"
       "Folded"
