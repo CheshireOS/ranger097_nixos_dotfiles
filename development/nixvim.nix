@@ -138,16 +138,16 @@ in
       };
 
       plugins.transparent = {
-      enable = false;
+      enable = true;
       settings.extra_groups = [
       "NormalFloat"
-      "NvimTreeNormal"
-      "NvimTreeNormalNC"
+      --"NvimTreeNormal"
+      --"NvimTreeNormalNC"
       "TelescopeNormal"
       "TelescopeBorder"
       "LspFloatWinNormal"
       "MsgArea"
-      "StatusLine"
+      --"StatusLine"
       "StatusLineNC"
       "WinSeparator"
       "Folded"
@@ -174,17 +174,17 @@ in
     --require('transparent').clear_prefix('lualine')
     --require('transparent').clear_prefix('NvimTree')
 
-    --local bg_groups = {
-    --"Normal", "NormalNC", "Comment", "Constant", "Special", "Identifier",
-    --"Statement", "PreProc", "Type", "Underlined", "Todo", "String",
-    --"Function", "Conditional", "Repeat", "Operator", "Structure",
-    --"LineNr", "CursorLineNr", "StatusLine", "StatusLineNC",
-    --"Pmenu", "PmenuSel", "SignColumn", "CursorLine", "FoldColumn",
-    --"MsgArea", "EndOfBuffer", "WinSeparator", "VertSplit"
-    --}
-    --for _, group in ipairs(bg_groups) do
-    --vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
-    --end
+    local bg_groups = {
+    "Normal", "NormalNC", "Comment", "Constant", "Special", "Identifier",
+    "Statement", "PreProc", "Type", "Underlined", "Todo", "String",
+    "Function", "Conditional", "Repeat", "Operator", "Structure",
+    "LineNr", "CursorLineNr", "StatusLine", "StatusLineNC",
+    "Pmenu", "PmenuSel", "SignColumn", "CursorLine", "FoldColumn",
+    "MsgArea", "EndOfBuffer", "WinSeparator", "VertSplit"
+    }
+    for _, group in ipairs(bg_groups) do
+    vim.api.nvim_set_hl(0, group, { bg = "none", ctermbg = "none" })
+    end
 
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none", ctermbg = "none" })
     vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none", ctermbg = "none" })
