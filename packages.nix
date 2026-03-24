@@ -5,6 +5,7 @@ programs.direnv = {
 enable = true;
 nix-direnv.enable = true;
 };
+
 programs.direnv.silent = true;
 nixpkgs.config.android_sdk.accept_license = true;
 environment.systemPackages = with pkgs; [
@@ -42,7 +43,6 @@ mpvpaper
 mpv
 wget
 ranger
-firefox
 git
 lsd
 dtrx
@@ -83,7 +83,6 @@ chafa
 ueberzugpp
 tree-sitter
 alacritty
-ghostty
 bc
 ];
 
@@ -93,7 +92,7 @@ nerd-fonts.caskaydia-cove
 maple-mono.NF-CN-unhinted
 nerd-fonts.jetbrains-mono
 nerd-fonts.iosevka
-nerd-fonts.departure-mono
+nerd-fonts.bigblue-terminal
 nerd-fonts.fira-code
 nerd-fonts.recursive-mono 
 nerd-fonts.space-mono
@@ -143,7 +142,7 @@ pulse.enable = true;
 #jack.enable = true;
 #media-session.enable = true;
 };
-services.gnome.gnome-keyring.enable = true;
 
+services.gnome.gnome-keyring.enable = true;
 services.gvfs.enable = true;
 }
