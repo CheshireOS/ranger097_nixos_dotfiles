@@ -3,7 +3,7 @@ import = ["~/ranger097_nixos_dotfiles/alacritty/kanagawa_dragon.toml"]
 working_directory = "~/ranger097_nixos_dotfiles"
 
 [window]
-padding = { x = 10, y = 10 }
+padding = { x = 20, y = 20 }
 opacity = 0.9
 startup_mode = "Windowed"
 
@@ -28,7 +28,7 @@ italic = { family = "Maple Mono NF CN", style = "Bold Italic" }
 #bold = { family = "SpaceMono Nerd Font Mono", style = "Bold" }
 #italic = { family = "SpaceMono Nerd Font Mono", style = "Bold Italic" }
 
-offset = { x = 0, y = 0 }
+offset = { x = 0, y = 10 }
 size = 14.0
 
 [colors]
