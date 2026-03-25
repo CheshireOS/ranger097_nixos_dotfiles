@@ -5,44 +5,42 @@ let
 in 
 
 {
-    programs.nixvim = {
-    enable = true;
-    defaultEditor = true;
-    colorscheme = "moonfly";
 
-    colorschemes.oxocarbon = {
-    enable = false;
-    autoLoad = false;
-    };
+programs.nixvim = {
+   enable = true;
+   defaultEditor = true;
+   terminalColors = false;
+   colorscheme = "moonfly";
 
-    colorschemes.moonfly = {
-    enable = true;
-    autoLoad = true;
-       settings = {
-       Italics = true;
-       NormalFloat = false;
-       TerminalColors = false;
-       Transparent = true;
-       Undercurls = true;
-       UnderlineMatchParen = false;
-       VirtualTextColor = false;
-       WinSeparator = 0;
+   colorschemes.oxocarbon = {
+      enable = false;
+      autoLoad = false;
+   };
+
+   colorschemes.moonfly = {
+      enable = true;
+      autoLoad = true;
+      settings = {
+         Italics = true;
+         NormalFloat = false;
+         TerminalColors = false;
+         Transparent = true;
+         Undercurls = true;
+         UnderlineMatchParen = false;
+         VirtualTextColor = false;
+         WinSeparator = 0;
        };
     };
 
-    terminalColors = false;
-        
-    keymaps = [
-      {
-        mode = "n";
-        key = "<leader>e";
-        action = "<cmd>NvimTreeToggle<CR>";
-        options = {
-          silent = true;
-          desc = "Toggle NvimTree";
+    keymaps = [{
+      mode = "n";
+      key = "<leader>e";
+      action = "<cmd>NvimTreeToggle<CR>";
+      options = {
+         silent = true;
+         desc = "Toggle NvimTree";
         };
-      }
-    ];
+      }];
      
     globals.mapleader = " "; 
     plugins.treesitter = {
@@ -93,12 +91,12 @@ in
     plugins.harpoon.enableTelescope = true;
     plugins.harpoon.autoLoad = true;
     plugins.cmp = {
-      enable = true;
-      settings.sources = [
-        { name = "nvim_lsp"; }
-        { name = "path"; }
-        { name = "buffer"; }
-      ];
+       enable = true;
+       settings.sources = [
+          { name = "nvim_lsp"; }
+          { name = "path"; }
+          { name = "buffer"; }
+       ];
     
      mapping = {
         "<C-Space>" = "cmp.mapping.complete()";
@@ -106,17 +104,17 @@ in
         "<Tab>" = "cmp.mapping.select_next_item()";
         "<S-Tab>" = "cmp.mapping.select_prev_item()";
 	"<leader>e" = "<cmd>NvimTreeToggle<CR>";
-        };
+      };
 
      snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
     };   
 
     opts = {
-      number = true;         
-      relativenumber = false; 
-      shiftwidth = 2;   
-      termguicolors = true;
-      background = "dark";    
+       number = true;         
+       relativenumber = false; 
+       shiftwidth = 2;   
+       termguicolors = true;
+       background = "dark";    
     };
     
       plugins.lsp.servers = {
@@ -179,52 +177,52 @@ in
 
 
     extraConfigLua = ''
-vim.cmd('highlight Keyword gui=italic')
-vim.cmd('highlight Function gui=italic')
-vim.cmd('highlight Comment gui=italic')
-vim.api.nvim_set_hl(0, "BufferCurrent", { fg = "#ffffff", bg = "none", ctermbg = "none" })
-vim.api.nvim_set_hl(0, "BufferInactive", { fg = "#808080", bg = "none", ctermbg = "none" })
-vim.api.nvim_set_hl(0, "BufferVisible", { fg = "#808080", bg = "none", ctermbg = "none" })
-vim.api.nvim_set_hl(0, "BufferCurrentSign", { fg = "#ffffff", bg = "none", ctermbg = "none" })
-vim.api.nvim_set_hl(0, "BufferVisibleSign", { fg = "#808080", bg = "none", ctermbg = "none" })
-vim.api.nvim_set_hl(0, "BufferInactiveSign", { fg = "#808080", bg = "none", ctermbg = "none" })
-vim.api.nvim_set_hl(0, "BufferCurrentMod", { fg = "#ffffff", bg = "none", ctermbg = "none" })
-vim.api.nvim_set_hl(0, "BufferVisibleMod", { fg = "#808080", bg = "none", ctermbg = "none" })
-vim.api.nvim_set_hl(0, "BufferInactiveMod", { fg = "#808080", bg = "none", ctermbg = "none" })
-vim.api.nvim_set_hl(0, "BufferOffset", { bg = "none", ctermbg = "none" })
-vim.api.nvim_set_hl(0, "BufferTabpageFill", { bg = "none", ctermbg = "none" })
+       vim.cmd('highlight Keyword gui=italic')
+       vim.cmd('highlight Function gui=italic')
+       vim.cmd('highlight Comment gui=italic')
+       vim.api.nvim_set_hl(0, "BufferCurrent", { fg = "#ffffff", bg = "none", ctermbg = "none" })
+       vim.api.nvim_set_hl(0, "BufferInactive", { fg = "#808080", bg = "none", ctermbg = "none" })
+       vim.api.nvim_set_hl(0, "BufferVisible", { fg = "#808080", bg = "none", ctermbg = "none" })
+       vim.api.nvim_set_hl(0, "BufferCurrentSign", { fg = "#ffffff", bg = "none", ctermbg = "none" })
+       vim.api.nvim_set_hl(0, "BufferVisibleSign", { fg = "#808080", bg = "none", ctermbg = "none" })
+       vim.api.nvim_set_hl(0, "BufferInactiveSign", { fg = "#808080", bg = "none", ctermbg = "none" })
+       vim.api.nvim_set_hl(0, "BufferCurrentMod", { fg = "#ffffff", bg = "none", ctermbg = "none" })
+       vim.api.nvim_set_hl(0, "BufferVisibleMod", { fg = "#808080", bg = "none", ctermbg = "none" })
+       vim.api.nvim_set_hl(0, "BufferInactiveMod", { fg = "#808080", bg = "none", ctermbg = "none" })
+       vim.api.nvim_set_hl(0, "BufferOffset", { bg = "none", ctermbg = "none" })
+       vim.api.nvim_set_hl(0, "BufferTabpageFill", { bg = "none", ctermbg = "none" })
 
-  require('lualine').setup({
-  options = {
-    theme = {
-      normal = {
-        a = { bg = "#000000" },
-        b = { bg = "#000000" },
-        c = { bg = "#000000" },
-      },
-      insert = {
-        a = { bg = "#000000" },
-        b = { bg = "#000000" },
-        c = { bg = "#000000" },
-      },
-      visual = {
-        a = { bg = "#000000" },
-        b = { bg = "#000000" },
-        c = { bg = "#000000" },
-      },
-      replace = {
-        a = { bg = "#000000" },
-        b = { bg = "#000000" },
-        c = { bg = "#000000" },
-      },
-      inactive = {
-        a = { bg = "#000000" },
-        b = { bg = "#000000" },
-        c = { bg = "#000000" },
-      },
-    }
-  }
-})
+       require('lualine').setup({
+          options = {
+             theme = {
+                normal = {
+                   a = { bg = "#000000" },
+                   b = { bg = "#000000" },
+                   c = { bg = "#000000" },
+             },
+                insert = {
+                   a = { bg = "#000000" },
+                   b = { bg = "#000000" },
+                   c = { bg = "#000000" },
+             },
+                visual = {
+                   a = { bg = "#000000" },
+                   b = { bg = "#000000" },
+                   c = { bg = "#000000" },
+             },
+                replace = {
+                   a = { bg = "#000000" },
+                   b = { bg = "#000000" },
+                   c = { bg = "#000000" },
+             },
+               inactive = {
+                   a = { bg = "#000000" },
+                   b = { bg = "#000000" },
+                   c = { bg = "#000000" },
+             },
+           }
+         }
+       })
     '';
 
     extraPlugins = [
