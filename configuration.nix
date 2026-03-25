@@ -15,8 +15,9 @@
   dates = "weekly";
   options = "--delete-older-than 3d";
   };
+   
 
-  # Bootloader & Kernel
+   # Bootloader & Kernel
   boot.loader.systemd-boot.enable = false;
   boot.lanzaboote.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

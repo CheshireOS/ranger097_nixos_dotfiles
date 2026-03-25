@@ -20,7 +20,6 @@ waybar
 swww
 walker
 networkmanager
-networkmanagerapplet
 home-manager
 libsForQt5.qt5ct
 libsForQt5.qtstyleplugin-kvantum
@@ -42,7 +41,6 @@ qmmp
 mpvpaper
 mpv
 wget
-ranger
 git
 lsd
 dtrx
@@ -57,10 +55,8 @@ pywalfox-native
 librewolf
 android-studio-tools
 android-studio-full
-wireguard-tools
 elephant
 timg
-networkmanagerapplet
 xdg-desktop-portal-gtk
 hyprpolkitagent
 gh
@@ -69,7 +65,6 @@ yq
 xq
 pokeget-rs
 gomatrix
-protonvpn-gui
 sioyek
 gnumake
 gcc
@@ -85,13 +80,15 @@ tree-sitter
 alacritty
 bc
 fontpreview
+tmux
+tor
+tor-browser
 ];
 
 fonts.packages = with pkgs;[
 maple-mono.NF-CN-unhinted
 nerd-fonts.victor-mono
 nerd-fonts.jetbrains-mono
-nerd-fonts.tinos
 nerd-fonts.departure-mono
 ];
 

@@ -15,7 +15,7 @@ clear = "clear && ranger_fetch";
 ytd = "yt-dlp -x --audio-format mp3 --audio-quality 0 --cookies-from-browser firefox --embed-metadata --embed-thumbnail --add-metadata";
 nvii = "nvim ~/ranger097_nixos_dotfiles/development/nixvim.nix";
 anime = "ani-cli --dub";
-    };
+};
    
 interactiveShellInit = ''
 #!/bin/bash
