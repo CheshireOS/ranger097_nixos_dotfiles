@@ -30,15 +30,15 @@ background-color: @color0;
 #custom-blender,
 #custom-dolphin,
 #custom-volume {
-padding-top: 7px;
-padding-bottom: 7px;
+padding-top: 10px;
+padding-bottom: 10px;
 margin-top: 0px;
 margin-bottom: 0px;
 margin-right: 7px;
 border: 0px solid @color9;
 border-radius: 0px;
 font-family: DepartureMono Nerd Font;
-font-size: 11px;
+font-size: 12px;
 font-weight: 700;
 background: linear-gradient(rgba(0,0,0,0.0));
 color: @accent-color;

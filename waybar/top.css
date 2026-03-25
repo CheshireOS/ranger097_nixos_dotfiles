@@ -22,12 +22,12 @@ border-bottom: 1px solid #000000;
   #battery, #mpris {
   padding-left: 10px;
   padding-right: 10px;
-padding-top: 7px;
-padding-bottom: 7px;
+padding-top: 10px;
+padding-bottom: 10px;
 margin-top: 0px;
 margin-bottom: 0px;
 font-family: DepartureMono Nerd Font;
-font-size: 11px;
+font-size: 12px;
 font-weight: 700;
 background-color: rgba(0,0,0,0);
 color: @accent-color;

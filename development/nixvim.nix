@@ -23,11 +23,11 @@ in
        Italics = true;
        NormalFloat = false;
        TerminalColors = false;
-       Transparent = false;
+       Transparent = true;
        Undercurls = true;
        UnderlineMatchParen = false;
        VirtualTextColor = false;
-       WinSeparator = 1;
+       WinSeparator = 0;
        };
     };
 
@@ -61,11 +61,6 @@ in
       width = 30;
       side = "left";
       };
-    };
-
-    plugins.barbar = {
-    enable = true;
-    autoLoad = true;
     };
 
     plugins.floaterm = {
@@ -153,7 +148,7 @@ in
       };
 
       plugins.transparent = {
-      enable = false;
+      enable = true;
       settings.extra_groups = [
       "NormalFloat"
       "NvimTreeNormal"
@@ -182,10 +177,55 @@ in
       };
     };
     
+
+
     extraConfigLua = ''
-    vim.cmd('highlight Keyword gui=italic')
-    vim.cmd('highlight Function gui=italic')
-    vim.cmd('highlight Comment gui=italic')
+vim.cmd('highlight Keyword gui=italic')
+vim.cmd('highlight Function gui=italic')
+vim.cmd('highlight Comment gui=italic')
+vim.api.nvim_set_hl(0, "BufferCurrent", { fg = "#ffffff", bg = "none", ctermbg = "none" })
+vim.api.nvim_set_hl(0, "BufferInactive", { fg = "#808080", bg = "none", ctermbg = "none" })
+vim.api.nvim_set_hl(0, "BufferVisible", { fg = "#808080", bg = "none", ctermbg = "none" })
+vim.api.nvim_set_hl(0, "BufferCurrentSign", { fg = "#ffffff", bg = "none", ctermbg = "none" })
+vim.api.nvim_set_hl(0, "BufferVisibleSign", { fg = "#808080", bg = "none", ctermbg = "none" })
+vim.api.nvim_set_hl(0, "BufferInactiveSign", { fg = "#808080", bg = "none", ctermbg = "none" })
+vim.api.nvim_set_hl(0, "BufferCurrentMod", { fg = "#ffffff", bg = "none", ctermbg = "none" })
+vim.api.nvim_set_hl(0, "BufferVisibleMod", { fg = "#808080", bg = "none", ctermbg = "none" })
+vim.api.nvim_set_hl(0, "BufferInactiveMod", { fg = "#808080", bg = "none", ctermbg = "none" })
+vim.api.nvim_set_hl(0, "BufferOffset", { bg = "none", ctermbg = "none" })
+vim.api.nvim_set_hl(0, "BufferTabpageFill", { bg = "none", ctermbg = "none" })
+
+  require('lualine').setup({
+  options = {
+    theme = {
+      normal = {
+        a = { bg = "#000000" },
+        b = { bg = "#000000" },
+        c = { bg = "#000000" },
+      },
+      insert = {
+        a = { bg = "#000000" },
+        b = { bg = "#000000" },
+        c = { bg = "#000000" },
+      },
+      visual = {
+        a = { bg = "#000000" },
+        b = { bg = "#000000" },
+        c = { bg = "#000000" },
+      },
+      replace = {
+        a = { bg = "#000000" },
+        b = { bg = "#000000" },
+        c = { bg = "#000000" },
+      },
+      inactive = {
+        a = { bg = "#000000" },
+        b = { bg = "#000000" },
+        c = { bg = "#000000" },
+      },
+    }
+  }
+})
     '';
 
     extraPlugins = [
