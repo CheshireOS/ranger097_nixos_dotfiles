@@ -28,7 +28,6 @@ source ~/ranger097_nixos_dotfiles/bash/wal.sh
 export EDITOR=nvim
 export VISUAL=nvim
 
-
 #printf "\e]10;%s\a" "$(sed -n '5p' ~/.cache/wal/colors)"
 #echo -e "\e]11;#000000\a"
 '';

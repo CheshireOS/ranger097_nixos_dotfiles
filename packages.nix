@@ -89,7 +89,11 @@ fonts.packages = with pkgs;[
 maple-mono.NF-CN-unhinted
 nerd-fonts.victor-mono
 nerd-fonts.jetbrains-mono
-nerd-fonts.departure-mono
+nerd-fonts.zed-mono
+nerd-fonts.iosevka
+nerd-fonts.geist-mono
+nerd-fonts.martian-mono
+monocraft
 ];
 
 fonts.fontconfig = {

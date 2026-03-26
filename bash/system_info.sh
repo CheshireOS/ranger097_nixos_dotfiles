@@ -48,11 +48,10 @@ fi
 }
 
 function IP_fetch {
-ip_address=$(curl icanhazip.com 2> /dev/null )
-if [ $? -eq 0 ]; then
-   printf "%*s\e[32m󰖩  \e[36m%s\e[0m\n" "$padding" "" "$ip_address" 
+if systemctl is-active --quiet tor; then
+   printf "%*s\e[32m󱚿  \e[36m%s\e[0m\n" "$padding" "" "Encrypted" 
 else
-   printf "%*s\e[32m󰖩  \e[36m%s\e[0m\n" "$padding" "" "???" 
+   printf "%*s\e[32m󱛀  \e[36m%s\e[0m\n" "$padding" "" "Unencrypted" 
 fi
 }
 
@@ -78,9 +77,18 @@ printf "%*s\e[32m  \e[36m%s\e[0m\n" "$padding" "" "Updated $update_time"
 }
 
 colors() {
-local color_line=$'\e[32m󰮯  \e[31m󰊠 \e[32m󰊠 \e[33m󰊠 \e[34m󰊠 \e[35m󰊠 \e[36m󰊠 \e[37m󰊠 '
+local color_line=$'\e[32m󰮯  \e[31m󰊠 \e[32m󰊠 \e[33m󰊠 \e[34m󰊠 \e[35m󰊠 \e[36m󰊠 \e[37m󰊠'
 printf "%*s%s\e[0m\n" "$padding" "" "$color_line" 
 }
+
+
+love_tmux() {
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+  tmux attach-session -t default || tmux new-session -s default
+fi
+}
+
+
 
 ranger_fetch() {
 echo -e "\n"
@@ -114,6 +122,6 @@ else [[ $(tput lines) -le 14 && $(tput cols) -le 59 ]];
    clear
 fi
 
-
+love_tmux
 
 

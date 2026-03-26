@@ -2,7 +2,6 @@
 let 
 userName = "ranger";
 homeDir = config.users.users.${userName}.home;
-
 in
 {
 

@@ -8,27 +8,31 @@ opacity = 0.7
 startup_mode = "Windowed"
 
 [font]
-#normal = { family = "CaskaydiaCove Nerd Font Mono", style = "Regular" }
-#bold = { family = "CaskaydiaCove Nerd Font Mono", style = "Bold" }
-#italic = { family = "CaskaydiaCove Nerd Font Mono", style = "SemiBold Italic" }
-
-#normal = { family = "Victor Mono NF", style = "Bold" }
+#normal = { family = "Victor Mono NF", style = "Regular" }
 #bold = { family = "Victor Mono NF", style = "Bold" }
-#italic = { family = "Victor Mono NF", style = "Bold Italic" }
+#italic = { family = "Victor Mono NF", style = "Italic" }
 
-normal = { family = "Maple Mono NF CN", style = "Regular" }
-bold = { family = "Maple Mono NF CN", style = "Bold" }
-italic = { family = "Maple Mono NF CN", style = "Bold Italic" }
+#normal = { family = "Maple Mono NF CN", style = "Light" }
+#bold = { family = "Maple Mono NF CN", style = "Bold" }
+#italic = { family = "Maple Mono NF CN", style = "Bold Italic" }
 
-#normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+#normal = { family = "JetBrainsMono Nerd Font", style = "Light" }
 #bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
 #italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
 
-#normal = { family = "SpaceMono Nerd Font Mono", style = "Regular" }
-#bold = { family = "SpaceMono Nerd Font Mono", style = "Bold" }
-#italic = { family = "SpaceMono Nerd Font Mono", style = "Bold Italic" }
+#normal = { family = "GeistMono NFM", style = "medium" }
+#bold = { family = "GeistMono NFM", style = "Black" }
+#italic = { family = "GeistMono NFM", style = "SemiBold" }
 
-offset = { x = 0, y = 10 }
+#normal = { family = "MartianMono NF", style = "Regular" }
+#bold = { family = "MartianMono NF", style = "Bold" }
+#italic = { family = "Iosevka NF", style = "Bold Italic" }
+
+normal = { family = "Iosevka NF", style = "Regular" }
+bold = { family = "Iosevka NF", style = "Light" }
+italic = { family = "Iosevka NF", style = "SemiBold" }
+
+offset = { x = 0, y = 15 }
 size = 14.0
 
 [colors]

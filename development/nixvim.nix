@@ -10,27 +10,6 @@ programs.nixvim = {
    enable = true;
    defaultEditor = true;
    terminalColors = false;
-   colorscheme = "moonfly";
-
-   colorschemes.oxocarbon = {
-      enable = false;
-      autoLoad = false;
-   };
-
-   colorschemes.moonfly = {
-      enable = true;
-      autoLoad = true;
-      settings = {
-         Italics = true;
-         NormalFloat = false;
-         TerminalColors = false;
-         Transparent = true;
-         Undercurls = true;
-         UnderlineMatchParen = false;
-         VirtualTextColor = false;
-         WinSeparator = 0;
-       };
-    };
 
     keymaps = [{
       mode = "n";
@@ -90,6 +69,7 @@ programs.nixvim = {
     plugins.harpoon.enable = true;
     plugins.harpoon.enableTelescope = true;
     plugins.harpoon.autoLoad = true;
+
     plugins.cmp = {
        enable = true;
        settings.sources = [
@@ -130,18 +110,17 @@ programs.nixvim = {
       tailwindcss.enable = true; 
       emmet_ls.enable = true;
       jdtls.enable = true; 
+      sqls.enable = true;
 
       gdscript = {
          enable = true;
          package = null; 
-        };
-
-      kotlin_lsp = {
-      enable = true;
-      package = null;
       };
 
-        sqls.enable = true;
+      kotlin_lsp = {
+         enable = true;
+         package = null;
+        };
       };
 
       plugins.transparent = {
@@ -174,24 +153,38 @@ programs.nixvim = {
       };
     };
     
-
-
-    extraConfigLua = ''
-       vim.cmd('highlight Keyword gui=italic')
-       vim.cmd('highlight Function gui=italic')
-       vim.cmd('highlight Comment gui=italic')
-       vim.api.nvim_set_hl(0, "BufferCurrent", { fg = "#ffffff", bg = "none", ctermbg = "none" })
-       vim.api.nvim_set_hl(0, "BufferInactive", { fg = "#808080", bg = "none", ctermbg = "none" })
-       vim.api.nvim_set_hl(0, "BufferVisible", { fg = "#808080", bg = "none", ctermbg = "none" })
-       vim.api.nvim_set_hl(0, "BufferCurrentSign", { fg = "#ffffff", bg = "none", ctermbg = "none" })
-       vim.api.nvim_set_hl(0, "BufferVisibleSign", { fg = "#808080", bg = "none", ctermbg = "none" })
-       vim.api.nvim_set_hl(0, "BufferInactiveSign", { fg = "#808080", bg = "none", ctermbg = "none" })
-       vim.api.nvim_set_hl(0, "BufferCurrentMod", { fg = "#ffffff", bg = "none", ctermbg = "none" })
-       vim.api.nvim_set_hl(0, "BufferVisibleMod", { fg = "#808080", bg = "none", ctermbg = "none" })
-       vim.api.nvim_set_hl(0, "BufferInactiveMod", { fg = "#808080", bg = "none", ctermbg = "none" })
-       vim.api.nvim_set_hl(0, "BufferOffset", { bg = "none", ctermbg = "none" })
-       vim.api.nvim_set_hl(0, "BufferTabpageFill", { bg = "none", ctermbg = "none" })
-
+   extraConfigLua = ''    
+   vim.cmd('highlight Keyword gui=italic')
+   vim.cmd('highlight Function gui=italic')
+   vim.cmd('highlight Comment gui=bold')
+   vim.api.nvim_set_hl(0, "Normal", { fg = "#c6c6c6", bg = "NONE" })
+   vim.api.nvim_set_hl(0, "NormalNC", { fg = "#c6c6c6", bg = "NONE" })
+   vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1c1c1c" })
+   vim.api.nvim_set_hl(0, "CursorColumn", { bg = "#1c1c1c" })
+   vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#80a0ff", bg = "#1c1c1c" })
+   vim.api.nvim_set_hl(0, "LineNr", { fg = "#404040", bg = "NONE" })
+   vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
+   vim.api.nvim_set_hl(0, "StatusLine", { fg = "#ff0000", bg = "NONE" })
+   vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "#0000ff", bg = "NONE" })
+   vim.api.nvim_set_hl(0, "NvimTreeNormal", { fg = "#c6c6c6", bg = "NONE" })
+   vim.api.nvim_set_hl(0, "NvimTreeFolderName", { fg = "#80a0ff", bg = "NONE" })
+   vim.api.nvim_set_hl(0, "NvimTreeRootFolder", { fg = "#ae81ff", bg = "NONE", bold = true })
+   vim.api.nvim_set_hl(0, "NvimTreeCursorLine", { fg = "NONE", bg = "NONE" })
+   vim.api.nvim_set_hl(0, "NvimTreeCursorLineNr", { fg = "NONE", bg = "NONE" })
+   vim.api.nvim_set_hl(0, "NvimTreeIndentMarker", { fg = "NONE", bg = "NONE" })
+   vim.api.nvim_set_hl(0, "BufferCurrent", { fg = "#ffffff", bg = "none", ctermbg = "none" })
+   vim.api.nvim_set_hl(0, "BufferInactive", { fg = "#808080", bg = "none", ctermbg = "none" })
+   vim.api.nvim_set_hl(0, "BufferVisible", { fg = "#808080", bg = "none", ctermbg = "none" })
+   vim.api.nvim_set_hl(0, "BufferCurrentSign", { fg = "#ffffff", bg = "none", ctermbg = "none" })
+   vim.api.nvim_set_hl(0, "BufferVisibleSign", { fg = "#808080", bg = "none", ctermbg = "none" })
+   vim.api.nvim_set_hl(0, "BufferInactiveSign", { fg = "#808080", bg = "none", ctermbg = "none" })
+   vim.api.nvim_set_hl(0, "BufferCurrentMod", { fg = "#ffffff", bg = "none", ctermbg = "none" })
+   vim.api.nvim_set_hl(0, "BufferVisibleMod", { fg = "#808080", bg = "none", ctermbg = "none" })
+   vim.api.nvim_set_hl(0, "BufferInactiveMod", { fg = "#808080", bg = "none", ctermbg = "none" })
+   vim.api.nvim_set_hl(0, "BufferOffset", { bg = "none", ctermbg = "none" })
+   vim.api.nvim_set_hl(0, "BufferTabpageFill", { bg = "none", ctermbg = "none" })
+   vim.api.nvim_set_hl(0, "ScrollbarHandle", { bg = "NONE" })
+       
        require('lualine').setup({
           options = {
              theme = {
@@ -222,6 +215,50 @@ programs.nixvim = {
              },
            }
          }
+       })
+
+        require("nvim-tree").setup({
+        renderer = {
+           highlight_opened_files = "name",
+           indent_markers = {
+              enable = true,
+              icons = { corner = " ", edge = " ", none = " " },
+           },
+           icons = {
+              webdev_colors = true,
+              git_placement = "after",
+              glyphs = {
+                 default = "",
+                 symlink = "",
+                 bookmark = "󰆤",
+              folder = {
+                 default = "",
+                 open = "󰝰",
+                 empty = "󰉖",
+                 empty_open = "",
+                 symlink = "",
+                 symlink_open = "",
+                 arrow_closed = "",
+                 arrow_open = "",
+               },
+               git = {
+                  unstaged = "✗",
+                  staged = "✓",
+                  unmerged = "",
+                  renamed = "➜",
+                  untracked = "★",
+                  deleted = "",
+                  ignored = "◌",
+               },
+               diagnostics = {
+                  hint = "",
+                  info = "",
+                  warning = "",
+                  error = "",
+               },
+             },
+           },
+         },
        })
     '';
 

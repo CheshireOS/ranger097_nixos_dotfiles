@@ -72,7 +72,7 @@
 },
 
 "custom/qmmp": {
-"format": "  Music",
+"format": " Music",
 "on-click":"qmmp"
 },
 
@@ -87,7 +87,7 @@
 },
 
 "wireplumber": {
-"format": "{icon} Volume",
+"format": "{icon}Volume",
 "format-icons": [ " ", " ", " " ],
 "tooltip-format": "volume: {volume}%",
 "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
@@ -96,7 +96,7 @@
 },
 
 "custom/power": {
-"format": "⏻  Power",
+"format": "⏻ Power",
 "on-click":"wlogout"
 },
 
@@ -114,15 +114,15 @@
 "format":"{icon}",
 "interface": "wlp0s20f3",
 "interval": 5,
-"format-wifi": "󰤨  Wifi", 
-"format-ethernet": "󰤨  Wifi",               
-"format-disconnected": "󰤯  Wifi", 
+"format-wifi": "󰤨 Wifi", 
+"format-ethernet": "󰤨 Wifi",               
+"format-disconnected": "󰤯 Wifi", 
 "on-click": "nm-connection-editor"    
 },
 
 "bluetooth": {
 "format": "{icon}Bluetooth",
-"format-icons": [ " ", "󰂱 "],
+"format-icons": [ "", "󰂱"],
 "on-click": "blueman-manager"
 },
 
