@@ -8,6 +8,7 @@ imports = [
   ./bash/bash.nix
   ./wifi/wifi.nix
   ./development/nixvim.nix
+  ./development/tmux.nix
   ./security/security.nix
 ];
    

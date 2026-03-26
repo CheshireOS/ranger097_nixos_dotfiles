@@ -82,14 +82,6 @@ printf "%*s%s\e[0m\n" "$padding" "" "$color_line"
 }
 
 
-love_tmux() {
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-  tmux attach-session -t default || tmux new-session -s default
-fi
-}
-
-
-
 ranger_fetch() {
 echo -e "\n"
 ascii_art
@@ -113,6 +105,10 @@ function ranger_page() {
     tput cnorm
 }
 
+love_tmux() {
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+  tmux attach-session -t default || tmux new-session -s default
+fi
 if [[ $(tput lines) -ge 15 && $(tput cols) -ge 60 ]]; then
    ranger_page
 
@@ -121,7 +117,6 @@ else [[ $(tput lines) -le 14 && $(tput cols) -le 59 ]];
    read -s -n 1 -p ""
    clear
 fi
+}
 
 love_tmux
-
-

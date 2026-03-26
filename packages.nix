@@ -80,7 +80,6 @@ tree-sitter
 alacritty
 bc
 fontpreview
-tmux
 tor
 tor-browser
 ];

@@ -139,7 +139,7 @@ contrast = 1.0
 vibrancy = 0
 vibrancy_darkness = 0 e
 brightness = 1.0
-noise = 0.07
+noise = 0.09
 popups = true
 }
 }

@@ -31,9 +31,10 @@ programs.nixvim = {
     };
     
     plugins.nvim-tree = {
+    autoLoad = true; 
     enable = true;
     openOnSetup = true;
-    settings.view = {
+    settis.view = {
       width = 30;
       side = "left";
       };
@@ -44,6 +45,40 @@ programs.nixvim = {
     autoLoad = true;
     };
 
+    plugins.barbar = {
+       enable = true;
+       autoLoad = true;
+
+      keymaps = {
+    next.key = "<TAB>";
+    previous.key = "<S-TAB>";
+    close.key = "<leader>x";
+  };
+       settings = {
+	auto_hide = 1;
+	maximum_padding = 3;
+	minimum_padding = 1;
+	tabpages = true;
+          animation = false;
+          exclude_ft = [
+             "oil"
+             "qf"
+             "fugitive"
+          ];
+          exclude_name = [
+             "UnicodeTable.txt"
+          ];
+   highlight_alternate = false;
+   icons = {
+    button = false;
+    separator = {
+    left = "";
+    right = "";
+    seperator_at_end = false;
+    };
+   };
+    };
+    };
     plugins.noice.enable = true;
     plugins.noice.autoLoad = true;
     plugins.web-devicons.enable = true;    
@@ -189,29 +224,29 @@ programs.nixvim = {
           options = {
              theme = {
                 normal = {
-                   a = { bg = "#000000" },
-                   b = { bg = "#000000" },
-                   c = { bg = "#000000" },
+                   a = { bg = "none" },
+                   b = { bg = "none" },
+                   c = { bg = "none" },
              },
                 insert = {
-                   a = { bg = "#000000" },
-                   b = { bg = "#000000" },
-                   c = { bg = "#000000" },
+                  a = { bg = "none" },
+                   b = { bg = "none" },
+                   c = { bg = "none" },
              },
                 visual = {
-                   a = { bg = "#000000" },
-                   b = { bg = "#000000" },
-                   c = { bg = "#000000" },
+                    a = { bg = "none" },
+                   b = { bg = "none" },
+                   c = { bg = "none" },
              },
                 replace = {
-                   a = { bg = "#000000" },
-                   b = { bg = "#000000" },
-                   c = { bg = "#000000" },
+                    a = { bg = "none" },
+                   b = { bg = "none" },
+                   c = { bg = "none" },
              },
                inactive = {
-                   a = { bg = "#000000" },
-                   b = { bg = "#000000" },
-                   c = { bg = "#000000" },
+                    a = { bg = "none" },
+                   b = { bg = "none" },
+                   c = { bg = "none" },
              },
            }
          }
