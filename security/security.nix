@@ -10,6 +10,7 @@ boot.kernelParams = [
   "slub_debug=P"
   "page_alloc.shuffle=1"
   "slab_nomerge"
+  "apparmor=1" 
   ];
 
 services.logind.settings.Login = {
@@ -24,7 +25,9 @@ boot.tmp.cleanOnBoot = true;
 boot.kernel.sysctl = {
 "kernel.dmesg_restrict" = 1;
 "kernel.kptr_restrict" = 2;
-"Kernel.unprivileged_userns_clone" = 0;  
+"Kernel.unprivileged_userns_clone" = 0; 
+"net.core.bpf_jit_harden" = 2;
+"kernel.yama.ptrace_scope" = 2;
 };
 
 networking.networkmanager.wifi.scanRandMacAddress = true;
@@ -38,8 +41,6 @@ systemd.tmpfiles.rules = [
   "D  /home/ranger/Pictures   0700  ranger users  0d  -"
   "D  /home/ranger/Videos     0700  ranger users  0d  -"
   "D  /home/ranger/.cache/thumbnails/  0700  ranger users  0d  -"
-  "D  /home/ranger/.cache/librewolf/  0700  ranger users  0d  -"
-  "D  /home/ranger/.cache/mozilla/firefox/  0700  ranger users  0d  -"
   "D  /home/ranger/.local/share/Trash/      0700 ranger users 0d -"
 
   "f+  /home/ranger/.bash_history  0600  ranger users  -  -"
@@ -66,25 +67,15 @@ systemd.tmpfiles.rules = [
 
 "f+  /var/lib/NetworkManager/seen-bssids  0600  root root  -  -"
 
- "D  /var/lib/systemd/coredump/  0755  root root  0d  -"
 "f+  /var/lib/mlocate/mlocate.db  0644  root root  -  -"
 "f+  /var/lib/plocate/plocate.db  0644  root root  -  -"
-
-"D  /tmp/  1777 root root  0d  -"
-"D  /var/tmp/  1777 root root  0d  -"
-
-  "f+  /var/log/wtmp  0664  root utmp  -  -"
-  "f+  /var/log/btmp  0600  root utmp  -  -"
  "f+  /var/log/lastlog  0664  root utmp  -  -"
 
 
-"f+  /home/ranger/.librewolf/cqtp3a7w.default/places.sqlite      0700  ranger users  -  -"
-"f+  /home/ranger/.librewolf/cqtp3a7w.default/cookies.sqlite     0700  ranger users  -  -"
-"f+  /home/ranger/.librewolf/cqtp3a7w.default/permissions.sqlite 0700  ranger users  -  -"
-"f+  /home/ranger/.librewolf/cqtp3a7w.default/formhistory.sqlite 0700  ranger users  -  -"
-
-"D   /home/ranger/.librewolf/cqtp3a7w.default/sessionstore-backups/  0700  ranger users  0d  -"
-"D   /home/ranger/.librewolf/cqtp3a7w.default/storage/               0700  ranger users  0d  -"
+"f+  /home/ranger/.librewolf/cqtp3a7w.default/places.sqlite      0600  ranger users  -  -"
+"f+  /home/ranger/.librewolf/cqtp3a7w.default/cookies.sqlite     0600  ranger users  -  -"
+"f+  /home/ranger/.librewolf/cqtp3a7w.default/formhistory.sqlite 0600  ranger users  -  -"
+"f+  /home/ranger/.librewolf/cqtp3a7w.default/content-prefs.sqlite 0600  ranger users  -  -"
 ];
 
 services.fstrim.enable = true;
@@ -96,6 +87,33 @@ services.fstrim.interval = "daily";
   options = "--delete-older-than 1d";
   };
 
+
+boot.tmp.tmpfsSize = "20G";
+systemd.coredump.enable = true;
+systemd.timers."systemd-tmpfiles-clean".timerConfig = {
+  OnUnitActiveSec = "1h";
+  OnBootSec = "1h";
+};
+
+services.usbguard = {
+  enable = true;
+  dbus.enable = true;
+  implicitPolicyTarget = "block"; #switch to "block" or "allow"
+  
+  rules = ''
+    #this is my bluetooth card
+    #if you need to add a bluetooth card
+    #run lsusb and enable it here
+    allow id 8087:0033 name "Intel Bluetooth"
+  '';
+};
+
+security.apparmor = {
+enable = true;
+packages = with pkgs; [ 
+   apparmor-profiles 
+ ];
+};
 
 }
 

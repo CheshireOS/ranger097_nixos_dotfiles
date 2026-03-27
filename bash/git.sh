@@ -15,7 +15,7 @@ if ! sudo nixos-rebuild switch --flake .#jirachi --quiet > /dev/null; then
    echo "FAILURE"
    return 1
 fi
-sudo systemd-tmpfiles --remove --clean
+sudo systemd-tmpfiles --remove --clean >/dev/null
 }
 
 jgit() {
@@ -30,7 +30,7 @@ if ! sudo nixos-rebuild switch --flake .#jirachi --quiet > /dev/null; then
    echo "FAILURE"
    return 1
 fi
-sudo systemd-tmpfiles --remove --clean
+sudo systemd-tmpfiles --remove --clean >/dev/null
 }
 
 get_dir_name() {
