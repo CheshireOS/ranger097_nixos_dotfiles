@@ -30,7 +30,7 @@ export VISUAL=nvim
 '';
 
 promptInit = ''
-PS1='\[\e[0;31m\]$(get_dir_name)\[\e[0;32m\]$(parse_git_branch)\[\e[0;33m\]$(get_lang_info)\[\e[0;34m\]   \[\e[0m\]'
+PS1='\n\[\e[0;31m\]$(get_dir_name)\[\e[0;32m\]$(parse_git_branch)\[\e[0;33m\]$(get_lang_info)\[\e[0;34m\] \n  \[\e[0m\]'
 '';
 };
 }
