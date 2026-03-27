@@ -10,27 +10,31 @@ startup_mode = "Windowed"
 [font]
 #normal = { family = "Victor Mono NF", style = "Regular" }
 #bold = { family = "Victor Mono NF", style = "Bold" }
-#italic = { family = "Victor Mono NF", style = "Italic" }
+#italic = { family = "Victor Mono NF", style = "SemiBold Italic" }
 
 #normal = { family = "Maple Mono NF CN", style = "Light" }
 #bold = { family = "Maple Mono NF CN", style = "Bold" }
 #italic = { family = "Maple Mono NF CN", style = "Bold Italic" }
 
-#normal = { family = "JetBrainsMono Nerd Font", style = "Light" }
-#bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
-#italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+#normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+#bold = { family = "JetBrainsMono Nerd Font", style = "Light" }
+#italic = { family = "JetBrainsMono Nerd Font", style = "Bold" }
 
 #normal = { family = "GeistMono NFM", style = "medium" }
 #bold = { family = "GeistMono NFM", style = "Black" }
 #italic = { family = "GeistMono NFM", style = "SemiBold" }
 
-#normal = { family = "MartianMono NF", style = "Regular" }
-#bold = { family = "MartianMono NF", style = "Bold" }
-#italic = { family = "Iosevka NF", style = "Bold Italic" }
+#normal = { family = "AdwaitaMono Nerd Font", style = "Regular" }
+#bold = { family = "AdwaitaMono Nerd Font", style = "Bold" }
+#italic = { family = "AdwaitaMono Nerd Font", style = "Italic" }
 
-normal = { family = "Iosevka NF", style = "Regular" }
-bold = { family = "Iosevka NF", style = "Light" }
-italic = { family = "Iosevka NF", style = "SemiBold" }
+#normal = { family = "ZedMono NF", style = "Regular" }
+#bold = { family = "ZedMono NF", style = "Bold" }
+#italic = { family = "ZedMono NF", style = "Italic" }
+
+normal = { family = "CaskaydiaCove NF", style = "Light" }
+bold = { family = "CaskaydiaCove NF", style = "Bold" }
+italic = { family = "CaskaydiaCove NFP", style = "Italic" }
 
 offset = { x = 0, y = 15 }
 size = 14.0
@@ -40,3 +44,24 @@ transparent_background_colors = true
 
 [colors.primary]
 background = '#000000'
+foreground = "#808080"
+
+[colors.normal]
+black   = "#32344a"
+red     = "#f7768e"
+green   = "#9ece6a"
+yellow  = "#e0af68"
+blue    = "#7aa2f7"
+magenta = "#ad8ee6"
+cyan    = "#449dab"
+white   = "#787c99"
+
+[colors.bright]
+black   = "#444b6a"
+red     = "#ff7a93"
+green   = "#b9f27c"
+yellow  = "#ff9e64"
+blue    = "#7da6ff"
+magenta = "#bb9af7"
+cyan    = "#0db9d7"
+white   = "#acb0d0"

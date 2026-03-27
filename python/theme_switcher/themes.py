@@ -26,4 +26,3 @@ subprocess.run(["pkill", "waybar"])
 subprocess.Popen(["waybar", "-c", os.path.expanduser("~/.config/waybar/top.jsonc"), "-s", os.path.expanduser("~/.config/waybar/top.css")], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 subprocess.Popen(["waybar", "-c", os.path.expanduser("~/.config/waybar/bottom.jsonc"), "-s", os.path.expanduser("~/.config/waybar/bottom.css")], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-

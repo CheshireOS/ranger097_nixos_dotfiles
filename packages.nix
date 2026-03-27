@@ -45,7 +45,6 @@ git
 lsd
 dtrx
 blender
-vscode
 qt5.qtwayland
 qt6.qtwayland
 pokeget-rs
@@ -82,6 +81,7 @@ bc
 fontpreview
 tor
 tor-browser
+sqlitebrowser
 ];
 
 fonts.packages = with pkgs;[
@@ -92,6 +92,8 @@ nerd-fonts.zed-mono
 nerd-fonts.iosevka
 nerd-fonts.geist-mono
 nerd-fonts.martian-mono
+nerd-fonts.adwaita-mono
+nerd-fonts.caskaydia-cove
 monocraft
 ];
 
@@ -101,6 +103,7 @@ antialias = true;
 hinting.enable = false;
 subpixel.rgba = "rgb";
 defaultFonts.monospace = [
+"CaskaydiaCove NF"
 "Maple Mono NF CN"
 "VictorMono Nerd Font Mono"
 "Jetbrains Mono NF" 

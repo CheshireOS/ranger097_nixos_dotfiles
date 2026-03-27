@@ -191,7 +191,7 @@ programs.nixvim = {
    extraConfigLua = ''    
    vim.cmd('highlight Keyword gui=italic')
    vim.cmd('highlight Function gui=italic')
-   vim.cmd('highlight Comment gui=bold')
+   vim.cmd('highlight Comment gui=italic')
    vim.api.nvim_set_hl(0, "Normal", { fg = "#c6c6c6", bg = "NONE" })
    vim.api.nvim_set_hl(0, "NormalNC", { fg = "#c6c6c6", bg = "NONE" })
    vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1c1c1c" })
@@ -257,7 +257,7 @@ programs.nixvim = {
            highlight_opened_files = "name",
            indent_markers = {
               enable = true,
-              icons = { corner = " ", edge = " ", none = " " },
+              icons = { corner = "", edge = "", none = "" },
            },
            icons = {
               webdev_colors = true,
@@ -267,22 +267,22 @@ programs.nixvim = {
                  symlink = "",
                  bookmark = "󰆤",
               folder = {
-                 default = "",
-                 open = "󰝰",
-                 empty = "󰉖",
-                 empty_open = "",
-                 symlink = "",
-                 symlink_open = "",
-                 arrow_closed = "",
-                 arrow_open = "",
+                 default = "󰲂 ",
+                 open = " ",
+                 empty = " ",
+                 empty_open = " ",
+                 symlink = " ",
+                 symlink_open = " ",
+                 arrow_closed = "",
+                 arrow_open = "",
                },
                git = {
-                  unstaged = "✗",
-                  staged = "✓",
+                  unstaged = "󰽂 ",
+                  staged = " ",
                   unmerged = "",
-                  renamed = "➜",
-                  untracked = "★",
-                  deleted = "",
+                  renamed = "󰑕 ",
+                  untracked = " ",
+                  deleted = "󰚃 ",
                   ignored = "◌",
                },
                diagnostics = {

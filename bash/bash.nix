@@ -9,12 +9,12 @@ gii = "nvim ~/ranger097_nixos_dotfiles/ghostty/config";
 hii = "nvim ~/ranger097_nixos_dotfiles/home.nix";
 wii = "nvim ~/ranger097_nixos_dotfiles/waybar";
 cii = "nvim ~/.config";
-ls = "lsd --tree --icon=always --depth 1";
+ls = "lsd --icon=always --depth 1";
 lsa = "lsd -a --tree --icon=always --depth 1";
 clear = "clear && ranger_fetch";
 ytd = "yt-dlp -x --audio-format mp3 --audio-quality 0 --cookies-from-browser firefox --embed-metadata --embed-thumbnail --add-metadata";
 nvii = "nvim ~/ranger097_nixos_dotfiles/development/nixvim.nix";
-anime = "ani-cli --dub";
+	    
 };
    
 interactiveShellInit = ''
@@ -27,13 +27,10 @@ source ~/ranger097_nixos_dotfiles/bash/git.sh
 source ~/ranger097_nixos_dotfiles/bash/wal.sh
 export EDITOR=nvim
 export VISUAL=nvim
-
-#printf "\e]10;%s\a" "$(sed -n '5p' ~/.cache/wal/colors)"
-#echo -e "\e]11;#000000\a"
 '';
 
 promptInit = ''
-PS1="\n\[\e[31m\]╭───\[\e[36m\]\$(get_dir_name)\$(parse_git_branch)\[\e[32m\]\$(get_lang_info)\[\e[35m\]\n\[\e[31m\]╰─\[\e[36m\]〉\[\e[0m\]"
+PS1='\[\e[0;31m\]$(get_dir_name)\[\e[0;32m\]$(parse_git_branch)\[\e[0;33m\]$(get_lang_info)\[\e[0;34m\]   \[\e[0m\]'
 '';
 };
 }
