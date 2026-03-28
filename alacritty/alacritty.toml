@@ -4,7 +4,7 @@ working_directory = "~/ranger097_nixos_dotfiles"
 
 [window]
 padding = { x = 25, y = 25 }
-opacity = 0.7
+opacity = 0.8
 startup_mode = "Windowed"
 
 [font]
@@ -44,24 +44,24 @@ transparent_background_colors = true
 
 [colors.primary]
 background = '#000000'
-foreground = "#808080"
+foreground = "#54546D"
 
 [colors.normal]
-black   = "#32344a"
-red     = "#f7768e"
-green   = "#9ece6a"
-yellow  = "#e0af68"
-blue    = "#7aa2f7"
-magenta = "#ad8ee6"
-cyan    = "#449dab"
-white   = "#787c99"
+black   = "#54546D" #\[\e[0;30m\] Muted Navy/Grey
+red     = "#FF5D62" #\[\e[0;31m\] Soft Coral Red
+green   = "#98BB6C" #\[\e[0;32m\] Sage Green
+yellow  = "#DCD7BA" #\[\e[0;33m\] Sand / Beige
+blue    = "#7E9CD8" #\[\e[0;34m\] Cornflower Blue
+magenta = "#D27E99" #\[\e[0;35m\] Dusty Rose
+cyan    = "#727169" #\[\e[0;36m\] Warm Grey
+white   = "#FFA066" #\[\e[0;37m\] Mango / Orange
 
 [colors.bright]
-black   = "#444b6a"
-red     = "#ff7a93"
-green   = "#b9f27c"
-yellow  = "#ff9e64"
-blue    = "#7da6ff"
-magenta = "#bb9af7"
-cyan    = "#0db9d7"
-white   = "#acb0d0"
+black   = "#54546D" #\[\e[0;30m\] Muted Navy/Grey
+red     = "#FF5D62" #\[\e[0;31m\] Soft Coral Red
+green   = "#98BB6C" #\[\e[0;32m\] Sage Green
+yellow  = "#DCD7BA" #\[\e[0;33m\] Sand / Beige
+blue    = "#7E9CD8" #\[\e[0;34m\] Cornflower Blue
+magenta = "#D27E99" #\[\e[0;35m\] Dusty Rose
+cyan    = "#727169" #\[\e[0;36m\] Warm Grey
+white   = "#FFA066" #\[\e[0;37m\] Mango / Orange

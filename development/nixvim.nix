@@ -7,6 +7,54 @@ in
 {
 
 programs.nixvim = {
+
+    highlight = {
+      Operator = { fg = "#98BB6C"; };
+      Delimiter = { fg = "#98BB6C"; };
+      Identifier = { fg = "#7E9CD8"; };
+     "@variable" = { fg = "#98BB6C"; };
+     "@module" = { fg = "#98BB6C"; };
+      Keyword = { italic = true; };
+      Function = { italic = true; };
+      Comment = { italic = true; };
+      Normal = { fg = "#7E9CD8"; };
+      Comment = { fg = "#54546D"; };
+      Keyword = { fg = "#727169"; };
+      Function = { fg = "#98BB6C"; };
+      String = { fg = "#7E9CD8"; };
+      Constant = { fg = "#D27E99"; };
+
+      NormalNC = { fg = "#7E9CD8"; bg = "none"; };
+      CursorLine = { bg = "#1c1c1c"; };
+      CursorColumn = { bg = "#1c1c1c"; };
+      CursorLineNr = { fg = "#80a0ff"; bg = "#1c1c1c"; };
+      LineNr = { fg = "#404040"; bg = "none"; };
+      SignColumn = { bg = "none"; };
+      StatusLine = { fg = "#54546D"; bg = "none"; };
+      StatusLineNC = { fg = "#54546D"; bg = "none"; };
+
+      NvimTreeNormal = { fg = "#DCD7BA"; bg = "none"; };
+      NvimTreeFolderName = { fg = "#D27E99"; bg = "none"; };
+      NvimTreeRootFolder = { fg = "#98BB6C"; bg = "none"; bold = true; };
+      NvimTreeCursorLine = { fg = "none"; bg = "none"; };
+      NvimTreeCursorLineNr = { fg = "none"; bg = "none"; };
+      NvimTreeIndentMarker = { fg = "none"; bg = "none"; };
+
+      BufferCurrent = { fg = "#7E9CD8"; bg = "none"; ctermbg = "none"; };
+      BufferInactive = { fg = "#54546D"; bg = "none"; ctermbg = "none"; };
+      BufferVisible = { fg = "#808080"; bg = "none"; ctermbg = "none"; };
+      BufferCurrentSign = { fg = "#ffffff"; bg = "none"; ctermbg = "none"; };
+      BufferVisibleSign = { fg = "#808080"; bg = "none"; ctermbg = "none"; };
+      BufferInactiveSign = { fg = "#808080"; bg = "none"; ctermbg = "none"; };
+      BufferCurrentMod = { fg = "#ffffff"; bg = "none"; ctermbg = "none"; };
+      BufferVisibleMod = { fg = "#808080"; bg = "none"; ctermbg = "none"; };
+      BufferInactiveMod = { fg = "#808080"; bg = "none"; ctermbg = "none"; };
+      BufferOffset = { bg = "none"; ctermbg = "none"; };
+      BufferTabpageFill = { bg = "none"; ctermbg = "none"; };
+
+      
+      ScrollbarHandle = { bg = "none"; };
+    };
    enable = true;
    defaultEditor = true;
    terminalColors = false;
@@ -189,36 +237,6 @@ programs.nixvim = {
     };
     
    extraConfigLua = ''    
-   vim.cmd('highlight Keyword gui=italic')
-   vim.cmd('highlight Function gui=italic')
-   vim.cmd('highlight Comment gui=italic')
-   vim.api.nvim_set_hl(0, "Normal", { fg = "#c6c6c6", bg = "NONE" })
-   vim.api.nvim_set_hl(0, "NormalNC", { fg = "#c6c6c6", bg = "NONE" })
-   vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1c1c1c" })
-   vim.api.nvim_set_hl(0, "CursorColumn", { bg = "#1c1c1c" })
-   vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#80a0ff", bg = "#1c1c1c" })
-   vim.api.nvim_set_hl(0, "LineNr", { fg = "#404040", bg = "NONE" })
-   vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
-   vim.api.nvim_set_hl(0, "StatusLine", { fg = "#ff0000", bg = "NONE" })
-   vim.api.nvim_set_hl(0, "StatusLineNC", { fg = "#0000ff", bg = "NONE" })
-   vim.api.nvim_set_hl(0, "NvimTreeNormal", { fg = "#c6c6c6", bg = "NONE" })
-   vim.api.nvim_set_hl(0, "NvimTreeFolderName", { fg = "#80a0ff", bg = "NONE" })
-   vim.api.nvim_set_hl(0, "NvimTreeRootFolder", { fg = "#ae81ff", bg = "NONE", bold = true })
-   vim.api.nvim_set_hl(0, "NvimTreeCursorLine", { fg = "NONE", bg = "NONE" })
-   vim.api.nvim_set_hl(0, "NvimTreeCursorLineNr", { fg = "NONE", bg = "NONE" })
-   vim.api.nvim_set_hl(0, "NvimTreeIndentMarker", { fg = "NONE", bg = "NONE" })
-   vim.api.nvim_set_hl(0, "BufferCurrent", { fg = "#ffffff", bg = "none", ctermbg = "none" })
-   vim.api.nvim_set_hl(0, "BufferInactive", { fg = "#808080", bg = "none", ctermbg = "none" })
-   vim.api.nvim_set_hl(0, "BufferVisible", { fg = "#808080", bg = "none", ctermbg = "none" })
-   vim.api.nvim_set_hl(0, "BufferCurrentSign", { fg = "#ffffff", bg = "none", ctermbg = "none" })
-   vim.api.nvim_set_hl(0, "BufferVisibleSign", { fg = "#808080", bg = "none", ctermbg = "none" })
-   vim.api.nvim_set_hl(0, "BufferInactiveSign", { fg = "#808080", bg = "none", ctermbg = "none" })
-   vim.api.nvim_set_hl(0, "BufferCurrentMod", { fg = "#ffffff", bg = "none", ctermbg = "none" })
-   vim.api.nvim_set_hl(0, "BufferVisibleMod", { fg = "#808080", bg = "none", ctermbg = "none" })
-   vim.api.nvim_set_hl(0, "BufferInactiveMod", { fg = "#808080", bg = "none", ctermbg = "none" })
-   vim.api.nvim_set_hl(0, "BufferOffset", { bg = "none", ctermbg = "none" })
-   vim.api.nvim_set_hl(0, "BufferTabpageFill", { bg = "none", ctermbg = "none" })
-   vim.api.nvim_set_hl(0, "ScrollbarHandle", { bg = "NONE" })
        
        require('lualine').setup({
           options = {
