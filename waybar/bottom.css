@@ -3,15 +3,11 @@
 @import "../../.cache/wal/colors-waybar-rgba.css";
 
 window#waybar {
-background: linear-gradient(rgba(0,0,0,1.0));
+background: linear-gradient(rgba(0,0,0,0.0));
 /*background-color: @waybar-bg;*/
-border-top: 1px solid #000000;
+border-top: 0px solid #000000;
 }
-
-window#waybar:hover {
-background-color: @color0;
-}
-
+ 
 #tray,
 #wireplumber,
 #network,
@@ -21,58 +17,81 @@ background-color: @color0;
 #custom-power,
 #custom-VacuumTube,
 #custom-ProtonVpn,
-#custom-code,
+#custom-tor,
 #custom-ghostty,
 #custom-steam,
-#custom-firefox, 
+#custom-web, 
 #custom-discord,
 #custom-qmmp,
 #custom-blender,
 #custom-dolphin,
 #custom-volume {
-padding-top: 10px;
-padding-bottom: 10px;
+padding-top: 12px;
+padding-bottom: 12px;
 margin-top: 0px;
-margin-bottom: 0px;
-margin-right: 7px;
-border: 0px solid @color9;
-border-radius: 0px;
+margin-bottom: 10px;
+margin-right: 8px;
 font-family: BigBlueTerm437 Nerd Font;
 font-size: 12px;
 font-weight: 300;
-background: linear-gradient(rgba(0,0,0,0.0));
-color: @accent-color;
+background: @waybar-bg;
+color: @color6;
 box-shadow: none;
-padding-left: 10px;
-padding-right: 10px;
+padding-left: 12px;
+padding-right: 12px;
 }
 
 #bluetooth {
 margin-right: 10px;
 }
 
+
 #custom-power {
 margin-left: 10px;
+margin-right:0px;
+border-radius: 10px 0px 0px 10px;
+border-top: 1px solid @color6;
+border-bottom: 1px solid @color6;
+border-left: 1px solid @color6;
+padding-left: 20px;
 }
 
-#wireplumber:hover,
-#network:hover,
-#bluetooth:hover,
-#custom-nixos:hover,
-#custom-themes:hover,
+
+#wireplumber,
+#custom-tor,
+#custom-discord,
+#custom-qmmp, 
+#network,
+#custom-web,
+#custom-dolphin,
+#custom-themes {
+margin-left: 0px;
+margin-right: 0px;
+border-radius: 0px;
+border-top: 1px solid @color6;
+border-bottom: 1px solid @color6;
+}
+
+#bluetooth {
+margin-left: 0px;
+border-radius: 0px 10px 10px 0px;
+border-top: 1px solid @color6;
+border-bottom: 1px solid @color6;
+border-right: 1px solid @color6;
+padding-right: 20px;
+}
+
 #custom-power:hover,
-#custom-VacuumTube:hover,
-#custom-ProtonVpn:hover,
-#custom-code:hover,
-#custom-ghostty:hover,
-#custom-steam:hover,
-#custom-firefox:hover,
+#wireplumber:hover,
+#custom-tor:hover,
 #custom-discord:hover,
-#custom-qmmp:hover,
-#custom-blender:hover,
+#custom-qmmp:hover, 
+#network:hover,
+#custom-web:hover,
 #custom-dolphin:hover,
-#custom-volume:hover {
-color: @color4;
-background: linear-gradient(rgba(0,0,0,0.0));
+#custom-themes:hover,
+#bluetooth:hover {
+color: @color3;
+background: #000000;
 }
 

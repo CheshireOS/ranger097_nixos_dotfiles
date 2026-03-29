@@ -1,9 +1,9 @@
 #!/bin/bash
 /run/current-system/systemd/bin/systemctl is-active --quiet tor
 if [ $? -eq 0 ]; then
-    echo "[ENCRYPTED]"
+    echo "ENCRYPTED"
 else
-    echo "[UNENCRYPTED]"
+    echo "UNENCRYPTED"
 fi
 
 

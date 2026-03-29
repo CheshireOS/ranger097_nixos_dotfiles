@@ -67,7 +67,7 @@
             "(.*)pavucontrol(.*)": "Volume",
             "(.*)blueman-manager(.*)": "Bluetooth",
             "(.*)discord(.*)": "Discord",
-            "(.*)vesktop(.*)": "vesktop",
+            "(.*)vesktop(.*)": "Vesktop",
             "(.*)gimp(.*)": "Gimp",
             "(.*)blender(.*)": "Blender",
             "(.*)libreoffice-writer(.*)": "Office",
@@ -120,10 +120,10 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}%",
+        "format": "󱐋 {capacity}%",
         "format-full": "{capacity}%",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format-charging": "{capacity}%",
+        "format-plugged": "{capacity}%",
         "format-icons": ["  ", "  ", "  ", "  ", "  "]
     },
 

@@ -10,20 +10,20 @@
     "margin-left" : 0,
     "margin-right" : 0,
     "modules-left": [
-    "custom/power",
-    "custom/themes"
-    //"tray"
     ],
     "modules-center": [
+    "custom/power",
+    "custom/themes",
     "custom/qmmp",
-    "custom/code",
-    "custom/ghostty",
-    "custom/volume"
-    ],
-    "modules-right": [
+    "custom/tor",
+    "custom/web",
+    "custom/dolphin",
+    "custom/discord",
     "wireplumber",
     "network", 
     "bluetooth"
+    ],
+    "modules-right": [
     ],
 
 
@@ -40,26 +40,20 @@
 "on-click": "freetube"
 },
 
-"custom/ProtonVpn": {
-"format": " ",
-"on-click": "protonvpn-app"
+"custom/tor": {
+"format": " Tor Browser",
+"on-click": "tor-browser"
 },
 
-"custom/code": {
-"format": " Vscode",
-"on-click": "code"
+"custom/terminal": {
+"format": " ",
+"on-click": "alacritty"
 },
 
-"custom/ghostty": {
-"format": " Ghostty",
-"on-click": "ghostty"
+"custom/web": {
+"format": " Librewolf",
+"on-click": "librewolf"
 },
-
-"custom/firefox": {
-"format": "  Web",
-"on-click": "firefox"
-},
-
 
 "custom/steam": {
 "format": "  Steam",
@@ -67,8 +61,8 @@
 },
 
 "custom/discord": {
-"format": "  Discord",
-"on-click": "discord"
+"format": " Discord",
+"on-click": "vesktop"
 },
 
 "custom/qmmp": {
@@ -82,7 +76,7 @@
 },
 
 "custom/dolphin": {
-"format": "󱢴 Files",
+"format": "󱢴 Dolphin",
 "on-click":"dolphin"
 },
 
@@ -96,12 +90,12 @@
 },
 
 "custom/power": {
-"format": "⏻ Power",
+"format": "󰤄 Power",
 "on-click":"wlogout"
 },
 
 "custom/themes": {
-"format": "󱠓 Theme",
+"format": " Theme",
 "on-click":"direnv exec /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher python /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/themes.py"
 },
 
@@ -122,7 +116,7 @@
 
 "bluetooth": {
 "format": "{icon} Bluetooth",
-"format-icons": [ "󰋐", "󰋎"],
+"format-icons": [ "󰂲", "󰂱"],
 "on-click": "blueman-manager"
 },
 

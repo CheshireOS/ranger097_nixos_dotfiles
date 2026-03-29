@@ -89,15 +89,15 @@ permission = /usr/(bin|local/bin)/hyprpm, plugin, allow
 #SETTINGS_START
 general {
 #GAPS
-gaps_in = 10
-gaps_out = 20
-border_size = 3
+gaps_in = 5
+gaps_out = 10
+border_size = 1
 
 #BORDER
-#col.active_border = $color3
-#col.inactive_border = $color3
-col.active_border = rgba(0,0,0,1)
-col.inactive_border = rgba(0,0,0,1)
+col.active_border = $color3
+col.inactive_border = $color3
+#col.active_border = rgba(0,0,0,1)
+#col.inactive_border = rgba(0,0,0,1)
 
 #BORDER_ANIMATION
 animations {
@@ -114,7 +114,7 @@ layout = dwindle
 
 #WINDOW_SETTINGS_START
 decoration { 
-rounding = 0
+rounding = 10
 rounding_power = 2
 active_opacity = 1.0
 inactive_opacity = 1.0
@@ -122,9 +122,9 @@ inactive_opacity = 1.0
 #SHADOW
 shadow {
 enabled = true
-range = 25
+range = 20
 render_power = 7
-color = rgba(0,0,0,0.5)
+color = rgba(0,0,0,0.4)
 offset = -4 3
 sharp = false
 scale = 0.99
