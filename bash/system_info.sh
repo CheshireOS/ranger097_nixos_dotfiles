@@ -14,44 +14,44 @@ function Music_fetch {
 local song_playing=$(playerctl metadata --format "{{ artist }}" 2>/dev/null)
 local status=$(playerctl status 2>/dev/null)
 if [ "$song_playing" != "No players found" ] && [ -n "$song_playing" ]; then
-    printf "%*s\e[32m  \e[36m%s\e[0m\n" "$padding" "" "$song_playing"
+    printf "%*s\e[34m  \e[30m%s\e[0m\n" "$padding" "" "$song_playing"
 else
-    printf "%*s\e[32m  \e[36m%s\e[0m\n" "$padding" "" "No music playing"
+    printf "%*s\e[34m  \e[30m%s\e[0m\n" "$padding" "" "No music playing"
 fi
 }
 
 function Host_fetch {
 local host_name=$(hostnamectl | awk 'NR==1 {print $3}')
 if [ $? -eq 0 ]; then
-     printf "%*s\e[32m󰐝  \e[36m%s\e[0m\n" "$padding" "" "$host_name" 
+     printf "%*s\e[34m󰐝  \e[30m%s\e[0m\n" "$padding" "" "$host_name" 
 else
-     printf "%*s\e[32m󰐝  \e[36m%s\e[0m\n" "$padding" "" "wtf???" 
+     printf "%*s\e[34m󰐝  \e[30m%s\e[0m\n" "$padding" "" "wtf???" 
 fi
 }
 
 function OS_fetch {
 local operating_system=$(hostnamectl | awk 'NR==6 {print $3, $4, $5 }')
 if [ $? -eq 0 ]; then
-    printf "%*s\e[32m  \e[36m%s\e[0m\n" "$padding" "" "$operating_system" 
+    printf "%*s\e[34m  \e[30m%s\e[0m\n" "$padding" "" "$operating_system" 
 else
-    printf "%*s\e[32m  \e[36m%s\e[0m\n" "$padding" "" "wtf???" 
+    printf "%*s\e[34m  \e[30m%s\e[0m\n" "$padding" "" "wtf???" 
 fi
 }
 
 function kernel_fetch {
 local kernel_version=$(hostnamectl | awk 'NR==8 {print $2, $3}')
 if [ $? -eq 0 ]; then
-   printf "%*s\e[32m  \e[36m%s\e[0m\n" "$padding" "" "$kernel_version" 
+   printf "%*s\e[34m  \e[30m%s\e[0m\n" "$padding" "" "$kernel_version" 
 else
-   printf "%*s\e[32m  \e[36m%s\e[0m\n" "$padding" "" "wtf???"
+   printf "%*s\e[34m  \e[30m%s\e[0m\n" "$padding" "" "wtf???"
 fi
 }
 
 function IP_fetch {
 if systemctl is-active --quiet tor; then
-   printf "%*s\e[32m󱚿  \e[36m%s\e[0m\n" "$padding" "" "Encrypted" 
+   printf "%*s\e[34m󱚿  \e[30m%s\e[0m\n" "$padding" "" "Encrypted" 
 else
-   printf "%*s\e[32m󱛀  \e[36m%s\e[0m\n" "$padding" "" "Unencrypted" 
+   printf "%*s\e[34m󱛀  \e[30m%s\e[0m\n" "$padding" "" "Unencrypted" 
 fi
 }
 
@@ -60,9 +60,9 @@ local top_ascii="┏┓╻   ╻   ╻ ╻   ┏━┓   ┏━┓"
 local mid_ascii="┃┗┫   ┃   ┏╋┛   ┃ ┃   ┗━┓"
 local bot_ascii="╹ ╹   ╹   ╹ ╹   ┗━┛   ┗━┛"
 echo -e "\n"
-printf "%*s\e[32m%s\e[0m\n" "$padding" "" "$top_ascii" 
-printf "%*s\e[32m%s\e[0m\n" "$padding" "" "$mid_ascii" 
-printf "%*s\e[32m%s\e[0m\n" "$padding" "" "$bot_ascii" 
+printf "%*s\e[37m%s\e[0m\n" "$padding" "" "$top_ascii" 
+printf "%*s\e[37m%s\e[0m\n" "$padding" "" "$mid_ascii" 
+printf "%*s\e[37m%s\e[0m\n" "$padding" "" "$bot_ascii" 
 }
 
 function github_info {
@@ -70,17 +70,16 @@ local repo_name="ranger097"
 local update_time=$(gh repo view ranger097_nixos_dotfiles --json updatedAt --template '{{.updatedAt | timeago}}')
 local forks_count=$(gh repo view ranger097_nixos_dotfiles --json forkCount --jq '.forkCount')
 local stars_count=$(gh repo view ranger097_nixos_dotfiles --json stargazerCount --jq '.stargazerCount')
-printf "%*s\e[32m  \e[36m%s\e[0m\n" "$padding" "" "$repo_name" 
-printf "%*s\e[32m  \e[36m%s\e[0m\n" "$padding" "" "Stars $stars_count" 
-printf "%*s\e[32m  \e[36m%s\e[0m\n" "$padding" "" "Forks $forks_count" 
-printf "%*s\e[32m  \e[36m%s\e[0m\n" "$padding" "" "Updated $update_time"
+printf "%*s\e[34m  \e[30m%s\e[0m\n" "$padding" "" "$repo_name" 
+printf "%*s\e[34m  \e[30m%s\e[0m\n" "$padding" "" "Stars $stars_count" 
+printf "%*s\e[34m  \e[30m%s\e[0m\n" "$padding" "" "Forks $forks_count" 
+printf "%*s\e[34m  \e[30m%s\e[0m\n" "$padding" "" "Updated $update_time"
 }
 
 colors() {
-local color_line=$'\e[32m󰮯  \e[31m󰊠 \e[32m󰊠 \e[33m󰊠 \e[34m󰊠 \e[35m󰊠 \e[36m󰊠 \e[37m󰊠'
+local color_line=$'\e[34m󰮯  \e[31m󰊠 \e[32m󰊠 \e[33m󰊠 \e[34m󰊠 \e[35m󰊠 \e[36m󰊠 \e[37m󰊠'
 printf "%*s%s\e[0m\n" "$padding" "" "$color_line" 
 }
-
 
 ranger_fetch() {
 echo -e "\n"

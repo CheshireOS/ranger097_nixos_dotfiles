@@ -131,14 +131,14 @@
     "format": "{}", 
     "exec": "playerctl --player=qmmp metadata --format '{{artist}} - {{title}}' || echo ''",
     "interval": 2,
-    "max-length": 40,
+    "max-length": 30,
     "on-click": "playerctl --player=qmmp play-pause",
     "escape": true
 },
 
 "mpris": {
 "format": "{artist} - {title}",
-"max-length": "40",
+"max-length": "30",
 "player-icons": {
 "default": "",
 "firefox": ""
@@ -146,10 +146,9 @@
 
 },
     "custom/vpn_ip": {
-       "format":"???",
-       "format-alt":"{}",
-       "exec": "curl -s https://icanhazip.com",
-       "on-click": ""
+       "format":"{}",
+       "exec": "bash /home/ranger/ranger097_nixos_dotfiles/bash/waybar_network_script.sh",
+       "interval": 10
     },
 
     "custom/right-bracket": { "format": "]" },

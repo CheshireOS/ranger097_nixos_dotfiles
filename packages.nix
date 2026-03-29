@@ -94,7 +94,7 @@ nerd-fonts.geist-mono
 nerd-fonts.martian-mono
 nerd-fonts.adwaita-mono
 nerd-fonts.caskaydia-cove
-monocraft
+nerd-fonts.bigblue-terminal
 ];
 
 fonts.fontconfig = {

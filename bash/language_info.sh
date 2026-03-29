@@ -57,7 +57,7 @@
       elif ls *.swift >/dev/null 2>&1 && command -v swift >/dev/null 2>&1; then
         echo "  v$(swift --version | head -n 1 | awk '{print $4}')"
       elif ls *.nix >/dev/null 2>&1; then
-        echo -e "\e[35m   \e[34mnix v$(nix --version | awk '{print $3}')"
+        echo -e "\e[34m   \e[30mnix v$(nix --version | awk '{print $3}')"
       elif [[ -f Dockerfile ]]; then
         echo " 󰡨 docker"
       elif ls *.md >/dev/null 2>&1; then

@@ -29,10 +29,8 @@ export EDITOR=nvim
 export VISUAL=nvim
 '';
 
-
-
 promptInit = ''
-PS1='\n\[\e[0;35m\] \[\e[0;34m\]  \[\e[0;36m\]\h \[\e[0;35m\] \[\e[0;31m\] \[\e[0;30m\]$(get_dir_name)\[\e[0;32m\]$(parse_git_branch)\[\e[0;34m\]$(get_lang_info) \n\[\e[0;35m\] \[\e[0;34m\]  \[\e[0;36m\]\u  \[\e[0;35m\] \[\e[0;31m\] \[\e[0m\]'
+PS1='\n\[\e[0;30m\] \[\e[0;37m\]  \[\e[0;33m\]\h \[\e[0;30m\] \[\e[0;31m\] \[\e[0;33m\]$(get_dir_name)\[\e[0;33m\]$(parse_git_branch)\[\e[0;30m\]$(get_lang_info) \n\[\e[0;30m\] \[\e[0;37m\]  \[\e[0;33m\]\u  \[\e[0;30m\] \[\e[0;31m\] \[\e[0m\]'
 '';
 };
 }

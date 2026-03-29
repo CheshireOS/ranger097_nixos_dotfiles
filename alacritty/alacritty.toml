@@ -44,7 +44,7 @@ transparent_background_colors = true
 
 [colors.primary]
 background = '#000000'
-foreground = "#54546D"
+foreground = "#DCD7BA"
 
 [colors.normal]
 black   = "#54546D" #\[\e[0;30m\] Muted Navy/Grey
@@ -52,7 +52,7 @@ red     = "#FF5D62" #\[\e[0;31m\] Soft Coral Red
 green   = "#98BB6C" #\[\e[0;32m\] Sage Green
 yellow  = "#DCD7BA" #\[\e[0;33m\] Sand / Beige
 blue    = "#7E9CD8" #\[\e[0;34m\] Cornflower Blue
-magenta = "#D27E99" #\[\e[0;35m\] Dusty Rose
+magenta = "#D27E99" #\[\e[0;35m\] Dusty  Rose
 cyan    = "#727169" #\[\e[0;36m\] Warm Grey
 white   = "#FFA066" #\[\e[0;37m\] Mango / Orange
 

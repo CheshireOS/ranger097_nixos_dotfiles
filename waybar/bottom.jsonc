@@ -121,8 +121,8 @@
 },
 
 "bluetooth": {
-"format": "{icon}Bluetooth",
-"format-icons": [ "", "󰂱"],
+"format": "{icon} Bluetooth",
+"format-icons": [ "󰋐", "󰋎"],
 "on-click": "blueman-manager"
 },
 
