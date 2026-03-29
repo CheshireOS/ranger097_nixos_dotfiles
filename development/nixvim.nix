@@ -9,21 +9,22 @@ in
 programs.nixvim = {
 
     highlight = {
-     "@punctuation.bracket" = { fg = "#E6C384"; };
-     "@operator" = { fg = "#FF5D62"; };
-      Delimiter = { fg = "#98BB6C"; };
-      Identifier = { fg = "#7E9CD8"; };
-     "@variable" = { fg = "#98BB6C"; };
-     "@module" = { fg = "#98BB6C"; };
+     "@punctuation.bracket" = { fg = "#FDC22A"; }; 
+     "@operator" = { fg = "#C6029D"; };
+      Delimiter = { fg = "#FF5D62"; };
+      Identifier = { fg = "#6A9589"; };
+     "@variable" = { fg = "#0094B5"; };
+     "@module" = { fg = "#7E9CD8"; };
       Keyword = { italic = true; };
       Function = { italic = true; };
       Comment = { italic = true; };
       Normal = { fg = "#7E9CD8"; };
       Comment = { fg = "#54546D"; };
-      Keyword = { fg = "#727169"; };
-      Function = { fg = "#98BB6C"; };
-      String = { fg = "#7E9CD8"; };
-      Constant = { fg = "#D27E99"; };
+      Keyword = { fg = "#6858A1"; };
+      Function = { fg = "#51516A"; };
+      String = { fg = "#B87777"; };
+      
+      Constant = { fg = "#658594"; };
 
       NormalNC = { fg = "#7E9CD8"; bg = "none"; };
       CursorLine = { bg = "#1c1c1c"; };

@@ -1,0 +1,75 @@
+* {
+    color: grey !important;
+    border: 0px solid black !important;
+}
+
+
+body {
+    background: linear-gradient(rgba(0,0,0,1));
+}
+
+.is-mobile .yQDlj3B5DI5YO8c8Ulio, .yQDlj3B5DI5YO8c8Ulio.jHKRD_8UMD51jfnKQ1LL {
+  background-color: #000;
+}
+
+.is-mobile .At_VJ9MlrHsSjbfCtz2_ .EcE0RD8NCNGe61Kp815G:not(.zqdPZIKd0gTxkTPnBBos), .is-mobile .At_VJ9MlrHsSjbfCtz2_ .wLL07_0Xnd1QZpzpfR4W:not(.zqdPZIKd0gTxkTPnBBos), .is-mobile .gdzyb9PgLazLyi4DKK0O .EcE0RD8NCNGe61Kp815G:not(.zqdPZIKd0gTxkTPnBBos), .is-mobile .gdzyb9PgLazLyi4DKK0O .wLL07_0Xnd1QZpzpfR4W:not(.zqdPZIKd0gTxkTPnBBos) {
+  background-color: #000;
+  margin: 0 -7px;
+}
+
+
+:root {
+  --ducksans-product-letter-spacing: 0.005em;
+  --col-white: #000;
+  --col-gray-90: #222;
+  --col-gray-25: #000;
+  --col-gray-10: #000;
+  --col-gray-0: #000;
+  --theme-col-bg-page: var(--col-white);
+  --theme-col-bg-expandcollapse: var(--col-gray-0);
+  --theme-col-bg-expandcollapse-hover: var(--col-gray-10);
+  --theme-col-txt-expandcollapse: var(--col-gray-90);
+  --theme-col-border-expandcollapse: var(--col-gray-25);
+  --rounded-md: 8px;
+  --font-size-unit: (0.9 * 16);
+  --px-in-rem: (1rem/var(--font-size-unit));
+}
+
+
+.footer {
+  background-color: #000;
+  border-top: 1px solid #d9d9d9;
+  display: none;
+}
+
+.is-vertical-tabs-exp .header-wrap {
+  background-color: #000;
+}
+
+.T265XEcezvjUhK71U8pN {
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  align-items: center;
+  gap: var(--sds-space-x02);
+  overflow: hidden;
+  background-color: var(--theme-col-bg-search,#202020);
+  border-radius: 13px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.08),0 2px 3px 0 rgba(0,0,0,.06);
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0 8px 0 0;
+  position: relative;
+  color: var(--sds-color-text-01);
+}
