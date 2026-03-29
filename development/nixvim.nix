@@ -9,7 +9,8 @@ in
 programs.nixvim = {
 
     highlight = {
-      Operator = { fg = "#98BB6C"; };
+     "@punctuation.bracket" = { fg = "#E6C384"; };
+     "@operator" = { fg = "#FF5D62"; };
       Delimiter = { fg = "#98BB6C"; };
       Identifier = { fg = "#7E9CD8"; };
      "@variable" = { fg = "#98BB6C"; };

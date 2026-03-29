@@ -2,7 +2,7 @@
 
 width=$(tput cols)
 math=$(( width /  2 ))
-percent=$(( width / 8 ))
+percent=$(( width / 6 ))
 padding=$(( math - percent ))
 
 function pokemon() {
@@ -106,9 +106,16 @@ function ranger_page() {
 }
 
 love_tmux() {
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-  tmux attach-session -t default || tmux new-session -s default
+if [ -z "$TMUX" ]; then
+   if tmux has-session -t ranger 2>/dev/null && tmux has-session -t terminal 2>/dev/null; then
+      tmux attach-session -t terminal
+elif tmux has-session -t ranger 2>/dev/null; then
+      tmux new-session -s terminal 2>/dev/null
+else
+      tmux new-session -s ranger 2>/dev/null
+   fi
 fi
+
 if [[ $(tput lines) -ge 15 && $(tput cols) -ge 60 ]]; then
    ranger_page
 
