@@ -18,7 +18,7 @@ in
   gtk.enable = true;
   x11.enable = true;
   };
-
+ 
   home.file = {
     ".config/hypr/hypridle.conf".source = ./hypr/hypridle.conf;
     ".config/hypr/hyprlock.conf".source = ./hypr/hyprlock.conf;
@@ -90,14 +90,14 @@ permission = /usr/(bin|local/bin)/hyprpm, plugin, allow
 general {
 #GAPS
 gaps_in = 5
-gaps_out = 10
+gaps_out = 0,10, 0, 10
 border_size = 1
 
 #BORDER
-col.active_border = $color3
-col.inactive_border = $color3
-#col.active_border = rgba(0,0,0,1)
-#col.inactive_border = rgba(0,0,0,1)
+#col.active_border = $color3
+#col.inactive_border = $color3
+col.active_border = rgba(0,0,0,1)
+col.inactive_border = rgba(0,0,0,1)
 
 #BORDER_ANIMATION
 animations {
@@ -124,7 +124,7 @@ shadow {
 enabled = true
 range = 20
 render_power = 7
-color = rgba(0,0,0,0.4)
+color = rgba(0,0,0,0.6)
 offset = -4 3
 sharp = false
 scale = 0.99
@@ -303,7 +303,7 @@ windowrule = match:class .blueman-manager-wrapped, opacity 1.0
 layerrule = blur on, match:namespace walker
 layerrule = match:namespace walker, ignore_alpha 0.7
 layerrule = match:namespace waybar, ignore_alpha 0.1
-layerrule = blur on, match:namespace waybar
+layerrule = blur off, match:namespace waybar
 layerrule = blur on, match:namespace wlogout
 #LAYER_RULE_SETTINGS_END
 '';  

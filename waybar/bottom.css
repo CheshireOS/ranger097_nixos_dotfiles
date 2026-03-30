@@ -26,17 +26,17 @@ border-top: 0px solid #000000;
 #custom-blender,
 #custom-dolphin,
 #custom-volume {
-padding-top: 12px;
-padding-bottom: 12px;
-margin-top: 0px;
+padding-top: 6px;
+padding-bottom: 6px;
+margin-top: 10px;
 margin-bottom: 10px;
 margin-right: 8px;
 font-family: BigBlueTerm437 Nerd Font;
-font-size: 12px;
+font-size: 10px;
 font-weight: 300;
-background: @waybar-bg;
+background: #000000;
 color: @color6;
-box-shadow: none;
+box-shadow: -2px 2px 5px rgba(0,0,0,0.6);
 padding-left: 12px;
 padding-right: 12px;
 }
@@ -47,15 +47,14 @@ margin-right: 10px;
 
 
 #custom-power {
-margin-left: 10px;
-margin-right:0px;
-border-radius: 10px 0px 0px 10px;
-border-top: 1px solid @color6;
-border-bottom: 1px solid @color6;
-border-left: 1px solid @color6;
-padding-left: 20px;
+margin-left: 8px;
+margin-right:8px;
+border-radius: 10px;
+border-top: 0px solid @color6;
+border-bottom: 0px solid @color6;
+border-left: 0px solid @color6;
+padding-left: 10px;
 }
-
 
 #wireplumber,
 #custom-tor,
@@ -65,20 +64,20 @@ padding-left: 20px;
 #custom-web,
 #custom-dolphin,
 #custom-themes {
-margin-left: 0px;
-margin-right: 0px;
-border-radius: 0px;
-border-top: 1px solid @color6;
-border-bottom: 1px solid @color6;
+margin-left: 8px;
+margin-right: 8px;
+border-radius: 10px;
+border-top: 0px solid @color6;
+border-bottom: 0px solid @color6;
 }
 
 #bluetooth {
-margin-left: 0px;
-border-radius: 0px 10px 10px 0px;
-border-top: 1px solid @color6;
-border-bottom: 1px solid @color6;
-border-right: 1px solid @color6;
-padding-right: 20px;
+margin-left: 8px;
+border-radius: 10px;
+border-top: 0px solid @color6;
+border-bottom: 0px solid @color6;
+border-right: 0px solid @color6;
+padding-right: 10px;
 }
 
 #custom-power:hover,
@@ -91,7 +90,7 @@ padding-right: 20px;
 #custom-dolphin:hover,
 #custom-themes:hover,
 #bluetooth:hover {
-color: @color3;
-background: #000000;
+color: @color0;
+background: @color3;
 }
 

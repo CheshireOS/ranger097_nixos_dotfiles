@@ -4,7 +4,7 @@ working_directory = "~/ranger097_nixos_dotfiles"
 
 [window]
 padding = { x = 25, y = 25 }
-opacity = 0.8
+opacity = 0.7
 startup_mode = "Windowed"
 
 [font]

@@ -25,24 +25,24 @@ border-bottom: 0px solid #000000;
 padding-top: 6px;
 padding-bottom: 6px;
 margin-top: 10px;
-margin-bottom: 0px;
+margin-bottom: 10px;
 font-family: BigBlueTerm437 Nerd Font;
-font-size: 12px;
+font-size: 10px;
 font-weight: 400;
-background-color: @waybar-bg;
-color: @color6;
+background-color: #000000;
+color: @color4;
 margin-right: 8px;
 border-radius: 10px;
-border: 1px solid @color6;
-box-shadow: none;
+border: 0px solid @color6;
+box-shadow: -2px 2px 4px rgba(0,0,0,0.5);
 text-shadow: none;
 }
 
 #window:hover, #mpris:hover,
 #clock:hover, #custom-vpn_ip:hover,
 #battery:hover, #workspaces:hover {
-color: @color4;
-background: rgba(0,0,0,0);
+color: @color0;
+background: @color3;
 box-shadow: none;
 text-shadow: none;
 -gtk-icon-shadow: none;    
