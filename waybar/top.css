@@ -17,30 +17,31 @@ background: linear-gradient(rgba(0,0,0,0.0));
 border-bottom: 0px solid #000000;
 }
 
-  #window, #workspaces,
-  #clock, #custom-vpn_ip,
-  #battery, #mpris {
-  padding-left: 12px;
-  padding-right: 12px;
-padding-top: 6px;
-padding-bottom: 6px;
+#window, #workspaces,
+#clock, #custom-vpn_ip,
+#battery, #mpris {
+padding-left: 12px;
+padding-right: 12px;
+padding-top: 7px;
+padding-bottom: 7px;
 margin-top: 10px;
 margin-bottom: 10px;
 font-family: BigBlueTerm437 Nerd Font;
 font-size: 10px;
 font-weight: 400;
 background-color: #000000;
-color: @color4;
-margin-right: 8px;
-border-radius: 10px;
-border: 0px solid @color6;
-box-shadow: -2px 2px 4px rgba(0,0,0,0.5);
+color: @color6;
+margin-right: 5px;
+margin-left:5px;
+border-radius: 5px;
+border: 1px solid #000000;
+box-shadow: -2px 2px 3px rgba(0,0,0,0.5);
 text-shadow: none;
 }
 
 #window:hover, #mpris:hover,
 #clock:hover, #custom-vpn_ip:hover,
-#battery:hover, #workspaces:hover {
+#battery:hover {
 color: @color0;
 background: @color3;
 box-shadow: none;
@@ -60,13 +61,13 @@ box-shadow: none;
 text-shadow: none;
 -gtk-icon-shadow: none;
 transition: none;
-color: @color3;
+color: @color4;
 }
 
 #workspaces button:hover {
 background: none; 
 background-color: rgba(0,0,0,0); 
-color: @color4; 
+color: @color3; 
 box-shadow: none;
 text-shadow: none;
 -gtk-icon-shadow: none;
@@ -76,7 +77,7 @@ transition: none;
 #workspaces button.active {
 background: none; 
 background-color: rgba(0,0,0,0);
-color: @color4; 
+color: @color3; 
 box-shadow: none;
 text-shadow: none;
 -gtk-icon-shadow: none;

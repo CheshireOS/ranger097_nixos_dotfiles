@@ -26,17 +26,17 @@ border-top: 0px solid #000000;
 #custom-blender,
 #custom-dolphin,
 #custom-volume {
-padding-top: 6px;
-padding-bottom: 6px;
+padding-top: 8px;
+padding-bottom: 8px;
 margin-top: 10px;
 margin-bottom: 10px;
 margin-right: 8px;
 font-family: BigBlueTerm437 Nerd Font;
 font-size: 10px;
-font-weight: 300;
+font-weight: 400;
 background: #000000;
 color: @color6;
-box-shadow: -2px 2px 5px rgba(0,0,0,0.6);
+box-shadow: -2px 2px 3px rgba(0,0,0,0.5);
 padding-left: 12px;
 padding-right: 12px;
 }
@@ -45,11 +45,10 @@ padding-right: 12px;
 margin-right: 10px;
 }
 
-
 #custom-power {
-margin-left: 8px;
-margin-right:8px;
-border-radius: 10px;
+margin-left: 5px;
+margin-right:5px;
+border-radius: 5px;
 border-top: 0px solid @color6;
 border-bottom: 0px solid @color6;
 border-left: 0px solid @color6;
@@ -64,16 +63,16 @@ padding-left: 10px;
 #custom-web,
 #custom-dolphin,
 #custom-themes {
-margin-left: 8px;
-margin-right: 8px;
-border-radius: 10px;
+margin-left: 5px;
+margin-right: 5px;
+border-radius: 5px;
 border-top: 0px solid @color6;
 border-bottom: 0px solid @color6;
 }
 
 #bluetooth {
 margin-left: 8px;
-border-radius: 10px;
+border-radius: 5px;
 border-top: 0px solid @color6;
 border-bottom: 0px solid @color6;
 border-right: 0px solid @color6;

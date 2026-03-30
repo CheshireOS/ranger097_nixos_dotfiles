@@ -90,8 +90,8 @@ permission = /usr/(bin|local/bin)/hyprpm, plugin, allow
 general {
 #GAPS
 gaps_in = 5
-gaps_out = 0,10, 0, 10
-border_size = 1
+gaps_out = 0,10,0,10
+border_size = 2
 
 #BORDER
 #col.active_border = $color3
@@ -114,7 +114,7 @@ layout = dwindle
 
 #WINDOW_SETTINGS_START
 decoration { 
-rounding = 10
+rounding = 5
 rounding_power = 2
 active_opacity = 1.0
 inactive_opacity = 1.0
