@@ -98,7 +98,7 @@ systemd.timers."systemd-tmpfiles-clean".timerConfig = {
 services.usbguard = {
   enable = true;
   dbus.enable = true;
-  implicitPolicyTarget = "block"; #switch to "block" or "allow"
+  implicitPolicyTarget = "allow"; #switch to "block" or "allow"
   
   rules = ''
     #this is my bluetooth card

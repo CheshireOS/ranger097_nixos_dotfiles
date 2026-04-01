@@ -125,4 +125,4 @@ else [[ $(tput lines) -le 14 && $(tput cols) -le 59 ]];
 fi
 }
 
-love_tmux
+

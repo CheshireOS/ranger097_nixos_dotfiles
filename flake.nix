@@ -18,7 +18,7 @@
        url = "github:nix-community/home-manager";
        inputs.nixpkgs.follows = "nixpkgs";
     };
-  
+ 
   };
  
   outputs = { self, nixpkgs, nixvim, home-manager, lanzaboote, ... }@inputs: {
@@ -27,7 +27,6 @@
      deoxy = nixpkgs.lib.nixosSystem {
      system = "x86_64-linux";
      specialArgs = { inherit inputs nixvim; };
-     
      modules = [
       ./hosts/deoxy/hardware-configuration.nix
       ./configuration.nix
@@ -50,6 +49,7 @@
       useUserPackages = true;
       users.ranger = import ./home.nix;
       backupFileExtension = "backup";
+      extraSpecialArgs = { inherit inputs; };
       };
   }
   
@@ -59,6 +59,7 @@
    jirachi = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs nixvim; };
+      
       modules = [
        ./hosts/jirachi/hardware-configuration.nix
        ./configuration.nix
@@ -80,6 +81,7 @@
       home-manager.useUserPackages = true;
       home-manager.users.ranger = import ./home.nix;
       home-manager.backupFileExtension = "backup";
+      home-manager.extraSpecialArgs = { inherit inputs; };
    }
 
    ];

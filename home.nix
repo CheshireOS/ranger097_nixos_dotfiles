@@ -1,4 +1,4 @@
-{ config, pkgs, osConfig, ... }:
+{ config, pkgs, osConfig, inputs, ... }:
 
 let
  myCursor = pkgs.runCommand "local-cursor" {} ''
@@ -29,12 +29,42 @@ in
     ".config/wlogout".source = ./wlogout;
  };
 
+programs.ghostty.enable = true;
+programs.ghostty.settings = {
+theme = "Catppuccin Mocha";
+custom-shader = [
+"${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/ripple_cursor.glsl"
+"${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/cursor_blaze.glsl"
+"${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/aurora.glsl"
+];
+
+custom-shader-animation = true;
+background-opacity = 1.0;
+adjust-cell-height = 8;
+background = "#000000";
+
+
+#FONT_SETTINGS
+font-family = "Maple Mono NF CN";
+font-family-italic = "Maple Mono NF CN";
+font-size = 14;
+font-style-bold = "Bold";
+font-style-italic = "ExtraLight Italic";
+font-style = "ExtraLight";
+font-feature = "calt";
+
+#WINDOW_SETTINGS
+window-padding-x = 20;
+window-padding-y = 20;
+confirm-close-surface = false;
+window-step-resize = true;
+};
+
 home.sessionVariables = {
   GBM_BACKEND = "nvidia-drm";
   __GLX_VENDOR_LIBRARY_NAME = "nvidia";
   LIBVA_DRIVER_NAME = "nvidia";
 };
-
 
 wayland.windowManager.hyprland = {
 enable = true;
@@ -90,20 +120,20 @@ permission = /usr/(bin|local/bin)/hyprpm, plugin, allow
 general {
 #GAPS
 gaps_in = 5
-gaps_out = 0,10,0,10
-border_size = 2
+gaps_out = 10
+border_size = 1
 
 #BORDER
-#col.active_border = $color3
-#col.inactive_border = $color3
+#col.active_border = $color4 rgba(0,0,0,1) rgba(0,0,0,1)
+#col.inactive_border = $color4 rgba(0,0,0,1) rgba(0,0,0,1)
 col.active_border = rgba(0,0,0,1)
 col.inactive_border = rgba(0,0,0,1)
 
 #BORDER_ANIMATION
-animations {
-bezier = linear, 0.0, 0.0, 0.0, 0.0
-animation = borderangle, 1, 200, linear, loop
-}
+#animations {
+#bezier = linear, 0.0, 0.0, 0.0, 0.0
+#animation = borderangle, 1, 200, linear, loop
+#}
 
 #ALTERNATIVE
 resize_on_border = true
@@ -114,20 +144,20 @@ layout = dwindle
 
 #WINDOW_SETTINGS_START
 decoration { 
-rounding = 5
+rounding = 7
 rounding_power = 2
 active_opacity = 1.0
 inactive_opacity = 1.0
 
 #SHADOW
 shadow {
-enabled = true
-range = 20
+enabled = false
+range = 15
 render_power = 7
-color = rgba(0,0,0,0.6)
-offset = -4 3
+color = rgba(0,0,0,0.29)
+offset = -1 1
 sharp = false
-scale = 0.99
+scale = 1.0
 }
 
 #BLUR
@@ -137,9 +167,9 @@ size = 3
 passes = 4
 contrast = 1.0
 vibrancy = 0
-vibrancy_darkness = 0 e
+vibrancy_darkness = 0
 brightness = 1.0
-noise = 0.09
+noise = 0.05
 popups = true
 }
 }
@@ -217,7 +247,7 @@ sensitivity = -0.5
 #DEVICE_SETTINGS_END
 
 #KEYBINDINGS_SETTINGS_START
-bind = SUPER, Return, exec, alacritty
+bind = SUPER, Return, exec, ghostty
 bind = SUPER, Q, killactive,
 bind = SUPER, Z, togglefloating,
 bind = SUPER, A, exec, /run/current-system/sw/bin/walker || pkill walker
@@ -302,8 +332,8 @@ windowrule = match:class .blueman-manager-wrapped, opacity 1.0
 #LAYER_RULE_SETTINGS_START
 layerrule = blur on, match:namespace walker
 layerrule = match:namespace walker, ignore_alpha 0.7
-layerrule = match:namespace waybar, ignore_alpha 0.1
-layerrule = blur off, match:namespace waybar
+layerrule = match:namespace waybar, ignore_alpha 0.19
+layerrule = blur on, match:namespace waybar
 layerrule = blur on, match:namespace wlogout
 #LAYER_RULE_SETTINGS_END
 '';  

@@ -1,134 +1,77 @@
-{ config, pkgs, lib, ... }:
-
-let
-  pywal = pkgs.vimPlugins.pywal-nvim;
-in 
-
-{
+{ config, pkgs, lib, ... }:{
 
 programs.nixvim = {
-
-    highlight = {
-     "@punctuation.bracket" = { fg = "#FDC22A"; }; 
-     "@operator" = { fg = "#C6029D"; };
-      Delimiter = { fg = "#FF5D62"; };
-      Identifier = { fg = "#6A9589"; };
-     "@variable" = { fg = "#0094B5"; };
-     "@module" = { fg = "#7E9CD8"; };
-      Keyword = { italic = true; };
-      Function = { italic = true; };
-      Comment = { italic = true; };
-      Normal = { fg = "#7E9CD8"; };
-      Comment = { fg = "#54546D"; };
-      Keyword = { fg = "#6858A1"; };
-      Function = { fg = "#51516A"; };
-      String = { fg = "#B87777"; };
-      
-      Constant = { fg = "#658594"; };
-
-      NormalNC = { fg = "#7E9CD8"; bg = "none"; };
-      CursorLine = { bg = "#1c1c1c"; };
-      CursorColumn = { bg = "#1c1c1c"; };
-      CursorLineNr = { fg = "#80a0ff"; bg = "#1c1c1c"; };
-      LineNr = { fg = "#404040"; bg = "none"; };
-      SignColumn = { bg = "none"; };
-      StatusLine = { fg = "#54546D"; bg = "none"; };
-      StatusLineNC = { fg = "#54546D"; bg = "none"; };
-
-      NvimTreeNormal = { fg = "#DCD7BA"; bg = "none"; };
-      NvimTreeFolderName = { fg = "#D27E99"; bg = "none"; };
-      NvimTreeRootFolder = { fg = "#98BB6C"; bg = "none"; bold = true; };
-      NvimTreeCursorLine = { fg = "none"; bg = "none"; };
-      NvimTreeCursorLineNr = { fg = "none"; bg = "none"; };
-      NvimTreeIndentMarker = { fg = "none"; bg = "none"; };
-
-      BufferCurrent = { fg = "#7E9CD8"; bg = "none"; ctermbg = "none"; };
-      BufferInactive = { fg = "#54546D"; bg = "none"; ctermbg = "none"; };
-      BufferVisible = { fg = "#808080"; bg = "none"; ctermbg = "none"; };
-      BufferCurrentSign = { fg = "#ffffff"; bg = "none"; ctermbg = "none"; };
-      BufferVisibleSign = { fg = "#808080"; bg = "none"; ctermbg = "none"; };
-      BufferInactiveSign = { fg = "#808080"; bg = "none"; ctermbg = "none"; };
-      BufferCurrentMod = { fg = "#ffffff"; bg = "none"; ctermbg = "none"; };
-      BufferVisibleMod = { fg = "#808080"; bg = "none"; ctermbg = "none"; };
-      BufferInactiveMod = { fg = "#808080"; bg = "none"; ctermbg = "none"; };
-      BufferOffset = { bg = "none"; ctermbg = "none"; };
-      BufferTabpageFill = { bg = "none"; ctermbg = "none"; };
-
-      
-      ScrollbarHandle = { bg = "none"; };
-    };
+  
    enable = true;
    defaultEditor = true;
    terminalColors = false;
 
-    keymaps = [{
-      mode = "n";
-      key = "<leader>e";
-      action = "<cmd>NvimTreeToggle<CR>";
-      options = {
-         silent = true;
-         desc = "Toggle NvimTree";
-        };
-      }];
+   keymaps = [{
+   mode = "n";
+   key = "<leader>e";
+   action = "<cmd>NvimTreeToggle<CR>";
+   options = {
+   silent = true;
+   desc = "Toggle NvimTree";
+     };
+   }];
      
-    globals.mapleader = " "; 
-    plugins.treesitter = {
-    enable = true;
-    settings.highlight.enable = true;
-    settings.indent.enable = true;
-    package = pkgs.vimPlugins.nvim-treesitter.withAllGrammars;
-    nixGrammars = false;
-    };
+   globals.mapleader = " "; 
+   plugins.treesitter = {
+   enable = true;
+   settings.highlight.enable = true;
+   settings.indent.enable = true;
+   package = pkgs.vimPlugins.nvim-treesitter.withAllGrammars;
+   nixGrammars = false;
+   };
     
-    plugins.nvim-tree = {
-    autoLoad = true; 
-    enable = true;
-    openOnSetup = true;
-    settis.view = {
-      width = 30;
-      side = "left";
-      };
-    };
+   plugins.nvim-tree = {
+   autoLoad = true; 
+   enable = true;
+   openOnSetup = true;
+   settings.view = {
+   width = 30;
+   side = "left";
+     };
+   };
 
-    plugins.floaterm = {
-    enable = true;
-    autoLoad = true;
-    };
+   plugins.barbar = {
+   enable = true;
+   autoLoad = true;
+   keymaps = {
+   next.key = "<TAB>";
+   previous.key = "<S-TAB>";
+   close.key = "<leader>x";
+   };
+      
+   settings = {
+   auto_hide = 1;
+   maximum_padding = 3;
+   minimum_padding = 1;
+   tabpages = true;
+   animation = false;
+   exclude_ft = [
+   "oil"
+   "qf"
+   "fugitive"
+   ];
+          
+   exclude_name = [
+   "UnicodeTable.txt"
+   ];
 
-    plugins.barbar = {
-       enable = true;
-       autoLoad = true;
-
-      keymaps = {
-    next.key = "<TAB>";
-    previous.key = "<S-TAB>";
-    close.key = "<leader>x";
-  };
-       settings = {
-	auto_hide = 1;
-	maximum_padding = 3;
-	minimum_padding = 1;
-	tabpages = true;
-          animation = false;
-          exclude_ft = [
-             "oil"
-             "qf"
-             "fugitive"
-          ];
-          exclude_name = [
-             "UnicodeTable.txt"
-          ];
    highlight_alternate = false;
    icons = {
-    button = false;
-    separator = {
-    left = "";
-    right = "";
-    seperator_at_end = false;
+   button = false;
+   separator = {
+   left = "";
+   right = "";
+   seperator_at_end = false;
+      };
+     };
     };
    };
-    };
-    };
+
     plugins.noice.enable = true;
     plugins.noice.autoLoad = true;
     plugins.web-devicons.enable = true;    
@@ -182,7 +125,7 @@ programs.nixvim = {
        background = "dark";    
     };
     
-      plugins.lsp.servers = {
+    plugins.lsp.servers = {
       pyright.enable = true;
       nixd.enable = true;
       clangd.enable = true;
@@ -208,23 +151,6 @@ programs.nixvim = {
         };
       };
 
-      plugins.transparent = {
-      enable = true;
-      settings.extra_groups = [
-      "NormalFloat"
-      "NvimTreeNormal"
-      "NvimTreeNormalNC"
-      "TelescopeNormal"
-      "TelescopeBorder"
-      "LspFloatWinNormal"
-      "MsgArea"
-      "StatusLine"
-      "StatusLineNC"
-      "WinSeparator"
-      "Folded"
-      "EndOfBuffer"
-      ];
-    };
    
     plugins.none-ls = {
     enable = true;
@@ -233,13 +159,61 @@ programs.nixvim = {
     enable = true; 
     disableTsServerFormatter = true; 
     };
+
     gofmt.enable = true;
     black.enable = true;
       };
     };
     
-   extraConfigLua = ''    
-       
+
+      colorschemes.catppuccin = {
+      autoLoad = true;
+      enable = true;
+      settings = {
+         flavour = "mocha";
+         transparent_background = true;
+         term_colors = false;
+    
+      integrations = {
+        cmp = true;
+        treesitter = true;
+        nvimtree = true;
+        telescope.enabled = true;
+       };
+     };
+   };
+
+    colorschemes.kanagawa = {
+    autoLoad = true;
+    enable = false;
+    settings = {
+    transparent = true;
+    functionStyle = {
+    italic = true;
+    };
+    keywordStyle = {
+    italic = true;
+    };
+    commentStyle = {
+    italic = true;
+    };
+    typeStyle = {
+    italic = true;
+    };
+    undercurl = true;
+    theme = "dragon";
+      };
+    };
+    
+
+
+
+
+   extraConfigLua = ''   
+
+   vim.cmd("colorscheme catppuccin-mocha")
+    --vim.cmd("colorscheme kanagawa-dragon")   
+
        require('lualine').setup({
           options = {
              theme = {
@@ -318,7 +292,7 @@ programs.nixvim = {
     '';
 
     extraPlugins = [
-    pywal   
+    #pywal   
     ];
         
     extraPackages = with pkgs; [

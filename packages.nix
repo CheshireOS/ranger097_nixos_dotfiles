@@ -12,7 +12,6 @@ environment.systemPackages = with pkgs; [
 sbctl
 ani-cli
 steam
-blueman
 kdePackages.dolphin
 kdePackages.kdenlive
 kdePackages.qtstyleplugin-kvantum
@@ -31,7 +30,6 @@ libreoffice-fresh
 wlogout
 playerctl
 pavucontrol
-bluez
 gimp
 kdePackages.qtsvg
 kdePackages.ffmpegthumbs
@@ -76,12 +74,13 @@ viu
 chafa
 ueberzugpp
 tree-sitter
-alacritty
 bc
 fontpreview
 tor
 tor-browser
 sqlitebrowser
+librashader
+ghostty
 ];
 
 fonts.packages = with pkgs;[
@@ -103,43 +102,33 @@ antialias = true;
 hinting.enable = false;
 subpixel.rgba = "rgb";
 defaultFonts.monospace = [
-"CaskaydiaCove NF"
 "Maple Mono NF CN"
-"VictorMono Nerd Font Mono"
-"Jetbrains Mono NF" 
 ];
 };
 
 hardware.bluetooth.enable = true;
-services.blueman.enable = true;
-hardware.bluetooth.settings = {
-General = {
-Enable = "Source,Sink,Media,Socket";
-  };
-};
-
-services.pipewire.wireplumber.extraConfig."10-bluez" = {
-"monitor.bluez.properties" = {
-"bluez5.enable-sbc-xq" = true;
-"bluez5.enable-msbc" = true;
-"bluez5.enable-hw-volume" = true;
-"bluez5.roles" = [
-"hsp_hs"
-"hsp_ag"
-"hfp_hf"
-"hfp_ag"];};};
-
-services.pulseaudio.enable = false;
+hardware.bluetooth.powerOnBoot = true;
+hardware.enableAllFirmware = true;
 security.rtkit.enable = true;
 services.pipewire = {
 enable = true;
 alsa.enable = true;
 alsa.support32Bit = true;
 pulse.enable = true;
-#jack.enable = true;
-#media-session.enable = true;
+wireplumber.enable = true; 
 };
 
+
+hardware.bluetooth.settings = {
+  General = {
+    Enable = "Source,Sink,Media,Socket";
+    Experimental = true;
+  };
+};
+
+
+services.blueman.enable = true;
 services.gnome.gnome-keyring.enable = true;
 services.gvfs.enable = true;
+
 }
