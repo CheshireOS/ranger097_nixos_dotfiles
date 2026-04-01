@@ -2,16 +2,16 @@
 const bool transparent = false;
 
 // terminal contents luminance threshold to be considered background (0.0 to 1.0)
-const float threshold = 0.15;
+const float threshold = 0.02;
 
 // divisions of grid
-const float repeats = 30.;
+const float repeats = 8.;
 
 // number of layers
-const float layers = 21.;
+const float layers = 30.;
 
 // star colors
-const vec3 white = vec3(1.0); // Set star color to pure white
+const vec3 white = vec3(0.02); // Set star color to pure white
 
 float luminance(vec3 color) {
     return dot(color, vec3(0.2126, 0.7152, 0.0722));
@@ -132,4 +132,4 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 
     // Apply terminal's alpha to control overall opacity
     fragColor = vec4(blendedColor, terminalColor.a);
-}
+} 

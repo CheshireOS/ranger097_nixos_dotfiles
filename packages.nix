@@ -79,8 +79,10 @@ fontpreview
 tor
 tor-browser
 sqlitebrowser
-librashader
+btop
+htop
 ghostty
+bettercap
 ];
 
 fonts.packages = with pkgs;[

@@ -115,6 +115,9 @@ else
    fi
 fi
 
+}
+
+
 if [[ $(tput lines) -ge 15 && $(tput cols) -ge 60 ]]; then
    ranger_page
 
@@ -123,6 +126,6 @@ else [[ $(tput lines) -le 14 && $(tput cols) -le 59 ]];
    read -s -n 1 -p ""
    clear
 fi
-}
 
 
+export LS_COLORS="di=31:ex=31:fi=0:ln=36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:er=01;31"

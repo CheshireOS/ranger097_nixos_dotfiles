@@ -46,6 +46,6 @@ get_dir_name() {
 parse_git_branch() {
   local branch=$(git branch --show-current 2> /dev/null)
   if [ -n "$branch" ]; then
-    echo -e "\e[30m  \e[33m$branch"
+    echo -e "\e[33m  \e[33m$branch"
   fi
 }

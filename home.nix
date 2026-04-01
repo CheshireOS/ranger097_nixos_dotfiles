@@ -33,6 +33,7 @@ programs.ghostty.enable = true;
 programs.ghostty.settings = {
 theme = "Catppuccin Mocha";
 custom-shader = [
+"${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/starfield.glsl"
 "${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/ripple_cursor.glsl"
 "${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/cursor_blaze.glsl"
 "${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/aurora.glsl"
