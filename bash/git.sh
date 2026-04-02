@@ -1,16 +1,16 @@
 #!/bin/bash
 
 dgit() {
-echo " Entering dotfiles  on main."
+echo -e "\e[0;32m\ \e[0;36mEntering dotfiles \e[0;32m on main."
 cd ~/ranger097_nixos_dotfiles
 wait
 echo " Adding files to dotfiles  on main"
 git add . &> /dev/null
 wait
-echo " Building system flake..."
+echo -e "\e[0;32m \e[0;36mBuilding system flake..."
 sudo nixos-rebuild switch --flake .#deoxy --quiet 
 wait
-echo " Updated dotfiles and system flake."
+echo -e "\e[0;32m \e[0;36mUpdated dotfiles and system flake."
 if ! sudo nixos-rebuild switch --flake .#jirachi --quiet > /dev/null; then
    echo "FAILURE"
    return 1
@@ -19,13 +19,16 @@ sudo systemd-tmpfiles --remove --clean >/dev/null
 }
 
 jgit() {
-echo " Entering dotfiles  on main."
+echo -e "\e[0;32m \e[0;36mEntering dotfiles \e[0;32m \e[0;36mon main."
 cd ~/ranger097_nixos_dotfiles
 wait
-echo " Adding files to dotfiles  on main"
+echo -e "\e[0;32m \e[0;36mAdding files to dotfiles \e[0;32m \e[0;36mon main"
 git add . &> /dev/null
 wait
-echo " Building system flake..."
+echo -e "\e[0;32m \e[0;36mBuilding system flake..."
+sudo nixos-rebuild switch --flake .#jirachi --quiet 
+wait
+echo -e "\e[0;32m \e[0;36mUpdated dotfiles and system flake."
 if ! sudo nixos-rebuild switch --flake .#jirachi --quiet > /dev/null; then
    echo "FAILURE"
    return 1
@@ -46,6 +49,6 @@ get_dir_name() {
 parse_git_branch() {
   local branch=$(git branch --show-current 2> /dev/null)
   if [ -n "$branch" ]; then
-    echo -e "\e[33m  \e[33m$branch"
+    echo -e "\e[32m  \e[36mon $branch"
   fi
 }

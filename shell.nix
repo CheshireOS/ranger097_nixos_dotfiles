@@ -45,6 +45,7 @@ rubocop
 sqlfluff
 ast-grep
 luarocks
+zig
 ];
 
 

@@ -39,7 +39,7 @@
       elif ls *.dart >/dev/null 2>&1 && command -v dart >/dev/null 2>&1; then
         echo "  v$(dart --version | awk '{print $4}')"
       elif ls *.zig >/dev/null 2>&1 && command -v zig >/dev/null 2>&1; then
-        echo "  v$(zig version)"
+        echo -e "\e[34m   \e[36mv$(zig version)"
       elif ls *.cs >/dev/null 2>&1 && command -v dotnet >/dev/null 2>&1; then
         echo "  v$(dotnet --version | head -n 1)"
       elif ls *.lua >/dev/null 2>&1 && command -v lua >/dev/null 2>&1; then
@@ -57,7 +57,7 @@
       elif ls *.swift >/dev/null 2>&1 && command -v swift >/dev/null 2>&1; then
         echo "  v$(swift --version | head -n 1 | awk '{print $4}')"
       elif ls *.nix >/dev/null 2>&1; then
-        echo -e "\e[34m   \e[30mnix v$(nix --version | awk '{print $3}')"
+        echo -e "\e[34m   \e[36mnix v$(nix --version | awk '{print $3}')"
       elif [[ -f Dockerfile ]]; then
         echo " 󰡨 docker"
       elif ls *.md >/dev/null 2>&1; then

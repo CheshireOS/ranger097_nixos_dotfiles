@@ -9,8 +9,6 @@ gii = "nvim ~/ranger097_nixos_dotfiles/ghostty/config";
 hii = "nvim ~/ranger097_nixos_dotfiles/home.nix";
 wii = "nvim ~/ranger097_nixos_dotfiles/waybar";
 cii = "nvim ~/.config";
-ls = "lsd --icon=always --depth 1";
-lsa = "lsd -a --tree --icon=always --depth 1";
 clear = "clear && ranger_fetch";
 ytd = "yt-dlp -x --audio-format mp3 --audio-quality 0 --cookies-from-browser firefox --embed-metadata --embed-thumbnail --add-metadata";
 nvii = "nvim ~/ranger097_nixos_dotfiles/development/nixvim.nix";
@@ -30,7 +28,7 @@ export VISUAL=nvim
 '';
 
 promptInit = ''
-PS1='\n\[\e[0;34m\] \[\e[0;32m\]  \[\e[0;37m\]\h \[\e[0;34m\] \[\e[0;31m\] \[\e[0;37m\]$(get_dir_name)\[\e[0;37m\]$(parse_git_branch)\[\e[0;36m\]$(get_lang_info) \n\[\e[0;34m\] \[\e[0;32m\]  \[\e[0;37m\]\u  \[\e[0;34m\] \[\e[0;31m\] \[\e[0m\]'
+PS1='\n\[\e[0;35m\] \[\e[0;36m\]\h \[\e[0;34m\]󱕅 \[\e[0;36m ジラーチ\[\e[0;35m\]   \[\e[0;31m\] \[\e[0;36m\]$(get_dir_name)\[\e[0;36m\]$(parse_git_branch)\[\e[0;36m\]$(get_lang_info) \n\[\e[0;35m\] \[\e[0;36m\]\u \[\e[0;34m\] 󱕅 \[\e[0;36mエンジニア \[\e[0;35m\] \[\e[0;31m\] \[\e[0m\]'
 '';
 };
 }

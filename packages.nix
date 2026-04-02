@@ -83,6 +83,8 @@ btop
 htop
 ghostty
 bettercap
+zig
+exercism
 ];
 
 fonts.packages = with pkgs;[

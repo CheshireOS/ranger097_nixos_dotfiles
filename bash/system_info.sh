@@ -128,4 +128,16 @@ else [[ $(tput lines) -le 14 && $(tput cols) -le 59 ]];
 fi
 
 
-export LS_COLORS="di=31:ex=31:fi=0:ln=36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:er=01;31"
+ls() {
+  local lscolor=$(basename "$PWD")
+  local width=$(tput cols)
+  local fmt_width=$((width/2))
+  local text_length=$(( ${#lscolor}/2 ))
+  local final_padding=$(( fmt_width - text_length - 10))
+    echo ""
+    printf "%*s%s" "$final_padding" "" 
+    echo -e "\e[34m󱕅 \e[37m$lscolor \e[34m󱕅 "
+    printf "\e[31m"
+   command lsd --color never
+    printf "\e[0m"
+} 

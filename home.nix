@@ -43,7 +43,7 @@ custom-shader-animation = true;
 background-opacity = 1.0;
 adjust-cell-height = 8;
 background = "#000000";
-
+foreground = "#A1D9CD";
 
 #FONT_SETTINGS
 font-family = "Maple Mono NF CN";

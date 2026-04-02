@@ -126,6 +126,7 @@ programs.nixvim = {
     };
     
     plugins.lsp.servers = {
+      zls.enable = true;
       pyright.enable = true;
       nixd.enable = true;
       clangd.enable = true;

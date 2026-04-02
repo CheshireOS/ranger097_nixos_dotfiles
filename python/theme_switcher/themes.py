@@ -6,7 +6,7 @@ num_of_wallpapers = len(wallpaper_directory)
 
 with open(toggle_file, 'r') as f:
     x = int(f.readline().strip())
-    
+
 with open(toggle_file, 'w') as f:
     y = (x + 1) % (num_of_wallpapers + 1)
     full_file = f.write(str(y))
