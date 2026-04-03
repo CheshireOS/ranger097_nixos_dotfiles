@@ -59,7 +59,7 @@
 // "(.*)Kvantum Manager(.*)": "Kvantum 主題",
 // "(.*)Foliate(.*)": "Books もと",
 // " ": "Ranger レンジャー"
-            "(.*)Alacritty(.*)": "Alacritty",
+            "(.*)ghostty(.*)": "Ghostty",
             "(.*)Qmmp(.*)": "Qmmp",
             "(.*)home/ranger/Music(.*)": "Qmmp",
             "(.*)code(.*)": "Vscode",

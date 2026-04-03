@@ -41,7 +41,7 @@ custom-shader = [
 
 custom-shader-animation = true;
 background-opacity = 1.0;
-adjust-cell-height = 8;
+adjust-cell-height = 10;
 background = "#000000";
 foreground = "#A1D9CD";
 
@@ -120,9 +120,9 @@ permission = /usr/(bin|local/bin)/hyprpm, plugin, allow
 #SETTINGS_START
 general {
 #GAPS
-gaps_in = 5
-gaps_out = 10
-border_size = 1
+gaps_in = 10
+gaps_out = 20
+border_size = 2
 
 #BORDER
 #col.active_border = $color4 rgba(0,0,0,1) rgba(0,0,0,1)
@@ -145,17 +145,17 @@ layout = dwindle
 
 #WINDOW_SETTINGS_START
 decoration { 
-rounding = 7
+rounding = 0
 rounding_power = 2
 active_opacity = 1.0
 inactive_opacity = 1.0
 
 #SHADOW
 shadow {
-enabled = false
-range = 15
+enabled = true
+range = 25
 render_power = 7
-color = rgba(0,0,0,0.29)
+color = rgba(0,0,0,0.6)
 offset = -1 1
 sharp = false
 scale = 1.0

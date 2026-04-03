@@ -9,6 +9,7 @@ gii = "nvim ~/ranger097_nixos_dotfiles/ghostty/config";
 hii = "nvim ~/ranger097_nixos_dotfiles/home.nix";
 wii = "nvim ~/ranger097_nixos_dotfiles/waybar";
 cii = "nvim ~/.config";
+pii = "nvim ~/ranger097_nixos_dotfiles/python";
 clear = "clear && ranger_fetch";
 ytd = "yt-dlp -x --audio-format mp3 --audio-quality 0 --cookies-from-browser firefox --embed-metadata --embed-thumbnail --add-metadata";
 nvii = "nvim ~/ranger097_nixos_dotfiles/development/nixvim.nix";

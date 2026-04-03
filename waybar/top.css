@@ -12,9 +12,9 @@ min-height: 0;
 
 window#waybar {
 /*background-color: @waybar-bg;*/
-background: linear-gradient(rgba(0,0,0,0.0));
+background: linear-gradient(rgba(0,0,0,1));
 /*background-color: @color0;*/
-border-bottom: 0px solid #000000;
+border-bottom: 1px solid #000000;
 }
 
 #window, #workspaces,
@@ -24,19 +24,19 @@ padding-left: 12px;
 padding-right: 12px;
 padding-top: 7px;
 padding-bottom: 7px;
-margin-top: 10px;
+margin-top: 0px;
 margin-bottom: 0px;
 font-family: BigBlueTerm437 Nerd Font;
 font-size: 10px;
 font-weight: 400;
-background: linear-gradient( @color0,rgba(0,0,0,1));
+background: linear-gradient(rgba(0,0,0,0));
 color: @color7;
-margin-right: 5px;
-margin-left:5px;
-border-radius: 7px;
+margin-right: 0px;
+margin-left:0px;
+border-radius: 0px;
 border: 1px solid #000000;
 /*box-shadow: -2px 2px 3px rgba(0,0,0,0.29);*/
-text-shadow: -1px 1px 4px rgba(0,0,0,0.2);
+text-shadow: none;
 }
 
 #window:hover, #mpris:hover,
