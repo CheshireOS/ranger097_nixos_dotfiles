@@ -258,6 +258,7 @@ bind = SUPER, D, exec, dolphin
 bind = SUPER, C, exec, code
 bind = SUPER, F, fullscreenstate, 2
 bind = SUPER, X, exec, direnv exec /home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/ python /home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/waybar_switcher.py
+bind = SUPER, M, exec, direnv exec /home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/ python /home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/bluelight_toggle.py
 bind = SUPER, H, exec, hyprshot -m output -m eDP-1
 bind = SUPER, P, exec, systemctl --user restart pipewire
 
