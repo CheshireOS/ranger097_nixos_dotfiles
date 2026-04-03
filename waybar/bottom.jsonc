@@ -61,7 +61,7 @@
 },
 
 "custom/discord": {
-"format": " Discord",
+"format": "  Discord",
 "on-click": "vesktop"
 },
 
@@ -108,9 +108,9 @@
 "format":"{icon}",
 "interface": "wlp0s20f3",
 "interval": 5,
-"format-wifi": "󰤨 Wifi", 
-"format-ethernet": "󰤨 Wifi",               
-"format-disconnected": "󰤯 Wifi", 
+"format-wifi": "󰤨  Wifi", 
+"format-ethernet": "󰤨  Wifi",               
+"format-disconnected": "󰤯  Wifi", 
 "on-click": "nm-connection-editor"    
 },
 

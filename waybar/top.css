@@ -20,23 +20,34 @@ border-bottom: 1px solid #000000;
 #window, #workspaces,
 #clock, #custom-vpn_ip,
 #battery, #mpris {
-padding-left: 12px;
-padding-right: 12px;
-padding-top: 7px;
-padding-bottom: 7px;
+padding-left: 15px;
+padding-right: 15px;
+padding-top: 5px;
+padding-bottom: 6px;
 margin-top: 0px;
 margin-bottom: 0px;
-font-family: BigBlueTerm437 Nerd Font;
-font-size: 10px;
+font-family: GeistMono NF;
+font-size: 11px;
 font-weight: 400;
 background: linear-gradient(rgba(0,0,0,0));
-color: @color7;
+color: rgba(255,255,255,0.3);
 margin-right: 0px;
 margin-left:0px;
 border-radius: 0px;
-border: 1px solid #000000;
+border: 0px solid #000000;
 /*box-shadow: -2px 2px 3px rgba(0,0,0,0.29);*/
 text-shadow: none;
+}
+
+#mpris {
+border-left: 0px solid #000000;
+border-right: 0px solid #000000;
+margin-left: 0px;
+margin-right: 0px;
+color: @nice-text;
+background: @waybar-bg;
+padding-left: 30px;
+padding-right: 30px;
 }
 
 #window:hover, #mpris:hover,
@@ -49,7 +60,7 @@ text-shadow: none;
 transition: none;
 box-shadow: none;
 text-shadow: none;
-box-shadow: -2px 2px 3px rgba(0,0,0,0.29);
+box-shadow: none;
 }
 
 #workspaces button {
@@ -64,7 +75,6 @@ transition: none;
 color: @color3;
 }
 
-
 #workspaces button:hover {
 background: none; 
 background-color: rgba(0,0,0,0.0); 
@@ -76,7 +86,7 @@ transition: none;
 }
 
 #workspaces button.active {
-background: none; 
+background: none;
 background-color: rgba(0,0,0,0);
 color: @color6; 
 box-shadow: none;
@@ -121,10 +131,11 @@ margin-right: 10px;
 }
 
 #workspaces {
-box-shadow: -2px 2px 3px rgba(0,0,0,0.29);
-background-color: rgba(0,0,0,0.5); 
+box-shadow: none;
+background-color: rgba(0,0,0,0.0); 
 color: @color3;
-border: 1px solid #000000;
+border: 0px solid #000000;
+margin-left: 20px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */

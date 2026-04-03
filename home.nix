@@ -39,7 +39,7 @@ custom-shader = [
 "${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/aurora.glsl"
 ];
 
-custom-shader-animation = true;
+custom-shader-animation = "always";
 background-opacity = 1.0;
 adjust-cell-height = 10;
 background = "#000000";
@@ -120,9 +120,9 @@ permission = /usr/(bin|local/bin)/hyprpm, plugin, allow
 #SETTINGS_START
 general {
 #GAPS
-gaps_in = 10
-gaps_out = 20
-border_size = 2
+gaps_in = 5
+gaps_out = 10
+border_size = 1
 
 #BORDER
 #col.active_border = $color4 rgba(0,0,0,1) rgba(0,0,0,1)
@@ -153,9 +153,9 @@ inactive_opacity = 1.0
 #SHADOW
 shadow {
 enabled = true
-range = 25
-render_power = 7
-color = rgba(0,0,0,0.6)
+range = 14
+render_power = 2
+color = rgba(0,0,0,0.3)
 offset = -1 1
 sharp = false
 scale = 1.0
@@ -164,13 +164,13 @@ scale = 1.0
 #BLUR
 blur {
 enabled = true
-size = 3
-passes = 4
+size = 5
+passes = 5
 contrast = 1.0
 vibrancy = 0
 vibrancy_darkness = 0
 brightness = 1.0
-noise = 0.05
+noise = 0.1
 popups = true
 }
 }
@@ -334,7 +334,7 @@ windowrule = match:class .blueman-manager-wrapped, opacity 1.0
 #LAYER_RULE_SETTINGS_START
 layerrule = blur on, match:namespace walker
 layerrule = match:namespace walker, ignore_alpha 0.7
-layerrule = match:namespace waybar, ignore_alpha 0.19
+#layerrule = match:namespace waybar, ignore_alpha 0.19
 layerrule = blur on, match:namespace waybar
 layerrule = blur on, match:namespace wlogout
 #LAYER_RULE_SETTINGS_END
