@@ -10,9 +10,9 @@ margin: 0;
 min-height: 0;
 }
 
+
 window#waybar {
-/*background-color: @waybar-bg;*/
-background: linear-gradient(rgba(0,0,0,1));
+background: linear-gradient( 90deg, @blurblack,#000000,#000000, @accent-color );
 /*background-color: @color0;*/
 border-bottom: 1px solid #000000;
 }
@@ -22,45 +22,47 @@ border-bottom: 1px solid #000000;
 #battery, #mpris {
 padding-left: 15px;
 padding-right: 15px;
-padding-top: 5px;
-padding-bottom: 6px;
-margin-top: 0px;
-margin-bottom: 0px;
+padding-top: 3px;
+padding-bottom: 3px;
+margin-top: 2px;
+margin-bottom: 3px;
 font-family: GeistMono NF;
 font-size: 11px;
 font-weight: 400;
-background: linear-gradient(rgba(0,0,0,0));
-color: rgba(255,255,255,0.3);
-margin-right: 0px;
-margin-left:0px;
+background: linear-gradient(rgba(0,0,0,1),@color0);
+color: @nice-text;
+margin-right: 1px;
+margin-left: 0px;
 border-radius: 0px;
 border: 0px solid #000000;
-/*box-shadow: -2px 2px 3px rgba(0,0,0,0.29);*/
+/*box-shadow: -2px 2px 3px rgba(0,0,0,0.5);*/
 text-shadow: none;
 }
 
+#custom-vpn_ip {
+padding-left: 25px;
+border-radius: 0px 0px 0px 50px;
+}
+
 #mpris {
-border-left: 0px solid #000000;
-border-right: 0px solid #000000;
 margin-left: 0px;
 margin-right: 0px;
 color: @nice-text;
-background: @waybar-bg;
+background: linear-gradient(rgba(0,0,0,0));
 padding-left: 30px;
 padding-right: 30px;
+border-radius: 0px 0px 50px 50px;
 }
 
 #window:hover, #mpris:hover,
 #clock:hover, #custom-vpn_ip:hover,
 #battery:hover {
-color: @nice-text;
-background: @waybar-bg;
+color: @color4;
+background: #000000;
 text-shadow: none;
 -gtk-icon-shadow: none;    
 transition: none;
-box-shadow: none;
 text-shadow: none;
-box-shadow: none;
 }
 
 #workspaces button {
@@ -72,7 +74,7 @@ box-shadow: none;
 text-shadow: none;
 -gtk-icon-shadow: none;
 transition: none;
-color: @color3;
+color: @nice-text;
 }
 
 #workspaces button:hover {
@@ -123,19 +125,20 @@ text-shadow: none;
 }
 
 #window {
-margin-left: 10px;
+margin-left: 2px;
 }
 
 #battery {
-margin-right: 10px;
+margin-right: 2px;
 }
 
 #workspaces {
 box-shadow: none;
-background-color: rgba(0,0,0,0.0); 
-color: @color3;
+background: linear-gradient(rgba(0,0,0,1), @color0);
 border: 0px solid #000000;
-margin-left: 20px;
+margin-left: 0px;
+padding-right: 25px;
+border-radius: 0px 0px 50px 0px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */

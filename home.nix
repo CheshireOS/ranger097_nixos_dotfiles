@@ -120,8 +120,8 @@ permission = /usr/(bin|local/bin)/hyprpm, plugin, allow
 #SETTINGS_START
 general {
 #GAPS
-gaps_in = 5
-gaps_out = 10
+gaps_in = 1
+gaps_out = 2
 border_size = 1
 
 #BORDER
@@ -153,7 +153,7 @@ inactive_opacity = 1.0
 #SHADOW
 shadow {
 enabled = true
-range = 14
+range = 5
 render_power = 2
 color = rgba(0,0,0,0.3)
 offset = -1 1
@@ -164,13 +164,13 @@ scale = 1.0
 #BLUR
 blur {
 enabled = true
-size = 5
-passes = 5
+size = 3
+passes = 3
 contrast = 1.0
 vibrancy = 0
 vibrancy_darkness = 0
 brightness = 1.0
-noise = 0.1
+noise = 0.02
 popups = true
 }
 }
@@ -334,7 +334,7 @@ windowrule = match:class .blueman-manager-wrapped, opacity 1.0
 #LAYER_RULE_SETTINGS_START
 layerrule = blur on, match:namespace walker
 layerrule = match:namespace walker, ignore_alpha 0.7
-#layerrule = match:namespace waybar, ignore_alpha 0.19
+#layerrule = match:namespace waybar, ignore_alpha 0.00
 layerrule = blur on, match:namespace waybar
 layerrule = blur on, match:namespace wlogout
 #LAYER_RULE_SETTINGS_END

@@ -10,20 +10,20 @@
     "margin-left" : 0,
     "margin-right" : 0,
     "modules-left": [
-    ],
-    "modules-center": [
     "custom/power",
     "custom/themes",
-    "custom/qmmp",
+    "custom/qmmp"
+    ],
+    "modules-center": [
     "custom/tor",
     "custom/web",
     "custom/dolphin",
-    "custom/discord",
+    "custom/discord"
+    ],
+    "modules-right": [
     "wireplumber",
     "network", 
     "bluetooth"
-    ],
-    "modules-right": [
     ],
 
 
