@@ -31,7 +31,7 @@
 
 "custom/spacer": {
     "tooltip": false,
-  "format": "󰫢  rangers world!/ 󰫢 "
+  "format": "󰫢  rangers_world!/ 󰫢 "
 },
 
 "custom/spacerLeft": {
@@ -60,6 +60,7 @@
 },
 
 "custom/steam": {
+"tooltip": false,
 "format": "  Steam",
 "on-click": "steam -newbigpicture"
 },

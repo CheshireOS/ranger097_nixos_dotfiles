@@ -30,7 +30,7 @@ font-family: GeistMono NF;
 font-size: 11px;
 font-weight: 400;
 background: linear-gradient(@color0, rgba(0,0,0,1));
-color: @nice-text;
+color: @color4;
 margin-right: 0px;
 margin-left: 0px;
 border-radius: 0px;
@@ -42,18 +42,19 @@ text-shadow: none;
 #custom-vpn_ip {
 padding-left: 25px;
 border-radius: 0px 0px 0px 50px;
+border-left: 1px solid @blurblack;
 }
 
 #mpris {
 margin-left: 0px;
 margin-right: 0px;
-color: @nice-text;
+color: @color4;
 background: linear-gradient(@color0, rgba(0,0,0,1));
 padding-left: 30px;
 padding-right: 30px;
 border-radius: 0px 0px 50px 50px;
-border-left: 0px solid @blurblack;
-border-right: 0px solid @blurblack;
+border-left: 1px solid #000000;
+border-right: 1px solid #000000;
 font-style: italic;
 }
 
@@ -77,7 +78,7 @@ box-shadow: none;
 text-shadow: none;
 -gtk-icon-shadow: none;
 transition: none;
-color: @nice-text;
+color: @color4;
 }
 
 #workspaces button:hover {
@@ -136,24 +137,24 @@ margin-right: 0px;
 }
 
 #window {
-border-right: 0px solid @blurblack;
+border-right: 1px solid #000000;
 
 }
 
 #clock {
-border-left: 0px solid @blurblack;
-border-right: 0px solid @blurblack;
+border-left: 1px solid #000000;
+border-right: 1px solid #000000;
 }
 
 #custom-vpn_ip {
-border-left: 0px solid @blurblack;
+border-left: 1px solid #000000;
 }
 
 #workspaces {
 box-shadow: none;
 background: linear-gradient(@color0, rgba(0,0,0,1));
 border-bottom: 0px solid @blurblack;
-border-right: 0px solid @blurblack;
+border-right: 1px solid #000000;
 margin-left: 0px;
 padding-right: 25px;
 border-radius: 0px 0px 50px 0px;

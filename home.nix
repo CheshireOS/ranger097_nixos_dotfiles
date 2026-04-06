@@ -122,7 +122,7 @@ permission = /usr/(bin|local/bin)/hyprpm, plugin, allow
 general {
 #GAPS
 gaps_in = 5
-gaps_out = 0, 10, 10, 10 
+gaps_out = 0, 10, 0, 10 
 border_size = 1
 
 #BORDER
@@ -146,7 +146,7 @@ layout = dwindle
 
 #WINDOW_SETTINGS_START
 decoration { 
-rounding = 0
+rounding = 10
 rounding_power = 2
 active_opacity = 1.0
 inactive_opacity = 1.0
@@ -154,12 +154,12 @@ inactive_opacity = 1.0
 #SHADOW
 shadow {
 enabled = true
-range = 20
-render_power = 5
+range = 15
+render_power = 10
 color = rgba(0,0,0,0.5)
-offset = -2 2
+offset = 0 0
 sharp = false
-scale = 0.99
+scale = 1.0
 }
 
 #BLUR
