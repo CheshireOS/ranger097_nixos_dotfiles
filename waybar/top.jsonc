@@ -14,7 +14,9 @@
      "hyprland/workspaces"
     ],
     "modules-center": [
-      "mpris"
+      "custom/spacer",
+      "mpris",
+      "custom/spacer"
     ],
     "modules-right": [
         "custom/vpn_ip",
@@ -22,6 +24,7 @@
         "battery"
     ],
 "hyprland/window": {
+"tooltip": false,
 "format": "{class} {title}",
 "separate-outputs": true,
 "icon": false,
@@ -98,10 +101,12 @@
 },
 
     "clock": {
+        "tooltip": false,
         "format": "{:%I:%M%p}"
     },
 
     "battery": {
+        "tooltip": false,
         "states": {
             "warning": 30,
             "critical": 15
@@ -124,7 +129,11 @@
 
 "mpris": {
 "format": "{artist} - {title}",
-"max-length": "30",
+"tooltip": false,
+//"dynamic-order": ["artist","title"],
+//"dynamic-separator": "-",
+//"dynamic-len": 20,
+"max-length": 70,
 "player-icons": {
 "default": "",
 "firefox": ""
@@ -132,6 +141,7 @@
 
 },
     "custom/vpn_ip": {
+       "tooltip": false,
        "format":"{}",
        "exec": "bash /home/ranger/ranger097_nixos_dotfiles/bash/waybar_network_script.sh",
        "interval": 10

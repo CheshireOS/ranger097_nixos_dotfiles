@@ -39,7 +39,7 @@ custom-shader = [
 "${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/aurora.glsl"
 ];
 
-custom-shader-animation = "always";
+custom-shader-animation = "true";
 background-opacity = 1.0;
 adjust-cell-height = 10;
 background = "#000000";
@@ -74,6 +74,7 @@ extraConfig = ''
 
 #ranger097
 source = ~/.cache/wal/colors-hyprland.conf
+source = ~/.cache/wal/hyprland_custom.conf
 monitor = ${ if osConfig.networking.hostName == "jirachi"
 	     then "eDP-1, 3840x2400@59.99400, 0x0, 3"
              else "eDP-1, 1920x1080@60.054, 0x0, 1"}   
@@ -120,13 +121,13 @@ permission = /usr/(bin|local/bin)/hyprpm, plugin, allow
 #SETTINGS_START
 general {
 #GAPS
-gaps_in = 1
-gaps_out = 2
+gaps_in = 5
+gaps_out = 0, 10, 10, 10 
 border_size = 1
 
 #BORDER
-#col.active_border = $color4 rgba(0,0,0,1) rgba(0,0,0,1)
-#col.inactive_border = $color4 rgba(0,0,0,1) rgba(0,0,0,1)
+#col.active_border = $right_border rgba(0,0,0,1) rgba(0,0,0,1) rgba(0,0,0,1) rgba(0,0,0,1) $left_border
+#col.inactive_border = $right_border rgba(0,0,0,1) rgba(0,0,0,1) rgba(0,0,0,1) rgba(0,0,0,1) $left_border
 col.active_border = rgba(0,0,0,1)
 col.inactive_border = rgba(0,0,0,1)
 
@@ -153,12 +154,12 @@ inactive_opacity = 1.0
 #SHADOW
 shadow {
 enabled = true
-range = 5
-render_power = 2
-color = rgba(0,0,0,0.3)
-offset = -1 1
+range = 20
+render_power = 5
+color = rgba(0,0,0,0.5)
+offset = -2 2
 sharp = false
-scale = 1.0
+scale = 0.99
 }
 
 #BLUR
@@ -172,6 +173,7 @@ vibrancy_darkness = 0
 brightness = 1.0
 noise = 0.02
 popups = true
+ignore_opacity = true
 }
 }
 #WINDOW_SETTINGS_END
@@ -335,7 +337,7 @@ windowrule = match:class .blueman-manager-wrapped, opacity 1.0
 layerrule = blur on, match:namespace walker
 layerrule = match:namespace walker, ignore_alpha 0.7
 #layerrule = match:namespace waybar, ignore_alpha 0.00
-layerrule = blur on, match:namespace waybar
+layerrule = blur off, match:namespace waybar
 layerrule = blur on, match:namespace wlogout
 #LAYER_RULE_SETTINGS_END
 '';  

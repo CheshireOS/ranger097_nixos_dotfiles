@@ -97,7 +97,7 @@ nerd-fonts.geist-mono
 nerd-fonts.martian-mono
 nerd-fonts.adwaita-mono
 nerd-fonts.caskaydia-cove
-nerd-fonts.gohufont
+nerd-fonts.bigblue-terminal
 ];
 
 fonts.fontconfig = {

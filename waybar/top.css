@@ -10,11 +10,11 @@ margin: 0;
 min-height: 0;
 }
 
-
 window#waybar {
-background: linear-gradient( 90deg, @blurblack,#000000,#000000, @accent-color );
+/*background: linear-gradient( 0deg, @blurblack,#000000 );*/
+background: linear-gradient( rgba(0,0,0,0) );
 /*background-color: @color0;*/
-border-bottom: 1px solid #000000;
+border-bottom: 0px solid #000000;
 }
 
 #window, #workspaces,
@@ -22,20 +22,20 @@ border-bottom: 1px solid #000000;
 #battery, #mpris {
 padding-left: 15px;
 padding-right: 15px;
-padding-top: 3px;
-padding-bottom: 3px;
-margin-top: 2px;
-margin-bottom: 3px;
+padding-top: 1px;
+padding-bottom: 4px;
+margin-top: 0px;
+margin-bottom: 12px;
 font-family: GeistMono NF;
 font-size: 11px;
 font-weight: 400;
-background: linear-gradient(rgba(0,0,0,1),@color0);
+background: linear-gradient(@color0, rgba(0,0,0,1));
 color: @nice-text;
-margin-right: 1px;
+margin-right: 0px;
 margin-left: 0px;
 border-radius: 0px;
-border: 0px solid #000000;
-/*box-shadow: -2px 2px 3px rgba(0,0,0,0.5);*/
+border-bottom: 0px solid @blurblack;
+box-shadow: -2px 2px 4px rgba(0,0,0,0.5);
 text-shadow: none;
 }
 
@@ -48,10 +48,13 @@ border-radius: 0px 0px 0px 50px;
 margin-left: 0px;
 margin-right: 0px;
 color: @nice-text;
-background: linear-gradient(rgba(0,0,0,0));
+background: linear-gradient(@color0, rgba(0,0,0,1));
 padding-left: 30px;
 padding-right: 30px;
 border-radius: 0px 0px 50px 50px;
+border-left: 0px solid @blurblack;
+border-right: 0px solid @blurblack;
+font-style: italic;
 }
 
 #window:hover, #mpris:hover,
@@ -125,20 +128,36 @@ text-shadow: none;
 }
 
 #window {
-margin-left: 2px;
+margin-left: 0px;
 }
 
 #battery {
-margin-right: 2px;
+margin-right: 0px;
+}
+
+#window {
+border-right: 0px solid @blurblack;
+
+}
+
+#clock {
+border-left: 0px solid @blurblack;
+border-right: 0px solid @blurblack;
+}
+
+#custom-vpn_ip {
+border-left: 0px solid @blurblack;
 }
 
 #workspaces {
 box-shadow: none;
-background: linear-gradient(rgba(0,0,0,1), @color0);
-border: 0px solid #000000;
+background: linear-gradient(@color0, rgba(0,0,0,1));
+border-bottom: 0px solid @blurblack;
+border-right: 0px solid @blurblack;
 margin-left: 0px;
 padding-right: 25px;
 border-radius: 0px 0px 50px 0px;
+box-shadow: -2px 2px 4px rgba(0,0,0,0.5);
 }
 
 /* If workspaces is the leftmost module, omit left margin */

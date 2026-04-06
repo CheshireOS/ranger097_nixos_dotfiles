@@ -12,24 +12,26 @@
     "modules-left": [
     "custom/power",
     "custom/themes",
-    "custom/qmmp"
+    "custom/qmmp",
+    "custom/web",
+    "custom/terminal",
+    "custom/dolphin"
     ],
     "modules-center": [
-    "custom/tor",
-    "custom/web",
-    "custom/dolphin",
-    "custom/discord"
+    "custom/spacer"
     ],
     "modules-right": [
+    "custom/steam",
+    "custom/discord",
+    "custom/blender",
     "wireplumber",
     "network", 
     "bluetooth"
     ],
 
-
-
-"custom/spacerRight": {
-  "format": " "
+"custom/spacer": {
+    "tooltip": false,
+  "format": "󰫢  rangers world!/ 󰫢 "
 },
 
 "custom/spacerLeft": {
@@ -46,11 +48,13 @@
 },
 
 "custom/terminal": {
-"format": " ",
-"on-click": "alacritty"
+"tooltip": false,
+"format": "󰊠 Ghostty",
+"on-click": "ghostty"
 },
 
 "custom/web": {
+"tooltip": false,
 "format": " Librewolf",
 "on-click": "librewolf"
 },
@@ -61,26 +65,31 @@
 },
 
 "custom/discord": {
+"tooltip": false,
 "format": "  Discord",
 "on-click": "vesktop"
 },
 
 "custom/qmmp": {
+"tooltip": false,
 "format": " Music",
 "on-click":"qmmp"
 },
 
 "custom/blender": {
+"tooltip": false,
 "format": " Blender",
 "on-click":"blender"
 },
 
 "custom/dolphin": {
+"tooltip": false,
 "format": "󱢴 Dolphin",
 "on-click":"dolphin"
 },
 
 "wireplumber": {
+"tooltip": false,
 "format": "{icon}Volume",
 "format-icons": [ " ", " ", " " ],
 "tooltip-format": "volume: {volume}%",
@@ -90,11 +99,13 @@
 },
 
 "custom/power": {
+"tooltip": false,
 "format": "󰤄 Power",
 "on-click":"wlogout"
 },
 
 "custom/themes": {
+"tooltip": false,
 "format": " Theme",
 "on-click":"direnv exec /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher python /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/themes.py"
 },
@@ -105,6 +116,7 @@
 },
 
 "network": {
+"tooltip": false,
 "format":"{icon}",
 "interface": "wlp0s20f3",
 "interval": 5,
@@ -115,6 +127,7 @@
 },
 
 "bluetooth": {
+"tooltip": false,
 "format": "{icon} Bluetooth",
 "format-icons": [ "󰂲", "󰂱"],
 "on-click": "blueman-manager"
