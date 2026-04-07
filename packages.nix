@@ -3,11 +3,10 @@ nixpkgs.config.allowUnfree = true;
 programs.steam.enable = true;
 programs.direnv = {
 enable = true;
-nix-direnv.enable = true;
-};
-
-programs.direnv.silent = true;
+silent = true;
+nix-direnv.enable = true; };
 nixpkgs.config.android_sdk.accept_license = true;
+
 environment.systemPackages = with pkgs; [
 sbctl
 ani-cli
@@ -16,7 +15,7 @@ kdePackages.dolphin
 kdePackages.kdenlive
 kdePackages.qtstyleplugin-kvantum
 waybar
-swww
+awww
 walker
 networkmanager
 home-manager
@@ -48,7 +47,6 @@ qt6.qtwayland
 pokeget-rs
 nmap
 pywal16
-pywalfox-native
 librewolf
 android-studio-tools
 android-studio-full
@@ -60,7 +58,6 @@ gh
 jq
 yq
 xq
-pokeget-rs
 gomatrix
 sioyek
 gnumake
@@ -122,7 +119,6 @@ pulse.enable = true;
 wireplumber.enable = true; 
 };
 
-
 hardware.bluetooth.settings = {
   General = {
     Enable = "Source,Sink,Media,Socket";
@@ -130,9 +126,7 @@ hardware.bluetooth.settings = {
   };
 };
 
-
 services.blueman.enable = true;
 services.gnome.gnome-keyring.enable = true;
 services.gvfs.enable = true;
-
 }

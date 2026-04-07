@@ -150,22 +150,7 @@ programs.nixvim = {
          enable = true;
          package = null;
         };
-      };
-
-   
-    plugins.none-ls = {
-    enable = true;
-    sources.formatting = {
-    prettier = {
-    enable = true; 
-    disableTsServerFormatter = true; 
-    };
-
-    gofmt.enable = true;
-    black.enable = true;
-      };
-    };
-    
+      };  
 
       colorschemes.catppuccin = {
       autoLoad = true;
@@ -293,13 +278,10 @@ programs.nixvim = {
     '';
 
     extraPlugins = [
-    #pywal   
     ];
         
     extraPackages = with pkgs; [
     tree-sitter
-    nodePackages.prettier
-    black
     ];
   };
 }
