@@ -10,7 +10,7 @@ delve
 
 ]))
 
-python
+python3
 zig
 
 

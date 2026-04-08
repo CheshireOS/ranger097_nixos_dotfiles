@@ -48,7 +48,7 @@ foreground = "#A1D9CD";
 #FONT_SETTINGS
 font-family = "Maple Mono NF CN";
 font-family-italic = "Maple Mono NF CN";
-font-size = 14;
+font-size = 12;
 font-style-bold = "Bold";
 font-style-italic = "ExtraLight Italic";
 font-style = "ExtraLight";
@@ -71,7 +71,6 @@ wayland.windowManager.hyprland = {
 enable = true;
 systemd.enable = false;
 extraConfig = ''
-
 #ranger097
 source = ~/.cache/wal/colors-hyprland.conf
 source = ~/.cache/wal/hyprland_custom.conf
@@ -85,6 +84,7 @@ ecosystem:no_update_news = true
 #AUTOSTART
 #exec-once = hyprlock
 exec-once = awww-daemon
+exec-once = bash /home/ranger/ranger097_nixos_dotfiles/bash/waybar.sh
 #exec-once = LD_LIBRARY_PATH=/run/opengl-driver/lib mpvpaper -o "no-audio --loop-playlist --panscan=1.0 hwdec=auto" eDP-1 /home/ranger/Videos/wallpapers/guweiz.mp4
 exec-once = hyprsunset
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
@@ -146,7 +146,7 @@ layout = dwindle
 
 #WINDOW_SETTINGS_START
 decoration { 
-rounding = 10
+rounding = 15
 rounding_power = 2
 active_opacity = 1.0
 inactive_opacity = 1.0
@@ -156,7 +156,7 @@ shadow {
 enabled = true
 range = 15
 render_power = 10
-color = rgba(0,0,0,0.5)
+color = rgba(0,0,0,0.3)
 offset = 0 0
 sharp = false
 scale = 1.0

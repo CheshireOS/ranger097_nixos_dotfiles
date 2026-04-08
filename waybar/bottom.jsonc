@@ -10,23 +10,23 @@
     "margin-left" : 0,
     "margin-right" : 0,
     "modules-left": [
+    ],
+    "modules-center": [
     "custom/power",
     "custom/themes",
     "custom/qmmp",
     "custom/web",
     "custom/terminal",
-    "custom/dolphin"
-    ],
-    "modules-center": [
-    "custom/spacer"
-    ],
-    "modules-right": [
+    "custom/dolphin",
+    "custom/spacer",
     "custom/steam",
     "custom/discord",
     "custom/blender",
     "wireplumber",
     "network", 
     "bluetooth"
+    ],
+    "modules-right": [
     ],
 
 "custom/spacer": {
@@ -49,49 +49,49 @@
 
 "custom/terminal": {
 "tooltip": false,
-"format": "󰊠 Ghostty",
+"format": "󰊠",
 "on-click": "ghostty"
 },
 
 "custom/web": {
 "tooltip": false,
-"format": " Librewolf",
+"format": " ",
 "on-click": "librewolf"
 },
 
 "custom/steam": {
 "tooltip": false,
-"format": "  Steam",
+"format": " ",
 "on-click": "steam -newbigpicture"
 },
 
 "custom/discord": {
 "tooltip": false,
-"format": "  Discord",
+"format": " ",
 "on-click": "vesktop"
 },
 
 "custom/qmmp": {
 "tooltip": false,
-"format": " Music",
+"format": " ",
 "on-click":"qmmp"
 },
 
 "custom/blender": {
 "tooltip": false,
-"format": " Blender",
+"format": " ",
 "on-click":"blender"
 },
 
 "custom/dolphin": {
 "tooltip": false,
-"format": "󱢴 Dolphin",
+"format": "󱢴 ",
 "on-click":"dolphin"
 },
 
 "wireplumber": {
 "tooltip": false,
-"format": "{icon}Volume",
+"format": "{icon}",
 "format-icons": [ " ", " ", " " ],
 "tooltip-format": "volume: {volume}%",
 "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
@@ -101,14 +101,14 @@
 
 "custom/power": {
 "tooltip": false,
-"format": "󰤄 Power",
+"format": "󰤄 ",
 "on-click":"wlogout"
 },
 
 "custom/themes": {
 "tooltip": false,
-"format": " Theme",
-"on-click":"direnv exec /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher python /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/themes.py"
+"format": " ",
+"on-click":"direnv exec /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher python3 /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/themes.py"
 },
 
 "custom/nixos": {
@@ -121,15 +121,15 @@
 "format":"{icon}",
 "interface": "wlp0s20f3",
 "interval": 5,
-"format-wifi": "󰤨  Wifi", 
-"format-ethernet": "󰤨  Wifi",               
-"format-disconnected": "󰤯  Wifi", 
+"format-wifi": "󰤨 ", 
+"format-ethernet": "󰤨 ",               
+"format-disconnected": "󰤯 ", 
 "on-click": "nm-connection-editor"    
 },
 
 "bluetooth": {
 "tooltip": false,
-"format": "{icon} Bluetooth",
+"format": "{icon}",
 "format-icons": [ "󰂲", "󰂱"],
 "on-click": "blueman-manager"
 },

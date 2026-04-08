@@ -1,9 +1,5 @@
-#!/bin/bash
-if [ pgrep waybar >/dev/null 2>&1 ]; then 
-   pkill waybar
-else 
-   waybar -c /home/ranger/ranger097_nixos_dotfiles/waybar/top.jsonc -s /home/ranger/ranger097_nixos_dotfiles/waybar/top.css >/dev/null 2>&1
-   waybar -c /home/ranger/ranger097_nixos_dotfiles/waybar/bottom.jsonc -s /home/ranger/ranger097_nixos_dotfiles/waybar/bottom.css >/dev/null 2>&1
-fi
+#!/bin/bash 
+   waybar -c /home/ranger/ranger097_nixos_dotfiles/waybar/top.jsonc -s /home/ranger/ranger097_nixos_dotfiles/waybar/top.css >/dev/null 2>&1 &
+   waybar -c /home/ranger/ranger097_nixos_dotfiles/waybar/bottom.jsonc -s /home/ranger/ranger097_nixos_dotfiles/waybar/bottom.css >/dev/null 2>&1 &
 
 

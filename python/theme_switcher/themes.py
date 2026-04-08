@@ -15,7 +15,7 @@ with open(toggle_file, 'w') as f:
     y = (x + 1) % (num_of_wallpapers + 1)
     full_file = f.write(str(y))
 
-cat_string_file = wallpaper_directory + wallpaper_list[x]
+cat_string_file = f"{wallpaper_directory}/{wallpaper_list[x]}"
 subprocess.run(["wal", "-i", cat_string_file])
 subprocess.run([
 "awww", "img", cat_string_file,
@@ -23,8 +23,6 @@ subprocess.run([
 "--transition-step", "90",
 "--transition-fps", "50"
 ])
-subprocess.run(f"cd ~/ranger097_nixos_dotfiles && git add .",shell=True, stdout=subprocess.DEVNULL)
-subprocess.run(["sudo", "nixos-rebuild", "switch", "--flake", "/home/ranger/ranger097_nixos_dotfiles/#jirachi"])
 subprocess.run(["hyprctl","reload"])
 subprocess.run(["pkill", "waybar"])
 subprocess.Popen(["waybar", "-c", os.path.expanduser("~/.config/waybar/top.jsonc"), "-s", os.path.expanduser("~/.config/waybar/top.css")], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)

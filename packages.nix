@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:{
+{ config, pkgs, inputs, ... }:{
 nixpkgs.config.allowUnfree = true;
 programs.steam.enable = true;
 programs.direnv = {
@@ -15,7 +15,6 @@ kdePackages.dolphin
 kdePackages.kdenlive
 kdePackages.qtstyleplugin-kvantum
 waybar
-awww
 walker
 networkmanager
 home-manager
@@ -43,7 +42,7 @@ lsd
 dtrx
 blender
 qt5.qtwayland
-qt6.qtwayland
+ qt6.qtwayland
 pokeget-rs
 nmap
 pywal16
@@ -82,6 +81,7 @@ ghostty
 bettercap
 zig
 exercism
+inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
 ];
 
 fonts.packages = with pkgs;[

@@ -18,22 +18,27 @@
        url = "github:nix-community/home-manager";
        inputs.nixpkgs.follows = "nixpkgs";
     };
- 
+
+    awww = {
+       url = "git+https://codeberg.org/LGFae/awww";
+       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
  
-  outputs = { self, nixpkgs, nixvim, home-manager, lanzaboote, ... }@inputs: {
+  outputs = { self, nixpkgs, nixvim, home-manager, lanzaboote, awww, ... }@inputs: {
    
   nixosConfigurations = {
      deoxy = nixpkgs.lib.nixosSystem {
      system = "x86_64-linux";
-     specialArgs = { inherit inputs nixvim; };
+     specialArgs = { inherit inputs nixvim awww; };
      modules = [
       ./hosts/deoxy/hardware-configuration.nix
       ./configuration.nix
         home-manager.nixosModules.home-manager
         lanzaboote.nixosModules.lanzaboote
 	nixvim.nixosModules.nixvim
-    
+
      ({ pkgs, lib, ... }: {
         networking.hostName = "deoxy";
         boot.loader.systemd-boot.enable = lib.mkForce false;
@@ -58,7 +63,7 @@
 
    jirachi = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit inputs nixvim; };
+      specialArgs = { inherit inputs nixvim awww; };
       
       modules = [
        ./hosts/jirachi/hardware-configuration.nix
