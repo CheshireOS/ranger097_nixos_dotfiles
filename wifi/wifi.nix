@@ -9,7 +9,7 @@ networking.networkmanager.enable = true;
 networking.networkmanager.dns = "none";
 networking.useDHCP = false;
 networking.dhcpcd.enable = false;
-networking.nameservers = [ "9.9.9.9" ];
+networking.nameservers = [ "9.9.9.9"];
 services.resolved.enable = false;
 networking.enableIPv6 = false;
 networking.firewall.checkReversePath = false;
@@ -32,10 +32,7 @@ psk = "$WIFI_PW"; };
   };
 };
 
-
 security.polkit.enable = true;
-
-
 
   xdg.portal = {
     enable = true;
@@ -46,11 +43,9 @@ security.polkit.enable = true;
     config.common.default = "*";
   };
 
-
 networking.firewall = {
   enable = true;
 };
-
 
 services.tor = {
 client.transparentProxy.enable = false;

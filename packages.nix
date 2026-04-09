@@ -82,6 +82,7 @@ bettercap
 zig
 exercism
 inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
+freetube
 ];
 
 fonts.packages = with pkgs;[
