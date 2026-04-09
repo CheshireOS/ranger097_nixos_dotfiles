@@ -40,7 +40,7 @@ text-shadow: none;
 }
 
 #custom-vpn_ip {
-padding-left: 25px;
+padding-left: 20px;
 border-radius: 0px 0px 0px 50px;
 border-left: 1px solid @blurblack;
 }
@@ -147,6 +147,7 @@ border-right: 1px solid #000000;
 
 #custom-vpn_ip {
 border-left: 1px solid #000000;
+
 }
 
 #workspaces {
@@ -155,7 +156,7 @@ background: linear-gradient(@color0, rgba(0,0,0,1));
 border-bottom: 0px solid @blurblack;
 border-right: 1px solid #000000;
 margin-left: 0px;
-padding-right: 25px;
+padding-right: 17px;
 border-radius: 0px 0px 50px 0px;
 box-shadow: -2px 2px 4px rgba(0,0,0,0.5);
 }
