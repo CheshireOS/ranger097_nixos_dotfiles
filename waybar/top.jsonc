@@ -67,6 +67,7 @@
             "(.*)nm-connection-editor(.*)": "Wifi",
             "(.*)Kvantum Manager(.*)": "Kvantum",
             "(.*)sioyek(.*)": "Books",
+            "(.*)electron(.*)": "Youtube",
             " ": "Ranger"
         }
 },
