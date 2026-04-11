@@ -55,6 +55,10 @@ extraGroups = [ "networkmanager" "wheel" ];
 
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+
+
+
+
 # Versioning - Set to Unstable/Next Release
 system.stateVersion = "25.11"; 
 }

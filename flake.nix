@@ -24,9 +24,14 @@
        inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    impermanence = {
+       url = "github:nix-community/impermanence";
+       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
  
-  outputs = { self, nixpkgs, nixvim, home-manager, lanzaboote, awww, ... }@inputs: {
+  outputs = { self, nixpkgs, nixvim, home-manager, lanzaboote, awww, impermanence, ... }@inputs: {
    
   nixosConfigurations = {
      deoxy = nixpkgs.lib.nixosSystem {
@@ -38,6 +43,7 @@
         home-manager.nixosModules.home-manager
         lanzaboote.nixosModules.lanzaboote
 	nixvim.nixosModules.nixvim
+        impermanence.nixosModules.impermanence
 
      ({ pkgs, lib, ... }: {
         networking.hostName = "deoxy";
@@ -70,7 +76,8 @@
        ./configuration.nix
          home-manager.nixosModules.home-manager
          lanzaboote.nixosModules.lanzaboote
-	  nixvim.nixosModules.nixvim
+	 nixvim.nixosModules.nixvim
+         impermanence.nixosModules.impermanence   
 
    ({ pkgs, lib, ... }: {
       networking.hostName = "jirachi";

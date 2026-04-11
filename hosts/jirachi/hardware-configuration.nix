@@ -8,32 +8,44 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "uas" "sd_mod" "rtsx_pci_sdmmc" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "uas" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  boot.initrd.luks.devices."luks-e2e2b2b3-d4e8-4ee7-9e85-329dee72f576" = {
-  device = "/dev/disk/by-uuid/e2e2b2b3-d4e8-4ee7-9e85-329dee72f576";
-  crypttabExtraOpts = [ "tpm2-device=auto" ];
-  };
- 
-
-
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/fe954753-37bc-488d-a11f-b0f7cdd93a9c";
-      fsType = "ext4";
+    { device = "/dev/mapper/crypt_root1";
+      fsType = "btrfs";
+      options = [ "subvol=root" ];
+    };
+
+  boot.initrd.luks.devices."crypt_root1".device = "/dev/disk/by-uuid/0af3cc19-dde0-453a-9760-2e1085729c1c";
+
+  fileSystems."/home" =
+    { device = "/dev/mapper/crypt_root1";
+      fsType = "btrfs";
+      options = [ "subvol=home" ];
+    };
+
+  fileSystems."/nix" =
+    { device = "/dev/mapper/crypt_root1";
+      fsType = "btrfs";
+      options = [ "subvol=nix" ];
+    };
+
+  fileSystems."/var/log" =
+    { device = "/dev/mapper/crypt_root1";
+      fsType = "btrfs";
+      options = [ "subvol=log" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/77C5-C8D5";
+    { device = "/dev/disk/by-uuid/3778-E288";
       fsType = "vfat";
-      options = [ "fmask=0077" "dmask=0077" ];
+      options = [ "fmask=0022" "dmask=0022" ];
     };
 
-  swapDevices =
-    [ { device = "/dev/disk/by-uuid/cfce9d27-34dc-4129-9cc9-4f19491c3ca2"; }
-    ];
+  swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

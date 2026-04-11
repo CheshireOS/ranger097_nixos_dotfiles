@@ -20,6 +20,29 @@ services.logind.settings.Login = {
   LidSwitchIgnoreInhibited = "yes";
  };
 
+boot.initrd.luks.devices = {
+    "crypt_root1" = {
+      device = "/dev/disk/by-uuid/0af3cc19-dde0-453a-9760-2e1085729c1c";
+      allowDiscards = true;
+    };
+    "crypt_root2" = {
+      device = "/dev/disk/by-uuid/1266b762-0547-4dc6-901c-1967842e6872";
+      keyFile = "/etc/secrets/crypto_keyfile.bin";
+      allowDiscards = true;
+    };
+  };
+
+  boot.initrd.secrets = {
+    "/etc/secrets/crypto_keyfile.bin" = "/etc/secrets/crypto_keyfile.bin";
+  };
+
+  boot.initrd.supportedFilesystems = [ "btrfs" ];
+
+  fileSystems."/".options = [ "subvol=root" "compress=zstd" "noatime" ];
+  fileSystems."/home".options = [ "subvol=home" "compress=zstd" ];
+  fileSystems."/nix".options = [ "subvol=nix" "compress=zstd" "noatime" ];
+  fileSystems."/var/log".options = [ "subvol=log" "compress=zstd" ];
+
 boot.tmp.useTmpfs = true;
 boot.tmp.cleanOnBoot = true;
 boot.kernel.sysctl = {
@@ -85,32 +108,31 @@ systemd.tmpfiles.rules = [
   "f+  /var/lib/plocate/plocate.db  0644  root root  -  -"
   "f+  /var/log/lastlog  0664  root utmp  -  -"
 
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/places.sqlite      0600  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/cookies.sqlite     0600  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/formhistory.sqlite 0600  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/content-prefs.sqlite 0600  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/cookies.sqlite-wal 0600  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/cookies.sqlite.bak 0600  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/favicons.sqlite 0600  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/favicons.sqlite-wal 0600  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/places.sqlite-wal 0600  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/places.sqlite.corrupt 0600  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/webappsstore.sqlite 0600  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/webappsstore.sqlite-wal 0600  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/storage-sync-v2.sqlite 0600  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/storage-sync-v2.sqlite-shm 0600  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/storage-sync-v2.sqlite-wal 0600  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/storage.sqlite 0600  ranger users  -  -"
-  "D  /home/ranger/.librewolf/cqtp3a7w.default/sessionstore-logs/ 0700  ranger users  -  -"
-  "D  /home/ranger/.librewolf/cqtp3a7w.default/sessionstore-backups 0700  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/logins.db 0600  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/key4.db 0600  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/content-prefs.sqlite 0600  ranger users  -  -"
-  "f+  /home/ranger/.librewolf/cqtp3a7w.default/logins.json  0600  ranger users  -  -"
-  "D  /home/ranger/.librewolf/cqtp3a7w.default/storage/ 0700 ranger users - -"
-
-  "D  /home/ranger/.librewolf/cqtp3a7w.default/cache2/  0700  ranger users  0d  -"
-  "D  /home/ranger/.local/share/librewolf/  0700  ranger users  0d  -"
+    # "f+  /home/ranger/.librewolf/cqtp3a7w.default/places.sqlite      0600  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/cookies.sqlite     0600  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/formhistory.sqlite 0600  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/content-prefs.sqlite 0600  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/cookies.sqlite-wal 0600  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/cookies.sqlite.bak 0600  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/favicons.sqlite 0600  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/favicons.sqlite-wal 0600  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/places.sqlite-wal 0600  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/places.sqlite.corrupt 0600  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/webappsstore.sqlite 0600  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/webappsstore.sqlite-wal 0600  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/storage-sync-v2.sqlite 0600  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/storage-sync-v2.sqlite-shm 0600  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/storage-sync-v2.sqlite-wal 0600  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/storage.sqlite 0600  ranger users  -  -"
+    #"D  /home/ranger/.librewolf/cqtp3a7w.default/sessionstore-logs/ 0700  ranger users  -  -"
+    #"D  /home/ranger/.librewolf/cqtp3a7w.default/sessionstore-backups 0700  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/logins.db 0600  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/key4.db 0600  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/content-prefs.sqlite 0600  ranger users  -  -"
+    #"f+  /home/ranger/.librewolf/cqtp3a7w.default/logins.json  0600  ranger users  -  -"
+    #"D  /home/ranger/.librewolf/cqtp3a7w.default/storage/ 0700 ranger users - -"
+    #"D  /home/ranger/.librewolf/cqtp3a7w.default/cache2/  0700  ranger users  0d  -"
+    #"D  /home/ranger/.local/share/librewolf/  0700  ranger users  0d  -"
 
   "f+  /home/ranger/.zsh_history  0600  ranger users  -  -"
   "f+  /home/ranger/.python_history  0600  ranger users  -  -"

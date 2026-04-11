@@ -83,6 +83,7 @@ zig
 exercism
 inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
 freetube
+firefox
 ];
 
 fonts.packages = with pkgs;[
