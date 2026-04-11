@@ -23,7 +23,8 @@
         "Music" 
         "ranger097_nixos_dotfiles"
         ".local/share"
-        ".ssh"       
+        ".ssh"      
+	".cache/wal"
       ];
       files = [
         ".bash_history"
