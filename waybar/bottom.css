@@ -48,7 +48,7 @@ border-radius: 10px;
 padding-left: 10px;
 padding-right: 10px;
 margin-left: 5px;
-margin-right: 5px;
+margin-right: 10px;
 background-color: rgba(0,0,0,1);
 color: #606060;
 margin-top: 10px;
@@ -87,6 +87,7 @@ padding-left: 7px;
 #custom-power {
 padding-right: 1px;
 padding-left: 9px;
+margin-left: 10px;
 }
 
 #custom-terminal {

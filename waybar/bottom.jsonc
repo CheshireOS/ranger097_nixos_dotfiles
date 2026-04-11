@@ -10,15 +10,14 @@
     "margin-left" : 0,
     "margin-right" : 0,
     "modules-left": [
+    "custom/power",
+    "custom/themes"
     ],
     "modules-center": [
-    "custom/power",
-    "custom/themes",
     "custom/qmmp",
     "custom/web",
     "custom/terminal",
     "custom/dolphin",
-    "custom/spacer",
     "custom/steam",
     "custom/discord",
     "custom/blender",
@@ -27,11 +26,12 @@
     "bluetooth"
     ],
     "modules-right": [
+    "custom/spacer"
     ],
 
 "custom/spacer": {
     "tooltip": false,
-  "format": "󰫢  rangers_world!/ 󰫢 "
+  "format": " rangers_world! "
 },
 
 "custom/spacerLeft": {
