@@ -25,6 +25,7 @@
         ".local/share"
         ".ssh"      
 	".cache/wal"
+	".config/wal"
       ];
       files = [
         ".bash_history"

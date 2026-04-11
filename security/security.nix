@@ -59,10 +59,7 @@ services.openssh = {
 };
 
 systemd.tmpfiles.rules = [
-  "D  /home/ranger/Downloads  0700  ranger users  0d  -"
-  "D  /home/ranger/Documents  0700  ranger users  0d  -"
-  "D  /home/ranger/Pictures   0700  ranger users  0d  -"
-  "D  /home/ranger/Videos     0700  ranger users  0d  -"
+  "D /home/ranger/.cache/wal/ 0700 ranger users 0d -"
   "D  /home/ranger/.cache/thumbnails/  0700  ranger users  0d  -"
   "D /home/ranger/.cache/nvidia/ 0700 ranger users 0d -"
   "D /home/ranger/.cache/nix/ 0700 ranger users 0d -"

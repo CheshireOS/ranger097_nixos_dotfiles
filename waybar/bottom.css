@@ -1,10 +1,10 @@
 /* ranger097 */
-@import "../../.cache/wal/colors-waybar.css";
-@import "../../.cache/wal/colors-waybar-rgba.css";
+/*@import "/home/ranger/.cache/wal/colors-waybar.css";
+@import "/home/ranger/.cache/wal/colors-waybar-rgba.css";
+*/
 
 window#waybar {
-background: linear-gradient(0deg, #000000, @blurblack );
-background: linear-gradient(0deg, rgba(0,0,0,0) );
+background-color: rgba(0,0,0,0);
 /*background-color: @waybar-bg;*/
 border-top: 0px solid #000000;
 }
@@ -36,8 +36,8 @@ margin-left: 5px;
 font-family: GeistMono NF;
 font-size: 15px;
 font-weight: 300;
-background: linear-gradient(rgba(0,0,0,1),@color0);
-color: @color5;
+background-color: rgba(0,0,0,1);
+color: #606060;
 box-shadow: -1px 1px 2px rgba(0,0,0,0.5);
 /*text-shadow: 0px 0px 4px rgba(0,0,0,0.2);*/
 border: 1px solid #000000;
@@ -49,8 +49,8 @@ padding-left: 10px;
 padding-right: 10px;
 margin-left: 5px;
 margin-right: 5px;
-background: linear-gradient(rgba(0,0,0,1), @color0);
-color: @nice-text;
+background-color: rgba(0,0,0,1);
+color: #606060;
 margin-top: 10px;
 margin-bottom: 10px;
 font-family: GeistMono NF;
@@ -124,19 +124,6 @@ padding-right: 3px;
 padding-left: 7px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 #custom-power:hover,
 #custom-themes:hover,
 #custom-qmmp:hover,
@@ -149,7 +136,7 @@ padding-left: 7px;
 #wireplumber:hover,
 #network:hover,
 #bluetooth:hover {
-color: @color4;
-background: linear-gradient(rgba(0,0,0,1));
+color: #909090;
+background-color: rgba(0,0,0,1);
 }
 

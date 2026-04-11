@@ -36,7 +36,7 @@ custom-shader = [
 "${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/starfield.glsl"
 "${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/ripple_cursor.glsl"
 "${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/cursor_blaze.glsl"
-"${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/aurora.glsl"
+#"${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/aurora.glsl"
 ];
 
 custom-shader-animation = "true";
@@ -72,8 +72,8 @@ enable = true;
 systemd.enable = false;
 extraConfig = ''
 #ranger097
-source = ~/.cache/wal/colors-hyprland.conf
-source = ~/.cache/wal/hyprland_custom.conf
+#source = ~/.cache/wal/colors-hyprland.conf
+#source = ~/.cache/wal/hyprland_custom.conf
 monitor = ${ if osConfig.networking.hostName == "jirachi"
 	     then "eDP-1, 3840x2400@59.99400, 0x0, 3"
              else "eDP-1, 1920x1080@60.054, 0x0, 1"}   
@@ -259,8 +259,8 @@ bind = SUPER, B, exec, librewolf
 bind = SUPER, D, exec, dolphin
 bind = SUPER, C, exec, code
 bind = SUPER, F, fullscreenstate, 2
-bind = SUPER, X, exec, direnv exec /home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/ python /home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/waybar_switcher.py
-bind = SUPER, M, exec, direnv exec /home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/ python /home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/bluelight_toggle.py
+bind = SUPER, X, exec, direnv exec /home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/ python3 /home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/waybar_switcher.py
+bind = SUPER, M, exec, direnv exec /home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/ python3 /home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/bluelight_toggle.py
 bind = SUPER, H, exec, hyprshot -m output -m eDP-1
 bind = SUPER, P, exec, systemctl --user restart pipewire
 

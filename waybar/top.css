@@ -1,6 +1,7 @@
 /* ranger097 */
-@import "../../.cache/wal/colors-waybar.css";
-@import "../../.cache/wal/colors-waybar-rgba.css";
+/*@import "/home/ranger/.cache/wal/colors-waybar.css";
+@import "/home/ranger/.cache/wal/colors-waybar-rgba.css";
+*/
 
 * {
 border: none;
@@ -11,9 +12,7 @@ min-height: 0;
 }
 
 window#waybar {
-/*background: linear-gradient( 0deg, @blurblack,#000000 );*/
-background: linear-gradient( rgba(0,0,0,0) );
-/*background-color: @color0;*/
+background-color: rgba(0,0,0,0);
 border-bottom: 0px solid #000000;
 }
 
@@ -29,12 +28,12 @@ margin-bottom: 12px;
 font-family: GeistMono NF;
 font-size: 11px;
 font-weight: 300;
-background: linear-gradient(@color0, rgba(0,0,0,1));
-color: @color5;
+background-color: rgba(0,0,0,1);
+color: #606060;
 margin-right: 0px;
 margin-left: 0px;
 border-radius: 0px;
-border-bottom: 0px solid @blurblack;
+border-bottom: 0px solid #000000;
 box-shadow: -2px 2px 4px rgba(0,0,0,0.5);
 text-shadow: none;
 }
@@ -42,14 +41,14 @@ text-shadow: none;
 #custom-vpn_ip {
 padding-left: 20px;
 border-radius: 0px 0px 0px 50px;
-border-left: 1px solid @blurblack;
+border-left: 1px solid #000000;
 }
 
 #mpris {
 margin-left: 0px;
 margin-right: 0px;
-color: @color4;
-background: linear-gradient(@color0, rgba(0,0,0,1));
+color: #606060;
+background-color: rgba(0,0,0,1);
 padding-left: 30px;
 padding-right: 30px;
 border-radius: 0px 0px 50px 50px;
@@ -61,8 +60,8 @@ font-style: italic;
 #window:hover, #mpris:hover,
 #clock:hover, #custom-vpn_ip:hover,
 #battery:hover {
-color: @color4;
-background: #000000;
+color: #606060;
+background-color: rgba(0,0,0,1);
 text-shadow: none;
 -gtk-icon-shadow: none;    
 transition: none;
@@ -78,13 +77,13 @@ box-shadow: none;
 text-shadow: none;
 -gtk-icon-shadow: none;
 transition: none;
-color: @color4;
+color: #606060;
 }
 
 #workspaces button:hover {
 background: none; 
 background-color: rgba(0,0,0,0.0); 
-color: @color3; 
+color: #606060; 
 box-shadow: none;
 text-shadow: none;
 -gtk-icon-shadow: none;
@@ -94,7 +93,7 @@ transition: none;
 #workspaces button.active {
 background: none;
 background-color: rgba(0,0,0,0);
-color: @color6; 
+color: #606060; 
 box-shadow: none;
 text-shadow: none;
 -gtk-icon-shadow: none;
@@ -104,7 +103,7 @@ text-shadow: none;
 
 #workspaces button.urgent { 
 background-color: rgba(0,0,0,0); 
-color:#000000; 
+color:#606060; 
 box-shadow: none;
 text-shadow: none;
 -gtk-icon-shadow: none;
@@ -152,8 +151,8 @@ border-left: 1px solid #000000;
 
 #workspaces {
 box-shadow: none;
-background: linear-gradient(@color0, rgba(0,0,0,1));
-border-bottom: 0px solid @blurblack;
+background-color: rgba(0,0,0,1);
+border-bottom: 0px solid #000000;
 border-right: 1px solid #000000;
 margin-left: 0px;
 padding-right: 17px;
