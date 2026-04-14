@@ -22,13 +22,13 @@
       directories = [
         "Music" 
         "ranger097_nixos_dotfiles"
-        ".local/share"
+        ".local/share/direnv"
         ".ssh"      
 	".cache/wal"
+	".cache/awww"
 	".config/wal"
       ];
       files = [
-        ".bash_history"
       ];
     };
   };

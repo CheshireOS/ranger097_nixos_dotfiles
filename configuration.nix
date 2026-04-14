@@ -11,7 +11,7 @@ imports = [
   ./development/tmux.nix
   ./security/security.nix
 ];
-   
+  
 # Bootloader & Kernel
 boot.loader.systemd-boot.enable = false;
 boot.lanzaboote.enable = true;
@@ -53,11 +53,10 @@ isNormalUser = true;
 extraGroups = [ "networkmanager" "wheel" ];
 };
 
-nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-
-
-
+nix.settings = {
+   experimental-features = [ "nix-command" "flakes" ];
+   warn-dirty = false;
+};
 
 # Versioning - Set to Unstable/Next Release
 system.stateVersion = "25.11"; 

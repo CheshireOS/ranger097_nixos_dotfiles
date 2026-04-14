@@ -4,9 +4,10 @@
 */
 
 window#waybar {
-background-color: rgba(0,0,0,0);
+background: linear-gradient( 0deg, rgba(0,0,0,0), rgba(0,0,0,0) );
 /*background-color: @waybar-bg;*/
-border-top: 0px solid #000000;
+border: 0px solid #000000;
+border-radius: 10px;
 }
  
 #tray,
@@ -14,8 +15,8 @@ border-top: 0px solid #000000;
 #network,
 #bluetooth,
 #custom-nixos,
-#custom-themes,
 #custom-power,
+#custom-themes,
 #custom-VacuumTube,
 #custom-ProtonVpn,
 #custom-tor,
@@ -31,113 +32,148 @@ padding-top: 3px;
 padding-bottom: 3px;
 margin-top: 10px;
 margin-bottom: 10px;
-margin-right: 5px;
-margin-left: 5px;
+margin-right: 7px;
+margin-left: 7px;
 font-family: GeistMono NF;
-font-size: 15px;
+font-size: 16px;
 font-weight: 300;
 background-color: rgba(0,0,0,1);
-color: #606060;
-box-shadow: -1px 1px 2px rgba(0,0,0,0.5);
+color: #89B4F4;
+box-shadow: -1px 2px 3px rgba(0,0,0,0.7);
 /*text-shadow: 0px 0px 4px rgba(0,0,0,0.2);*/
-border: 1px solid #000000;
 border-radius: 10px;
-}
-
-#custom-spacer {
-padding-left: 10px;
-padding-right: 10px;
-margin-left: 5px;
-margin-right: 10px;
-background-color: rgba(0,0,0,1);
-color: #606060;
-margin-top: 10px;
-margin-bottom: 10px;
-font-family: GeistMono NF;
-font-size: 12px;
-font-weight: 300;
-font-style: italic;
-border: 1px solid #000000;
-box-shadow: -1px 1px 2px rgba(0,0,0,0.5);
-border-radius: 10px;
-padding-top: 3px;
-padding-bottom: 3px;
+border: 2px solid rgba(0,0,0,1);
 }
 
 #wireplumber {
 padding-right: 5px;
 padding-left: 5px;
+color: #74c7ec;
+}
+
+#wireplumber:hover {
+background-color: #74c7ec;
+color: #000000;
 }
 
 #network {
-padding-right: 4px;
-padding-left: 6px;
+padding-right: 3px;
+padding-left: 7px;
+color: #89b4fa;
+}
+
+#network:hover {
+background-color: #89b4fa;
+color: #000000;
 }
 
 #bluetooth {
 padding-right: 11px;
 padding-left: 9px;
+margin-right: 0px;
+color: #b4befe;
+}
+
+#bluetooth:hover {
+background-color: #b4befe;
+color: #000000;
 }
 
 #custom-themes {
 padding-right: 3px;
 padding-left: 7px;
+color: #f5c2e7;
+}
+
+#custom-themes:hover {
+background-color: #f5c2e7;
+color: #000000;
 }
 
 #custom-power {
 padding-right: 1px;
 padding-left: 9px;
-margin-left: 10px;
+color: #f2cdcd;
+}
+
+#custom-power:hover {
+background-color: #F2CDCD;
+color: #000000;
 }
 
 #custom-terminal {
 padding-right: 11px;
 padding-left: 8px;
+color: #fab387;
+}
+
+#custom-terminal:hover {
+background-color: #fab387;
+color: #000000;
 }
 
 #custom-steam {
 padding-right: 3px;
 padding-left: 7px;
+color: #a6e3a1;
+}
+
+#custom-steam:hover {
+background-color: #a6e3a1;
+color: #000000;
 }
 
 #custom-web {
 padding-right: 3px;
 padding-left: 7px;
+color: #f38ba8;
+}
+
+#custom-web:hover {
+background-color: #f38ba8;
+color: #000000;
 }
 
 #custom-discord {
 padding-right: 4px;
 padding-left: 6px;
+color: #94e2d5;
+}
+
+#custom-discord:hover {
+background-color: #94e2d5;
+color: #000000;
 }
 
 #custom-qmmp {
 padding-right: 4px;
 padding-left: 6px;
+color: #cba6f7;
+}
+
+#custom-qmmp:hover {
+background-color: #cba6f7;
+color: #000000;
 }
 
 #custom-blender {
 padding-right: 3px;
 padding-left: 7px;
+color: #89dceb;
+}
+
+#custom-blender:hover {
+background-color: #89dceb;
+color: #000000;
 }
 
 #custom-dolphin {
 padding-right: 3px;
 padding-left: 7px;
+color: #f9e2af;
 }
 
-#custom-power:hover,
-#custom-themes:hover,
-#custom-qmmp:hover,
-#custom-web:hover,
-#custom-terminal:hover,
-#custom-dolphin:hover,
-#custom-steam:hover,
-#custom-discord:hover,
-#custom-blender:hover,
-#wireplumber:hover,
-#network:hover,
-#bluetooth:hover {
-color: #909090;
-background-color: rgba(0,0,0,1);
+#custom-dolphin:hover {
+background-color: #f9e2af;
+color: #000000;
 }
-

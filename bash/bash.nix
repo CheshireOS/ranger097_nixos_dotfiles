@@ -4,7 +4,6 @@ enable = true;
 shellAliases = {
 bye = "shutdown -h now";
 nii = "cd ~/ranger097_nixos_dotfiles";
-bii = "nvim ~/ranger097_nixos_dotfiles/bash";
 gii = "nvim ~/ranger097_nixos_dotfiles/ghostty/config";
 hii = "nvim ~/ranger097_nixos_dotfiles/home.nix";
 wii = "nvim ~/ranger097_nixos_dotfiles/waybar";

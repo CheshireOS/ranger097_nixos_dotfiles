@@ -17,12 +17,9 @@ if ! sudo nixos-rebuild switch --flake .#jirachi --quiet > /dev/null; then
    echo "FAILURE"
    return 1
 else
-sudo systemd-tmpfiles --remove --clean >/dev/null
-sudo nix-store --gc
-sudo nix-collect-garbage -d
 security
 clear
-echo -e "\e[0;31m󱇥 \e[0;37mDone & Done"
+echo -e "\e[0;37m╭────────────────────╮\n\e[0;37m│   \e[0;32m󱇥 \e[0;36mDone & Done    \e[0;37m│\n╰────────────────────╯"
 fi
 }
 
@@ -42,9 +39,6 @@ if ! sudo nixos-rebuild switch --flake .#jirachi --quiet > /dev/null; then
    echo "FAILURE"
    return 1
 else
-sudo systemd-tmpfiles --remove --clean >/dev/null
-sudo nix-store --gc
-sudo nix-collect-garbage -d
 security
 clear
 echo -e "\e[0;37m╭────────────────────╮\n\e[0;37m│   \e[0;32m󱇥 \e[0;36mDone & Done    \e[0;37m│\n╰────────────────────╯"

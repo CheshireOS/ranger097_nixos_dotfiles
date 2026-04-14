@@ -3,17 +3,17 @@
     "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)  
  // "height": 15, // Waybar height (to be removed for auto height)
- // "width": 1526, // Waybar width
+    "width": 700, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
-    "margin-top" : 0,
+    "margin-top" : -10,
     "margin-bottom": 0,
     "margin-left" : 0,
     "margin-right" : 0,
     "modules-left": [
-    "custom/power",
-    "custom/themes"
     ],
     "modules-center": [
+    "custom/power",
+    "custom/themes",
     "custom/qmmp",
     "custom/web",
     "custom/terminal",
@@ -26,15 +26,14 @@
     "bluetooth"
     ],
     "modules-right": [
-    "custom/spacer"
     ],
 
-"custom/spacer": {
+"custom/spacerLeft": {
     "tooltip": false,
-  "format": " rangers_world! "
+  "format": " "
 },
 
-"custom/spacerLeft": {
+"custom/spacerRight": {
   "format": " "
 },
 "custom/VacuumTube": {
@@ -101,13 +100,13 @@
 
 "custom/power": {
 "tooltip": false,
-"format": "󰤄 ",
+"format": " ",
 "on-click":"wlogout"
 },
 
 "custom/themes": {
 "tooltip": false,
-"format": " ",
+"format": " ",
 "on-click":"direnv exec /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher python3 /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/themes.py"
 },
 

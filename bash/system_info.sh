@@ -5,7 +5,7 @@ math=$(( width /  2 ))
 percent=$(( width / 6 ))
 padding=$(( math - percent ))
 
-function pokemon() {
+pokemon() {
 poke=$(pokeget --mega random --hide-name)
 printf "%*s" "$padding" "$poke"
 } 
@@ -118,14 +118,16 @@ fi
 }
 
 
-if [[ $(tput lines) -ge 15 && $(tput cols) -ge 60 ]]; then
-   ranger_page
+pokemon
 
-else [[ $(tput lines) -le 14 && $(tput cols) -le 59 ]];
-   pokemon
-   read -s -n 1 -p ""
-   clear
-fi
+
+bii() {
+clear
+ranger_page
+nvim ~/ranger097_nixos_dotfiles/bash
+}
+
+
 
 
 ls() {

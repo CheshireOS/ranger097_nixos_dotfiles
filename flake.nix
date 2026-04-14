@@ -32,7 +32,8 @@
   };
  
   outputs = { self, nixpkgs, nixvim, home-manager, lanzaboote, awww, impermanence, ... }@inputs: {
-   
+
+
   nixosConfigurations = {
      deoxy = nixpkgs.lib.nixosSystem {
      system = "x86_64-linux";

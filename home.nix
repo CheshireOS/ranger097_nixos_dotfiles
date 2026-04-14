@@ -86,12 +86,14 @@ ecosystem:no_update_news = true
 exec-once = awww-daemon
 exec-once = bash /home/ranger/ranger097_nixos_dotfiles/bash/waybar.sh
 #exec-once = LD_LIBRARY_PATH=/run/opengl-driver/lib mpvpaper -o "no-audio --loop-playlist --panscan=1.0 hwdec=auto" eDP-1 /home/ranger/Videos/wallpapers/guweiz.mp4
-exec-once = hyprsunset
+exec-once = ghostty
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec-once = systemctl --user start hyprpolkitagent
 exec-once = hyprctl setcursor Pokemon 32
 exec-once = elephant
 exec-once = systemctl --user start hyprpolkitagent
+exec-once = direnv exec /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/ python3 /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/themes.py 
+
 
 #ENVIRONMENT
 #env = HYPRCURSOR_THEME,Pokemon
@@ -121,21 +123,22 @@ permission = /usr/(bin|local/bin)/hyprpm, plugin, allow
 #SETTINGS_START
 general {
 #GAPS
-gaps_in = 5
-gaps_out = 0, 10, 0, 10 
+gaps_in = 2
+gaps_out = 10, 10, 10, 10
 border_size = 1
 
 #BORDER
 #col.active_border = $right_border rgba(0,0,0,1) rgba(0,0,0,1) rgba(0,0,0,1) rgba(0,0,0,1) $left_border
 #col.inactive_border = $right_border rgba(0,0,0,1) rgba(0,0,0,1) rgba(0,0,0,1) rgba(0,0,0,1) $left_border
-col.active_border = rgba(0,0,0,1)
-col.inactive_border = rgba(0,0,0,1)
+
+col.active_border = rgba(166,227,161,1) rgba(202,211,240,1)
+col.inactive_border = rgba(180,190,254,1) rgba(202,211,240,1)
 
 #BORDER_ANIMATION
-#animations {
-#bezier = linear, 0.0, 0.0, 0.0, 0.0
-#animation = borderangle, 1, 200, linear, loop
-#}
+animations {
+bezier = linear, 0.0, 0.0, 0.0, 0.0
+animation = borderangle, 1, 50, linear, loop
+}
 
 #ALTERNATIVE
 resize_on_border = true
@@ -146,7 +149,7 @@ layout = dwindle
 
 #WINDOW_SETTINGS_START
 decoration { 
-rounding = 15
+rounding = 0
 rounding_power = 2
 active_opacity = 1.0
 inactive_opacity = 1.0
@@ -154,9 +157,9 @@ inactive_opacity = 1.0
 #SHADOW
 shadow {
 enabled = true
-range = 15
+range = 20
 render_power = 10
-color = rgba(0,0,0,0.3)
+color = rgba(0,0,0,0.6)
 offset = 0 0
 sharp = false
 scale = 1.0
@@ -165,8 +168,8 @@ scale = 1.0
 #BLUR
 blur {
 enabled = true
-size = 3
-passes = 3
+size = 7
+passes = 7
 contrast = 1.0
 vibrancy = 0
 vibrancy_darkness = 0
@@ -324,19 +327,18 @@ bindl = , XF86AudioPrev, exec, playerctl previous
 
 #WINDOW_RULE_SETTINGS_START
 windowrule = match:class com.mitchellh.ghostty, opacity 1.0
-windowrule = match:class code, opacity 0.7
-windowrule = match:class Mullvad Browser, opacity 1.0
+windowrule = match:class librewolf, opacity 0.7
 windowrule = match:class discord, opacity 1.0
 windowrule = match:fullscreen opacity 1.0 override
-windowrule = match:class libreoffice-writer, opacity 1.0
-windowrule = match:class org.pulseaudio.pavucontrol, opacity 1.0
-windowrule = match:class .blueman-manager-wrapped, opacity 1.0
+windowrule = match:class libreoffice-writer, opacity 0.7
+windowrule = match:class org.pulseaudio.pavucontrol, opacity 0.7
+windowrule = match:class .blueman-manager-wrapped, opacity 0.7
 #WINDOW_RULE_SETTINGS_END
 
 #LAYER_RULE_SETTINGS_START
 layerrule = blur on, match:namespace walker
 layerrule = match:namespace walker, ignore_alpha 0.7
-#layerrule = match:namespace waybar, ignore_alpha 0.00
+layerrule = match:namespace waybar, ignore_alpha 0.001
 layerrule = blur off, match:namespace waybar
 layerrule = blur on, match:namespace wlogout
 #LAYER_RULE_SETTINGS_END

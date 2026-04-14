@@ -16,7 +16,7 @@ with open(toggle_file, 'w') as f:
     full_file = f.write(str(y))
 
 cat_string_file = f"{wallpaper_directory}/{wallpaper_list[x]}"
-subprocess.run(["wal", "-i", cat_string_file])
+#subprocess.run(["wal", "-i", cat_string_file])
 subprocess.run([
 "awww", "img", cat_string_file,
 "--transition-type", "grow",
