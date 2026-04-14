@@ -21,8 +21,8 @@ border-bottom: 0px solid #000000;
 #battery, #mpris {
 padding-left: 15px;
 padding-right: 15px;
-padding-top: 2px;
-padding-bottom: 5px;
+padding-top: 3px;
+padding-bottom: 4px;
 margin-top: 0px;
 margin-bottom: 10px;
 font-family: Maple Mono NF CN;
@@ -33,7 +33,7 @@ color: #CDD6F4;
 margin-right: 0px;
 margin-left: 0px;
 border-radius: 0px;
-border-bottom: 1px solid #000000;
+border-bottom: 2px solid #000000;
 box-shadow: -1px 2px 3px rgba(0,0,0,0.7);
 text-shadow: none;
 }
@@ -46,21 +46,15 @@ background-color: rgba(0,0,0,1);
 padding-left: 30px;
 padding-right: 30px;
 border-radius: 0px 0px 50px 50px;
-border-left: 1px solid #000000;
-border-right: 1px solid #000000;
-border-bottom: 1px solid #000000;
+border-left: 2px solid #000000;
+border-right: 2px solid #000000;
+border-bottom: 2px solid #000000;
 font-style: italic;
 }
 
-#window:hover, #mpris:hover,
-#clock:hover, #custom-vpn_ip:hover,
-#battery:hover {
-color: #FAB387;
-background-color: rgba(0,0,0,1);
-text-shadow: none;
--gtk-icon-shadow: none;    
-transition: none;
-text-shadow: none;
+#mpris:hover {
+background-color: #cdd6f4;
+color: #000000;
 }
 
 #workspaces button {
@@ -78,7 +72,7 @@ color: #89b4fa;
 #workspaces button:hover {
 background: none; 
 background-color: rgba(0,0,0,0.0); 
-color: #9399b2; 
+color: #f8e1ae; 
 box-shadow: none;
 text-shadow: none;
 -gtk-icon-shadow: none;
@@ -124,37 +118,57 @@ text-shadow: none;
 
 #battery {
 margin-right: 0px;
-border-bottom: 1px solid #000000;
-color: #74c7ec;
+border-bottom: 2px solid #000000;
+color: #fdccc9;
+}
+
+#battery:hover {
+background-color: #74c7ec;
+color: #000000;
 }
 
 #window {
 margin-left: 0px;
 border-right: 1px solid #2A2B3C;
-border-bottom: 1px solid #000000;
+border-bottom: 2px solid #000000;
 color: #f9e2af;
+}
+
+#window:hover {
+background-color: #f9e2af;
+color: #000000;
 }
 
 #clock {
 border-left: 1px solid #2A2B3C;
 border-right: 1px solid #2A2B3C;
-border-bottom: 1px solid #000000;
+border-bottom: 2px solid #000000;
 color: #f9e2af;
+}
+
+#clock:hover {
+background-color: #f9e2af;
+color: #000000;
 }
 
 #custom-vpn_ip {
 color: #f38ba8;
 padding-left: 20px;
 border-radius: 0px 0px 0px 50px;
-border-left: 1px solid #000000;
-border-bottom: 1px solid #000000;
+border-left: 2px solid #000000;
+border-bottom: 2px solid #000000;
+}
+
+#custom-vpn_ip:hover {
+background-color: #f38ba8;
+color: #000000;
 }
 
 #workspaces {
 box-shadow: none;
 background-color: rgba(0,0,0,1);
-border-bottom: 1px solid #000000;
-border-right: 1px solid #000000;
+border-bottom: 2px solid #000000;
+border-right: 2px solid #000000;
 margin-left: 0px;
 padding-right: 17px;
 border-radius: 0px 0px 50px 0px;
