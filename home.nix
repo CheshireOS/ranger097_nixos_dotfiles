@@ -36,7 +36,7 @@ custom-shader = [
 "${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/starfield.glsl"
 "${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/ripple_cursor.glsl"
 "${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/cursor_blaze.glsl"
-#"${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/aurora.glsl"
+"${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/aurora.glsl"
 ];
 
 custom-shader-animation = "true";
@@ -157,9 +157,9 @@ inactive_opacity = 1.0
 #SHADOW
 shadow {
 enabled = true
-range = 20
-render_power = 10
-color = rgba(0,0,0,0.6)
+range = 16
+render_power = 2
+color = rgba(0,0,0,0.5)
 offset = 0 0
 sharp = false
 scale = 1.0

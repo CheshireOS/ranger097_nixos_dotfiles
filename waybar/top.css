@@ -25,7 +25,7 @@ padding-top: 2px;
 padding-bottom: 5px;
 margin-top: 0px;
 margin-bottom: 10px;
-font-family: GeistMono NF;
+font-family: Maple Mono NF CN;
 font-size: 11px;
 font-weight: 300;
 background-color: rgba(0,0,0,1);
@@ -41,7 +41,7 @@ text-shadow: none;
 #mpris {
 margin-left: 0px;
 margin-right: 0px;
-color: #89B4F4;
+color: #cdd6f4;
 background-color: rgba(0,0,0,1);
 padding-left: 30px;
 padding-right: 30px;
@@ -72,13 +72,13 @@ box-shadow: none;
 text-shadow: none;
 -gtk-icon-shadow: none;
 transition: none;
-color: #FAB387;
+color: #89b4fa;
 }
 
 #workspaces button:hover {
 background: none; 
 background-color: rgba(0,0,0,0.0); 
-color: #89B4F4; 
+color: #9399b2; 
 box-shadow: none;
 text-shadow: none;
 -gtk-icon-shadow: none;
@@ -88,7 +88,7 @@ transition: none;
 #workspaces button.active {
 background: none;
 background-color: rgba(0,0,0,0);
-color: #606060; 
+color: #707070; 
 box-shadow: none;
 text-shadow: none;
 -gtk-icon-shadow: none;
@@ -125,22 +125,25 @@ text-shadow: none;
 #battery {
 margin-right: 0px;
 border-bottom: 1px solid #000000;
+color: #74c7ec;
 }
 
 #window {
 margin-left: 0px;
 border-right: 1px solid #2A2B3C;
 border-bottom: 1px solid #000000;
+color: #f9e2af;
 }
 
 #clock {
 border-left: 1px solid #2A2B3C;
 border-right: 1px solid #2A2B3C;
 border-bottom: 1px solid #000000;
+color: #f9e2af;
 }
 
 #custom-vpn_ip {
-color: #FAB387;
+color: #f38ba8;
 padding-left: 20px;
 border-radius: 0px 0px 0px 50px;
 border-left: 1px solid #000000;
