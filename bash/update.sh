@@ -10,6 +10,6 @@ nix flake update
 sudo systemd-tmpfiles --remove --clean >/dev/null
 security
 clear
-echo -e "\e[0;37m╭────────────────────╮\n\e[0;37m│   \e[0;32m󱇥 \e[0;36mUpdate Complete   \e[0;37m│\n╰────────────────────╯"
+echo -e "\e[0;37m╭───────────────────────╮\n\e[0;37m│   \e[0;32m󱇥 \e[0;36mUpdate Complete   \e[0;37m│\n╰───────────────────────╯"
 }
 
