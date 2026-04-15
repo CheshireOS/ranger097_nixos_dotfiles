@@ -1,6 +1,6 @@
 { config, lib, ... }: {
 
-  environment.persistence."/persistent" = {
+  environment.persistence."/persist" = {
     hideMounts = true;
     
     directories = [
@@ -34,15 +34,4 @@
   };
 
 
-boot.initrd.postDeviceCommands = lib.mkAfter ''
-  mkdir /mnt
-  mount -t btrfs /dev/mapper/crypt_root1 /mnt
-
-  if [ -e /mnt/root ]; then
-    btrfs subvolume delete /mnt/root
-  fi
-  btrfs subvolume snapshot /mnt/root-blank /mnt/root
-  
-  umount /mnt
-'';
 }

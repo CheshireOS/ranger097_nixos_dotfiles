@@ -21,27 +21,52 @@ services.logind.settings.Login = {
  };
 
 boot.initrd.luks.devices = {
-    "crypt_root1" = {
-      device = "/dev/disk/by-uuid/0af3cc19-dde0-453a-9760-2e1085729c1c";
+    "cryptroot1" = {
+      device = "/dev/disk/by-uuid/62092d03-7d6d-40c2-8313-5c059f2b6961";
       allowDiscards = true;
     };
-    "crypt_root2" = {
-      device = "/dev/disk/by-uuid/1266b762-0547-4dc6-901c-1967842e6872";
-      keyFile = "/etc/secrets/crypto_keyfile.bin";
+    "cryptroot2" = {
+      device = "/dev/disk/by-uuid/8fa6e4dc-af1e-429a-81cd-3797c9d7fabe";
       allowDiscards = true;
     };
-  };
-
-  boot.initrd.secrets = {
-    "/etc/secrets/crypto_keyfile.bin" = "/etc/secrets/crypto_keyfile.bin";
   };
 
   boot.initrd.supportedFilesystems = [ "btrfs" ];
 
-  fileSystems."/".options = [ "subvol=root" "compress=zstd" "noatime" ];
-  fileSystems."/home".options = [ "subvol=home" "compress=zstd" ];
-  fileSystems."/nix".options = [ "subvol=nix" "compress=zstd" "noatime" ];
-  fileSystems."/var/log".options = [ "subvol=log" "compress=zstd" ];
+  fileSystems."/" = {
+    device = "none";
+    fsType = "tmpfs";
+    options = [ "defaults" "size=4G" "mode=755" ];
+  };  
+
+
+fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/F9BE-2DF5";
+    fsType = "vfat";
+  };
+
+
+
+fileSystems."/nix" = {
+ options = [ "subvol=@nix" "compress=zstd" "noatime" ];
+ device = "/dev/mapper/cryptroot1";
+ fsType = "btrfs";
+};
+
+
+fileSystems."/persist" = {
+    device = "/dev/mapper/cryptroot1";
+    fsType = "btrfs";
+    options = [ "subvol=@persist" "compress=zstd" ];
+  };
+
+  fileSystems."/var/log" = {
+    device = "/dev/mapper/cryptroot1";
+    fsType = "btrfs";
+    options = [ "subvol=@log" "compress=zstd" ];
+  };
+
+
 
 boot.tmp.useTmpfs = true;
 boot.tmp.cleanOnBoot = true;
@@ -59,63 +84,6 @@ services.openssh = {
 };
 
 systemd.tmpfiles.rules = [
-"R /home/ranger/Downloads/ 0700 ranger users 0d -"
-"R /home/ranger/Documents/ 0700 ranger users 0d -"
-"R /home/ranger/Videos/ 0700 ranger users 0d -"
-"R /home/ranger/Picures/ 0700 ranger users 0d -"
-"R /home/ranger/Desktop/ 0700 ranger users 0d -"
-"R /home/ranger/.tor project/ 0700 ranger users 0d -"
-"R /home/ranger/.librewolf/ 0700 ranger users 0d -"
-"r /home/ranger/.node_repl_history 0600 ranger user 0d -"
-"r /home/ranger/.python_history 0600 ranger user 0d -"
-"R /home/ranger/.icons/ 0700 ranger user 0d -"
-
-  "R  /home/ranger/.cache/thumbnails/  0700  ranger users  0d  -"
-  "R /home/ranger/.cache/nvidia/ 0700 ranger users 0d -"
-  "R /home/ranger/.cache/nix/ 0700 ranger users 0d -"
-  "R /home/ranger/.cache/elephant/ 0700 ranger users 0d -"
-  "R /home/ranger/.cache/fontconfig/ 0700 ranger users 0d -"
-  "R /home/ranger/.cache/kwin/ 0700 ranger users 0d -"
-  "R /home/ranger/.cache/yt-dlp/ 0700 ranger users 0d -"
-  "R /home/ranger/.cache/nvim/ 0700 ranger users 0d -"
-  "R /home/ranger/.cache/mpv/ 0700 ranger users 0d -"
-  "R /home/ranger/.cache/gtk-4.0/ 0700 ranger users 0d -"
-  "R /home/ranger/.cache/mesa_shader_cache/ 0700 ranger users 0d -"
-  "R /home/ranger/.cache/qmmp/ 0700 ranger users 0d -"
-  "R /home/ranger/.cache/zig/ 0700 ranger users 0d -"
-
-  "R  /home/ranger/.local/share/Trash/      0700 ranger users 0d -"
-
-  "r  /home/ranger/.bash_history 0600 ranger users  -  -"
-  "r  /home/ranger/.zsh_history 0600 ranger users - -"
-  "r  /home/ranger/.viminfo 0600 ranger users  -  -"
-  "r  /home/ranger/.nano_history 0600 ranger users  -  -"
-  "r  /home/ranger/.lesshst  0600 ranger users  -  -"
-  "r  /home/ranger/.mysql_history  0600  ranger users  -  -"
-  "r  /home/ranger/.psql_history  0600  ranger users  -  -"
-  "r  /home/ranger/.local/share/RecentlyUsed.xbel  0600  ranger users  -  -"
-  "r  /home/ranger/.ssh/known_hosts  0644  ranger users  -  -"
-  "r  /home/ranger/.ssh/known_hosts.old  0644  ranger users  -  -"
-
-  "e  /var/log/journal/  0755  root root  0d -"
-  "e  /run/log/journal/  0755  root root  0d -"
-  "r  /var/log/auth.log  0600  root root  -  -"
-  "r  /var/log/secure  0600  root root  -  -"
-  "r  /var/log/syslog  0600  root root  -  -"
-  "r  /var/log/messages  0644  root root  -  -"
-  "r  /var/log/audit/audit.log  0600  root root  -  -"
-
-  "e  /var/log/samba/  0750  root root  0d  -"
-  "e  /var/log/apache2/  0750  root root  0d  -"
-  "e  /var/log/nginx/  0750  root root  0d  -"
-
-  "f+  /var/lib/NetworkManager/seen-bssids  0600  root root  -  -"
-
-  "f+  /var/lib/mlocate/mlocate.db  0644  root root  -  -"
-  "f+  /var/lib/plocate/plocate.db  0644  root root  -  -"
-  "f+  /var/log/lastlog  0664  root utmp  -  -"
-
-  "R  /home/ranger/.local/share/librewolf/  0700  ranger users  0d  -"
 ];
 
 services.fstrim.enable = true;

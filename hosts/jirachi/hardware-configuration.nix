@@ -14,33 +14,32 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/mapper/crypt_root1";
-      fsType = "btrfs";
-      options = [ "subvol=root" ];
-    };
-
-  boot.initrd.luks.devices."crypt_root1".device = "/dev/disk/by-uuid/0af3cc19-dde0-453a-9760-2e1085729c1c";
-
-  fileSystems."/home" =
-    { device = "/dev/mapper/crypt_root1";
-      fsType = "btrfs";
-      options = [ "subvol=home" ];
+    { device = "none";
+      fsType = "tmpfs";
     };
 
   fileSystems."/nix" =
-    { device = "/dev/mapper/crypt_root1";
+    { device = "/dev/mapper/cryptroot1";
       fsType = "btrfs";
-      options = [ "subvol=nix" ];
+      options = [ "subvol=@nix" ];
+    };
+
+  boot.initrd.luks.devices."cryptroot1".device = "/dev/disk/by-uuid/62092d03-7d6d-40c2-8313-5c059f2b6961";
+
+  fileSystems."/persist" =
+    { device = "/dev/mapper/cryptroot1";
+      fsType = "btrfs";
+      options = [ "subvol=@persist" ];
     };
 
   fileSystems."/var/log" =
-    { device = "/dev/mapper/crypt_root1";
+    { device = "/dev/mapper/cryptroot1";
       fsType = "btrfs";
-      options = [ "subvol=log" ];
+      options = [ "subvol=@log" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/3778-E288";
+    { device = "/dev/disk/by-uuid/F9BE-2DF5";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
