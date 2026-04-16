@@ -48,9 +48,9 @@
 
      ({ pkgs, lib, ... }: {
         networking.hostName = "deoxy";
-        boot.loader.systemd-boot.enable = lib.mkForce false;
+        boot.loader.systemd-boot.enable = lib.mkForce true;
         boot.lanzaboote = {
-        enable = true;
+        enable = false;
         pkiBundle = "/var/lib/sbctl";
       };
    })
@@ -82,9 +82,9 @@
 
    ({ pkgs, lib, ... }: {
       networking.hostName = "jirachi";
-      boot.loader.systemd-boot.enable = lib.mkForce false;
+      boot.loader.systemd-boot.enable = lib.mkForce true;
       boot.lanzaboote = {
-         enable = true;
+         enable = false;
          pkiBundle = "/var/lib/sbctl";
       };   
    })  

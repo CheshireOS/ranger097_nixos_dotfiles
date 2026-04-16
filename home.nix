@@ -5,7 +5,6 @@ let
  mkdir -p $out/share/icons/Pokemon
  cp -r ${./icons/Pokemon}/* $out/share/icons/Pokemon/ 
  '';
-
 in
 {
   home.username = "ranger";
@@ -33,10 +32,10 @@ programs.ghostty.enable = true;
 programs.ghostty.settings = {
 theme = "Catppuccin Mocha";
 custom-shader = [
-"${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/starfield.glsl"
-"${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/ripple_cursor.glsl"
-"${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/cursor_blaze.glsl"
-"${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/aurora.glsl"
+"/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/starfield.glsl"
+"/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/ripple_cursor.glsl"
+"/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/cursor_blaze.glsl"
+"/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/aurora.glsl"
 ];
 
 custom-shader-animation = "true";
@@ -72,8 +71,6 @@ enable = true;
 systemd.enable = false;
 extraConfig = ''
 #ranger097
-#source = ~/.cache/wal/colors-hyprland.conf
-#source = ~/.cache/wal/hyprland_custom.conf
 monitor = ${ if osConfig.networking.hostName == "jirachi"
 	     then "eDP-1, 3840x2400@59.99400, 0x0, 3"
              else "eDP-1, 1920x1080@60.054, 0x0, 1"}   
@@ -84,7 +81,7 @@ ecosystem:no_update_news = true
 #AUTOSTART
 #exec-once = hyprlock
 exec-once = awww-daemon
-exec-once = bash /home/ranger/ranger097_nixos_dotfiles/bash/waybar.sh
+exec-once = bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/waybar.sh
 #exec-once = LD_LIBRARY_PATH=/run/opengl-driver/lib mpvpaper -o "no-audio --loop-playlist --panscan=1.0 hwdec=auto" eDP-1 /home/ranger/Videos/wallpapers/guweiz.mp4
 exec-once = ghostty
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
@@ -92,7 +89,7 @@ exec-once = systemctl --user start hyprpolkitagent
 exec-once = hyprctl setcursor Pokemon 32
 exec-once = elephant
 exec-once = systemctl --user start hyprpolkitagent
-exec-once = direnv exec /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/ python3 /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/themes.py 
+exec-once = direnv exec /persist/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/ python3 /persist/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/themes.py 
 
 
 #ENVIRONMENT
@@ -262,8 +259,8 @@ bind = SUPER, B, exec, librewolf
 bind = SUPER, D, exec, dolphin
 bind = SUPER, C, exec, code
 bind = SUPER, F, fullscreenstate, 2
-bind = SUPER, X, exec, direnv exec /home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/ python3 /home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/waybar_switcher.py
-bind = SUPER, M, exec, direnv exec /home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/ python3 /home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/bluelight_toggle.py
+bind = SUPER, X, exec, direnv exec /persist/home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/ python3 /persist/home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/waybar_switcher.py
+bind = SUPER, M, exec, direnv exec /persist/home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/ python3 /persist/home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/bluelight_toggle.py
 bind = SUPER, H, exec, hyprshot -m output -m eDP-1
 bind = SUPER, P, exec, systemctl --user restart pipewire
 

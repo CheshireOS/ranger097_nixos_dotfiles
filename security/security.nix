@@ -13,6 +13,11 @@ boot.kernelParams = [
   "apparmor=1" 
   ];
 
+
+  boot.loader.grub.enable = false;
+  boot.loader.systemd-boot.enable = lib.mkForce true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
 services.logind.settings.Login = {
   HandleLidSwitch = "poweroff";
   HandleLidSwitchExternalPower = "poweroff";
@@ -22,11 +27,11 @@ services.logind.settings.Login = {
 
 boot.initrd.luks.devices = {
     "cryptroot1" = {
-      device = "/dev/disk/by-uuid/62092d03-7d6d-40c2-8313-5c059f2b6961";
+      device = "/dev/disk/by-uuid/e600efd4-8a5c-4afe-bf3b-f67e5efa1eaf";
       allowDiscards = true;
     };
     "cryptroot2" = {
-      device = "/dev/disk/by-uuid/8fa6e4dc-af1e-429a-81cd-3797c9d7fabe";
+      device = "/dev/disk/by-uuid/8f5e8d13-49fc-4885-94e4-9866ac549f88";
       allowDiscards = true;
     };
   };
@@ -41,7 +46,7 @@ boot.initrd.luks.devices = {
 
 
 fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/F9BE-2DF5";
+    device = "/dev/disk/by-uuid/4C79-9D1A";
     fsType = "vfat";
   };
 
@@ -95,7 +100,7 @@ services.fstrim.interval = "daily";
   options = "--delete-older-than 1d";
   };
 
-boot.tmp.tmpfsSize = "20G";
+boot.tmp.tmpfsSize = "32G";
 systemd.coredump.enable = true;
 systemd.timers."systemd-tmpfiles-clean".timerConfig = {
   OnUnitActiveSec = "1h";

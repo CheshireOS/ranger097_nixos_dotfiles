@@ -1,10 +1,9 @@
 import os
 import subprocess
-from pathlib import Path
 
-dotfiles_dir = Path.home() / "ranger097_nixos_dotfiles"
-toggle_file = dotfiles_dir / "python/theme_switcher/toggle.txt"
-wallpaper_directory = dotfiles_dir / "wallpapers/wallpapers"
+dotfiles_dir = "/persist/home/ranger/ranger097_nixos_dotfiles"
+toggle_file = "/persist/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/toggle.txt"
+wallpaper_directory = "/persist/home/ranger/ranger097_nixos_dotfiles/wallpapers/wallpapers"
 wallpaper_list = os.listdir(wallpaper_directory)
 num_of_wallpapers = len(wallpaper_list)
 
@@ -25,6 +24,6 @@ subprocess.run([
 ])
 subprocess.run(["hyprctl","reload"])
 subprocess.run(["pkill", "waybar"])
-subprocess.Popen(["waybar", "-c", os.path.expanduser("~/.config/waybar/top.jsonc"), "-s", os.path.expanduser("~/.config/waybar/top.css")], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-subprocess.Popen(["waybar", "-c", os.path.expanduser("~/.config/waybar/bottom.jsonc"), "-s", os.path.expanduser("~/.config/waybar/bottom.css")], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+subprocess.Popen(["waybar", "-c", "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/top.jsonc", "-s", "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/top.css"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+subprocess.Popen(["waybar", "-c", "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.jsonc", "-s", "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.css"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 

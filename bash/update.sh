@@ -1,5 +1,5 @@
 #!/bin/bash
-source /home/ranger/ranger097_nixos_dotfiles/bash/security.sh
+source /persist/home/ranger/ranger097_nixos_dotfiles/bash/security.sh
 
 update() {
 sudo nix-store --gc

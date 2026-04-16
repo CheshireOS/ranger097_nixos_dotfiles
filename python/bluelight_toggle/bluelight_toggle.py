@@ -1,6 +1,6 @@
 import subprocess
 
-toggle_file = "/home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/bluelight_toggle.txt"
+toggle_file = "/persist/home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/bluelight_toggle.txt"
 
 try:
     with open(toggle_file, 'r') as f:

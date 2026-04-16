@@ -124,7 +124,7 @@ pokemon
 bii() {
 clear
 ranger_page
-nvim ~/ranger097_nixos_dotfiles/bash
+nvim /persist/home/ranger/ranger097_nixos_dotfiles/bash
 }
 
 

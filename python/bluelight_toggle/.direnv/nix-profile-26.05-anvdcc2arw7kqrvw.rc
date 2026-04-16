@@ -43,7 +43,7 @@ NIX_ENFORCE_NO_NATIVE='1'
 export NIX_ENFORCE_NO_NATIVE
 NIX_HARDENING_ENABLE='bindnow format fortify fortify3 libcxxhardeningfast pic relro stackclashprotection stackprotector strictflexarrays1 strictoverflow zerocallusedregs'
 export NIX_HARDENING_ENABLE
-NIX_LDFLAGS='-rpath /home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/outputs/out/lib  -L/nix/store/inrp21vw9dx175j5apwbqs7fyyb2avnc-python3-3.13.12-env/lib -L/nix/store/pzdalg368npikvpq4ncz2saxnz19v53k-python3-3.13.12/lib -L/nix/store/inrp21vw9dx175j5apwbqs7fyyb2avnc-python3-3.13.12-env/lib -L/nix/store/pzdalg368npikvpq4ncz2saxnz19v53k-python3-3.13.12/lib'
+NIX_LDFLAGS='-rpath /persist/home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/outputs/out/lib  -L/nix/store/inrp21vw9dx175j5apwbqs7fyyb2avnc-python3-3.13.12-env/lib -L/nix/store/pzdalg368npikvpq4ncz2saxnz19v53k-python3-3.13.12/lib -L/nix/store/inrp21vw9dx175j5apwbqs7fyyb2avnc-python3-3.13.12-env/lib -L/nix/store/pzdalg368npikvpq4ncz2saxnz19v53k-python3-3.13.12/lib'
 export NIX_LDFLAGS
 NIX_NO_SELF_RPATH='1'
 NIX_STORE='/nix/store'
@@ -149,7 +149,7 @@ name='nix-shell-env'
 export name
 nativeBuildInputs='/nix/store/ckcq2mj8zk0drhaaacy6mp9d924hnr4m-go-1.26.1 /nix/store/27gfim2iij5ydh7r750q2ja5ljpv5ihl-gopls-0.21.1 /nix/store/ks4xiahi7m0fm839xkln4lxdk1jpf8w4-delve-1.26.1 /nix/store/inrp21vw9dx175j5apwbqs7fyyb2avnc-python3-3.13.12-env /nix/store/pzdalg368npikvpq4ncz2saxnz19v53k-python3-3.13.12 /nix/store/9ljn49hx3a2lhha1anl3agivwb3z0ga1-zig-0.15.2'
 export nativeBuildInputs
-out='/home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/outputs/out'
+out='/persist/home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/outputs/out'
 export out
 outputBin='out'
 outputDev='out'
@@ -180,7 +180,7 @@ preConfigurePhases=' updateAutotoolsGnuConfigScriptsPhase'
 declare -a preFixupHooks=('_moveToShare' '_multioutDocs' '_multioutDevs' )
 preferLocalBuild='1'
 export preferLocalBuild
-prefix='/home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/outputs/out'
+prefix='/persist/home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/outputs/out'
 declare -a propagatedBuildDepFiles=('propagated-build-build-deps' 'propagated-native-build-inputs' 'propagated-build-target-deps' )
 propagatedBuildInputs=''
 export propagatedBuildInputs
