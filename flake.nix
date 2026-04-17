@@ -29,6 +29,12 @@
        inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nur = {
+       url = "github:nix-community/NUR";
+       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+
   };
  
   outputs = { self, nixpkgs, nixvim, home-manager, lanzaboote, awww, impermanence, ... }@inputs: {
@@ -45,6 +51,7 @@
         lanzaboote.nixosModules.lanzaboote
 	nixvim.nixosModules.nixvim
         impermanence.nixosModules.impermanence
+	inputs.nur.modules.nixos.default
 
      ({ pkgs, lib, ... }: {
         networking.hostName = "deoxy";
@@ -78,7 +85,8 @@
          home-manager.nixosModules.home-manager
          lanzaboote.nixosModules.lanzaboote
 	 nixvim.nixosModules.nixvim
-         impermanence.nixosModules.impermanence   
+         impermanence.nixosModules.impermanence  
+	 inputs.nur.modules.nixos.default
 
    ({ pkgs, lib, ... }: {
       networking.hostName = "jirachi";

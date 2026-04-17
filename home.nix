@@ -28,6 +28,327 @@ in
     ".config/wlogout".source = ./wlogout;
  };
 
+programs.librewolf = {
+enable = true;
+  
+    policies = {
+        ExtensionSettings = { 
+	   "solid-black@paiton.it" = {
+              installation_mode = "force_installed";
+              install_url = "https://addons.mozilla.org/firefox/downloads/latest/solid-black-theme/latest.xpi";
+           };
+        };
+     };
+
+    profiles.ranger = {
+       isDefault = true;
+       extensions.packages = with inputs.nur.legacyPackages.${pkgs.system}.repos.rycee.firefox-addons; [
+             ublock-origin
+          ];
+        
+          userContent = ''
+	@-moz-document domain("duckduckgo.com") {
+        * {
+    color: grey !important;
+    border: 0px solid black !important;
+}
+
+
+body {
+    background: linear-gradient(rgba(0,0,0,1));
+}
+
+.is-mobile .yQDlj3B5DI5YO8c8Ulio, .yQDlj3B5DI5YO8c8Ulio.jHKRD_8UMD51jfnKQ1LL {
+  background-color: #000;
+}
+
+.is-mobile .At_VJ9MlrHsSjbfCtz2_ .EcE0RD8NCNGe61Kp815G:not(.zqdPZIKd0gTxkTPnBBos), .is-mobile .At_VJ9MlrHsSjbfCtz2_ .wLL07_0Xnd1QZpzpfR4W:not(.zqdPZIKd0gTxkTPnBBos), .is-mobile .gdzyb9PgLazLyi4DKK0O .EcE0RD8NCNGe61Kp815G:not(.zqdPZIKd0gTxkTPnBBos), .is-mobile .gdzyb9PgLazLyi4DKK0O .wLL07_0Xnd1QZpzpfR4W:not(.zqdPZIKd0gTxkTPnBBos) {
+  background-color: #000;
+  margin: 0 -7px;
+}
+
+
+:root {
+  --ducksans-product-letter-spacing: 0.005em;
+  --col-white: #000;
+  --col-gray-90: #222;
+  --col-gray-25: #000;
+  --col-gray-10: #000;
+  --col-gray-0: #000;
+  --theme-col-bg-page: var(--col-white);
+  --theme-col-bg-expandcollapse: var(--col-gray-0);
+  --theme-col-bg-expandcollapse-hover: var(--col-gray-10);
+  --theme-col-txt-expandcollapse: var(--col-gray-90);
+  --theme-col-border-expandcollapse: var(--col-gray-25);
+  --rounded-md: 8px;
+  --font-size-unit: (0.9 * 16);
+  --px-in-rem: (1rem/var(--font-size-unit));
+}
+
+
+.footer {
+  background-color: #000;
+  border-top: 1px solid #d9d9d9;
+  display: none;
+}
+
+.is-vertical-tabs-exp .header-wrap {
+  background-color: #000;
+}
+
+.T265XEcezvjUhK71U8pN {
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  align-items: center;
+  gap: var(--sds-space-x02);
+  overflow: hidden;
+  background-color: var(--theme-col-bg-search,#202020);
+  border-radius: 13px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.08),0 2px 3px 0 rgba(0,0,0,.06);
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0 8px 0 0;
+  position: relative;
+  color: var(--sds-color-text-01);
+}
+      }
+
+	@-moz-document domain("youtube.com") {
+         .ytSearchboxComponentSearchButton {
+border: 0px solid transparent;
+background-color: #f8f8f8;
+width: 64px;
+border-radius: 0 40px 40px 0;
+-moz-box-pack: center;
+justify-content: center;
+cursor: pointer;
+padding: 0;
+margin: 0;
+color: inherit;
+box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0) !important;
+}
+    
+#container {
+backdrop-filter: blur(10px);
+background: linear-gradient(rgba(0, 0, 0, .5)) !important; 
+border-bottom: 2px solid #000000 !important; 
+}
+    
+html:not(#⁠), body>div,body>table,
+[role="navigation"], [role="dialog"],
+#body-container>div, [aria-expanded="true"]:not(.ytp-button),
+[class*="tooltip"]:not(.ytp-tooltip-duration):not(.ytp-tooltip-bg):not(.ytp-tooltip-text-wrapper):not([class*="arrow"]):not(button),             [role="menu"], .ytp-popup, .videoAdUiPreSkipButton,
+.videoAdUiAdInfoPopup {
+background:url(/*[[_]]*/)fixed #000!important;
+background-size:cover!important
+}
+    
+/*search bar*/#masthead-search-terms,
+form.channels-search:not(#​) {
+border:1px solid #FFF!important
+} 
+    
+#masthead-search-terms.gsfe_a {
+border:1px solid #A0A0A0!important
+} 
+
+#masthead-search-terms.gsfe_b {
+border:1px solid #4D90FE!important
+}
+
+:not(textarea):not(input):not([contenteditable]) {
+text-shadow:0 0.05em rgba(0,0,0,.5),0 -0.05em rgba(0,0,0,.5),0.05em 0 rgba(0,0,0,.5),-0.05em 0 rgba(0,0,0,.5)!important
+}
+
+:not([class*="video-extras-sparkbar"]):not([class^="ytp-"]):not(.sidebar):not(.video-time):not([class^="html5-"]):not(.yt-uix-button-primary):not(label):not(.toggle):not(.branding-context-container-inner):not(.iv-drawer) {
+background-color:transparent!important;
+color:/*[[Font]]*/!important
+}
+    
+.load-more-button {
+background:transparent!important
+}
+    
+[role="alert"],.content-region,
+.yt-uix-checkbox-on-off .checked:before{
+display:none!important
+}
+    
+:not(#​) :link{
+color:/*[[Link]]*/!important
+}
+    
+:not(#​) :visited{
+color:/*[[Visited]]*/!important
+}
+    
+:not(#​) select{
+background:black!important
+}
+    
+[href="/"][id*="logo"],
+:not(.ytp-volume-slider-handle):not(.yt-uix-playlistlike):before,
+.yt-uix-button-icon-material-upload,
+.yt-uix-button-icon-bell,
+.yt-uix-button-icon-wrapper>.yt-sprite,
+.autoplay-info-icon,
+.search-button>.yt-uix-button-content,
+#appbar-guide-button .yt-uix-button-icon-wrapper,
+.yt-uix-button-shelf-slider-pager {
+-webkit-filter:invert(1)hue-rotate(180deg);
+filter:invert(1)hue-rotate(180deg)
+}
+
+.yt-uix-form-input-select,
+[class$="container"],
+#yt-comments-paginator {
+background-image:none!important
+}
+    
+:not(h2):not(button):not(.comment-simplebox-renderer-collapsed-content),
+#footer-container button,
+.yt-uix-button-shelf-slider-pager {
+border:none!important
+}
+    
+textarea,
+[contenteditable="true"],
+[type="text"]:not(#masthead-search-term),
+[role="menu"]:not(.guide-user-links):not(.ytp-panel-menu),
+#footer-container .yt-uix-button-default,
+.yt-uix-clickcard-card-visible,
+#watch-appbar-playlist,
+.comment-simplebox-frame,
+body>table {
+box-shadow:inset 0px 0px 0px 1px rgba(255,255,255,0)!important
+}
+    
+#masthead-search-terms {
+box-shadow:none!important
+}
+     
+* {
+color: #848484 !important;    
+box-shadow:inset 0px 0px 0px 1px rgba(255,255,255,0)!important;
+text-shadow: 0px 0px 1px rgba(255,255,255,0)!important;
+        
+}
+    
+*:hover {
+color: #bababa !important;
+}
+    
+a:hover {
+color: #bababa !important;      
+}
+    
+.ytSearchboxComponentSuggestionsContainer,
+.ytSearchboxComponentSuggestionsContainerDark, .ytSearchboxComponentSuggestionsContainerScrollable {
+backdrop-filter: blur(10px) !important;
+background: linear-gradient(rgba(0, 0, 0, 0.8)) !important; 
+border-bottom: 2px solid #000000 !important; 
+border-radius: 0px 0px 20px 20px;
+margin-top: 6px;
+}
+
+video {
+filter: saturate(100%) contrast(105%) !important;
+}
+    
+img {
+filter: saturate(0%) brightness(50%) contrast(115%) !important;
+}
+
+img:hover {
+filter: saturate(100%) brightness(100%) contrast(100%) !important;
+}
+    
+    
+:not(textarea):not(input):not([contenteditable]) {
+text-shadow: none !important;
+}
+
+
+	}
+      '';
+
+
+
+        settings = {
+	  "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+          "webgl.disabled" = false;
+          "privacy.resistFingerprinting" = true;
+          "privacy.clearOnShutdown.history" = true;
+          "privacy.clearOnShutdown.cookies" = true;
+          "network.cookie.lifetimePolicy" = 0;
+	  "extensions.enabledAddons" = "uBlock0@raymondhill.net:1.55.0"; 
+          "extensions.ublock0.allowInPrivateBrowsing" = true;
+	  "extensions.ublock0.adminSettings" = builtins.toJSON {
+	  userSettings = {
+          extensionDisabled = false;
+	  };
+          selectedFilterLists = [
+            "ublock-filters"
+            "ublock-badware"
+            "ublock-privacy"
+            "ublock-unbreak"
+            "ublock-quick-fixes"
+	    "easylist"
+            "easyprivacy"
+            ];
+          };
+        };
+      
+	 bookmarks = {
+         force = true;
+	 settings = [ 
+	    { name = "WGU";           url = "https://www.wgu.edu/"; }
+	    { name = "GITHUB";        url = "https://www.github.com/"; }
+	    { name = "NIX PKGS";      url = "https://search.nixos.org/packages"; }
+            { name = "HOME.NIX";      url = "https://mynixos.com/home-manager/options/programs"; }
+	    { name = "MDN DOCS";      url = "https://developer.mozilla.org/en-US/"; }
+	    { name = "ZIG GUIDE";     url = "https://zig.guide/"; }
+	    { name = "ZIG DOCS";      url = "https://ziggit.dev/t/zig-learning-resources/3160"; }
+	    { name = "EXERCISM";      url = "https://exercism.org/"; }
+	    { name = "PRO WITH ZIG";  url = "https://gencmurat.com/en/pages/programming-with-zig/"; }
+	    { name = "SVELTE DOCS";   url = "https://svelte.dev/docs/kit/introduction"; }
+	    { name = "JAVA DOCS";     url = "https://www.w3schools.com/java/java_exercises.asp"; }
+
+	   ];
+	};
+     };
+  };
+
+
+programs.freetube = {
+   enable = true;
+   settings = {
+   allowDashAv1Formats = true;
+   checkForUpdates     = false;
+   defaultQuality      = "2160";
+   baseTheme           = "black";
+   hideHeaderLogo = true;
+   hideLabelsSideBar = true;
+   mainColor = "CatppuccinFrappeFlamingo";
+    secColor = "CatppuccinFrappeBlue";
+   };
+};
+
+
+
+
 programs.ghostty.enable = true;
 programs.ghostty.settings = {
 theme = "Catppuccin Mocha";

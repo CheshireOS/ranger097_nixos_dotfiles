@@ -47,7 +47,6 @@ qt5.qtwayland
 pokeget-rs
 nmap
 pywal16
-librewolf
 android-studio-tools
 android-studio-full
 elephant
@@ -83,8 +82,7 @@ bettercap
 zig
 exercism
 inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
-freetube
-firefox
+ventoy-full-qt
 ];
 
 fonts.packages = with pkgs;[

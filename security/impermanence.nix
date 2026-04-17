@@ -9,12 +9,11 @@
       "/var/lib/nixos"
       "/etc/NetworkManager/system-connections"
       "/etc/secureboot"
+      "/etc/ssh"
     ];
     
     files = [
       "/etc/machine-id"
-      "/etc/ssh/ssh_host_ed25519_key"
-      "/etc/ssh/ssh_host_rsa_key"
       "/etc/shadow"
     ];
 
