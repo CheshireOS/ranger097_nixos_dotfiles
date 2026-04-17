@@ -23,6 +23,7 @@
         "Music" 
         "ranger097_nixos_dotfiles"
         ".local/share/direnv"
+	".config/direnv"
         ".ssh"      
 	".cache/wal"
 	".cache/awww"

@@ -33,12 +33,12 @@ programs.ghostty.settings = {
 theme = "Catppuccin Mocha";
 custom-shader = [
 "/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/starfield.glsl"
-"/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/ripple_cursor.glsl"
+#"/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/ripple_cursor.glsl"
 "/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/cursor_blaze.glsl"
-"/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/aurora.glsl"
+#"/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/aurora.glsl"
 ];
 
-custom-shader-animation = "true";
+custom-shader-animation = "always";
 background-opacity = 1.0;
 adjust-cell-height = 10;
 background = "#000000";
@@ -79,18 +79,16 @@ monitor = ${ if osConfig.networking.hostName == "jirachi"
 ecosystem:no_update_news = true
 
 #AUTOSTART
-#exec-once = hyprlock
-exec-once = awww-daemon
-exec-once = bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/waybar.sh
-#exec-once = LD_LIBRARY_PATH=/run/opengl-driver/lib mpvpaper -o "no-audio --loop-playlist --panscan=1.0 hwdec=auto" eDP-1 /home/ranger/Videos/wallpapers/guweiz.mp4
 exec-once = ghostty
+exec-once = bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/wifi.sh
+exec-once = bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/waybar.sh
+exec-once = bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/startup.sh
+#exec-once = LD_LIBRARY_PATH=/run/opengl-driver/lib mpvpaper -o "no-audio --loop-playlist --panscan=1.0 hwdec=auto" eDP-1 /home/ranger/Videos/wallpapers/guweiz.mp4
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec-once = systemctl --user start hyprpolkitagent
 exec-once = hyprctl setcursor Pokemon 32
 exec-once = elephant
-exec-once = systemctl --user start hyprpolkitagent
-exec-once = direnv exec /persist/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/ python3 /persist/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/themes.py 
-
+exec-once = systemctl --user start hyprpolkitagent 
 
 #ENVIRONMENT
 #env = HYPRCURSOR_THEME,Pokemon
@@ -324,12 +322,12 @@ bindl = , XF86AudioPrev, exec, playerctl previous
 
 #WINDOW_RULE_SETTINGS_START
 windowrule = match:class com.mitchellh.ghostty, opacity 1.0
-windowrule = match:class librewolf, opacity 0.7
+windowrule = match:class librewolf, opacity 1.0
 windowrule = match:class discord, opacity 1.0
 windowrule = match:fullscreen opacity 1.0 override
-windowrule = match:class libreoffice-writer, opacity 0.7
-windowrule = match:class org.pulseaudio.pavucontrol, opacity 0.7
-windowrule = match:class .blueman-manager-wrapped, opacity 0.7
+windowrule = match:class libreoffice-writer, opacity 1.0
+windowrule = match:class org.pulseaudio.pavucontrol, opacity 1.0
+windowrule = match:class .blueman-manager-wrapped, opacity 1.0
 #WINDOW_RULE_SETTINGS_END
 
 #LAYER_RULE_SETTINGS_START

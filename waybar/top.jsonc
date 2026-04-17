@@ -144,7 +144,7 @@
     "custom/vpn_ip": {
        "tooltip": false,
        "format":"{}",
-       "exec": "bash /home/ranger/ranger097_nixos_dotfiles/bash/waybar_network_script.sh",
+       "exec": "bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/waybar_network_script.sh",
        "interval": 10
     },
 
