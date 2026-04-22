@@ -82,7 +82,8 @@ bettercap
 zig
 exercism
 inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
-ventoy-full-qt
+kitty
+firefox
 ];
 
 fonts.packages = with pkgs;[

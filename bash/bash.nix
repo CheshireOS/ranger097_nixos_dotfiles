@@ -10,7 +10,7 @@ wii = "nvim /persist/home/ranger/ranger097_nixos_dotfiles/waybar";
 cii = "nvim /persist/home/.config";
 pii = "nvim /persist/home/ranger/ranger097_nixos_dotfiles/python";
 clear = "clear && ranger_fetch";
-ytd = "yt-dlp -x --audio-format mp3 --audio-quality 0 --cookies-from-browser firefox --embed-metadata --embed-thumbnail --add-metadata";
+mii = "cd /persist/home/ranger/Music/";
 nvii = "nvim ~/ranger097_nixos_dotfiles/development/nixvim.nix";
 	    
 };

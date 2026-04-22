@@ -27,6 +27,7 @@
 	".cache/wal"
 	".cache/awww"
 	".config/wal"
+	".config/gh"
       ];
       files = [
       ];

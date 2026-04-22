@@ -325,6 +325,9 @@ text-shadow: none !important;
 	    { name = "PRO WITH ZIG";  url = "https://gencmurat.com/en/pages/programming-with-zig/"; }
 	    { name = "SVELTE DOCS";   url = "https://svelte.dev/docs/kit/introduction"; }
 	    { name = "JAVA DOCS";     url = "https://www.w3schools.com/java/java_exercises.asp"; }
+	    { name = "CODE WARS";     url = "https://www.codewars.com/";}
+	    { name = "TUF";           url = "https://takeuforward.org/home";}
+	    { name = "UIVERSE";       url = "https://uiverse.io/";}
 
 	   ];
 	};
@@ -345,9 +348,6 @@ programs.freetube = {
     secColor = "CatppuccinFrappeBlue";
    };
 };
-
-
-
 
 programs.ghostty.enable = true;
 programs.ghostty.settings = {
@@ -439,16 +439,16 @@ permission = /usr/(bin|local/bin)/hyprpm, plugin, allow
 #SETTINGS_START
 general {
 #GAPS
-gaps_in = 2
-gaps_out = 10, 10, 10, 10
+gaps_in = 3
+gaps_out = 6
 border_size = 1
 
 #BORDER
-#col.active_border = $right_border rgba(0,0,0,1) rgba(0,0,0,1) rgba(0,0,0,1) rgba(0,0,0,1) $left_border
-#col.inactive_border = $right_border rgba(0,0,0,1) rgba(0,0,0,1) rgba(0,0,0,1) rgba(0,0,0,1) $left_border
+col.active_border = rgba(0,0,0,1)
+col.inactive_border = rgba(0,0,0,1)
 
-col.active_border = rgba(166,227,161,1) rgba(202,211,240,1)
-col.inactive_border = rgba(180,190,254,1) rgba(202,211,240,1)
+#col.active_border = rgba(166,227,161,1) rgba(202,211,240,1)
+#col.inactive_border = rgba(180,190,254,1) rgba(202,211,240,1)
 
 #BORDER_ANIMATION
 animations {
@@ -465,18 +465,18 @@ layout = dwindle
 
 #WINDOW_SETTINGS_START
 decoration { 
-rounding = 0
+rounding = 3
 rounding_power = 2
 active_opacity = 1.0
 inactive_opacity = 1.0
 
 #SHADOW
 shadow {
-enabled = true
-range = 5
+enabled = false
+range = 6
 render_power = 2
 color = rgba(0,0,0,0.5)
-offset = 0 0
+offset = -1 1
 sharp = false
 scale = 1.0
 }
@@ -654,7 +654,7 @@ windowrule = match:class .blueman-manager-wrapped, opacity 1.0
 #LAYER_RULE_SETTINGS_START
 layerrule = blur on, match:namespace walker
 layerrule = match:namespace walker, ignore_alpha 0.7
-layerrule = match:namespace waybar, ignore_alpha 0.001
+#layerrule = match:namespace waybar, ignore_alpha 0.001
 layerrule = blur off, match:namespace waybar
 layerrule = blur on, match:namespace wlogout
 #LAYER_RULE_SETTINGS_END

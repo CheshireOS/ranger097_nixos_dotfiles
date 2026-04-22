@@ -12,30 +12,27 @@ min-height: 0;
 }
 
 window#waybar {
-background-color: rgba(0,0,0,0);
+background-color: rgba(0,0,0,1);
 border-bottom: 0px solid #000000;
+border-radius: 5px;
 }
 
 #window, #workspaces,
 #clock, #custom-vpn_ip,
 #battery, #mpris {
-padding-left: 15px;
-padding-right: 15px;
-padding-top: 3px;
-padding-bottom: 4px;
-margin-top: 0px;
-margin-bottom: 10px;
+padding-left: 6px;
+padding-right: 6px;
+padding-top: 0px; 
+padding-bottom: 0px;
+margin-top: 6px;
+margin-bottom: 6px;
 font-family: Maple Mono NF CN;
 font-size: 11px;
 font-weight: 300;
 background-color: rgba(0,0,0,1);
 color: #CDD6F4;
-margin-right: 0px;
+margin-right: 4px;
 margin-left: 0px;
-border-radius: 0px;
-border-bottom: 2px solid #000000;
-box-shadow: -1px 2px 3px rgba(0,0,0,0.7);
-text-shadow: none;
 }
 
 #mpris {
@@ -43,12 +40,7 @@ margin-left: 0px;
 margin-right: 0px;
 color: #cdd6f4;
 background-color: rgba(0,0,0,1);
-padding-left: 30px;
-padding-right: 30px;
-border-radius: 0px 0px 50px 50px;
-border-left: 2px solid #000000;
-border-right: 2px solid #000000;
-border-bottom: 2px solid #000000;
+color: #89B4F4;
 font-style: italic;
 }
 
@@ -117,8 +109,8 @@ text-shadow: none;
 }
 
 #battery {
-margin-right: 0px;
-border-bottom: 2px solid #000000;
+margin-right: 3px;
+border-radius: 10px 5px 5px 10px;
 color: #fdccc9;
 }
 
@@ -128,10 +120,11 @@ color: #000000;
 }
 
 #window {
-margin-left: 0px;
-border-right: 1px solid #2A2B3C;
-border-bottom: 2px solid #000000;
+margin-left: 3px;
 color: #f9e2af;
+border-radius: 5px 0px 0px 5px;
+margin-right: 0px;
+border-right: 0px solid #000000;
 }
 
 #window:hover {
@@ -140,9 +133,6 @@ color: #000000;
 }
 
 #clock {
-border-left: 1px solid #2A2B3C;
-border-right: 1px solid #2A2B3C;
-border-bottom: 2px solid #000000;
 color: #f9e2af;
 }
 
@@ -153,10 +143,7 @@ color: #000000;
 
 #custom-vpn_ip {
 color: #f38ba8;
-padding-left: 20px;
-border-radius: 0px 0px 0px 50px;
-border-left: 2px solid #000000;
-border-bottom: 2px solid #000000;
+border-radius: 5px 10px 10px 5px;
 }
 
 #custom-vpn_ip:hover {
@@ -166,13 +153,9 @@ color: #000000;
 
 #workspaces {
 box-shadow: none;
-background-color: rgba(0,0,0,1);
-border-bottom: 2px solid #000000;
-border-right: 2px solid #000000;
 margin-left: 0px;
-padding-right: 17px;
-border-radius: 0px 0px 50px 0px;
-box-shadow: -1px 2px 3px rgba(0,0,0,0.7);
+border-radius: 0px 5px 5px 0px;
+border-left: 0px solid #000000;
 }
 
 /* If workspaces is the leftmost module, omit left margin */

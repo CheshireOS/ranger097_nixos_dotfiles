@@ -121,7 +121,7 @@ services.usbguard = {
 };
 
 security.apparmor = {
-enable = true;
+enable = false;
 packages = with pkgs; [ 
    apparmor-profiles 
  ];
