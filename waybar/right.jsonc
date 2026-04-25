@@ -4,37 +4,31 @@
 {
 "layer": "top",
 "position": "right", // (top|bottom|left|right)
-//"height": 940,  
-"width": 10, 
+"height": 296,  
+"width": 4, 
 "spacing": 0,
-"margin-top" : 20,
-"margin-bottom": 20,
-"margin-left" : -14,
-"margin-right" : 20,
+"margin-top" : 0,
+"margin-bottom": 0,
+"margin-left" : 0,
+"margin-right" : 6,
 
 "modules-left": [
-"hyprland/workspaces"
 ],
 
 "modules-center": [
-//"custom/dna",
-//"custom/dna",
-"custom/code",
-"custom/ghostty",
-"custom/firefox",
-"custom/nix",
-"custom/steam",
-"custom/discord",
-"custom/hyprlock"
-//"custom/dna",
-//"custom/dna"
+"custom/button1",
+"custom/button2",
+"custom/button3",
+"custom/button4",
+"custom/button5",
+"custom/button6",
+"custom/button7",
+"custom/button8",
+"custom/button9",
+"custom/button10"
 ],
 
 "modules-right": [ 
-"custom/music",      
-"battery",
-"clock",
-"custom/power"
 ],
 
 "hyprland/workspaces": {
@@ -59,70 +53,63 @@
 
  },
 
-"clock": {
-"format": "{:%I\n%M\n%p}",
-"rotate":0,
-},
-"battery": {
-"states": {
-"warning": 30,
-"critical": 15
-},
-"format": "{icon}",
-"format-full": "{icon}",
-"format-charging": "{icon}",
-"format-plugged": "{icon}",
-"format-alt": "{icon}",
-"format-icons": ["󰁺", "󰁼", "󰁾", "󰂂", ""],
-"rotate":0,
+"custom/button1": {
+"format":"一",
+"tooltip": false,
+"on-click":  "hyprctl dispatch workspace 1"
 },
 
-"custom/power": {
-"format":"󰤆",
-"on-click": "wlogout"
+"custom/button2": {
+"format":"二",
+"tooltip": false,
+"on-click": "hyprctl dispatch workspace 2"
 },
 
-"custom/code": {
-"format":"",
-"on-click": "code",
-
+"custom/button3": {
+"format":"三",
+"tooltip": false,
+"on-click": "hyprctl dispatch workspace 3"
 },
 
-"custom/hyprlock": {
-"format":"",
-"on-click":"hyprlock"
+"custom/button4": {
+"format":"四",
+"tooltip": false,
+"on-click": "hyprctl dispatch workspace 4"
 },
 
-"custom/ghostty": {
-"format": "",
-"on-click": "ghostty"
+"custom/button5": {
+"format":"五",
+"tooltip": false,
+"on-click": "hyprctl dispatch workspace 5"
 },
 
-"custom/firefox": {
-"format": "",
-"on-click":"firefox"
+"custom/button6": {
+"format":"六",
+"tooltip": false,
+"on-click": "hyprctl dispatch workspace 6"
 },
 
-"custom/discord": {
-"format": " ",
-"on-click": "discord"
+"custom/button7": {
+"format":"七",
+"tooltip": false,
+"on-click": "hyprctl dispatch workspace 7"
 },
 
-"custom/steam": {
-"format": " ",
-"on-click": "steam"
+"custom/button8": {
+"format":"八",
+"tooltip": false,
+"on-click": "hyprctl dispatch workspace 8"
 },
 
-"custom/nix": {
-"format": "",
-
-},
-"custom/dna": {
-"format": "󰚄",
+"custom/button9": {
+"format":"九",
+"tooltip": false,
+"on-click": "hyprctl dispatch workspace 9"
 },
 
-"custom/music": {
-"format": "󱖏",
-"on-click": "VacuumTube",
+"custom/button10": {
+"format":"十",
+"tooltip": false,
+"on-click": "hyprctl dispatch workspace 10"
 }
 }

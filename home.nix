@@ -33,10 +33,18 @@ enable = true;
   
     policies = {
         ExtensionSettings = { 
-	   "solid-black@paiton.it" = {
-              installation_mode = "force_installed";
-              install_url = "https://addons.mozilla.org/firefox/downloads/latest/solid-black-theme/latest.xpi";
-           };
+
+	   "ranger097_nixos_dotfiles" = {
+               installation_mode = "force_installed";
+	       install_url = "https://addons.mozilla.org/firefox/downloads/file/4769506/ranger097_nixos_dotfiles-1.0.xpi";
+	    };
+
+            "User-Agent_Switcher_and_Manager" = {
+               installation_mode = "force_installed";
+	       install_url = "https://addons.mozilla.org/firefox/downloads/file/4773733/user_agent_string_switcher-0.6.7.xpi";
+	    };
+
+
         };
      };
 
@@ -284,8 +292,6 @@ text-shadow: none !important;
 	}
       '';
 
-
-
         settings = {
 	  "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "webgl.disabled" = false;
@@ -314,20 +320,32 @@ text-shadow: none !important;
 	 bookmarks = {
          force = true;
 	 settings = [ 
-	    { name = "WGU";           url = "https://www.wgu.edu/"; }
-	    { name = "GITHUB";        url = "https://www.github.com/"; }
-	    { name = "NIX PKGS";      url = "https://search.nixos.org/packages"; }
-            { name = "HOME.NIX";      url = "https://mynixos.com/home-manager/options/programs"; }
-	    { name = "MDN DOCS";      url = "https://developer.mozilla.org/en-US/"; }
-	    { name = "ZIG GUIDE";     url = "https://zig.guide/"; }
-	    { name = "ZIG DOCS";      url = "https://ziggit.dev/t/zig-learning-resources/3160"; }
-	    { name = "EXERCISM";      url = "https://exercism.org/"; }
-	    { name = "PRO WITH ZIG";  url = "https://gencmurat.com/en/pages/programming-with-zig/"; }
-	    { name = "SVELTE DOCS";   url = "https://svelte.dev/docs/kit/introduction"; }
-	    { name = "JAVA DOCS";     url = "https://www.w3schools.com/java/java_exercises.asp"; }
-	    { name = "CODE WARS";     url = "https://www.codewars.com/";}
-	    { name = "TUF";           url = "https://takeuforward.org/home";}
-	    { name = "UIVERSE";       url = "https://uiverse.io/";}
+	    { name = "WGU";                     url = "https://www.wgu.edu/"; }
+	    { name = "GITHUB";                  url = "https://www.github.com/"; }
+	    { name = "NIX PKGS";                url = "https://search.nixos.org/packages"; }
+            { name = "HOME.NIX";                url = "https://mynixos.com/home-manager/options/programs"; }
+	    { name = "MDN DOCS";                url = "https://developer.mozilla.org/en-US/"; }
+	    { name = "ZIG GUIDE";               url = "https://zig.guide/"; }
+	    { name = "ZIG DOCS";                url = "https://ziggit.dev/t/zig-learning-resources/3160"; }
+	    { name = "EXERCISM";                url = "https://exercism.org/"; }
+	    { name = "PRO WITH ZIG";            url = "https://gencmurat.com/en/pages/programming-with-zig/"; }
+	    { name = "SVELTE DOCS";             url = "https://svelte.dev/docs/kit/introduction"; }
+	    { name = "JAVA DOCS";               url = "https://www.w3schools.com/java/java_exercises.asp"; }
+	    { name = "CODE WARS";               url = "https://www.codewars.com/";}
+	    { name = "TUF";                     url = "https://takeuforward.org/home";}
+	    { name = "UIVERSE";                 url = "https://uiverse.io/";}
+	    { name = "YOUTUBE";                 url = "https://www.youtube.com/";}
+	    { name = "NIX PILLS";               url = "https://nixos.org/guides/nix-pills/01-why-you-should-give-it-a-try.html";}
+	    { name = "ZERO TO NIX";             url = "https://zero-to-nix.com/start/";}
+	    { name = "LINUX JOURNEY";           url = "https://labex.io/linuxjourney";}
+	    { name = "BASH ACADEMY";            url = "https://guide.bash.academy/";}
+	    { name = "T.O.P.";                  url = "https://www.theodinproject.com/";}
+	    { name = "BOOT.DEV";                url = "https://www.boot.dev/";}
+	    { name = "CHATGPT";                 url = "https://chatgpt.com/";}
+	    { name = "COODEVERSE C";            url = "https://coodeverse.com/courses/c-course";}
+	    { name = "COODEVERSE C++";          url = "https://coodeverse.com/courses/c-plus-course";}
+	    { name = "COODEVERSE KOTLIN";       url = "https://coodeverse.com/courses/kotlin-course";}
+	    { name = "LEETCODE";                url = "https://leetcode.com/";}
 
 	   ];
 	};
@@ -444,10 +462,11 @@ gaps_out = 6
 border_size = 1
 
 #BORDER
-col.active_border = rgba(0,0,0,1)
+#col.active_border = rgba(0,0,0,1)
 col.inactive_border = rgba(0,0,0,1)
 
-#col.active_border = rgba(166,227,161,1) rgba(202,211,240,1)
+#col.active_border = rgba(180,190,254,1) rgba(245,194,231,1) rgba(242,205,205,1) rgba(250,179,135,1)
+col.active_border = rgba(243,139,168,1) rgba(148,226,213,1) rgba(203,166,247,1) rgba(137,220,235,1) rgba(249,226,175,1)
 #col.inactive_border = rgba(180,190,254,1) rgba(202,211,240,1)
 
 #BORDER_ANIMATION
@@ -465,7 +484,7 @@ layout = dwindle
 
 #WINDOW_SETTINGS_START
 decoration { 
-rounding = 3
+rounding = 5
 rounding_power = 2
 active_opacity = 1.0
 inactive_opacity = 1.0

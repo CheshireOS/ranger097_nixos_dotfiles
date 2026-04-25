@@ -1,3 +1,4 @@
+#!/bin/bash
 ytd() {
 
 if [ -z "$1" ]; then

@@ -23,6 +23,7 @@ source /persist/home/ranger/ranger097_nixos_dotfiles/bash/language_info.sh
 source /persist/home/ranger/ranger097_nixos_dotfiles/bash/update.sh
 source /persist/home/ranger/ranger097_nixos_dotfiles/bash/git.sh
 source /persist/home/ranger/ranger097_nixos_dotfiles/bash/wal.sh
+source /persist/home/ranger/ranger097_nixos_dotfiles/bash/music.sh
 export EDITOR=nvim
 export VISUAL=nvim
 '';

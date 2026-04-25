@@ -1,0 +1,32 @@
+// -*- mode: jsonc -*-
+{
+    "position": "top",
+    "layer": "top",
+    //"width": 384,
+    //"height": 5,
+    "spacing": 0,
+    "margin-top": 6,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 6,
+    "modules-left": [
+    ],
+    "modules-center": [
+      "mpris"
+    ],
+    "modules-right": [
+    ],
+
+"mpris": {
+"format": "{artist} - {title}",
+"tooltip": false,
+//"dynamic-order": ["artist","title"],
+//"dynamic-separator": "-",
+//"dynamic-len": 20,
+"max-length": 150,
+"player-icons": {
+"default": "",
+"firefox": ""
+}
+}
+}

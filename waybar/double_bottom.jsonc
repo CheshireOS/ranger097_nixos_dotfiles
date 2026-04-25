@@ -1,0 +1,215 @@
+/* ranger097 */
+
+// -*- mode: jsonc -*-
+{
+"layer": "top",
+"position": "bottom", // (top|bottom|left|right)
+//"height": 4,  
+"width": 620, 
+"spacing": 0,
+"margin-top" : 0,
+"margin-bottom": 6,
+"margin-left" : 0,
+"margin-right" : 0,
+
+"modules-left": [
+],
+
+"modules-center": [
+"custom/button1",
+"custom/button2",
+"custom/button3",
+"custom/button4",
+"custom/button5",
+"custom/button6",
+"custom/button7",
+"custom/button8",
+"custom/button9",
+"custom/button10",
+"custom/power",
+"custom/themes",
+"custom/qmmp",
+"custom/web",
+"custom/terminal",
+"custom/dolphin",
+"custom/steam",
+"custom/discord",
+"custom/blender",
+"wireplumber",
+"network", 
+"bluetooth"
+],
+
+"modules-right": [ 
+],
+
+"hyprland/workspaces": {
+"format": "{icon}",
+"format-icons": {
+"1": "一",
+"2": "二",
+"3": "三",
+"4": "四",
+"5": "五",
+"6": "六",
+"7": "七",
+"8": "八",
+"9": "九",
+"10": "十"
+},
+
+"persistent-workspaces": {
+"*": [ 1,2,3,4,5,6,7,8,9,10 ],
+"HDMI-A-1": [ 1,2,3,4,5,6,7,8,9 ]
+ }
+
+ },
+
+"custom/button1": {
+"format":"一",
+"tooltip": false,
+"on-click":  "hyprctl dispatch workspace 1"
+},
+
+"custom/button2": {
+"format":"二",
+"tooltip": false,
+"on-click": "hyprctl dispatch workspace 2"
+},
+
+"custom/button3": {
+"format":"三",
+"tooltip": false,
+"on-click": "hyprctl dispatch workspace 3"
+},
+
+"custom/button4": {
+"format":"四",
+"tooltip": false,
+"on-click": "hyprctl dispatch workspace 4"
+},
+
+"custom/button5": {
+"format":"五",
+"tooltip": false,
+"on-click": "hyprctl dispatch workspace 5"
+},
+
+"custom/button6": {
+"format":"六",
+"tooltip": false,
+"on-click": "hyprctl dispatch workspace 6"
+},
+
+"custom/button7": {
+"format":"七",
+"tooltip": false,
+"on-click": "hyprctl dispatch workspace 7"
+},
+
+"custom/button8": {
+"format":"八",
+"tooltip": false,
+"on-click": "hyprctl dispatch workspace 8"
+},
+
+"custom/button9": {
+"format":"九",
+"tooltip": false,
+"on-click": "hyprctl dispatch workspace 9"
+},
+
+"custom/button10": {
+"format":"十",
+"tooltip": false,
+"on-click": "hyprctl dispatch workspace 10"
+},
+
+"custom/terminal": {
+"tooltip": false,
+"format": "󰊠",
+"on-click": "ghostty"
+},
+
+"custom/web": {
+"tooltip": false,
+"format": " ",
+"on-click": "librewolf"
+},
+
+"custom/steam": {
+"tooltip": false,
+"format": " ",
+"on-click": "steam -newbigpicture"
+},
+
+"custom/discord": {
+"tooltip": false,
+"format": " ",
+"on-click": "vesktop"
+},
+
+"custom/qmmp": {
+"tooltip": false,
+"format": " ",
+"on-click":"qmmp"
+},
+
+"custom/blender": {
+"tooltip": false,
+"format": " ",
+"on-click":"blender"
+},
+
+"custom/dolphin": {
+"tooltip": false,
+"format": "󱢴 ",
+"on-click":"dolphin"
+},
+
+"custom/power": {
+"tooltip": false,
+"format": " ",
+"on-click":"wlogout"
+},
+
+"custom/themes": {
+"tooltip": false,
+"format": " ",
+"on-click":"direnv exec /persist/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher python3 /persist/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/themes.py"
+},
+
+"wireplumber": {
+"tooltip": false,
+"format": "{icon}",
+"format-icons": [ " ", " ", " " ],
+"tooltip-format": "volume: {volume}%",
+"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+"on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+},
+
+"custom/nixos": {
+"format": " ",
+"on-click": "rofi -show drun"
+},
+
+"network": {
+"tooltip": false,
+"format":"{icon}",
+"interface": "wlp0s20f3",
+"interval": 5,
+"format-wifi": "󰤨 ", 
+"format-ethernet": "󰤨 ",               
+"format-disconnected": "󰤯 ", 
+"on-click": "nm-connection-editor"    
+},
+
+"bluetooth": {
+"tooltip": false,
+"format": "{icon}",
+"format-icons": [ "󰂲", "󰂱"],
+"on-click": "blueman-manager"
+}
+
+}

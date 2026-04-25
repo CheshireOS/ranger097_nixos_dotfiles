@@ -1,12 +1,150 @@
 /* ranger097 */
-/*@import "/home/ranger/.cache/wal/colors-waybar.css";
-@import "/home/ranger/.cache/wal/colors-waybar-rgba.css";
-*/
 
 window#waybar {
-background: linear-gradient( 0deg, rgba(0,0,0,1), rgba(0,0,0,1) );
-border: 0px solid #000000;
+background-color: rgba(0,0,0,1);
+border: 1px solid #000000;
 border-radius: 7px;
+}
+
+#custom-button1,
+#custom-button2,
+#custom-button3,
+#custom-button4,
+#custom-button5,
+#custom-button6,
+#custom-button7,
+#custom-button8,
+#custom-button9,
+#custom-button10 {
+padding-top: 3px;
+padding-bottom: 3px;
+margin: 4px 2px 4px 2px;
+font-family: GeistMono NF;
+font-size: 11px;
+font-weight: 300;
+background-color: rgba(20,20,20,1);
+color: #89B4F4;
+text-shadow: 0px 0px 6px rgba(0,0,0,1);
+border-radius: 10px; 
+border: 1px solid rgba(40,40,40,1);
+transition: all 0.4s ease;
+padding-right: 6px;
+padding-left: 6px;
+color: rgba(116, 199, 236, 0.9);
+box-shadow: inset 0px 0px 3px rgba(116, 199, 236, 0.2);
+}
+
+#custom-button1 {
+color: rgba(180, 190, 254, 0.9);
+border-radius: 5px 10px 10px 5px;
+box-shadow: inset 0px 0px 3px rgba(180, 190, 254, 0.2);
+padding-left: 5px;
+margin-left: 4px;
+}
+
+#custom-button1:hover {
+background-color: #b4befe;
+color: #000000;
+border: 1px solid #000000;
+}
+
+#custom-button2 {
+color: rgba(245, 194, 231, 0.9);
+box-shadow: inset 0px 0px 3px rgba(245, 194, 231, 0.2);
+}
+
+#custom-button2:hover {
+background-color: #f5c2e7;
+color: #000000;
+border: 1px solid #000000;
+}
+
+#custom-button3 {
+color: rgba(242, 205, 205, 0.9);
+box-shadow: inset 0px 0px 3px rgba(242, 205, 205, 0.2);
+}
+
+#custom-button3:hover {
+background-color: #F2CDCD;
+color: #000000;
+border: 1px solid #000000;
+}
+
+#custom-button4 {
+color: rgba(250, 179, 135, 0.9);
+box-shadow: inset 0px 0px 3px rgba(250, 179, 135, 0.2);
+}
+
+#custom-button4:hover {
+background-color: #fab387;
+color: #000000;
+border: 1px solid #000000;
+}
+
+#custom-button5 {
+color: rgba(166, 227, 161, 0.9);
+box-shadow: inset 0px 0px 3px rgba(166, 227, 161, 0.2);
+}
+
+#custom-button5:hover {
+background-color: #a6e3a1;
+color: #000000;
+border: 1px solid #000000;
+}
+
+#custom-button6 {
+color: rgba(243, 139, 168, 0.9);
+box-shadow: inset 0px 0px 3px rgba(243, 139, 168, 0.2);
+}
+
+#custom-button6:hover {
+background-color: #f38ba8;
+color: #000000;
+border: 1px solid #000000;
+}
+
+#custom-button7 {
+color: rgba(148, 226, 213, 0.9);
+box-shadow: inset 0px 0px 3px rgba(148, 226, 213, 0.2);
+}
+
+#custom-button7:hover {
+background-color: #94e2d5;
+color: #000000;
+border: 1px solid #000000;
+}
+
+#custom-button8 {
+color: rgba(203, 166, 247, 0.9);
+box-shadow: inset 0px 0px 3px rgba(203, 166, 247, 0.2);
+}
+
+#custom-button8:hover {
+background-color: #cba6f7;
+color: #000000;
+border: 1px solid #000000;
+}
+
+#custom-button9 {
+color: rgba(137, 220, 235, 0.9);
+box-shadow: inset 0px 0px 3px rgba(137, 220, 235, 0.2);
+}
+
+#custom-button9:hover {
+background-color: #89dceb;
+color: #000000;
+border: 1px solid #000000;
+}
+
+#custom-button10 {
+color: rgba(249, 226, 175, 0.9);
+box-shadow: inset 0px 0px 3px rgba(249, 226, 175, 0.2);
+}
+
+#custom-button10:hover {
+background-color: #f9e2af;
+color: #000000;
+border: 1px solid #000000;
 }
  
 #tray,
@@ -31,7 +169,7 @@ padding-top: 3px;
 padding-bottom: 3px;
 margin: 4px 2px 4px 2px;
 font-family: GeistMono NF;
-font-size: 13px;
+font-size: 12px;
 font-weight: 300;
 background-color: rgba(20,20,20,1);
 color: #89B4F4;
@@ -75,8 +213,8 @@ background-color: #74c7ec;
 }
 
 #network {
-padding-right: 3px;
-padding-left: 7px;
+padding-right: 4px;
+padding-left: 6px;
 color: rgba(137, 180, 250, 0.9);
 box-shadow: inset 0px 0px 3px rgba(137, 180, 250, 0.2);
 }
@@ -86,9 +224,9 @@ background-color: #89b4fa;
 }
 
 #bluetooth {
-padding-right: 11px;
-padding-left: 9px;
-margin-right: 0px;
+padding-right: 10px;
+padding-left: 8px;
+margin-right: 4px;
 color: rgba(180, 190, 254, 0.9);
 border-radius: 10px 5px 5px 10px;
 box-shadow: inset 0px 0px 3px rgba(180, 190, 254, 0.2);
@@ -99,8 +237,8 @@ background-color: #b4befe;
 }
 
 #custom-themes {
-padding-right: 3px;
-padding-left: 7px;
+padding-right: 4px;
+padding-left: 6px;
 color: rgba(245, 194, 231, 0.9);
 box-shadow: inset 0px 0px 3px rgba(245, 194, 231, 0.2);
 }
@@ -110,10 +248,9 @@ background-color: #f5c2e7;
 }
 
 #custom-power {
-padding-right: 1px;
-padding-left: 9px;
+padding-right: 3px;
+padding-left: 7px;
 color: rgba(242, 205, 205, 0.9);
-border-radius: 5px 10px 10px 5px;
 box-shadow: inset 0px 0px 3px rgba(242, 205, 205, 0.2);
 }
 
@@ -122,7 +259,7 @@ background-color: #F2CDCD;
 }
 
 #custom-terminal {
-padding-right: 11px;
+padding-right: 10px;
 padding-left: 8px;
 color: rgba(250, 179, 135, 0.9);
 box-shadow: inset 0px 0px 3px rgba(250, 179, 135, 0.2);
@@ -155,8 +292,8 @@ background-color: #f38ba8;
 }
 
 #custom-discord {
-padding-right: 4px;
-padding-left: 6px;
+padding-right: 5px;
+padding-left: 5px;
 color: rgba(148, 226, 213, 0.9);
 box-shadow: inset 0px 0px 3px rgba(148, 226, 213, 0.2);
 }

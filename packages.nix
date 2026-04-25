@@ -84,6 +84,8 @@ exercism
 inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
 kitty
 firefox
+sqlmap
+hping
 ];
 
 fonts.packages = with pkgs;[
