@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/run/current-system/sw/bin/bash
 ytd() {
 
 if [ -z "$1" ]; then

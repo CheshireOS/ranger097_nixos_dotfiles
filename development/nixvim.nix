@@ -6,6 +6,14 @@ programs.nixvim = {
    defaultEditor = true;
    terminalColors = false;
 
+
+
+    plugins.treesitter = {
+    enable = true;
+    autoLoad = true;
+
+  };
+
    keymaps = [{
    mode = "n";
    key = "<leader>e";
@@ -17,13 +25,6 @@ programs.nixvim = {
    }];
      
    globals.mapleader = " "; 
-   plugins.treesitter = {
-   enable = true;
-   settings.highlight.enable = true;
-   settings.indent.enable = true;
-   package = pkgs.vimPlugins.nvim-treesitter.withAllGrammars;
-   nixGrammars = false;
-   };
     
    plugins.nvim-tree = {
    autoLoad = true; 
@@ -36,8 +37,8 @@ programs.nixvim = {
    };
 
    plugins.barbar = {
-   enable = true;
-   autoLoad = true;
+   enable = false;
+   autoLoad = false;
    keymaps = {
    next.key = "<TAB>";
    previous.key = "<S-TAB>";
@@ -60,9 +61,9 @@ programs.nixvim = {
    "UnicodeTable.txt"
    ];
 
-   highlight_alternate = false;
+   highlight_alternate = true;
    icons = {
-   button = false;
+   button = true;
    separator = {
    left = "";
    right = "";
@@ -169,37 +170,9 @@ programs.nixvim = {
      };
    };
 
-    colorschemes.kanagawa = {
-    autoLoad = true;
-    enable = false;
-    settings = {
-    transparent = true;
-    functionStyle = {
-    italic = true;
-    };
-    keywordStyle = {
-    italic = true;
-    };
-    commentStyle = {
-    italic = true;
-    };
-    typeStyle = {
-    italic = true;
-    };
-    undercurl = true;
-    theme = "dragon";
-      };
-    };
-    
-
-
-
-
    extraConfigLua = ''   
 
    vim.cmd("colorscheme catppuccin-mocha")
-    --vim.cmd("colorscheme kanagawa-dragon")   
-
        require('lualine').setup({
           options = {
              theme = {
@@ -265,23 +238,11 @@ programs.nixvim = {
                   deleted = "󰚃 ",
                   ignored = "◌",
                },
-               diagnostics = {
-                  hint = "",
-                  info = "",
-                  warning = "",
-                  error = "",
-               },
              },
            },
          },
        })
     '';
 
-    extraPlugins = [
-    ];
-        
-    extraPackages = with pkgs; [
-    tree-sitter
-    ];
   };
 }

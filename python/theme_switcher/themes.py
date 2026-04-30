@@ -22,8 +22,5 @@ subprocess.run([
 "--transition-step", "90",
 "--transition-fps", "50"
 ])
-subprocess.run(["hyprctl","reload"])
-subprocess.run(["pkill", "waybar"])
-subprocess.Popen(["waybar", "-c", "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/top.jsonc", "-s", "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/top.css"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-subprocess.Popen(["waybar", "-c", "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.jsonc", "-s", "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.css"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
 

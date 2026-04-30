@@ -16,7 +16,7 @@ nvii = "nvim ~/ranger097_nixos_dotfiles/development/nixvim.nix";
 };
    
 interactiveShellInit = ''
-#!/bin/bash
+#!/run/current-system/sw/bin/bash
 source /persist/home/ranger/ranger097_nixos_dotfiles/bash/development.sh
 source /persist/home/ranger/ranger097_nixos_dotfiles/bash/system_info.sh
 source /persist/home/ranger/ranger097_nixos_dotfiles/bash/language_info.sh
@@ -24,6 +24,7 @@ source /persist/home/ranger/ranger097_nixos_dotfiles/bash/update.sh
 source /persist/home/ranger/ranger097_nixos_dotfiles/bash/git.sh
 source /persist/home/ranger/ranger097_nixos_dotfiles/bash/wal.sh
 source /persist/home/ranger/ranger097_nixos_dotfiles/bash/music.sh
+source /persist/home/ranger/ranger097_nixos_dotfiles/bash/home.sh
 export EDITOR=nvim
 export VISUAL=nvim
 '';

@@ -6,6 +6,7 @@ let
  cp -r ${./icons/Pokemon}/* $out/share/icons/Pokemon/ 
  '';
 in
+
 {
   home.username = "ranger";
   home.homeDirectory = "/home/ranger";
@@ -30,111 +31,165 @@ in
 
 programs.librewolf = {
 enable = true;
+policies = {
+
+ExtensionSettings = {
+
+  "uBlock0@raymondhill.net" = {
+      installation_mode = "force_installed";
+      install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+   };
+
+  "ahrefs-seo-toolbar@ahrefs.com" = {
+      installation_mode = "force_installed";
+      install_url = "https://addons.mozilla.org/firefox/downloads/latest/ahrefs-seo-toolbar/latest.xpi";
+   };
+    
+  "{076a4b3d-2400-4b53-93d3-8255561a00a1}" = {
+      installation_mode = "force_installed";
+      install_url = "https://addons.mozilla.org/firefox/downloads/latest/catppuccin-web-file-icons/latest.xpi";
+   };
+
+  "censortracker@roskomsvoboda.org" = {
+      installation_mode = "force_installed";
+      install_url = "https://addons.mozilla.org/firefox/downloads/latest/censor-tracker/latest.xpi";
+   };
   
-    policies = {
-        ExtensionSettings = { 
+  "jid1-kkvOfwqdnS6YHA@jetpack" = {
+        installation_mode = "force_installed";
+        install_url = "https://addons.mozilla.org/firefox/downloads/latest/i-dont-care-about-cookies/latest.xpi";
+   };
+  
+  "{13c329a2-9464-448f-9a48-52e46e8c750b}" = {
+        installation_mode = "force_installed";
+        install_url = "https://addons.mozilla.org/firefox/downloads/latest/js-search-extension/latest.xpi";
+   };
+    
+  "{fdf69678-8316-46c5-9f5b-1ec567f2f111}" = {
+        installation_mode = "force_installed";
+        install_url = "https://addons.mozilla.org/firefox/downloads/latest/protondb-for-steam/latest.xpi";
+   };
 
-	   "ranger097_nixos_dotfiles" = {
-               installation_mode = "force_installed";
-	       install_url = "https://addons.mozilla.org/firefox/downloads/file/4769506/ranger097_nixos_dotfiles-1.0.xpi";
-	    };
-
-            "User-Agent_Switcher_and_Manager" = {
-               installation_mode = "force_installed";
-	       install_url = "https://addons.mozilla.org/firefox/downloads/file/4773733/user_agent_string_switcher-0.6.7.xpi";
-	    };
-
-
-        };
-     };
-
-    profiles.ranger = {
-       isDefault = true;
-       extensions.packages = with inputs.nur.legacyPackages.${pkgs.system}.repos.rycee.firefox-addons; [
-             ublock-origin
-          ];
+  "{3a44d656-7848-4067-9f6c-8a07c3761763}" = {
+        installation_mode = "force_installed";
+        install_url = "https://addons.mozilla.org/firefox/downloads/latest/spoof-timezone/latest.xpi";
+   };
         
-          userContent = ''
-	@-moz-document domain("duckduckgo.com") {
-        * {
-    color: grey !important;
-    border: 0px solid black !important;
+  "{68694065-9851-4091-a83d-3b56a953d611}" = {
+        installation_mode = "force_installed";
+        install_url = "https://addons.mozilla.org/firefox/downloads/latest/user-agent-string-switcher/latest.xpi";
+   };
+
+  "{c45c406e-ab73-11d8-be37-007d0444c644}" = {
+        installation_mode = "force_installed";
+        install_url = "https://addons.mozilla.org/firefox/downloads/latest/web-developer/latest.xpi";
+   };
+
+   "@react-devtools" = {
+        installation_mode = "forced_installed";
+	install_url = "https://addons.mozilla.org/firefox/downloads/file/4432990/react_devtools-6.1.1.xpi";
+    };
+  };
+};
+
+
+profiles.ranger = {
+  isDefault = true;
+  extensions.packages = with inputs.nur.legacyPackages.${pkgs.system}.repos.rycee.firefox-addons; [
+  ublock-origin
+  ahrefs-seo-toolbar
+  catppuccin-web-file-icons
+  censor-tracker
+  i-dont-care-about-cookies
+  js-search-extension
+  protondb-for-steam
+  spoof-timezone
+  user-agent-string-switcher
+  web-developer
+  react-devtools
+  ];
+       
+  userChrome = ''
+  #personal-toolbar-empty-description,
+  #PersonalToolbar,
+  .browser-toolbox-background,
+  #nav-bar-customization-target,
+  .browser-toolbar,
+  .tabbrowser-tab, slot,
+  #TabsToolbar, .titlebar-spacer,
+  .titlebar-close, toolbarbutton,
+  .tab-content, tabbrowser-tab,tabs, 
+  #urlbar-container, .urlbar-container, toolbar,
+  .searchmode-switcher, #navigator-toolbox, .browser-toolbox-background{
+  background-color: #000000;
+  color: #808080;
+  }
+
+
+  .titlebar-close {
+   display: none;
+  }
+
+
+  * {
+   border: none !important;
+  }
+
+  .text-link, a, ::part(support-link){
+  background-color: #000000;
+  color: aquamarine !important;
+
+  }
+
+  #PersonalToolbar {
+  :root[sessionrestored] &:not(.instant) {
+  background-color: #000000 !important;
+      }
+  }
+
+
+
+  #PlacesToolbar, #PlacesToolbarItems {
+  background-color: #000000;
+  }
+
+  .tab-text {
+   color: #707070;
+  }
+
+@media not -moz-pref("browser.urlbar.unifiedSearchButton.always") {
+  .searchmode-switcher {
+    background-color: #000 !important;
+  }
 }
 
-
-body {
-    background: linear-gradient(rgba(0,0,0,1));
+.outer-wrapper.only-search {
+  display: block;
+  padding-block-start: calc(var(--space-xxlarge) * 4);
+  background-color: #000 !important;
 }
 
-.is-mobile .yQDlj3B5DI5YO8c8Ulio, .yQDlj3B5DI5YO8c8Ulio.jHKRD_8UMD51jfnKQ1LL {
-  background-color: #000;
-}
-
-.is-mobile .At_VJ9MlrHsSjbfCtz2_ .EcE0RD8NCNGe61Kp815G:not(.zqdPZIKd0gTxkTPnBBos), .is-mobile .At_VJ9MlrHsSjbfCtz2_ .wLL07_0Xnd1QZpzpfR4W:not(.zqdPZIKd0gTxkTPnBBos), .is-mobile .gdzyb9PgLazLyi4DKK0O .EcE0RD8NCNGe61Kp815G:not(.zqdPZIKd0gTxkTPnBBos), .is-mobile .gdzyb9PgLazLyi4DKK0O .wLL07_0Xnd1QZpzpfR4W:not(.zqdPZIKd0gTxkTPnBBos) {
-  background-color: #000;
-  margin: 0 -7px;
-}
-
-
-:root {
-  --ducksans-product-letter-spacing: 0.005em;
-  --col-white: #000;
-  --col-gray-90: #222;
-  --col-gray-25: #000;
-  --col-gray-10: #000;
-  --col-gray-0: #000;
-  --theme-col-bg-page: var(--col-white);
-  --theme-col-bg-expandcollapse: var(--col-gray-0);
-  --theme-col-bg-expandcollapse-hover: var(--col-gray-10);
-  --theme-col-txt-expandcollapse: var(--col-gray-90);
-  --theme-col-border-expandcollapse: var(--col-gray-25);
-  --rounded-md: 8px;
-  --font-size-unit: (0.9 * 16);
-  --px-in-rem: (1rem/var(--font-size-unit));
-}
-
-
-.footer {
-  background-color: #000;
-  border-top: 1px solid #d9d9d9;
+.search-handoff-button {
+  background-color: #000 !important;
+  color: aquamarine !important;
   display: none;
 }
 
-.is-vertical-tabs-exp .header-wrap {
-  background-color: #000;
+  .urlbar[breakout] {
+  & > .urlbar-input-container {
+    width: 100%;
+    height: 100%;
+    background-color: #000 !important;
+    color: #909090 !important;
+  }
 }
+  '';
 
-.T265XEcezvjUhK71U8pN {
-  display: -webkit-flex;
-  display: -moz-box;
-  display: flex;
-  -webkit-flex-direction: row;
-  -moz-box-orient: horizontal;
-  -moz-box-direction: normal;
-  flex-direction: row;
-  -webkit-justify-content: space-between;
-  -moz-box-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  align-items: center;
-  gap: var(--sds-space-x02);
-  overflow: hidden;
-  background-color: var(--theme-col-bg-search,#202020);
-  border-radius: 13px;
-  box-shadow: 0 0 0 1px rgba(0,0,0,.08),0 2px 3px 0 rgba(0,0,0,.06);
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  padding: 0 8px 0 0;
-  position: relative;
-  color: var(--sds-color-text-01);
-}
-      }
 
-	@-moz-document domain("youtube.com") {
-         .ytSearchboxComponentSearchButton {
+  userContent = ''
+   @-moz-document domain("youtube.com") {
+ 
+.ytSearchboxComponentSearchButton {
 border: 0px solid transparent;
 background-color: #f8f8f8;
 width: 64px;
@@ -157,7 +212,7 @@ border-bottom: 2px solid #000000 !important;
 html:not(#⁠), body>div,body>table,
 [role="navigation"], [role="dialog"],
 #body-container>div, [aria-expanded="true"]:not(.ytp-button),
-[class*="tooltip"]:not(.ytp-tooltip-duration):not(.ytp-tooltip-bg):not(.ytp-tooltip-text-wrapper):not([class*="arrow"]):not(button),             [role="menu"], .ytp-popup, .videoAdUiPreSkipButton,
+[class*="tooltip"]:not(.ytp-tooltip-duration):not(.ytp-tooltip-bg):not(.ytp-tooltip-text-wrapper):not([class*="arrow"]):not(button),[role="menu"], .ytp-popup, .videoAdUiPreSkipButton,
 .videoAdUiAdInfoPopup {
 background:url(/*[[_]]*/)fixed #000!important;
 background-size:cover!important
@@ -251,7 +306,6 @@ box-shadow:none!important
 color: #848484 !important;    
 box-shadow:inset 0px 0px 0px 1px rgba(255,255,255,0)!important;
 text-shadow: 0px 0px 1px rgba(255,255,255,0)!important;
-        
 }
     
 *:hover {
@@ -288,70 +342,77 @@ filter: saturate(100%) brightness(100%) contrast(100%) !important;
 text-shadow: none !important;
 }
 
+* {
+border: 0px solid rgba(0,0,0,0) !important;
 
-	}
-      '';
+}
 
-        settings = {
-	  "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-          "webgl.disabled" = false;
-          "privacy.resistFingerprinting" = true;
-          "privacy.clearOnShutdown.history" = true;
-          "privacy.clearOnShutdown.cookies" = true;
-          "network.cookie.lifetimePolicy" = 0;
-	  "extensions.enabledAddons" = "uBlock0@raymondhill.net:1.55.0"; 
-          "extensions.ublock0.allowInPrivateBrowsing" = true;
-	  "extensions.ublock0.adminSettings" = builtins.toJSON {
-	  userSettings = {
-          extensionDisabled = false;
-	  };
-          selectedFilterLists = [
-            "ublock-filters"
-            "ublock-badware"
-            "ublock-privacy"
-            "ublock-unbreak"
-            "ublock-quick-fixes"
-	    "easylist"
-            "easyprivacy"
-            ];
-          };
-        };
+
+}
+  '';
+
+settings = {
+   "extensions.autoDisableScopes" = 0;
+   "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+   "webgl.disabled" = false;
+   "privacy.resistFingerprinting" = true;
+   "privacy.clearOnShutdown.history" = true;
+   "privacy.clearOnShutdown.cookies" = true;
+   "network.cookie.lifetimePolicy" = 0;
+   "extensions.enabledAddons" = "uBlock0@raymondhill.net:1.55.0"; 
+   "extensions.ublock0.allowInPrivateBrowsing" = true;
+   "extensions.ublock0.adminSettings" = builtins.toJSON {
+    userSettings = {
+    extensionDisabled = false;
+    };
+
+    selectedFilterLists = [
+    "ublock-filters"
+    "ublock-badware"
+    "ublock-privacy"
+    "ublock-unbreak"
+    "ublock-quick-fixes"
+    "easylist"
+    "easyprivacy"
+    ];
+  };
+};
       
-	 bookmarks = {
-         force = true;
-	 settings = [ 
-	    { name = "WGU";                     url = "https://www.wgu.edu/"; }
-	    { name = "GITHUB";                  url = "https://www.github.com/"; }
-	    { name = "NIX PKGS";                url = "https://search.nixos.org/packages"; }
-            { name = "HOME.NIX";                url = "https://mynixos.com/home-manager/options/programs"; }
-	    { name = "MDN DOCS";                url = "https://developer.mozilla.org/en-US/"; }
-	    { name = "ZIG GUIDE";               url = "https://zig.guide/"; }
-	    { name = "ZIG DOCS";                url = "https://ziggit.dev/t/zig-learning-resources/3160"; }
-	    { name = "EXERCISM";                url = "https://exercism.org/"; }
-	    { name = "PRO WITH ZIG";            url = "https://gencmurat.com/en/pages/programming-with-zig/"; }
-	    { name = "SVELTE DOCS";             url = "https://svelte.dev/docs/kit/introduction"; }
-	    { name = "JAVA DOCS";               url = "https://www.w3schools.com/java/java_exercises.asp"; }
-	    { name = "CODE WARS";               url = "https://www.codewars.com/";}
-	    { name = "TUF";                     url = "https://takeuforward.org/home";}
-	    { name = "UIVERSE";                 url = "https://uiverse.io/";}
-	    { name = "YOUTUBE";                 url = "https://www.youtube.com/";}
-	    { name = "NIX PILLS";               url = "https://nixos.org/guides/nix-pills/01-why-you-should-give-it-a-try.html";}
-	    { name = "ZERO TO NIX";             url = "https://zero-to-nix.com/start/";}
-	    { name = "LINUX JOURNEY";           url = "https://labex.io/linuxjourney";}
-	    { name = "BASH ACADEMY";            url = "https://guide.bash.academy/";}
-	    { name = "T.O.P.";                  url = "https://www.theodinproject.com/";}
-	    { name = "BOOT.DEV";                url = "https://www.boot.dev/";}
-	    { name = "CHATGPT";                 url = "https://chatgpt.com/";}
-	    { name = "COODEVERSE C";            url = "https://coodeverse.com/courses/c-course";}
-	    { name = "COODEVERSE C++";          url = "https://coodeverse.com/courses/c-plus-course";}
-	    { name = "COODEVERSE KOTLIN";       url = "https://coodeverse.com/courses/kotlin-course";}
-	    { name = "LEETCODE";                url = "https://leetcode.com/";}
-
-	   ];
+bookmarks = {
+force = true;
+settings = [ 
+	     { name = "WGU";                     url = "https://www.wgu.edu/"; }
+             { name = "GITHUB";                  url = "https://www.github.com/"; }
+             { name = "NIX PKGS";                url = "https://search.nixos.org/packages"; }
+             { name = "HOME.NIX";                url = "https://mynixos.com/home-manager/options/programs"; }
+	     { name = "MDN DOCS";                url = "https://developer.mozilla.org/en-US/"; }
+	     { name = "ZIG GUIDE";               url = "https://zig.guide/"; }
+	     { name = "ZIG DOCS";                url = "https://ziggit.dev/t/zig-learning-resources/3160"; }
+	     { name = "EXERCISM";                url = "https://exercism.org/"; }
+	     { name = "PRO WITH ZIG";            url = "https://gencmurat.com/en/pages/programming-with-zig/"; }
+	     { name = "SVELTE DOCS";             url = "https://svelte.dev/docs/kit/introduction"; }
+	     { name = "JAVA DOCS";               url = "https://www.w3schools.com/java/java_exercises.asp"; }
+	     { name = "CODE WARS";               url = "https://www.codewars.com/";}
+	     { name = "TUF";                     url = "https://takeuforward.org/home";}
+	     { name = "UIVERSE";                 url = "https://uiverse.io/";}
+	     { name = "YOUTUBE";                 url = "https://www.youtube.com/";}
+	     { name = "NIX PILLS";               url = "https://nixos.org/guides/nix-pills/01-why-you-should-give-it-a-try.html";}
+	     { name = "ZERO TO NIX";             url = "https://zero-to-nix.com/start/";}
+	     { name = "LINUX JOURNEY";           url = "https://labex.io/linuxjourney";}
+	     { name = "BASH ACADEMY";            url = "https://guide.bash.academy/";}
+	     { name = "T.O.P.";                  url = "https://www.theodinproject.com/";}
+	     { name = "BOOT.DEV";                url = "https://www.boot.dev/";}
+	     { name = "CHATGPT";                 url = "https://chatgpt.com/";}
+	     { name = "COODEVERSE C";            url = "https://coodeverse.com/courses/c-course";}
+	     { name = "COODEVERSE C++";          url = "https://coodeverse.com/courses/c-plus-course";}
+	     { name = "COODEVERSE KOTLIN";       url = "https://coodeverse.com/courses/kotlin-course";}
+	     { name = "LEETCODE";                url = "https://leetcode.com/";}
+	     { name = "RYCEE";                   url = "https://nur.nix-community.org/repos/rycee/";}
+	     { name = "RUNTIME";                 url = "about:debugging#/runtime/this-firefox";}
+	  ];
 	};
      };
   };
-
 
 programs.freetube = {
    enable = true;
@@ -374,7 +435,7 @@ custom-shader = [
 "/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/starfield.glsl"
 #"/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/ripple_cursor.glsl"
 "/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/cursor_blaze.glsl"
-#"/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/aurora.glsl"
+#"/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/cineShader-Lava.glsl"
 ];
 
 custom-shader-animation = "always";
@@ -419,8 +480,6 @@ ecosystem:no_update_news = true
 
 #AUTOSTART
 exec-once = ghostty
-exec-once = bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/wifi.sh
-exec-once = bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/waybar.sh
 exec-once = bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/startup.sh
 #exec-once = LD_LIBRARY_PATH=/run/opengl-driver/lib mpvpaper -o "no-audio --loop-playlist --panscan=1.0 hwdec=auto" eDP-1 /home/ranger/Videos/wallpapers/guweiz.mp4
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
@@ -459,7 +518,7 @@ general {
 #GAPS
 gaps_in = 3
 gaps_out = 6
-border_size = 1
+border_size = 2
 
 #BORDER
 #col.active_border = rgba(0,0,0,1)
@@ -492,11 +551,11 @@ inactive_opacity = 1.0
 #SHADOW
 shadow {
 enabled = false
-range = 6
+range = 1
 render_power = 2
-color = rgba(0,0,0,0.5)
-offset = -1 1
-sharp = false
+color = rgba(0,0,0,1)
+offset = 0 0
+sharp = true
 scale = 1.0
 }
 

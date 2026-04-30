@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/run/current-system/sw/bin/bash
 source /persist/home/ranger/ranger097_nixos_dotfiles/bash/security.sh
 
 update() {

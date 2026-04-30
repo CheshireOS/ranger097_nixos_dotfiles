@@ -11,7 +11,8 @@ imports = [
   ./development/tmux.nix
   ./security/security.nix
 ];
-  
+ 
+
 # Bootloader & Kernel
 boot.loader.systemd-boot.enable = false;
 boot.lanzaboote.enable = false;

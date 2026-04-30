@@ -81,7 +81,7 @@ ghostty
 bettercap
 zig
 exercism
-inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
+awww
 kitty
 firefox
 sqlmap
