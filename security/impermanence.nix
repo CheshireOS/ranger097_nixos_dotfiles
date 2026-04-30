@@ -19,7 +19,8 @@
 
     users.ranger = {
       directories = [
-        "Music" 
+        "Music"
+	"Projects"
         "ranger097_nixos_dotfiles"
         ".local/share/direnv"
 	".config/direnv"
