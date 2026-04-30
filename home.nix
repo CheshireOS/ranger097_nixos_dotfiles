@@ -482,6 +482,7 @@ settings = [
 	     { name = "LEETCODE";                url = "https://leetcode.com/";}
 	     { name = "RYCEE";                   url = "https://nur.nix-community.org/repos/rycee/";}
 	     { name = "RUNTIME";                 url = "about:debugging#/runtime/this-firefox";}
+	     { name = "NERD FONTS";              url = "https://www.nerdfonts.com/cheat-sheet";}
 	  ];
 	};
      };
