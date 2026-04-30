@@ -9,14 +9,14 @@ hii = "nvim /persist/home/ranger/ranger097_nixos_dotfiles/home.nix";
 wii = "nvim /persist/home/ranger/ranger097_nixos_dotfiles/waybar";
 cii = "nvim /persist/home/.config";
 pii = "nvim /persist/home/ranger/ranger097_nixos_dotfiles/python";
-clear = "clear && ranger_fetch";
+clear = "clear";
 mii = "cd /persist/home/ranger/Music/";
 nvii = "nvim ~/ranger097_nixos_dotfiles/development/nixvim.nix";
-	    
+sii = "bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/ssh.sh";
 };
    
 interactiveShellInit = ''
-#!/run/current-system/sw/bin/bash
+#!/usr/bin/env
 source /persist/home/ranger/ranger097_nixos_dotfiles/bash/development.sh
 source /persist/home/ranger/ranger097_nixos_dotfiles/bash/system_info.sh
 source /persist/home/ranger/ranger097_nixos_dotfiles/bash/language_info.sh

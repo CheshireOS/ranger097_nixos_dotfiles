@@ -1,4 +1,4 @@
-#!/run/current-system/sw/bin/bash
+#!/usr/bin/env
 network="/persist/home/ranger/ranger097_nixos_dotfiles/bash/wifi/networks.txt"
 
 wifi_add() {
@@ -9,7 +9,7 @@ echo "nmcli device wifi connect $ssid password $pswd" > /persist/home/ranger/ran
 }
 
 wifi_connect() {
-sleep 3
+sleep 2
 while read line; do
 $line > /dev/null 2>&1
 done <$network
@@ -24,6 +24,3 @@ else
 fi
 }
 
-wifi_switch
-
-nmcli | grep -G wlp0s20f3 | grep -G connected | grep -G to

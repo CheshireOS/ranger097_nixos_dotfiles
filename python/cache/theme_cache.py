@@ -9,10 +9,10 @@ num_of_wallpapers = len(wallpaper_list)
 
 with open(toggle_file, 'r') as f:
     x = int(f.readline().strip())
-
-with open(toggle_file, 'w') as f:
-    y = (x) % (num_of_wallpapers + 1)
-    full_file = f.write(str(y))
+    if x != 0:
+        x = x - 1
+    else:
+        x = len(wallpaper_list)
 
 cat_string_file = f"{wallpaper_directory}/{wallpaper_list[x]}"
 subprocess.run([

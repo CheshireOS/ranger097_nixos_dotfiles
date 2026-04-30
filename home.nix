@@ -125,11 +125,9 @@ profiles.ranger = {
   color: #808080;
   }
 
-
   .titlebar-close {
    display: none;
   }
-
 
   * {
    border: none !important;
@@ -146,8 +144,6 @@ profiles.ranger = {
   background-color: #000000 !important;
       }
   }
-
-
 
   #PlacesToolbar, #PlacesToolbarItems {
   background-color: #000000;
@@ -186,7 +182,85 @@ profiles.ranger = {
   '';
 
 
-  userContent = ''
+userContent = ''
+@-moz-document url("about:home"), url("about:newtab") {
+
+body {
+  background-color: #000;
+  font-family: system-ui;
+  font-size: var(--font-size-root);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: var(--newtab-wallpaper-backgroundPosition);
+  background-attachment: fixed;
+  overflow-y: scroll;
+  background-image: url("https://wallpapercave.com/wp/wp11742024.jpg") !important;
+}
+
+  .search-handoff-button {
+  position: relative;
+  background: #000 var(--newtab-search-icon) 16px center no-repeat;
+  background-size: var(--size-item-medium);
+  padding-inline-start: calc(2 * var(--space-xlarge));
+  padding-inline-end: var(--space-small);
+  padding-block: 0;
+  width: 100%;
+  box-shadow: var(--box-shadow-level-3);
+  border: var(--content-search-handoff-ui-border-width) solid var(--content-search-handoff-ui-unfocused-border-color);
+  border-radius: var(--border-radius-medium);
+  color: #808080;
+  -moz-context-properties: fill;
+  fill: var(--content-search-handoff-ui-fill);
+
+}
+
+:root {
+  color-scheme: light;
+  --newtab-background-color: #000;
+  --newtab-background-color-secondary: #000;
+  --newtab-text-primary-color: #808080;
+  --newtab-background-card: color-mix(in srgb, var(--color-white) 85%, transparent);
+  --newtab-text-topic-label-color: var(--color-violet-70);
+  --newtab-text-secondary-text: var(--text-color-deemphasized);
+  --newtab-contextual-text-primary-color: light-dark(var(--newtab-text-primary-color), var(--text-color));
+  --newtab-primary-action-background: light-dark(var(--color-accent-primary), var(--color-accent-primary));
+  --newtab-primary-action-background-pocket: #008078;
+  --newtab-text-secondary-color: color-mix(in srgb, var(--newtab-text-primary-color) 70%, transparent);
+  --newtab-contextual-text-secondary-color: color-mix(in srgb, var(--newtab-contextual-text-primary-color) 70%, transparent);
+  --newtab-weather-background-color: light-dark(rgba(255, 255, 255, 85%), rgba(66, 65, 77, 85%));
+  --newtab-element-hover-color: color-mix(in srgb, var(--newtab-background-color) 90%, #000);
+  --newtab-element-active-color: color-mix(in srgb, var(--newtab-background-color) 80%, #000);
+  --newtab-button-background: var(--button-background-color);
+  --newtab-button-focus-background: var(--newtab-button-background);
+  --newtab-button-focus-border: var(--focus-outline-color);
+  --newtab-button-hover-background: var(--button-background-color-hover);
+  --newtab-button-active-background: var(--button-background-color-active);
+  --newtab-button-text: var(--button-text-color);
+  --newtab-button-static-background: light-dark(#F0F0F4, #2B2A33);
+  --newtab-button-static-focus-background: var(--newtab-button-static-background);
+  --newtab-button-static-hover-background: light-dark(#000, #52525E);
+  --newtab-button-static-active-background: light-dark(#CFCFD8, #5B5B66);
+  --newtab-element-secondary-color: color-mix(in srgb, currentColor 5%, transparent);
+  --newtab-element-secondary-hover-color: color-mix(in srgb, currentColor 12%, transparent);
+  --newtab-element-secondary-active-color: color-mix(in srgb, currentColor 25%, transparent);
+  --newtab-primary-element-hover-color: color-mix(in srgb, var(--newtab-primary-action-background) 90%, #000);
+  --newtab-primary-element-hover-pocket-color: color-mix(in srgb, var(--newtab-primary-action-background-pocket) 90%, #000);
+  --newtab-primary-element-active-color: color-mix(in srgb, var(--newtab-primary-action-background) 80%, #000);
+  --newtab-primary-element-text-color: var(--color-white);
+  --newtab-primary-action-background-dimmed: color-mix(in srgb, var(--newtab-primary-action-background) 25%, transparent);
+  --newtab-primary-action-background-pocket-dimmed: color-mix(in srgb, var(--newtab-primary-action-background-pocket) 25%, transparent);
+  --newtab-wordmark-color: light-dark(#20123A, #fbfbfe);
+  --newtab-status-success: var(--color-green-50);
+  --newtab-status-error: var(--color-red-60);
+  --newtab-inner-box-shadow-color: rgba(0, 0, 0, 0.1);
+  --newtab-section-card-box-shadow-color: rgba(58, 57, 68, 20%);
+  --newtab-overlay-color: color-mix(in srgb, var(--newtab-background-color) 85%, transparent);
+  --border-radius-large: 16px;
+  --newtab-button-secondary-color: inherit;
+}
+}
+
+
    @-moz-document domain("youtube.com") {
  
 .ytSearchboxComponentSearchButton {
@@ -347,7 +421,6 @@ border: 0px solid rgba(0,0,0,0) !important;
 
 }
 
-
 }
   '';
 
@@ -480,6 +553,7 @@ ecosystem:no_update_news = true
 
 #AUTOSTART
 exec-once = ghostty
+exec-once = awww-daemon
 exec-once = bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/startup.sh
 #exec-once = LD_LIBRARY_PATH=/run/opengl-driver/lib mpvpaper -o "no-audio --loop-playlist --panscan=1.0 hwdec=auto" eDP-1 /home/ranger/Videos/wallpapers/guweiz.mp4
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
@@ -656,8 +730,8 @@ bind = SUPER, B, exec, librewolf
 bind = SUPER, D, exec, dolphin
 bind = SUPER, C, exec, code
 bind = SUPER, F, fullscreenstate, 2
-bind = SUPER, X, exec, direnv exec /persist/home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/ python3 /persist/home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/waybar_switcher.py
-bind = SUPER, M, exec, direnv exec /persist/home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/ python3 /persist/home/ranger/ranger097_nixos_dotfiles/python/bluelight_toggle/bluelight_toggle.py
+bind = SUPER, X, exec, bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/waybar.sh
+bind = SUPER, M, exec, bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/bluelight.sh
 bind = SUPER, H, exec, hyprshot -m output -m eDP-1
 bind = SUPER, P, exec, systemctl --user restart pipewire
 
