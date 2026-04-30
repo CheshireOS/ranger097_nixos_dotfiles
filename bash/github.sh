@@ -1,6 +1,6 @@
 #!/usr/bin/env
 source /persist/home/ranger/ranger097_nixos_dotfiles/bash/ssh.sh
-make_ssh
+echo ""
 cd /persist/home/ranger/ranger097_nixos_dotfiles
 git add .
 read -p "changes: " changes
