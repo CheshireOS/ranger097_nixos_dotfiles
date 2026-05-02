@@ -39,20 +39,10 @@ ExtensionSettings = {
       installation_mode = "force_installed";
       install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
    };
-
-  "ahrefs-seo-toolbar@ahrefs.com" = {
-      installation_mode = "force_installed";
-      install_url = "https://addons.mozilla.org/firefox/downloads/latest/ahrefs-seo-toolbar/latest.xpi";
-   };
     
   "{076a4b3d-2400-4b53-93d3-8255561a00a1}" = {
       installation_mode = "force_installed";
       install_url = "https://addons.mozilla.org/firefox/downloads/latest/catppuccin-web-file-icons/latest.xpi";
-   };
-
-  "censortracker@roskomsvoboda.org" = {
-      installation_mode = "force_installed";
-      install_url = "https://addons.mozilla.org/firefox/downloads/latest/censor-tracker/latest.xpi";
    };
   
   "jid1-kkvOfwqdnS6YHA@jetpack" = {
@@ -60,16 +50,7 @@ ExtensionSettings = {
         install_url = "https://addons.mozilla.org/firefox/downloads/latest/i-dont-care-about-cookies/latest.xpi";
    };
   
-  "{13c329a2-9464-448f-9a48-52e46e8c750b}" = {
-        installation_mode = "force_installed";
-        install_url = "https://addons.mozilla.org/firefox/downloads/latest/js-search-extension/latest.xpi";
-   };
     
-  "{fdf69678-8316-46c5-9f5b-1ec567f2f111}" = {
-        installation_mode = "force_installed";
-        install_url = "https://addons.mozilla.org/firefox/downloads/latest/protondb-for-steam/latest.xpi";
-   };
-
   "{3a44d656-7848-4067-9f6c-8a07c3761763}" = {
         installation_mode = "force_installed";
         install_url = "https://addons.mozilla.org/firefox/downloads/latest/spoof-timezone/latest.xpi";
@@ -80,10 +61,6 @@ ExtensionSettings = {
         install_url = "https://addons.mozilla.org/firefox/downloads/latest/user-agent-string-switcher/latest.xpi";
    };
 
-  "{c45c406e-ab73-11d8-be37-007d0444c644}" = {
-        installation_mode = "force_installed";
-        install_url = "https://addons.mozilla.org/firefox/downloads/latest/web-developer/latest.xpi";
-   };
 
    "@react-devtools" = {
         installation_mode = "forced_installed";
@@ -97,15 +74,11 @@ profiles.ranger = {
   isDefault = true;
   extensions.packages = with inputs.nur.legacyPackages.${pkgs.system}.repos.rycee.firefox-addons; [
   ublock-origin
-  ahrefs-seo-toolbar
   catppuccin-web-file-icons
-  censor-tracker
   i-dont-care-about-cookies
-  js-search-extension
   protondb-for-steam
   spoof-timezone
   user-agent-string-switcher
-  web-developer
   react-devtools
   ];
        
@@ -483,6 +456,8 @@ settings = [
 	     { name = "RYCEE";                   url = "https://nur.nix-community.org/repos/rycee/";}
 	     { name = "RUNTIME";                 url = "about:debugging#/runtime/this-firefox";}
 	     { name = "NERD FONTS";              url = "https://www.nerdfonts.com/cheat-sheet";}
+	     { name = "SCHEMA";                  url = "https://schema.org/docs/full.html";}
+	     { name = "GEMINI";                  url = "https://gemini.google.com/app";}
 	  ];
 	};
      };
