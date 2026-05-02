@@ -13,6 +13,7 @@ clear = "clear";
 mii = "cd /persist/home/ranger/Music/";
 nvii = "nvim ~/ranger097_nixos_dotfiles/development/nixvim.nix";
 sii = "bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/ssh.sh";
+webii="bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/web.sh";
 };
    
 interactiveShellInit = ''
