@@ -458,6 +458,7 @@ settings = [
 	     { name = "NERD FONTS";              url = "https://www.nerdfonts.com/cheat-sheet";}
 	     { name = "SCHEMA";                  url = "https://schema.org/docs/full.html";}
 	     { name = "GEMINI";                  url = "https://gemini.google.com/app";}
+	     { name = "GOOGLE FONTS";            url = "https://fonts.google.com/?preview.script=Latn";}
 	  ];
 	};
      };

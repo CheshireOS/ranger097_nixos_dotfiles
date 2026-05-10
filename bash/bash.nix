@@ -14,6 +14,8 @@ mii = "cd /persist/home/ranger/Music/";
 nvii = "nvim ~/ranger097_nixos_dotfiles/development/nixvim.nix";
 sii = "bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/ssh.sh";
 webii="bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/web.sh";
+prii="cd /persist/home/ranger/Projects/";
+glii="cd /persist/home/ranger/Projects/TheGlazePopStudioWeb/ && ./webserver.sh";
 };
    
 interactiveShellInit = ''

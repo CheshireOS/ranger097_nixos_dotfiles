@@ -1,0 +1,101 @@
+What is ranger097_nixos_dotfiles?
+What does the ranger097_nixos_dotfiles repository do?
+Is ranger097_nixos_dotfiles a full NixOS configuration?
+Who is the ranger097_nixos_dotfiles dotfiles repo for?
+Is this NixOS flake beginner-friendly?
+What makes ranger097_nixos_dotfiles different from other dotfiles?
+Is this repo a full Linux system configuration?
+What desktop environment does this dotfiles setup use?
+Does this repo include Hyprland configuration?
+Is ranger097_nixos_dotfiles actively maintained?
+How do I install ranger097_nixos_dotfiles on NixOS?
+What prerequisites are required before using this flake?
+Do I need Nix flakes enabled for this setup?
+How do I clone the repository correctly?
+How do I run nixos-rebuild with this flake?
+Can I install this without NixOS?
+How do I enable Home Manager in this setup?
+What is the first step after cloning the repo?
+How do I switch to this configuration safely?
+How do I update the system after changes?
+How is the flake.nix structured in this repo?
+What does the flake system control in this configuration?
+How are hosts managed in ranger097_nixos_dotfiles?
+What is the purpose of the hosts directory?
+How do I add a new host configuration?
+What are deoxy and jirachi in this repo?
+How does multi-host NixOS configuration work here?
+How modular is this dotfiles setup?
+Does this repo follow best practices for Nix flakes?
+How do I debug flake evaluation errors?
+Does this configuration use LUKS encryption?
+How is TPM integrated into this NixOS setup?
+What is Lanzaboote in this repository?
+How does Secure Boot work in this flake?
+Why does this setup require Secure Boot?
+How do I set up sbctl keys correctly?
+What is the purpose of impermanence in this system?
+How does LUKS + TPM auto-unlock work?
+Is this a hardened NixOS configuration?
+How secure is this dotfiles setup?
+🖥️ Hyprland & Desktop Environment
+How is Hyprland configured in this repo?
+What Wayland components are included?
+How is Waybar customized in this setup?
+Can I change Hyprland keybindings easily?
+What launcher is used instead of Rofi?
+How is window management handled?
+Does this setup support multiple monitors?
+How are animations configured in Hyprland?
+What compositor settings are included?
+How do I reset Hyprland config to default?
+How does the theme system work in this dotfiles repo?
+How many themes are included in ranger097_nixos_dotfiles?
+Can I switch themes dynamically?
+What is Pywal used for in this setup?
+How does SWWW integrate into wallpaper changes?
+How are Waybar themes managed?
+Can I create my own custom theme?
+Where are theme files stored?
+Does this setup support dark and light modes?
+How do I fix broken theme colors?
+How are dotfiles organized in this repository?
+What is stored in the bash directory?
+What does the hypr directory contain?
+What is the waybar folder used for?
+How are wallpapers managed?
+Where are system configs located?
+How is the Python directory used?
+What is stored in the security folder?
+How is configuration modularized?
+Can I reuse parts of this dotfiles setup?
+What development tools are included in this setup?
+Does this repo support direnv?
+How are programming languages configured?
+Is Neovim included in this setup?
+How is Git configured in this system?
+Does this setup support isolated dev environments?
+How do I add a new programming language?
+Is VS Code preconfigured?
+How are shell environments managed?
+Does this include Python development tools?
+What is impermanence in this NixOS setup?
+How does system state persistence work?
+Does this system reset on reboot?
+How are cached files handled?
+What does the Python automation system do?
+How are bash scripts used in this repo?
+What system utilities are included?
+How does this setup manage wallpapers automatically?
+What is the purpose of shaders in this config?
+How does the system handle updates?
+Why does nixos-rebuild fail with this flake?
+How do I fix missing host configuration errors?
+What if Secure Boot breaks the boot process?
+How do I recover from a broken NixOS build?
+Why is Hyprland not starting?
+How do I fix Waybar not loading correctly?
+What causes theme system issues?
+How do I debug flake.lock problems?
+Why are my dotfiles not applying correctly?
+Where can I get help with this configuration?

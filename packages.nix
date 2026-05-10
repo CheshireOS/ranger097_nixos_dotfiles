@@ -86,6 +86,7 @@ kitty
 firefox
 sqlmap
 hping
+live-server
 ];
 
 fonts.packages = with pkgs;[
