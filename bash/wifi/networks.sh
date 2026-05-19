@@ -9,7 +9,7 @@ echo "nmcli device wifi connect $ssid password $pswd" > /persist/home/ranger/ran
 }
 
 wifi_connect() {
-sleep 2
+sleep 3
 while read line; do
 $line > /dev/null 2>&1
 done <$network

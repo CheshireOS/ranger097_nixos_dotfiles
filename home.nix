@@ -95,7 +95,7 @@ profiles.ranger = {
   #urlbar-container, .urlbar-container, toolbar,
   .searchmode-switcher, #navigator-toolbox, .browser-toolbox-background{
   background-color: #000000;
-  color: #808080;
+  color: #96ce92;
   }
 
   .titlebar-close {
@@ -167,7 +167,7 @@ body {
   background-position: var(--newtab-wallpaper-backgroundPosition);
   background-attachment: fixed;
   overflow-y: scroll;
-  background-image: url("https://wallpapercave.com/wp/wp11742024.jpg") !important;
+  background-image: url("https://wallpapercave.com/wp/wp6513772.jpg") !important;
 }
 
   .search-handoff-button {
@@ -238,7 +238,7 @@ body {
  
 .ytSearchboxComponentSearchButton {
 border: 0px solid transparent;
-background-color: #f8f8f8;
+background-color: #000000;
 width: 64px;
 border-radius: 0 40px 40px 0;
 -moz-box-pack: center;
@@ -253,7 +253,7 @@ box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0) !important;
 #container {
 backdrop-filter: blur(10px);
 background: linear-gradient(rgba(0, 0, 0, .5)) !important; 
-border-bottom: 2px solid #000000 !important; 
+border-bottom: 1px solid #000000 !important; 
 }
     
 html:not(#⁠), body>div,body>table,
@@ -262,50 +262,50 @@ html:not(#⁠), body>div,body>table,
 [class*="tooltip"]:not(.ytp-tooltip-duration):not(.ytp-tooltip-bg):not(.ytp-tooltip-text-wrapper):not([class*="arrow"]):not(button),[role="menu"], .ytp-popup, .videoAdUiPreSkipButton,
 .videoAdUiAdInfoPopup {
 background:url(/*[[_]]*/)fixed #000!important;
-background-size:cover!important
+background-size: cover !important;
 }
     
 /*search bar*/#masthead-search-terms,
 form.channels-search:not(#​) {
-border:1px solid #FFF!important
+border: none !important
 } 
     
 #masthead-search-terms.gsfe_a {
-border:1px solid #A0A0A0!important
+border: none !important;
 } 
 
 #masthead-search-terms.gsfe_b {
-border:1px solid #4D90FE!important
+border: none !important;
 }
 
 :not(textarea):not(input):not([contenteditable]) {
-text-shadow:0 0.05em rgba(0,0,0,.5),0 -0.05em rgba(0,0,0,.5),0.05em 0 rgba(0,0,0,.5),-0.05em 0 rgba(0,0,0,.5)!important
+text-shadow:0 0.05em rgba(0,0,0,.5),0 -0.05em rgba(0,0,0,.5),0.05em 0 rgba(0,0,0,.5),-0.05em 0 rgba(0,0,0,.5) !important;
 }
 
 :not([class*="video-extras-sparkbar"]):not([class^="ytp-"]):not(.sidebar):not(.video-time):not([class^="html5-"]):not(.yt-uix-button-primary):not(label):not(.toggle):not(.branding-context-container-inner):not(.iv-drawer) {
-background-color:transparent!important;
-color:/*[[Font]]*/!important
+background-color: transparent !important;
+color:/*[[Font]]*/ !important;
 }
     
 .load-more-button {
-background:transparent!important
+background: transparent !important;
 }
     
 [role="alert"],.content-region,
 .yt-uix-checkbox-on-off .checked:before{
-display:none!important
+display:none !important;
 }
     
 :not(#​) :link{
-color:/*[[Link]]*/!important
+color:/*[[Link]]*/ !important;
 }
     
 :not(#​) :visited{
-color:/*[[Visited]]*/!important
+color:/*[[Visited]]*/ !important;
 }
     
 :not(#​) select{
-background:black!important
+background: black !important;
 }
     
 [href="/"][id*="logo"],
@@ -330,7 +330,7 @@ background-image:none!important
 :not(h2):not(button):not(.comment-simplebox-renderer-collapsed-content),
 #footer-container button,
 .yt-uix-button-shelf-slider-pager {
-border:none!important
+border:none !important;
 }
     
 textarea,
@@ -349,20 +349,17 @@ box-shadow:inset 0px 0px 0px 1px rgba(255,255,255,0)!important
 box-shadow:none!important
 }
      
-* {
-color: #848484 !important;    
+ytd-watch-metadata[title-headline-xs] h1.ytd-watch-metadata {
+color: #b997e1 !important;    
 box-shadow:inset 0px 0px 0px 1px rgba(255,255,255,0)!important;
 text-shadow: 0px 0px 1px rgba(255,255,255,0)!important;
 }
     
-*:hover {
-color: #bababa !important;
+* {
+border: none !important;
+box-shadow: none !important;
 }
-    
-a:hover {
-color: #bababa !important;      
-}
-    
+        
 .ytSearchboxComponentSuggestionsContainer,
 .ytSearchboxComponentSuggestionsContainerDark, .ytSearchboxComponentSuggestionsContainerScrollable {
 backdrop-filter: blur(10px) !important;
@@ -377,23 +374,45 @@ filter: saturate(100%) contrast(105%) !important;
 }
     
 img {
-filter: saturate(0%) brightness(50%) contrast(115%) !important;
+filter: saturate(105%) brightness(100%) contrast(105%) !important;
 }
-
-img:hover {
-filter: saturate(100%) brightness(100%) contrast(100%) !important;
-}
-    
     
 :not(textarea):not(input):not([contenteditable]) {
 text-shadow: none !important;
 }
 
-* {
-border: 0px solid rgba(0,0,0,0) !important;
 
+svg {
+color: #e2cea0 !important;
 }
 
+h1, h2, h3, h4, h5, h6, title, a {
+color: #e2a27a !important;
+}
+
+canvas, caption, center, cite, code, dd, del, dfn, div, dl, dt, em, embed, fieldset, font, form, h1, h2, h3, h4, h5, h6, hr, i, iframe, img, ins, kbd, label, legend, li, menu, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, u, ul, var  {
+color: #808080 !important;
+}
+
+yt-formatted-string {
+  color: #dcbbbb !important;
+}
+
+.ytSearchboxComponentInputBox {
+  position: relative;
+  -moz-box-align: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 40px 0 0 40px;
+  margin-left: 32px;
+  padding: 0 4px 0 16px;
+  display: -moz-box;
+  display: flex;
+  -moz-box-flex: 1;
+  flex: 1;
+  cursor: text;
 }
   '';
 
@@ -459,6 +478,7 @@ settings = [
 	     { name = "SCHEMA";                  url = "https://schema.org/docs/full.html";}
 	     { name = "GEMINI";                  url = "https://gemini.google.com/app";}
 	     { name = "GOOGLE FONTS";            url = "https://fonts.google.com/?preview.script=Latn";}
+	     { name = "SPRING BOOT";             url = "https://spring.academy/paths/spring-certified-professional-2023";}
 	  ];
 	};
      };
@@ -656,7 +676,6 @@ animation = workspaces, 1, 2.5, almostLinear, slidefadevert
 
 #DWINDLE_SETTINGS_START
 dwindle {
-pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
 preserve_split = true # You probably want this
 }
 #DWINDLE_SETTINGS_END
@@ -702,7 +721,6 @@ bind = SUPER, Return, exec, ghostty
 bind = SUPER, Q, killactive,
 bind = SUPER, Z, togglefloating,
 bind = SUPER, A, exec, /run/current-system/sw/bin/walker || pkill walker
-bind = SUPER, J, togglesplit, # dwindle
 bind = SUPER, B, exec, librewolf
 bind = SUPER, D, exec, dolphin
 bind = SUPER, C, exec, code

@@ -1,4 +1,4 @@
-const themeButtons = document.querySelectorAll('#anonymous, #gruvbox, #catppuccin, #kanagawa, #persona, #tokyo, #anime');
+const themeButtons = document.querySelectorAll('#normal, #anonymous, #gruvbox, #catppuccin, #kanagawa, #persona, #tokyo, #anime');
 
 const navList = document.querySelectorAll('.query_nav-text');
 navList.forEach((nav) => {
@@ -31,7 +31,7 @@ themeButtons.forEach(btn => {
 });
 
 
-thebody.classList.add('anonymous');
+thebody.classList.add('normal');
 document.getElementById('welcome')?.classList.add('chosen');
-document.getElementById('anonymous')?.classList.add('chosen');
+document.getElementById('normal')?.classList.add('chosen');
 

@@ -2,77 +2,48 @@
 
 programs.nixvim = {
   
-   enable = true;
-   defaultEditor = true;
-   terminalColors = false;
+  enable = true;
+  defaultEditor = true;
+  terminalColors = false;
 
+  keymaps = [
+  {
+    mode = "n";                 
+    key = "<leader>e";          
+    action = "<cmd>NvimTreeToggle<CR>"; 
+    options = {
+      silent = true;            
+      desc = "Toggle NvimTree";  
+    };
+  }
+];
 
-
-    plugins.treesitter = {
-    enable = true;
-    autoLoad = true;
-
+  plugins.cmp-tabby = {
+  enable = true;
+  autoLoad = true;
   };
 
-   keymaps = [{
-   mode = "n";
-   key = "<leader>e";
-   action = "<cmd>NvimTreeToggle<CR>";
-   options = {
-   silent = true;
-   desc = "Toggle NvimTree";
+  plugins.treesitter = {
+  enable = true;
+  autoLoad = true;
+  };
+
+  plugins.bufferline = {
+  enable = true;
+  autoLoad = true;
+  };
+
+  plugins.conform-nvim.enable = true;
+  globals.mapleader = " "; 
+  plugins.nvim-tree = {
+  autoLoad = true; 
+  enable = true;
+  settings.view = {
+  width = 30;
+  side = "left";
      };
-   }];
+  };
      
-   globals.mapleader = " "; 
-    
-   plugins.nvim-tree = {
-   autoLoad = true; 
-   enable = true;
-   openOnSetup = true;
-   settings.view = {
-   width = 30;
-   side = "left";
-     };
-   };
-
-   plugins.barbar = {
-   enable = false;
-   autoLoad = false;
-   keymaps = {
-   next.key = "<TAB>";
-   previous.key = "<S-TAB>";
-   close.key = "<leader>x";
-   };
-      
-   settings = {
-   auto_hide = 1;
-   maximum_padding = 3;
-   minimum_padding = 1;
-   tabpages = true;
-   animation = false;
-   exclude_ft = [
-   "oil"
-   "qf"
-   "fugitive"
-   ];
-          
-   exclude_name = [
-   "UnicodeTable.txt"
-   ];
-
-   highlight_alternate = true;
-   icons = {
-   button = true;
-   separator = {
-   left = "";
-   right = "";
-   seperator_at_end = false;
-      };
-     };
-    };
-   };
-
     plugins.noice.enable = true;
     plugins.noice.autoLoad = true;
     plugins.web-devicons.enable = true;    
@@ -81,13 +52,7 @@ programs.nixvim = {
     plugins.luasnip.enable = true;
     plugins.rustaceanvim.enable = true;
     plugins.lsp.enable = true;
-    plugins.java = { 
-    enable = false;
-       settings = {
-          spring_boot.enable = false;
-       };
-    };
-    
+    plugins.jdtls.enable = true;
     plugins.auto-save.enable = true;
     plugins.dotnet.enable = true;
     plugins.fzf-lua.enable = true;
@@ -169,7 +134,13 @@ programs.nixvim = {
      };
    };
 
-   extraConfigLua = ''   
+   extraConfigLua = ''  
+
+   vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    require("nvim-tree.api").tree.open()
+  end,
+})
 
    vim.cmd("colorscheme catppuccin-mocha")
        require('lualine').setup({
@@ -242,6 +213,5 @@ programs.nixvim = {
          },
        })
     '';
-
-  };
+};
 }

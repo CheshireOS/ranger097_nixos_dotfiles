@@ -7,7 +7,8 @@ gopls
 delve
 
 (python3.withPackages (pyPkgs: with pyPkgs; [
-
+numpy
+pandas
 ]))
 
 python3

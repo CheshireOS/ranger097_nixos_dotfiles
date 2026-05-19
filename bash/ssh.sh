@@ -20,7 +20,7 @@ cd /persist/home/ranger/ranger097_nixos_dotfiles
 new_ssh
 new_user
 
-sweet_cream=$(cat ~/.ssh/id_ed25519.pub)
+sweet_cream=$(cat /persist/home/ranger/.ssh/id_ed25519.pub)
 echo -e "\e[33m󱕴  \e[32mssh     \e[37m|\e[36m location \e[37m.ssh/id_ed25519.pub"
 echo -e "\e[33m󰌆  key     \e[37m| \e[31m$sweet_cream\e[0m"
 }

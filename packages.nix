@@ -86,7 +86,14 @@ kitty
 firefox
 sqlmap
 hping
+maven
+gradle
 live-server
+vite
+nodejs_25
+maven
+spring-boot-cli
+openjdk
 ];
 
 fonts.packages = with pkgs;[
