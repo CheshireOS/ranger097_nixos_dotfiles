@@ -90,7 +90,7 @@ maven
 gradle
 live-server
 vite
-nodejs_25
+nodejs_latest
 maven
 spring-boot-cli
 openjdk

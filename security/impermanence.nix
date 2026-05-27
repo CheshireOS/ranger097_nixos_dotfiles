@@ -23,6 +23,7 @@
 	"Projects"
         "ranger097_nixos_dotfiles"
         ".local/share/direnv"
+	".local/share/fonts"
 	".config/direnv"
         ".ssh"      
 	".cache/wal"

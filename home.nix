@@ -235,7 +235,12 @@ body {
 
 
    @-moz-document domain("youtube.com") {
- 
+
+@font-face {
+src: url("file://persist/home/ranger/.local/share/fonts/BigBlueTerm437NerdFontMono-Regular.ttf")
+}
+
+
 .ytSearchboxComponentSearchButton {
 border: 0px solid transparent;
 background-color: #000000;
@@ -251,9 +256,9 @@ box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0) !important;
 }
     
 #container {
-backdrop-filter: blur(10px);
-background: linear-gradient(rgba(0, 0, 0, .5)) !important; 
-border-bottom: 1px solid #000000 !important; 
+backdrop-filter: blur(0px);
+background: linear-gradient(rgba(0, 0, 0, 0)) !important; 
+border-bottom: 0px solid #000000 !important; 
 }
     
 html:not(#⁠), body>div,body>table,
@@ -279,7 +284,7 @@ border: none !important;
 }
 
 :not(textarea):not(input):not([contenteditable]) {
-text-shadow:0 0.05em rgba(0,0,0,.5),0 -0.05em rgba(0,0,0,.5),0.05em 0 rgba(0,0,0,.5),-0.05em 0 rgba(0,0,0,.5) !important;
+text-shadow:0 0.05em rgba(0,0,0,.0),0 -0.05em rgba(0,0,0,.0),0.05em 0 rgba(0,0,0,.0),-0.05em 0 rgba(0,0,0,.0) !important;
 }
 
 :not([class*="video-extras-sparkbar"]):not([class^="ytp-"]):not(.sidebar):not(.video-time):not([class^="html5-"]):not(.yt-uix-button-primary):not(label):not(.toggle):not(.branding-context-container-inner):not(.iv-drawer) {
@@ -362,9 +367,9 @@ box-shadow: none !important;
         
 .ytSearchboxComponentSuggestionsContainer,
 .ytSearchboxComponentSuggestionsContainerDark, .ytSearchboxComponentSuggestionsContainerScrollable {
-backdrop-filter: blur(10px) !important;
-background: linear-gradient(rgba(0, 0, 0, 0.8)) !important; 
-border-bottom: 2px solid #000000 !important; 
+backdrop-filter: blur(0px) !important;
+background: linear-gradient(rgba(0, 0, 0, 0)) !important; 
+border-bottom: 0px solid #000000 !important; 
 border-radius: 0px 0px 20px 20px;
 margin-top: 6px;
 }
@@ -383,15 +388,17 @@ text-shadow: none !important;
 
 
 svg {
-color: #e2cea0 !important;
+animation: rainbowText 18s linear infinite !important;
 }
 
-h1, h2, h3, h4, h5, h6, title, a {
-color: #e2a27a !important;
+h1, h2, h3, h4, h5, h6, title, a, span, p {
+color: #aliceblue !important;
+font-family: "BigBlueTerm437 Nerd Font Mono" !important;
 }
 
-canvas, caption, center, cite, code, dd, del, dfn, div, dl, dt, em, embed, fieldset, font, form, h1, h2, h3, h4, h5, h6, hr, i, iframe, img, ins, kbd, label, legend, li, menu, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, u, ul, var  {
-color: #808080 !important;
+canvas, caption, center, cite, code, dd, del, dfn, div, dl, dt, em, embed, fieldset, font, form, hr, i, iframe, img, ins, kbd, label, legend, li, menu, object, ol, pre, q, s, samp, small, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, u, ul, var  {
+color: aliceblue !important;
+font-family: "BigBlueTerm437 Nerd Font Mono" !important;
 }
 
 yt-formatted-string {
@@ -413,7 +420,240 @@ yt-formatted-string {
   -moz-box-flex: 1;
   flex: 1;
   cursor: text;
+
+
 }
+
+  ytd-app {
+  background: url('https://cdna.artstation.com/p/assets/images/images/025/789/352/original/pixel-jeff-galaxy-far-far-away.gif') !important;
+  object-fit: contain !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-position: center center !important;
+  backdrop-filter: brightness(30%) !important;
+}
+
+#secondary.ytd-watch-flexy {
+  padding-right: var(--ytd-watch-flexy-horizontal-page-margin);
+  width: var(--ytd-watch-flexy-sidebar-width);
+  min-width: var(--ytd-watch-flexy-sidebar-min-width);
+  position: relative;
+  backdrop-filter: blur(0px);
+  border-radius: 15px;
+  padding: 20px !important;
+  margin: 10px 0px !important;
+  border: 0px solid #000 !important;
+}
+
+ytd-watch-flexy[is-two-columns_][is-extra-wide-video_]:not([fixed-panels]) #primary.ytd-watch-flexy, ytd-watch-flexy[is-two-columns_][is-four-three-to-sixteen-nine-video_]:not([fixed-panels]) #primary.ytd-watch-flexy {
+  max-width: var(--ytd-watch-flexy-max-player-width);
+  min-width: var(--ytd-watch-flexy-min-player-width);
+  backdrop-filter: blur(0px);
+  margin: 0px;
+  padding: 30px !important;
+}
+
+html,
+body,
+ytd-app,
+yt-formatted-string,
+tp-yt-paper-item,
+tp-yt-paper-tab,
+tp-yt-paper-button,
+yt-chip-cloud-chip-renderer,
+#video-title,
+#text,
+#content,
+#author-text,
+#channel-name,
+#title,
+#description,
+#subtitle,
+#label,
+#message,
+#input,
+input,
+textarea,
+button,
+a,
+span,
+div {
+    font-family: "BigBlueTerm437 Nerd Font Mono" !important;
+    color: aliceblue !important;
+}
+
+@keyframes rainbowText {
+  0%   { color: #ff6ec7; }
+  25%  { color: #ffd166; }
+  50%  { color: #7bdff2; }
+  75%  { color: #b2f7ef; }
+  100% { color: #ff6ec7; }
+}
+
+.ytIconWrapperHost.ytd-logo, yt-icon.ytd-logo {
+  height: 20px;
+  width: 93px;
+  padding: 18px 14px 18px 16px;
+  color: var(--t7f9b7e1603e20b94);
+  -moz-box-flex: 0;
+  flex: none;
+  display: none;
+}
+
+page-manager.ytd-app {
+  --ytd-toolbar-offset: var(--ytd-masthead-height,var(--ytd-toolbar-height));
+  backdrop-filter: brightness(30%) !important;
+}
+
+#container.ytd-masthead {
+  height: 56px;
+  padding: 0 16px;
+  display: flexbox;
+  display: -moz-box;
+  display: flex;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  flex-direction: row;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: justify;
+  justify-content: space-between;
+  backdrop-filter: brightness(30%) !important;
+}
+
+ytd-watch-flexy[is-two-columns_]:not([full-bleed-player]) #columns.ytd-watch-flexy {
+  min-width: calc(var(--ytd-watch-flexy-min-player-height)*var(--ytd-watch-flexy-width-ratio)/var(--ytd-watch-flexy-height-ratio) + var(--ytd-watch-flexy-horizontal-page-margin)*3 + var(--ytd-watch-flexy-sidebar-min-width));
+  -moz-box-pack: center;
+  justify-content: center;
+  backdrop-filter: brightness(30%) !important;
+}
+
+ytd-search[has-search-header] {
+  padding: 0 24px 16px;
+  backdrop-filter: brightness(30%) !important;
+}
+
+ytd-mini-guide-renderer.ytd-app {
+  position: fixed;
+  left: 0;
+  top: var(--ytd-masthead-height,var(--ytd-toolbar-height));
+  bottom: 0;
+  width: var(--ytd-mini-guide-width);
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  backdrop-filter: brightness(30%) !important;
+}
+
+ytd-rich-grid-renderer {
+  display: -moz-box;
+  display: flex;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  flex-direction: column;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  --ytd-rich-grid-gutter-margin: 16px;
+  --ytd-rich-grid-content-max-width: calc(var(--ytd-rich-grid-items-per-row)*(var(--ytd-rich-grid-item-max-width) + var(--ytd-rich-grid-item-margin)) - var(--ytd-rich-grid-item-margin));
+  --ytd-rich-grid-row-margin: 32px;
+  backdrop-filter: brightness(30%) !important;
+}
+
+ytd-tabbed-page-header.grid-4-columns #page-header.ytd-tabbed-page-header, ytd-tabbed-page-header.grid-4-columns[has-inset-banner] #page-header-banner.ytd-tabbed-page-header {
+  padding-right: calc(50% - 428px);
+  padding-left: calc(50% - 428px);
+  backdrop-filter: brightness(30%) !important;
+}
+
+#contentContainer.tp-yt-app-header-layout {
+  position: relative;
+  z-index: 0;
+  backdrop-filter: brightness(30%) !important;
+}
+
+ytd-browse[page-subtype="channels"][enable-channel-lockup] {
+  --ytd-grid-1-columns-width: 218px;
+  --ytd-grid-2-columns-width: 436px;
+  --ytd-grid-3-columns-width: 654px;
+  --ytd-grid-4-columns-width: 872px;
+  --ytd-grid-5-columns-width: 1090px;
+  --ytd-grid-6-columns-width: 1308px;
+  --ytd-grid-max-width: 1308px;
+  backdrop-filter: brightness(30%) !important;
+}
+
+ytd-app {
+min-height: 1000000vh;
+}
+
+.ytSearchboxComponentSuggestionsContainerScrollable {
+  padding-top: 8px;
+  overflow-y: auto;
+  max-height: 80vh;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  backdrop-filter: blur(10px) !important;
+  display: none;
+}
+
+ytd-rich-grid-renderer {
+  display: -moz-box;
+  display: flex;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  flex-direction: column;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  --ytd-rich-grid-gutter-margin: 16px;
+  --ytd-rich-grid-content-max-width: calc(var(--ytd-rich-grid-items-per-row)*(var(--ytd-rich-grid-item-max-width) + var(--ytd-rich-grid-item-margin)) - var(--ytd-rich-grid-item-margin));
+  --ytd-rich-grid-row-margin: 32px;
+  padding-bottom: 1000000vh;
+}
+
+.html5-video-player, .ytp-contextmenu {
+  -ms-high-contrast-adjust: none;
+  forced-color-adjust: none;
+  background: rgba(0,0,0,0.30) !important;
+}
+
+ytd-watch-flexy[view-transition-enabled]:not([show-engagement-panel-scrim_]) #below.ytd-watch-flexy {
+  view-transition-name: metadata;
+  backdrop-filter: brightness(30%) !important;
+  min-width: 100%;
+  margin: 0px -3vw;
+  padding: 0px 3vw 0px 3vw;
+}
+
+ytd-watch-flexy:not([fixed-panels]) #primary.ytd-watch-flexy {
+  min-width: var(--ytd-watch-flexy-min-player-width);
+  background: black;
+    background-color: black;
+  backdrop-filter: brightness(30%) !important;
+  margin: 0px;
+  padding: 0px 3vw;
+}
+
+.html5-video-player, .ytp-contextmenu {
+  -ms-high-contrast-adjust: none;
+  forced-color-adjust: none;
+  background: rgba(0,0,0,0.7) !important;
+}
+
+#primary.ytd-watch-flexy {
+  padding-right: 0;
+  margin-left: 0px !important;
+  -moz-box-flex: 1;
+  flex: 1;
+    flex-basis: 0%;
+  flex-basis: 0.000000001px;
+  padding: 0px 3vw !important;
+}
+
+
   '';
 
 settings = {

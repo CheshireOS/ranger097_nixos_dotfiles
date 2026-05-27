@@ -2,6 +2,7 @@
 source /persist/home/ranger/ranger097_nixos_dotfiles/bash/wifi/networks.sh
 
 startup() {
+sleep 3
 wifi_switch
 sleep 0.5
 if pgrep awww >/dev/null; then
