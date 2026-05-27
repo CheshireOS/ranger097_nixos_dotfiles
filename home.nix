@@ -653,6 +653,15 @@ ytd-watch-flexy:not([fixed-panels]) #primary.ytd-watch-flexy {
   padding: 0px 3vw !important;
 }
 
+.html5-main-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline: 0;
+  border-radius: 10px !important;
+}
 
   '';
 
