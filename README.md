@@ -1,3 +1,8 @@
+deprecated but not abandoned(the opposite actually)!!!
+
+i have alot of projects but i plan on making a documentation website with extremely detailed instructions.
+
+
 ## Welcome to my dotfiles repo!!
 Made for developers who like very secure systems featuring [Lanzaboote](https://youtu.be/sbG1ENGWoIg?si=BcS0beGMHFDTaBlZ), [LUKS + TPM](https://av.tib.eu/media/61546), heavily *"[riced](https://www.reddit.com/r/unixporn/)"* systems, isolated and reproducible developer environments (via direnv), and fun scripts ive made to automate basic system task. As I learn more about Linux, Nixos, Hyprland, Automation, Systems Development and Programming as a whole, I will update this repo periodically.<br/>
 
