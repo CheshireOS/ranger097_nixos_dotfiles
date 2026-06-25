@@ -9,7 +9,7 @@ hii = "nvim /persist/home/ranger/ranger097_nixos_dotfiles/home.nix";
 wii = "nvim /persist/home/ranger/ranger097_nixos_dotfiles/waybar";
 cii = "nvim /persist/home/.config";
 pii = "nvim /persist/home/ranger/ranger097_nixos_dotfiles/python";
-clear = "clear";
+usii = "bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/user.sh";
 exii = "cd /persist/home/ranger/Projects/Exercism/";
 excii = "bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/exer.sh";
 mii = "cd /persist/home/ranger/Music/";
@@ -18,6 +18,7 @@ sii = "bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/ssh.sh";
 webii="bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/web.sh";
 prii="cd /persist/home/ranger/Projects/";
 glii="cd /persist/home/ranger/Projects/TheGlazePopStudioWeb/ && ./webserver.sh";
+rii = "bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/rice.sh";
 };
    
 interactiveShellInit = ''

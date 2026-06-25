@@ -5,6 +5,9 @@
     
     directories = [
       "/var/log"
+      "/var/log/mariadb"
+      "/var/log/mysql"
+      "/var/lib/mysql"
       "/var/lib/bluetooth"
       "/var/lib/nixos"
       "/etc/NetworkManager/system-connections"

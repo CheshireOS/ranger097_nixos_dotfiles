@@ -7,6 +7,11 @@ silent = true;
 nix-direnv.enable = true; };
 nixpkgs.config.android_sdk.accept_license = true;
 
+services.mysql = {
+  enable = true;
+  package = pkgs.mariadb;
+};
+
 environment.systemPackages = with pkgs; [
 sbctl
 ani-cli
@@ -43,7 +48,7 @@ lsd
 dtrx
 blender
 qt5.qtwayland
- qt6.qtwayland
+qt6.qtwayland
 pokeget-rs
 nmap
 pywal16
@@ -94,6 +99,10 @@ nodejs_latest
 maven
 spring-boot-cli
 openjdk
+jdk17
+mariadb
+peaclock
+cmatrix
 ];
 
 fonts.packages = with pkgs;[

@@ -4,7 +4,6 @@ programs.nixvim = {
   
   enable = true;
   defaultEditor = true;
-  terminalColors = false;
 
   keymaps = [
   {
@@ -71,15 +70,15 @@ programs.nixvim = {
           { name = "buffer"; }
        ];
     
-     mapping = {
-        "<C-Space>" = "cmp.mapping.complete()";
-        "<CR>" = "cmp.mapping.confirm({ select = true })";
-        "<Tab>" = "cmp.mapping.select_next_item()";
-        "<S-Tab>" = "cmp.mapping.select_prev_item()";
-	"<leader>e" = "<cmd>NvimTreeToggle<CR>";
-      };
+     #mapping = {
+     #   "<C-Space>" = "cmp.mapping.complete()";
+     #   "<CR>" = "cmp.mapping.confirm({ select = true })";
+     #   "<Tab>" = "cmp.mapping.select_next_item()";
+     #   "<S-Tab>" = "cmp.mapping.select_prev_item()";
+     #	"<leader>e" = "<cmd>NvimTreeToggle<CR>";
+     # };
 
-     snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
+     #snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
     };   
 
     opts = {
