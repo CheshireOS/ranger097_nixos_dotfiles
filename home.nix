@@ -1081,6 +1081,7 @@ settings = [
 	     { name = "VERCEL";                    url = "https://vercel.com/";}
 	     { name = "AWS";                       url = "https://aws.amazon.com/";}
 	     { name = "SPRING IO DOCS";                 url = "https://docs.spring.io/spring-boot/documentation.html";}
+	     { name = "SPRING BOOT SUPABASE TEMPLATE";   url = "https://github.com/ChangeNode/spring-boot-supabase/tree/main";}
 	  ];
 	};
      };
