@@ -17,6 +17,32 @@ programs.nixvim = {
   }
 ];
 
+    opts = {
+       number = true;         
+       relativenumber = false; 
+       shiftwidth = 2;   
+       termguicolors = true;
+       background = "dark";    
+    };
+
+colorschemes.catppuccin = {
+      autoLoad = true;
+      enable = true;
+      settings = {
+         flavour = "mocha";
+         transparent_background = true;
+         term_colors = false;
+    
+      integrations = {
+        cmp = true;
+        treesitter = true;
+        nvimtree = true;
+        telescope.enabled = true;
+       };
+     };
+   };
+
+
   plugins.cmp-tabby = {
   enable = true;
   autoLoad = true;
@@ -32,7 +58,17 @@ programs.nixvim = {
   autoLoad = true;
   };
 
-  plugins.conform-nvim.enable = true;
+  plugins.conform-nvim = { 
+  enable = true; 
+  settings.formatters_by_ft = {
+  nix = [ "alejandra" ];
+      lua = [ "stylua" ];
+      python = [ "black" ];
+      javascript = [ "prettier" ];
+      typescript = [ "prettier" ];
+};
+  };
+
   globals.mapleader = " "; 
   plugins.nvim-tree = {
   autoLoad = true; 
@@ -40,6 +76,7 @@ programs.nixvim = {
   settings.view = {
   width = 30;
   side = "left";
+   
      };
   };
      
@@ -70,39 +107,21 @@ programs.nixvim = {
           { name = "buffer"; }
        ];
     
-     #mapping = {
-     #   "<C-Space>" = "cmp.mapping.complete()";
-     #   "<CR>" = "cmp.mapping.confirm({ select = true })";
-     #   "<Tab>" = "cmp.mapping.select_next_item()";
-     #   "<S-Tab>" = "cmp.mapping.select_prev_item()";
-     #	"<leader>e" = "<cmd>NvimTreeToggle<CR>";
-     # };
-
-     #snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
-    };   
-
-    opts = {
-       number = true;         
-       relativenumber = false; 
-       shiftwidth = 2;   
-       termguicolors = true;
-       background = "dark";    
-    };
+};
     
     plugins.lsp.servers = {
       zls.enable = true;
       pyright.enable = true;
       nixd.enable = true;
-      clangd.enable = true;
+      clangd.enable = false;
       ts_ls.enable = true;
       html.enable = true;
-      cssls.enable = true;
+      cssls.enable = false;
       gopls.enable = true;
       lua_ls.enable = true;
       svelte.enable = true;
       tailwindcss.enable = true; 
-      emmet_ls.enable = true;
-      jdtls.enable = true; 
+      #emmet_ls.enable = true; 
       sqls.enable = true;
 
       gdscript = {
@@ -116,23 +135,7 @@ programs.nixvim = {
         };
       };  
 
-      colorschemes.catppuccin = {
-      autoLoad = true;
-      enable = true;
-      settings = {
-         flavour = "mocha";
-         transparent_background = true;
-         term_colors = false;
-    
-      integrations = {
-        cmp = true;
-        treesitter = true;
-        nvimtree = true;
-        telescope.enabled = true;
-       };
-     };
-   };
-
+      
    extraConfigLua = ''  
 
    vim.api.nvim_create_autocmd("VimEnter", {
