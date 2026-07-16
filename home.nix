@@ -1083,6 +1083,7 @@ settings = [
 	     { name = "SPRING IO DOCS";                 url = "https://docs.spring.io/spring-boot/documentation.html";}
 	     { name = "SPRING BOOT SUPABASE TEMPLATE";   url = "https://github.com/ChangeNode/spring-boot-supabase/tree/main";}
 	     { name = "WALLHAVEN";                       url = "https://wallhaven.cc/";}
+	     { name = "LOGOIPSUM";                                url = "https://logoipsum.com/";}
 	  ];
 	};
      };
@@ -1332,6 +1333,7 @@ bind = SUPER, C, exec, code
 bind = SUPER, F, fullscreenstate, 2
 bind = SUPER, X, exec, bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/waybar.sh
 bind = SUPER, M, exec, bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/bluelight.sh
+bind = SUPER, T, exec, direnv exec /persist/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher python3 /persist/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/themes.py
 bind = SUPER, H, exec, hyprshot -m output -m eDP-1
 bind = SUPER, P, exec, systemctl --user restart pipewire
 

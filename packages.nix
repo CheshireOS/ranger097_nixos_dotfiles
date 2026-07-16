@@ -7,10 +7,9 @@ silent = true;
 nix-direnv.enable = true; };
 nixpkgs.config.android_sdk.accept_license = true;
 
-services.mysql = {
-  enable = true;
-  package = pkgs.mariadb;
-};
+nixpkgs.config.permittedInsecurePackages = [
+                "pnpm-10.29.2"
+              ];
 
 environment.systemPackages = with pkgs; [
 sbctl
@@ -103,6 +102,9 @@ jdk17
 mariadb
 peaclock
 cmatrix
+postgresql
+flutter
+dart
 ];
 
 fonts.packages = with pkgs;[

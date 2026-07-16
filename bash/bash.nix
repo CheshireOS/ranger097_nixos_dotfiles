@@ -19,6 +19,7 @@ webii="bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/web.sh";
 prii="cd /persist/home/ranger/Projects/";
 glii="cd /persist/home/ranger/Projects/TheGlazePopStudioWeb/ && ./webserver.sh";
 rii = "bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/rice.sh";
+peaclock="peaclock --config-dir=/persist/home/ranger/ranger097_nixos_dotfiles/peaclock";
 };
    
 interactiveShellInit = ''
