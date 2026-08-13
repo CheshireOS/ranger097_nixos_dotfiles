@@ -25,8 +25,6 @@ services.logind.settings.Login = {
   LidSwitchIgnoreInhibited = "yes";
  };
 
-
-
 boot.tmp.useTmpfs = true;
 boot.tmp.cleanOnBoot = true;
 boot.kernel.sysctl = {

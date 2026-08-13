@@ -5,7 +5,7 @@ programs.direnv = {
 enable = true;
 silent = true;
 nix-direnv.enable = true; };
-nixpkgs.config.android_sdk.accept_license = true;
+#nixpkgs.config.android_sdk.accept_license = true;
 
 nixpkgs.config.permittedInsecurePackages = [
                 "pnpm-10.29.2"
@@ -51,8 +51,8 @@ qt6.qtwayland
 pokeget-rs
 nmap
 pywal16
-android-studio-tools
-android-studio-full
+#android-studio-tools
+#android-studio-full
 elephant
 timg
 xdg-desktop-portal-gtk

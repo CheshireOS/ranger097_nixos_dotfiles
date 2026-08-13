@@ -10,6 +10,14 @@ imports = [
   ./security/security.nix
 ];
 
+
+fileSystems."/" = {
+  device = "/dev/disk/by-uuid/70b719d7-740a-48dc-95c8-0134766573f5";
+  fsType = "ext4";
+};
+
+
+
 # Bootloader & Kernel
 boot.loader.systemd-boot.enable = false;
 boot.loader.efi.canTouchEfiVariables = true;
