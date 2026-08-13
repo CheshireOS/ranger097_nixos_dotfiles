@@ -1,9 +1,9 @@
 import os
 import subprocess
 
-dotfiles_dir = "/persist/home/ranger/ranger097_nixos_dotfiles"
-toggle_file = "/persist/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/toggle.txt"
-wallpaper_directory = "/persist/home/ranger/ranger097_nixos_dotfiles/wallpapers/wallpapers"
+dotfiles_dir = "/home/ranger/ranger097_nixos_dotfiles"
+toggle_file = "/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/toggle.txt"
+wallpaper_directory = "/home/ranger/ranger097_nixos_dotfiles/wallpapers/wallpapers"
 wallpaper_list = os.listdir(wallpaper_directory)
 num_of_wallpapers = len(wallpaper_list)
 

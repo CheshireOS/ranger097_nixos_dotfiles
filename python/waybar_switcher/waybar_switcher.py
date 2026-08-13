@@ -2,7 +2,7 @@ import os
 import sys
 import subprocess
 
-toggle_file = "/persist/home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/toggle.txt"
+toggle_file = "/home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/toggle.txt"
 
 with open(toggle_file, 'r') as f:
     x = int(f.readline().strip())
@@ -12,12 +12,12 @@ try:
     if x == 0:
         subprocess.run(["pkill", "waybar"])
         subprocess.Popen(["waybar", "-c", 
-        "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/left.jsonc", "-s", 
-        "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/left.css"
+        "/home/ranger/ranger097_nixos_dotfiles/waybar/left.jsonc", "-s", 
+        "/home/ranger/ranger097_nixos_dotfiles/waybar/left.css"
         ])
         subprocess.Popen(["waybar", "-c", 
-        "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.jsonc", "-s", 
-        "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.css"
+        "/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.jsonc", "-s", 
+        "/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.css"
         ])
         with open(toggle_file, 'w') as f:
             f.write("1")
@@ -25,12 +25,12 @@ try:
     elif x == 1:
         subprocess.run(["pkill", "waybar"])
         subprocess.Popen(["waybar", "-c", 
-        "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/right.jsonc", "-s", 
-        "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/right.css"
+        "/home/ranger/ranger097_nixos_dotfiles/waybar/right.jsonc", "-s", 
+        "/home/ranger/ranger097_nixos_dotfiles/waybar/right.css"
         ])
         subprocess.Popen(["waybar", "-c", 
-        "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.jsonc", "-s", 
-        "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.css"
+        "/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.jsonc", "-s", 
+        "/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.css"
         ])
         with open(toggle_file, 'w') as f:
             f.write("2")
@@ -38,8 +38,8 @@ try:
     elif x == 2:
         subprocess.run(["pkill", "waybar"])
         subprocess.Popen(["waybar", "-c", 
-        "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/double_bottom.jsonc", "-s", 
-        "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/double_bottom.css"
+        "/home/ranger/ranger097_nixos_dotfiles/waybar/double_bottom.jsonc", "-s", 
+        "/home/ranger/ranger097_nixos_dotfiles/waybar/double_bottom.css"
         ])
         with open(toggle_file, 'w') as f:
             f.write("3")
@@ -47,12 +47,12 @@ try:
     elif x == 3:
         subprocess.run(["pkill", "waybar"])
         subprocess.Popen(["waybar", "-c", 
-        "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/music.jsonc", "-s", 
-        "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/music.css"
+        "/home/ranger/ranger097_nixos_dotfiles/waybar/music.jsonc", "-s", 
+        "/home/ranger/ranger097_nixos_dotfiles/waybar/music.css"
         ])
         subprocess.Popen(["waybar", "-c", 
-        "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.jsonc", "-s", 
-        "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.css"
+        "/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.jsonc", "-s", 
+        "/home/ranger/ranger097_nixos_dotfiles/waybar/bottom.css"
         ])
         with open(toggle_file, 'w') as f:
             f.write("4")
@@ -60,12 +60,12 @@ try:
     elif x == 4:
         subprocess.run(["pkill", "waybar"])
         subprocess.Popen(["waybar", "-c", 
-        "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/music.jsonc", "-s", 
-        "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/music.css"
+        "/home/ranger/ranger097_nixos_dotfiles/waybar/music.jsonc", "-s", 
+        "/home/ranger/ranger097_nixos_dotfiles/waybar/music.css"
         ])
         subprocess.Popen(["waybar", "-c", 
-        "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/double_bottom.jsonc", "-s", 
-        "/persist/home/ranger/ranger097_nixos_dotfiles/waybar/double_bottom.css"
+        "/home/ranger/ranger097_nixos_dotfiles/waybar/double_bottom.jsonc", "-s", 
+        "/home/ranger/ranger097_nixos_dotfiles/waybar/double_bottom.css"
         ])
         with open(toggle_file, 'w') as f:
             f.write("5")

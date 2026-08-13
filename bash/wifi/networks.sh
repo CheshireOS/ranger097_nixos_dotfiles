@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-network="/persist/home/ranger/ranger097_nixos_dotfiles/bash/wifi/networks.txt"
+network="/home/ranger/ranger097_nixos_dotfiles/bash/wifi/networks.txt"
 
 wifi_switch() {
 while IFS=":" read -r ssid pswd; do
