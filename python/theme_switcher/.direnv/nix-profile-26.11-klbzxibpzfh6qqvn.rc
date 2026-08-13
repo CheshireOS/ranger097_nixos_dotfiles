@@ -43,7 +43,7 @@ NIX_ENFORCE_NO_NATIVE='1'
 export NIX_ENFORCE_NO_NATIVE
 NIX_HARDENING_ENABLE='bindnow format fortify fortify3 libcxxhardeningfast pic relro stackclashprotection stackprotector strictflexarrays1 strictoverflow zerocallusedregs'
 export NIX_HARDENING_ENABLE
-NIX_LDFLAGS='-rpath /persist/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/outputs/out/lib  -L/nix/store/hk14yx3g7ir9498m85fx5zv0lb4xpf5k-python3-3.14.6-env/lib -L/nix/store/jxyrvv4gbpnp3ap5iy7wxwl1sg4x2x88-python3-3.14.6/lib -L/nix/store/hk14yx3g7ir9498m85fx5zv0lb4xpf5k-python3-3.14.6-env/lib -L/nix/store/jxyrvv4gbpnp3ap5iy7wxwl1sg4x2x88-python3-3.14.6/lib'
+NIX_LDFLAGS='-rpath /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/outputs/out/lib  -L/nix/store/hk14yx3g7ir9498m85fx5zv0lb4xpf5k-python3-3.14.6-env/lib -L/nix/store/jxyrvv4gbpnp3ap5iy7wxwl1sg4x2x88-python3-3.14.6/lib -L/nix/store/hk14yx3g7ir9498m85fx5zv0lb4xpf5k-python3-3.14.6-env/lib -L/nix/store/jxyrvv4gbpnp3ap5iy7wxwl1sg4x2x88-python3-3.14.6/lib'
 export NIX_LDFLAGS
 NIX_NO_SELF_RPATH='1'
 NIX_STORE='/nix/store'
@@ -149,7 +149,7 @@ name='nix-shell-env'
 export name
 nativeBuildInputs='/nix/store/1xklj6dmgcpgz60c9w2ynaq7ynzfsrrq-go-1.26.4 /nix/store/1vgg94l8hv1r4z7vr0alzfmr1lya4pzz-gopls-0.23.0 /nix/store/q2mj53z4sw7b763v9hy0zr9yq931r4r2-delve-1.27.0 /nix/store/hk14yx3g7ir9498m85fx5zv0lb4xpf5k-python3-3.14.6-env /nix/store/jxyrvv4gbpnp3ap5iy7wxwl1sg4x2x88-python3-3.14.6 /nix/store/d0kkd93aji32klh4npp5fzq82lb84p85-zig-0.16.0'
 export nativeBuildInputs
-out='/persist/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/outputs/out'
+out='/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/outputs/out'
 export out
 outputBin='out'
 outputDev='out'
@@ -180,7 +180,7 @@ preConfigurePhases=' updateAutotoolsGnuConfigScriptsPhase'
 declare -a preFixupHooks=('_moveToShare' '_multioutDocs' '_multioutDevs' )
 preferLocalBuild='1'
 export preferLocalBuild
-prefix='/persist/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/outputs/out'
+prefix='/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/outputs/out'
 declare -a propagatedBuildDepFiles=('propagated-build-build-deps' 'propagated-native-build-inputs' 'propagated-build-target-deps' )
 propagatedBuildInputs=''
 export propagatedBuildInputs
