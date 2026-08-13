@@ -35,7 +35,7 @@ input {
         // dwtp
         // drag false
         // drag-lock
-        natural-scroll
+        // natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"
         // scroll-method "two-finger"
@@ -75,7 +75,7 @@ input {
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-/-output "eDP-1" {
+output "eDP-1" {
     // Uncomment this line to disable this output.
     // off
 
@@ -88,7 +88,7 @@ input {
     mode "3840x2400@59.994"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 4
+    scale 3
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -111,7 +111,7 @@ input {
 // https://niri-wm.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 16
+    gaps 20
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -270,7 +270,7 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "ghostty"
 spawn-at-startup "elephant"
-spawn-at-startup "awww-daemon"
+spawn-sh-at-startup "awww-daemon"
 spawn-sh-at-startup "bash /home/ranger/ranger097_nixos_dotfiles/bash/startup.sh"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
