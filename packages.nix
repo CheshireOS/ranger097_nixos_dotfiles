@@ -105,6 +105,9 @@ cmatrix
 postgresql
 flutter
 dart
+electron
+fuzzel
+alacritty
 ];
 
 fonts.packages = with pkgs;[
