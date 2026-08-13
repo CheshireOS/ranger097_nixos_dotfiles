@@ -167,13 +167,13 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#7fc8ff"
+        active-color "#acacac"
 
         // Color of the ring on inactive monitors.
         //
         // The focus ring only draws around the active window, so the only place
         // where you can see its inactive-color is on other monitors.
-        inactive-color "#505050"
+        inactive-color "#000000"
 
         // You can also use gradients. They take precedence over solid colors.
         // Gradients are rendered the same as CSS linear-gradient(angle, from, to).
@@ -215,7 +215,7 @@ layout {
     // You can enable drop shadows for windows.
     shadow {
         // Uncomment the next line to enable shadows.
-        // on
+        off
 
         // By default, the shadow draws only around its window, and not behind it.
         // Uncomment this setting to make the shadow draw behind its window.
@@ -237,16 +237,16 @@ layout {
         // pixels and match the CSS box-shadow properties.
 
         // Softness controls the shadow blur radius.
-        softness 30
+        softness 40
 
         // Spread expands the shadow.
         spread 5
 
         // Offset moves the shadow relative to the window.
-        offset x=0 y=5
+        offset x=0 y=3
 
         // You can also change the shadow color and opacity.
-        color "#0007"
+        color "#000"
     }
 
     // Struts shrink the area occupied by windows, similarly to layer-shell panels.
@@ -274,7 +274,7 @@ spawn-sh-at-startup "awww-daemon"
 spawn-sh-at-startup "awww-daemon --namespace backdrop"
 
 spawn-sh-at-startup "python3 /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/themes.py"
-spawn-sh-at-startup "python3 /home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/waybar_switcher.py"
+spawn-sh-at-startup "python3 /home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/niri_waybar_switcher.py"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -358,7 +358,7 @@ window-rule {
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
-    geometry-corner-radius 5
+    geometry-corner-radius 20
     clip-to-geometry true
 }
 
@@ -382,7 +382,7 @@ binds {
     Mod+A hotkey-overlay-title="Run an Application: walker" { spawn "walker"; }
     Mod+B hotkey-overlay-title="Open Browser: firefox" { spawn "firefox"; }
     Mod+D hotkey-overlay-title="Open Browser: dolphin" { spawn "dolphin"; }
-    Mod+T hotkey-overlay-title="theme switcher" { spawn-sh "python3 /home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/waybar_switcher.py" ; }
+    Mod+T hotkey-overlay-title="theme switcher" { spawn-sh "python3 /home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/niri_waybar_switcher.py" ; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -576,14 +576,14 @@ binds {
     Mod+Ctrl+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
 
-    Mod+M { maximize-column; }
+    Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
 
     // While maximize-column leaves gaps and borders around the window,
     // maximize-window-to-edges doesn't: the window expands to the edges of the screen.
     // This bind corresponds to normal window maximizing,
     // e.g. by double-clicking on the titlebar.
-    Mod+F { maximize-window-to-edges; }
+    Mod+M { maximize-window-to-edges; }
 
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".

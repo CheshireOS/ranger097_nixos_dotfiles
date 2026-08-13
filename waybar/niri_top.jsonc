@@ -1,0 +1,34 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
+    "spacing": 0, // Gaps between modules (4px)
+    "margin-top" : 0,
+    "margin-bottom": 0,
+    "margin-left" : 0,
+    "margin-right" : 0,
+    "modules-left": [
+    ],
+    "modules-center": [
+    "mpris"
+    ],
+    "modules-right": [
+    ],
+
+"mpris": {
+"format": "{artist} - {title}",
+"tooltip": false,
+//"dynamic-order": ["artist","title"],
+//"dynamic-separator": "-",
+//"dynamic-len": 20,
+"max-length": 200,
+"player-icons": {
+"default": "",
+"firefox": ""
+}
+
+},
+
+
+}

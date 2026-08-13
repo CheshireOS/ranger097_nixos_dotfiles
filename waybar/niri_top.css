@@ -1,0 +1,24 @@
+/* ranger097 */
+
+window#waybar {
+background-color: rgba(0,0,0,0);
+border: 0px solid #000000;
+border-radius: 7px;
+}
+
+#mpris {
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 15px;
+padding-right: 15px;
+margin: 0px 5px;
+font-family: GeistMono NF;
+font-size: 13px;
+font-weight: 300;
+background-color: black;
+color: white;
+text-shadow: 0px 0px 6px rgba(0,0,0,1);
+border-radius: 0px 0px 100px 100px; 
+}
+
+
