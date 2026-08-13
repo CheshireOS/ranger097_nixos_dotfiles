@@ -5,7 +5,7 @@
 "layer": "top",
 "position": "bottom", // (top|bottom|left|right)
 //"height": 4,  
-"width": 620, 
+"width": 700, 
 "spacing": 0,
 "margin-top" : 0,
 "margin-bottom": 6,

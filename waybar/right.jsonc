@@ -4,13 +4,13 @@
 {
 "layer": "top",
 "position": "right", // (top|bottom|left|right)
-"height": 296,  
+"height": 300,  
 "width": 4, 
 "spacing": 0,
 "margin-top" : 0,
 "margin-bottom": 0,
-"margin-left" : 0,
-"margin-right" : 6,
+"margin-left" : 10,
+"margin-right" : 10,
 
 "modules-left": [
 ],

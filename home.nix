@@ -1107,10 +1107,10 @@ programs.ghostty.enable = true;
 programs.ghostty.settings = {
 theme = "Catppuccin Mocha";
 custom-shader = [
-"/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/starfield.glsl"
-#"/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/ripple_cursor.glsl"
-"/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/cursor_blaze.glsl"
-#"/persist/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/cineShader-Lava.glsl"
+"/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/starfield.glsl"
+#"/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/ripple_cursor.glsl"
+"/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/cursor_blaze.glsl"
+#"/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/cineShader-Lava.glsl"
 ];
 
 custom-shader-animation = "always";
@@ -1129,6 +1129,7 @@ font-style = "ExtraLight";
 font-feature = "calt";
 
 #WINDOW_SETTINGS
+window-decoration = false;
 window-padding-x = 20;
 window-padding-y = 20;
 confirm-close-surface = false;
@@ -1159,7 +1160,7 @@ ecosystem:no_update_news = true
 #AUTOSTART
 exec-once = ghostty
 exec-once = awww-daemon
-exec-once = bash /persist/home/ranger/ranger097_nixos_dotfiles/bash/startup.sh
+exec-once = bash /home/ranger/ranger097_nixos_dotfiles/bash/startup.sh
 #exec-once = LD_LIBRARY_PATH=/run/opengl-driver/lib mpvpaper -o "no-audio --loop-playlist --panscan=1.0 hwdec=auto" eDP-1 /home/ranger/Videos/wallpapers/guweiz.mp4
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec-once = systemctl --user start hyprpolkitagent

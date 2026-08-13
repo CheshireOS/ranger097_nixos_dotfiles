@@ -23,4 +23,12 @@ subprocess.run([
 "--transition-fps", "50"
 ])
 
+subprocess.run([
+"awww", "img", cat_string_file,
+"--transition-type", "grow",
+"--transition-step", "90",
+"--transition-fps", "50",
+"--namespace", "backdrop"
+])
+
 
