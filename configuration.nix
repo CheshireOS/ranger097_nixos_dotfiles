@@ -2,13 +2,10 @@
 
 {
 imports = [ 
-  ./desktops/cosmic.nix
-  ./desktops/hyprland.nix
   ./packages.nix
   ./bash/bash.nix
   ./wifi/wifi.nix
   ./development/nixvim.nix
-  ./development/tmux.nix
   ./security/security.nix
 ];
 
@@ -59,5 +56,5 @@ nix.settings = {
 };
 
 # Versioning - Set to Unstable/Next Release
-system.stateVersion = "25.11"; 
+system.stateVersion = "26.05"; 
 }

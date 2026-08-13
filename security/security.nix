@@ -25,52 +25,6 @@ services.logind.settings.Login = {
   LidSwitchIgnoreInhibited = "yes";
  };
 
-boot.initrd.luks.devices = {
-    "cryptroot1" = {
-      device = "/dev/disk/by-uuid/e600efd4-8a5c-4afe-bf3b-f67e5efa1eaf";
-      allowDiscards = true;
-    };
-    "cryptroot2" = {
-      device = "/dev/disk/by-uuid/8f5e8d13-49fc-4885-94e4-9866ac549f88";
-      allowDiscards = true;
-    };
-  };
-
-  boot.initrd.supportedFilesystems = [ "btrfs" ];
-
-  fileSystems."/" = {
-    device = "none";
-    fsType = "tmpfs";
-    options = [ "defaults" "size=4G" "mode=755" ];
-  };  
-
-
-fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/4C79-9D1A";
-    fsType = "vfat";
-  };
-
-
-
-fileSystems."/nix" = {
- options = [ "subvol=@nix" "compress=zstd" "noatime" ];
- device = "/dev/mapper/cryptroot1";
- fsType = "btrfs";
-};
-
-
-fileSystems."/persist" = {
-    device = "/dev/mapper/cryptroot1";
-    fsType = "btrfs";
-    options = [ "subvol=@persist" "compress=zstd" ];
-  };
-
-  fileSystems."/var/log" = {
-    device = "/dev/mapper/cryptroot1";
-    fsType = "btrfs";
-    options = [ "subvol=@log" "compress=zstd" ];
-  };
-
 
 
 boot.tmp.useTmpfs = true;

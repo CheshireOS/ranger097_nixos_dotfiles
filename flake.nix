@@ -9,18 +9,8 @@
        inputs.nixpkgs.follows = "nixpkgs"; 
     };
     
-    lanzaboote = {
-       url = "github:nix-community/lanzaboote/v1.0.0";
-       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    
     home-manager = {
        url = "github:nix-community/home-manager";
-       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    impermanence = {
-       url = "github:nix-community/impermanence";
        inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -32,7 +22,7 @@
 
   };
  
-  outputs = { self, nixpkgs, nixvim, home-manager, lanzaboote, impermanence, ... }@inputs: {
+  outputs = { self, nixpkgs, nixvim, home-manager ... }@inputs: {
 
 
   nixosConfigurations = {
@@ -43,18 +33,12 @@
       ./hosts/deoxy/hardware-configuration.nix
       ./configuration.nix
         home-manager.nixosModules.home-manager
-        lanzaboote.nixosModules.lanzaboote
 	nixvim.nixosModules.nixvim
-        impermanence.nixosModules.impermanence
 	inputs.nur.modules.nixos.default
 
      ({ pkgs, lib, ... }: {
         networking.hostName = "deoxy";
         boot.loader.systemd-boot.enable = lib.mkForce true;
-        boot.lanzaboote = {
-        enable = false;
-        pkiBundle = "/var/lib/sbctl";
-      };
    })
 
   {
@@ -77,18 +61,12 @@
        ./hosts/jirachi/hardware-configuration.nix
        ./configuration.nix
          home-manager.nixosModules.home-manager
-         lanzaboote.nixosModules.lanzaboote
-	 nixvim.nixosModules.nixvim
-         impermanence.nixosModules.impermanence  
+	 nixvim.nixosModules.nixvim  
 	 inputs.nur.modules.nixos.default
 
    ({ pkgs, lib, ... }: {
       networking.hostName = "jirachi";
       boot.loader.systemd-boot.enable = lib.mkForce true;
-      boot.lanzaboote = {
-         enable = false;
-         pkiBundle = "/var/lib/sbctl";
-      };   
    })  
 
   {
