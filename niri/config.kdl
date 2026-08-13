@@ -111,7 +111,7 @@ output "eDP-1" {
 // https://niri-wm.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 20
+    gaps 10
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -255,10 +255,10 @@ layout {
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
     struts {
-        // left 64
-        // right 64
-        // top 64
-        // bottom 64
+        left 0
+        right 0
+        top 0
+        bottom 0
     }
 }
 
@@ -272,7 +272,7 @@ spawn-at-startup "ghostty"
 spawn-at-startup "elephant"
 spawn-sh-at-startup "awww-daemon"
 spawn-sh-at-startup "python /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/themes.py"
-spawn-sh-at-startup "bash /home/ranger/ranger097_nixos_dotfiles/bash/startup.sh"
+spawn-sh-at-startup "python /home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/waybar_switcher.py"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -345,7 +345,7 @@ window-rule {
 
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
-/-window-rule {
+window-rule {
     geometry-corner-radius 5
     clip-to-geometry true
 }

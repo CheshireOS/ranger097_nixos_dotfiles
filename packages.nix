@@ -108,7 +108,7 @@ dart
 electron
 fuzzel
 alacritty
-python
+python3
 ];
 
 fonts.packages = with pkgs;[

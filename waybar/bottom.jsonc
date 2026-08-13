@@ -107,7 +107,7 @@
 "custom/themes": {
 "tooltip": false,
 "format": " ",
-"on-click":"direnv exec /persist/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher python3 /persist/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/themes.py"
+"on-click":"direnv exec /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher python3 /home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/themes.py"
 },
 
 "custom/nixos": {
