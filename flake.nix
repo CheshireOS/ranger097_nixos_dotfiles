@@ -22,7 +22,7 @@
 
   };
  
-  outputs = { self, nixpkgs, nixvim, home-manager ... }@inputs: {
+  outputs = { self, nixpkgs, nixvim, home-manager, ... }@inputs: {
 
 
   nixosConfigurations = {
