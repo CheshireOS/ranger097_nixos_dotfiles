@@ -1,5 +1,5 @@
 #!/usr/bin/env
-source /persist/home/ranger/ranger097_nixos_dotfiles/bash/wifi/networks.sh
+source /home/ranger/ranger097_nixos_dotfiles/bash/wifi/networks.sh
 
 startup() {
 sleep 3
@@ -13,12 +13,12 @@ else
 fi
 sleep 0.5
 for dir in theme_switcher bluelight_toggle waybar_switcher cache; do
-cd /persist/home/ranger/ranger097_nixos_dotfiles/python/$dir 
-direnv allow "/persist/home/ranger/ranger097_nixos_dotfiles/python/$dir" > /dev/null 2>&1 &
+cd /home/ranger/ranger097_nixos_dotfiles/python/$dir 
+direnv allow "/home/ranger/ranger097_nixos_dotfiles/python/$dir" > /dev/null 2>&1 &
 sleep 0.5
 done
 
-DIR="/persist/home/ranger/ranger097_nixos_dotfiles/python/cache"
+DIR="/home/ranger/ranger097_nixos_dotfiles/python/cache"
 for file in theme_cache.py waybar_cache.py bluelight_toggle.py; do
 direnv exec "$DIR" python3 "$DIR/$file" > /dev/null 2>&1 &
 sleep 0.5

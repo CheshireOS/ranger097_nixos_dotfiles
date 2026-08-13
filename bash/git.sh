@@ -4,7 +4,7 @@ source /persist/home/ranger/ranger097_nixos_dotfiles/bash/security.sh
 dgit() {
 echo ""
 echo -e "\e[0;32m \e[0;36mEntering dotfiles \e[0;32m \e[0;36mon main."
-cd /persist/home/ranger/ranger097_nixos_dotfiles
+cd /home/ranger/ranger097_nixos_dotfiles
 wait
 echo -e "\e[0;32m \e[0;36mAdding files to dotfiles \e[0;32m \e[0;36mon main"
 git add . &> /dev/null
@@ -26,7 +26,7 @@ fi
 jgit() {
 echo ""
 echo -e "\e[0;32m \e[0;36mEntering dotfiles \e[0;32m \e[0;36mon main."
-cd /persist/home/ranger/ranger097_nixos_dotfiles
+cd /home/ranger/ranger097_nixos_dotfiles
 wait
 echo -e "\e[0;32m \e[0;36mAdding files to dotfiles \e[0;32m \e[0;36mon main"
 git add . &> /dev/null

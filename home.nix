@@ -1141,7 +1141,7 @@ home.sessionVariables = {
   LIBVA_DRIVER_NAME = "nvidia";
 };
 
-xdg.configFile."niri/config.kdl".source = .niri/config.kdl;
+xdg.configFile."niri/config.kdl".source = ./niri/config.kdl;
 
 wayland.windowManager.hyprland = {
 enable = true;

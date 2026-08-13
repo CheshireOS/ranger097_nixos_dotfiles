@@ -1,2 +1,2 @@
-cd /persist/home/ranger/ranger097_nixos_dotfiles/
+cd /home/ranger/ranger097_nixos_dotfiles/
 

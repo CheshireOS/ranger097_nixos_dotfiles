@@ -4,7 +4,7 @@ exer() {
 read -p "exercism token: " token
 exercism configure --token="$token" > /dev/null 2>&1
 tokenStatus=$?
-exercism configure -w /persist/home/ranger/Projects/Exercism/ > /dev/null 2>&1
+exercism configure -w /home/ranger/Projects/Exercism/ > /dev/null 2>&1
 workspaceStatus=$?
 
 if [[ tokenStatus -eq 0 && workspaceStatus -eq 0 ]]; then

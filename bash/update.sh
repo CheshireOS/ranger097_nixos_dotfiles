@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-source /persist/home/ranger/ranger097_nixos_dotfiles/bash/security.sh
-source /persist/home/ranger/ranger097_nixos_dotfiles/bash/git.sh
+source /home/ranger/ranger097_nixos_dotfiles/bash/security.sh
+source /home/ranger/ranger097_nixos_dotfiles/bash/git.sh
 
 update() {
 clear
@@ -18,7 +18,7 @@ if [[ store -eq 0 && garbage -eq 0 ]]; then
 fi 
 
 
-cd /persist/home/ranger/ranger097_nixos_dotfiles
+cd /home/ranger/ranger097_nixos_dotfiles
 echo -e "\e[0;37m╭────────────────────────────╮\n\e[0;37m│  \e[0;32m \e[0;36mUpgrading Nixos System  \e[0;37m│\n╰────────────────────────────╯"
 
 nix flake update >/dev/null 2>&1

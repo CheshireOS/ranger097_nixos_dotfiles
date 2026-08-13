@@ -14,5 +14,5 @@ yt-dlp -x \
 --embed-thumbnail \
 --add-metadata \
 --batch-file "$1" \
--o "/persist/home/ranger/Music/%(title)s.%(ext)s"
+-o "/home/ranger/Music/%(title)s.%(ext)s"
 }
