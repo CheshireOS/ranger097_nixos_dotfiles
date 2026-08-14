@@ -19,20 +19,20 @@
 // Settings
 // -----------------------------------------------------------------------------
 
-const float SPEED = 0.05;
-const float CORNER_RADIUS = 0.10;
+const float SPEED = 0.01;
+const float CORNER_RADIUS = 0.30;
 const float DECAY_START = 0.1;
 const float DECAY_RATE = 5.0;
 
 // Rectangular Cutoff Settings
-const float GLOW_CUTOFF_DISTANCE = 0.1;
-const float GLOW_CUTOFF_SOFTNESS = 0.1;
+const float GLOW_CUTOFF_DISTANCE = 0.2;
+const float GLOW_CUTOFF_SOFTNESS = 0.5;
 
 // Dithering Strength
 const float DITHER_STRENGTH = 1.0 / 50.0;
 
 // Opacity settings
-const float GLOW_OPACITY = 0.1;
+const float GLOW_OPACITY = 0.10;
 
 // Snake head/tail proportions
 const float HEAD_END = 0.4;
@@ -54,7 +54,7 @@ const vec3 AURORA_BLUE   = vec3(0.258, 0.521, 0.956);
 
 // 2. Catppuccin Mocha Palette
 const int CAT_NUM_STOPS = 6;
-const float CAT_BRIGHTNESS = 0.1;
+const float CAT_BRIGHTNESS = 0.3;
 const vec3 CAT_LAVENDER = vec3(0.706, 0.745, 0.996);
 const vec3 CAT_SAPPHIRE = vec3(0.455, 0.780, 0.925);
 const vec3 CAT_GREEN    = vec3(0.651, 0.890, 0.631);

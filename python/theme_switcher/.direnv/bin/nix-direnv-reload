@@ -9,11 +9,3 @@ fi
 
 # rebuild the cache forcefully
 _nix_direnv_force_reload=1 direnv exec "/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher" true
-
-# Update the mtime for .envrc.
-# This will cause direnv to reload again - but without re-building.
-touch "/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/.envrc"
-
-# Also update the timestamp of whatever profile_rc we have.
-# This makes sure that we know we are up to date.
-touch -r "/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/.envrc" "/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/.direnv"/*.rc

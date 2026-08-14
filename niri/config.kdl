@@ -152,14 +152,15 @@ layout {
     //
     // Alternatively, you can override it with a window rule called
     // `draw-border-with-background`.
+    // These are the default values:
 
     // You can change how the focus ring looks.
     focus-ring {
         // Uncomment this line to disable the focus ring.
-        on
+        off
 
         // How many logical pixels the ring extends out from the windows.
-        width 1
+        width 2
 
         // Colors can be set in a variety of ways:
         // - CSS named colors: "red"
@@ -167,13 +168,13 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#acacac"
+        active-color "#ffffff"
 
         // Color of the ring on inactive monitors.
         //
         // The focus ring only draws around the active window, so the only place
         // where you can see its inactive-color is on other monitors.
-        inactive-color "#000000"
+        inactive-color "#acacac"
 
         // You can also use gradients. They take precedence over solid colors.
         // Gradients are rendered the same as CSS linear-gradient(angle, from, to).
@@ -195,9 +196,9 @@ layout {
     border {
         // The settings are the same as for the focus ring.
         // If you enable the border, you probably want to disable the focus ring.
-        off
+        on
 
-        width 4
+        width 2
         active-color "#ffc87f"
         inactive-color "#505050"
 
@@ -215,7 +216,7 @@ layout {
     // You can enable drop shadows for windows.
     shadow {
         // Uncomment the next line to enable shadows.
-        off
+        on
 
         // By default, the shadow draws only around its window, and not behind it.
         // Uncomment this setting to make the shadow draw behind its window.
@@ -237,10 +238,10 @@ layout {
         // pixels and match the CSS box-shadow properties.
 
         // Softness controls the shadow blur radius.
-        softness 40
+        softness 20
 
         // Spread expands the shadow.
-        spread 5
+        spread 2
 
         // Offset moves the shadow relative to the window.
         offset x=0 y=3
@@ -255,10 +256,10 @@ layout {
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
     struts {
-        left 0
-        right 0
-        top 0
-        bottom 0
+        left 12
+        right 12
+        top 12
+        bottom -10
     }
 }
 
@@ -326,13 +327,6 @@ place-within-backdrop true
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
-window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
 
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
@@ -358,7 +352,7 @@ window-rule {
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
-    geometry-corner-radius 20
+    geometry-corner-radius 5
     clip-to-geometry true
 }
 
@@ -422,7 +416,7 @@ binds {
     Mod+Down  { focus-window-down; }
     Mod+Up    { focus-window-up; }
     Mod+Right { focus-column-right; }
-    Mod+H     { focus-column-left; }
+    Mod+G     { focus-column-left; }
     Mod+J     { focus-window-down; }
     Mod+K     { focus-window-up; }
     Mod+L     { focus-column-right; }
@@ -626,7 +620,7 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Print { screenshot; }
+    Mod+H { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 

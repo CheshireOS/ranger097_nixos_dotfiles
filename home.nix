@@ -168,7 +168,19 @@ body {
   background-position: var(--newtab-wallpaper-backgroundPosition);
   background-attachment: fixed;
   overflow-y: scroll;
-  background-image: url("https://wallpapercave.com/wp/wp6513772.jpg") !important;
+  background-image: url("https://w.wallhaven.cc/full/9o/wallhaven-9orjqw.jpg") !important;
+}
+
+.nova-enabled.container {
+  container-type: inline-size;
+  container-name: outer-grid;
+  display: none !important;
+  grid-template-columns: var(--side-col-width) var(--content-col-width) var(--side-col-width);
+  grid-auto-rows: var(--row-height);
+  gap: var(--space-medium);
+  justify-content: space-between;
+  margin-inline: auto;
+  padding-inline: var(--space-xlarge);
 }
 
   .search-handoff-button {
@@ -1108,12 +1120,12 @@ programs.ghostty.settings = {
 theme = "Catppuccin Mocha";
 custom-shader = [
 "/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/starfield.glsl"
-#"/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/ripple_cursor.glsl"
+"/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/aurora.glsl"
 "/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/cursor_blaze.glsl"
 #"/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/cineShader-Lava.glsl"
 ];
 
-custom-shader-animation = "always";
+custom-shader-animation = "true";
 background-opacity = 1.0;
 adjust-cell-height = 10;
 background = "#000000";

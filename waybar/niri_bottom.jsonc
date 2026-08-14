@@ -4,7 +4,7 @@
     "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
     "spacing": 0, // Gaps between modules (4px)
-    "margin-top" : 0,
+    "margin-top" : 12,
     "margin-bottom": 10,
     "margin-left" : 0,
     "margin-right" : 0,
@@ -26,8 +26,8 @@
     "cpu",
     "memory",
     "network",
-    "bluetooth",
     "pulseaudio",
+    "bluetooth",
     "battery",
     "clock"
     ],
