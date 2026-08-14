@@ -6,6 +6,7 @@ border: 0px solid #000000;
 border-radius: 7px;
 }
 
+
 #custom-button1,
 #custom-button2,
 #custom-button3,
@@ -20,18 +21,17 @@ padding-top: 3px;
 padding-bottom: 3px;
 margin: 0px;
 font-family: GeistMono NF;
-font-size: 11px;
-font-weight: 300;
-background-color: black;
+font-size: 13px;
+font-weight: 400;
 transition: all 0.4s ease;
-padding-right: 10px;
-padding-left: 10px;
+padding-right: 6px;
+padding-left: 6px;
 color: white;
 }
 
 #custom-button1 {
 border-radius: 100px 0px 0px 100px;
-padding-left: 20px;
+padding-left: 13px;
 margin-left: 5px;
 }
 
@@ -49,7 +49,7 @@ border-radius: 0px 0px 0px 0px;
 #custom-button10 {
 border-radius: 0px 100px 100px 0px;
 margin-right: 5px;
-padding-right: 20px;
+padding-right: 13px;
 }
 
 #mpris,
@@ -71,9 +71,7 @@ margin: 0px 5px;
 font-family: GeistMono NF;
 font-size: 13px;
 font-weight: 300;
-background-color: black;
 color: white;
-text-shadow: 0px 0px 6px rgba(0,0,0,1);
 border-radius: 100px; 
 }
 
@@ -90,10 +88,65 @@ padding-right: 5px;
 #custom-power {
 padding-left: 10px;
 padding-right: 4px;
+background-color: transparent;
 }
 
 #custom-themes {
-padding-left: 8.5px;
-padding-right: 5.5px;
+padding-left: 9px;
+padding-right: 6px;
+background-color: transparent;
 }
 
+#clock {
+background-color: transparent;
+}
+
+
+#custom-button1,
+#custom-button2,
+#custom-button3,
+#custom-button4,
+#custom-button5,
+#custom-button6,
+#custom-button7,
+#custom-button8,
+#custom-button9,
+#custom-button10,
+#mpris,
+#cpu,
+#memory,
+#battery,
+#clock,
+#pulseaudio,
+#volume,
+#bluetooth, 
+#network,
+#custom-power,
+#custom-themes,
+#clock {
+text-shadow: -2px 2px 5px rgba(0,0,0,0.5);
+background: linear-gradient(rgba(0,0,0,1));
+color: rgba(255,255,255,0.7);
+border-radius: 5px;
+}
+
+#custom-button1,
+#custom-button2,
+#custom-button3,
+#custom-button4,
+#custom-button5,
+#custom-button6,
+#custom-button7,
+#custom-button8,
+#custom-button9,
+#custom-button10 {
+border-radius: 0px;
+}
+
+#custom-button1 {
+border-radius: 5px 0px 0px 5px;
+}
+
+#custom-button10 {
+border-radius: 0px 5px 5px 0px;
+}

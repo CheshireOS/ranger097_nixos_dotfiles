@@ -15,8 +15,6 @@ try:
         "/home/ranger/ranger097_nixos_dotfiles/waybar/niri_bottom.jsonc", "-s", 
         "/home/ranger/ranger097_nixos_dotfiles/waybar/niri_bottom.css"
         ])
-        with open(toggle_file, 'w') as f:
-            f.write("1")
 
     else:
        subprocess.run(["pkill", "waybar"])
@@ -24,12 +22,10 @@ try:
        "/home/ranger/ranger097_nixos_dotfiles/waybar/niri_bottom.jsonc", "-s", 
        "/home/ranger/ranger097_nixos_dotfiles/waybar/niri_bottom.css"
        ])
-       #subprocess.Popen(["waybar", "-c", 
-       #"/home/ranger/ranger097_nixos_dotfiles/waybar/niri_top.jsonc", "-s", 
-       #"/home/ranger/ranger097_nixos_dotfiles/waybar/niri_top.css"
-       #])
-       with open(toggle_file, 'w') as f:
-            f.write("0")
+       subprocess.Popen(["waybar", "-c", 
+       "/home/ranger/ranger097_nixos_dotfiles/waybar/niri_top.jsonc", "-s", 
+       "/home/ranger/ranger097_nixos_dotfiles/waybar/niri_top.css"
+       ])
 
 except KeyboardInterrupt:
     sys.exit(0)

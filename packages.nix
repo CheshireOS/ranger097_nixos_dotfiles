@@ -109,6 +109,7 @@ electron
 fuzzel
 alacritty
 python3
+xwayland-satellite
 ];
 
 fonts.packages = with pkgs;[

@@ -4,34 +4,19 @@ import subprocess
 dotfiles_dir = "/home/ranger/ranger097_nixos_dotfiles"
 toggle_file = "/home/ranger/ranger097_nixos_dotfiles/python/theme_switcher/toggle.txt"
 wallpaper_directory = "/home/ranger/ranger097_nixos_dotfiles/wallpapers/wallpapers"
-blur_wallpaper_directory = "/home/ranger/ranger097_nixos_dotfiles/wallpapers/blur"
 wallpaper_list = os.listdir(wallpaper_directory)
-blur_wallpaper_list = os.listdir(blur_wallpaper_directory)
 num_of_wallpapers = len(wallpaper_list)
 
 with open(toggle_file, 'r') as f:
     x = int(f.readline().strip())
 
-with open(toggle_file, 'w') as f:
-    y = (x + 1) % (num_of_wallpapers + 1)
-    full_file = f.write(str(y))
-
 cat_string_file = f"{wallpaper_directory}/{wallpaper_list[x]}"
-blur_cat_string_file = f"{blur_wallpaper_directory}/{blur_wallpaper_list[x]}"
 #subprocess.run(["wal", "-i", cat_string_file])
 subprocess.run([
 "awww", "img", cat_string_file,
 "--transition-type", "grow",
 "--transition-step", "90",
 "--transition-fps", "50"
-])
-
-subprocess.run([
-"awww", "img", blur_cat_string_file,
-"--transition-type", "grow",
-"--transition-step", "90",
-"--transition-fps", "50",
-"--namespace", "backdrop"
 ])
 
 
