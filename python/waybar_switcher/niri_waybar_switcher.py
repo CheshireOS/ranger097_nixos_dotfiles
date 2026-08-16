@@ -20,10 +20,10 @@ try:
 
     else:
        subprocess.run(["pkill", "waybar"])
-       subprocess.Popen(["waybar", "-c", 
-       "/home/ranger/ranger097_nixos_dotfiles/waybar/niri_bottom.jsonc", "-s", 
-       "/home/ranger/ranger097_nixos_dotfiles/waybar/niri_bottom.css"
-       ])
+       #subprocess.Popen(["waybar", "-c", 
+       #"/home/ranger/ranger097_nixos_dotfiles/waybar/niri_bottom.jsonc", "-s", 
+       #"/home/ranger/ranger097_nixos_dotfiles/waybar/niri_bottom.css"
+       #])
        #subprocess.Popen(["waybar", "-c", 
        #"/home/ranger/ranger097_nixos_dotfiles/waybar/niri_top.jsonc", "-s", 
        #"/home/ranger/ranger097_nixos_dotfiles/waybar/niri_top.css"

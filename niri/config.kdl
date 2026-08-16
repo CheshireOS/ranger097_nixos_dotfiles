@@ -120,7 +120,7 @@ layout {
     // - "always", the focused column will always be centered.
     // - "on-overflow", focusing a column will center it if it doesn't fit
     //   together with the previously focused column.
-    center-focused-column "never"
+    center-focused-column "always"
 
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
     preset-column-widths {
@@ -138,7 +138,7 @@ layout {
     // preset-window-heights { }
 
     // You can change the default width of the new windows.
-    default-column-width { proportion 0.5; }
+    default-column-width { proportion 1.0; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     // default-column-width {}
 
@@ -256,17 +256,17 @@ layout {
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
     struts {
-        left 12
-        right 12
-        top 12
-        bottom 12
+        left 10
+        right 10
+        top 10
+        bottom 10
     }
 }
 
 // These are the default values:
 blur {
     // off
-    passes 5
+    passes 4
     offset 5
     noise 0.05
     saturation 0.7
@@ -359,7 +359,7 @@ window-rule {
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
-    geometry-corner-radius 2
+    geometry-corner-radius 0
     clip-to-geometry true
 }
 

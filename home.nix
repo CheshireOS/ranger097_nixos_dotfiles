@@ -10,8 +10,9 @@ in
 {
   home.username = "ranger";
   home.homeDirectory = "/home/ranger";
-  home.stateVersion = "25.11"; 
+  home.stateVersion = "26.05"; 
   home.pointerCursor = {
+  enable = true;
   package = myCursor;
   name = "Pokemon";
   size = 32;

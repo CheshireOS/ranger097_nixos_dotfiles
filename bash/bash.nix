@@ -3,6 +3,7 @@ programs.bash = {
 enable = true;
 shellAliases = {
 bye = "shutdown -h now";
+bii = "nvim /home/ranger/ranger097_nixos_dotfiles/bash/";
 nii = "cd /home/ranger/ranger097_nixos_dotfiles";
 gii = "bash /home/ranger/ranger097_nixos_dotfiles/bash/github.sh";
 hii = "nvim /home/ranger/ranger097_nixos_dotfiles/home.nix";
