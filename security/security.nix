@@ -41,6 +41,7 @@ services.openssh = {
 };
 
 systemd.tmpfiles.rules = [
+"R! /home/ranger/.mozilla/firefox/ - - - - -"
 ];
 
 services.fstrim.enable = true;

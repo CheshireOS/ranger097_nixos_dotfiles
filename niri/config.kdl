@@ -138,7 +138,7 @@ layout {
     // preset-window-heights { }
 
     // You can change the default width of the new windows.
-    default-column-width { proportion 1.0; }
+    default-column-width { proportion 0.5; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     // default-column-width {}
 
@@ -199,8 +199,8 @@ layout {
         on
 
         width 1
-        active-color "#ffc87f"
-        inactive-color "#505050"
+        active-color "#000000"
+        inactive-color "#000000"
 
         // Color of the border around windows that request your attention.
         urgent-color "#9b0000"
@@ -238,16 +238,16 @@ layout {
         // pixels and match the CSS box-shadow properties.
 
         // Softness controls the shadow blur radius.
-        softness 20
+        softness 30
 
         // Spread expands the shadow.
         spread 2
 
         // Offset moves the shadow relative to the window.
-        offset x=0 y=3
+        offset x=0 y=5
 
         // You can also change the shadow color and opacity.
-        color "rgba(0,0,0,0.4)"
+        color "rgba(0,0,0,0.6)"
     }
 
     // Struts shrink the area occupied by windows, similarly to layer-shell panels.
@@ -259,9 +259,19 @@ layout {
         left 12
         right 12
         top 12
-        bottom -10
+        bottom 12
     }
 }
+
+// These are the default values:
+blur {
+    // off
+    passes 5
+    offset 5
+    noise 0.05
+    saturation 0.7
+}
+
 
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
@@ -291,7 +301,7 @@ hotkey-overlay {
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
 // This option will also fix border/focus ring drawing behind some semitransparent windows.
 // After enabling or disabling this, you need to restart the apps for this to take effect.
-// prefer-no-csd
+prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
@@ -349,8 +359,26 @@ window-rule {
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
-    geometry-corner-radius 5
+    geometry-corner-radius 2
     clip-to-geometry true
+}
+
+// Enable blur behind the Alacritty terminal.
+window-rule {
+    match app-id="com.mitchellh.ghostty"
+    draw-border-with-background false
+    opacity 1.0
+    background-effect {
+        blur true
+    }
+}
+
+// Enable blur behind the fuzzel launcher.
+layer-rule {
+    match namespace="waybar"
+    background-effect {
+        blur true
+    }
 }
 
 binds {

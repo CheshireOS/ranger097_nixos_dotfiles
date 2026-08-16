@@ -1,9 +1,9 @@
 /* ranger097 */
 
 window#waybar {
-background-color: rgba(0,0,0,0);
-border: 0px solid #000000;
-border-radius: 7px;
+background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,1));
+border-top: 1px solid #000000;
+border-radius: 0px;
 }
 
 
@@ -17,8 +17,8 @@ border-radius: 7px;
 #custom-button8,
 #custom-button9,
 #custom-button10 {
-padding-top: 3px;
-padding-bottom: 3px;
+padding-top: 0px;
+padding-bottom: 0px;
 margin: 0px;
 font-family: GeistMono NF;
 font-size: 13px;
@@ -27,6 +27,8 @@ transition: all 0.4s ease;
 padding-right: 6px;
 padding-left: 6px;
 color: white;
+margin-bottom: 6px;
+margin-top: 7px;
 }
 
 #custom-button1 {
@@ -63,16 +65,18 @@ padding-right: 13px;
 #custom-power,
 #custom-themes,
 #volume {
-padding-top: 3px;
-padding-bottom: 3px;
-padding-left: 15px;
-padding-right: 15px;
-margin: 0px 5px;
+padding-top: 0px;
+padding-bottom: 0px;
+padding-left: 12px;
+padding-right: 12px;
+margin: 0px 2px;
 font-family: GeistMono NF;
 font-size: 13px;
 font-weight: 300;
 color: white;
-border-radius: 100px; 
+border-radius: 100px;
+margin-bottom: 6px;
+margin-top: 7px;
 }
 
 #bluetooth {
@@ -124,9 +128,9 @@ background-color: transparent;
 #custom-power,
 #custom-themes,
 #clock {
-text-shadow: -2px 2px 5px rgba(0,0,0,0.5);
-background: linear-gradient(rgba(0,0,0,1));
-color: rgba(255,255,255,0.7);
+text-shadow: -2px 2px 5px rgba(0,0,0,0.2);
+background: linear-gradient(rgba(0,0,0,0));
+color: rgba(255,255,255,0.5);
 border-radius: 5px;
 }
 

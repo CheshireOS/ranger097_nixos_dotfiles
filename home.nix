@@ -1119,16 +1119,16 @@ programs.ghostty.enable = true;
 programs.ghostty.settings = {
 theme = "Catppuccin Mocha";
 custom-shader = [
-"/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/starfield.glsl"
-"/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/aurora.glsl"
-"/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/cursor_blaze.glsl"
+#"/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/starfield.glsl"
+#"/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/aurora.glsl"
+#"/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/cursor_blaze.glsl"
 #"/${config.home.homeDirectory}/ranger097_nixos_dotfiles/shaders/cineShader-Lava.glsl"
 ];
 
 custom-shader-animation = "true";
-background-opacity = 1.0;
+background-opacity = 0.4;
 adjust-cell-height = 10;
-background = "#000000";
+background = "#101010";
 foreground = "#A1D9CD";
 
 #FONT_SETTINGS

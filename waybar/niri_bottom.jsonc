@@ -4,16 +4,12 @@
     "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
     "spacing": 0, // Gaps between modules (4px)
-    "margin-top" : 12,
-    "margin-bottom": 10,
+    "margin-top" : 0,
+    "margin-bottom": 0,
     "margin-left" : 0,
     "margin-right" : 0,
     "modules-left": [
-    ],
-    "modules-center": [
-    "custom/power",
-    "custom/themes",
-    "custom/button1",
+     "custom/button1",
     "custom/button2",
     "custom/button3",
     "custom/button4",
@@ -22,16 +18,23 @@
     "custom/button7",
     "custom/button8",
     "custom/button9",
-    "custom/button10",
-    "cpu",
-    "memory",
+    "custom/button10"
+    ],
+    "modules-center": [
+    "custom/power",
+    "custom/themes",
     "network",
-    "pulseaudio",
     "bluetooth",
-    "battery",
-    "clock"
+    "cpu",
+    "memory"
+    
     ],
     "modules-right": [
+    
+    "pulseaudio",
+    
+    "clock",
+    "battery"
     ],
 "custom/button1": {
 "format":"一",
