@@ -1,37 +1,30 @@
-#ranger097
+theme = Catppuccin Mocha
 
-#FONT_SETTINGS
-font-family = Maple Mono NF
-font-size = 14
+#custom-shader = /home/ranger/ranger097_nixos_dotfiles/shaders/aurora.glsl
+# custom-shader = /home/ranger/ranger097_nixos_dotfiles/shaders/starfield.glsl
+custom-shader = /home/ranger/ranger097_nixos_dotfiles/shaders/cursor_blaze.glsl
+# custom-shader = /home/ranger/ranger097_nixos_dotfiles/shaders/cineShader-Lava.glsl
+
+custom-shader-animation = true
+background-opacity = 0.5
+adjust-cell-height = 10
+background = #101010
+foreground = #A1D9CD
+
+# FONT_SETTINGS
+font-family = Maple Mono NF CN
+font-family-italic = Maple Mono NF CN
+font-size = 12
 font-style-bold = Bold
-font-style-italic = Italic
-font-style = Regular
-font-feature = "calt"
-font-feature = "liga"
-font-feature = "ss01"  
+font-style-italic = ExtraLight Italic
+font-style = ExtraLight
+font-feature = calt
 
-#WINDOW_SETTINGS
-window-padding-x = 0
-window-padding-y = 0
+# WINDOW_SETTINGS
+window-decoration = false
+window-padding-x = 20
+window-padding-y = 20
 confirm-close-surface = false
 window-step-resize = true
-adjust-cell-height = 30%
-window-padding-balance = true
 
-#BACKGROUND_SETTINGS
-background-opacity = 0.6
-#background = #000000
-#foreground = #909090
-#background-image = /home/ranger/ranger097_nixos_dotfiles/wallpapers/Guweiz/893152-digital-art-women-smoking-Bad-guys-legs-artwork.jpg
-background-image-opacity = 0.00
-background-image-position = center
-background-image-fit = cover
-background-image-repeat = false
-#config-file = /home/ranger/.cache/wal/ghostty.conf
-
-#CURSOR
-cursor-style = underline
-#cursor-color = #DBBA95
-cursor-style-blink = true
-adjust-cursor-thickness = 600%
 

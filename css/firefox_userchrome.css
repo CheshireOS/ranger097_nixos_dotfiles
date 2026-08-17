@@ -1,0 +1,69 @@
+ #personal-toolbar-empty-description,
+  #PersonalToolbar,
+  .browser-toolbox-background,
+  #nav-bar-customization-target,
+  .browser-toolbar,
+  .tabbrowser-tab, slot,
+  #TabsToolbar, .titlebar-spacer,
+  .titlebar-close, toolbarbutton,
+  .tab-content, tabbrowser-tab,tabs, 
+  #urlbar-container, .urlbar-container, toolbar,
+  .searchmode-switcher, #navigator-toolbox, .browser-toolbox-background{
+  background-color: #000000;
+  color: #96ce92;
+  }
+
+  .titlebar-close {
+   display: none;
+  }
+
+  * {
+   border: none !important;
+  }
+
+  .text-link, a, ::part(support-link){
+  background-color: #000000;
+  color: aquamarine !important;
+
+  }
+
+  #PersonalToolbar {
+  :root[sessionrestored] &:not(.instant) {
+  background-color: #000000 !important;
+      }
+  }
+
+  #PlacesToolbar, #PlacesToolbarItems {
+  background-color: #000000;
+  }
+
+  .tab-text {
+   color: #707070;
+  }
+
+@media not -moz-pref("browser.urlbar.unifiedSearchButton.always") {
+  .searchmode-switcher {
+    background-color: #000 !important;
+  }
+}
+
+.outer-wrapper.only-search {
+  display: block;
+  padding-block-start: calc(var(--space-xxlarge) * 4);
+  background-color: #000 !important;
+}
+
+.search-handoff-button {
+  background-color: #000 !important;
+  color: aquamarine !important;
+  display: none;
+}
+
+  .urlbar[breakout] {
+  & > .urlbar-input-container {
+    width: 100%;
+    height: 100%;
+    background-color: #000 !important;
+    color: #909090 !important;
+  }
+}

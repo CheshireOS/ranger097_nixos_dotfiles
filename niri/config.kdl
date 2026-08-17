@@ -267,7 +267,7 @@ layout {
 blur {
     // off
     passes 4
-    offset 5
+    offset 3
     noise 0.05
     saturation 0.7
 }
