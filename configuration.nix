@@ -10,24 +10,39 @@ imports = [
   ./security/security.nix
 ];
 
-
 fileSystems."/" = {
   device = "/dev/disk/by-uuid/70b719d7-740a-48dc-95c8-0134766573f5";
   fsType = "ext4";
 };
 
-
-
 # Bootloader & Kernel
-boot.loader.systemd-boot.enable = false;
-boot.loader.efi.canTouchEfiVariables = true;
-boot.loader.timeout = 0; 
-boot.kernelPackages = pkgs.linuxPackages_latest;
+boot = {
+  loader = {
+    efi.canTouchEfiVariables = true;
+    systemd-boot.enable = false;
+    timeout = 0;
+  };
 
-# Hardware Drivers & Kernel Params
-boot.initrd.kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
-boot.blacklistedKernelModules = [ "nouveau" ];
-  
+  plymouth = {
+    enable = true;
+    theme = "spinfinity";
+  };
+
+    kernelPackages = pkgs.linuxPackages_latest;
+    blacklistedKernelModules = [ "nouveau" ];
+    initrd.kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
+
+    # Enable "Silent boot"
+    consoleLogLevel = 3;
+    initrd.verbose = false;
+    kernelParams = [
+      "quiet"
+      "rd.udev.log_level=3"
+      "rd.systemd.show_status=auto"
+      "i915.enable_guc=0"
+    ];
+  };
+
 # Networking
 time.timeZone = "America/New_York";
 i18n.defaultLocale = "en_US.UTF-8";
@@ -50,7 +65,8 @@ LIBVA_DRIVER_NAME = "nvidia";
 GBM_BACKEND = "nvidia-drm";
 __GLX_VENDOR_LIBRARY_NAME = "nvidia";
 NIXOS_OZONE_WL = "1";
-WLR_NO_HARDWARE_CURSORS = "1"; 
+WLR_NO_HARDWARE_CURSORS = "1";
+MOZ_ENABLE_WAYLAND = "1";
 };
 
 users.users.ranger = {

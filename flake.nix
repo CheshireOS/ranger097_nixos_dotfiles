@@ -12,13 +12,7 @@
     home-manager = {
        url = "github:nix-community/home-manager";
        inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nur = {
-       url = "github:nix-community/NUR";
-       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
+    }; 
 
   };
  
@@ -34,7 +28,6 @@
       ./configuration.nix
         home-manager.nixosModules.home-manager
 	nixvim.nixosModules.nixvim
-	inputs.nur.modules.nixos.default
 
      ({ pkgs, lib, ... }: {
         networking.hostName = "deoxy";
@@ -62,7 +55,6 @@
        ./configuration.nix
          home-manager.nixosModules.home-manager
 	 nixvim.nixosModules.nixvim  
-	 inputs.nur.modules.nixos.default
 
    ({ pkgs, lib, ... }: {
       networking.hostName = "jirachi";

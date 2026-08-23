@@ -110,6 +110,8 @@ fuzzel
 alacritty
 python3
 xwayland-satellite
+kdePackages.filelight
+qutebrowser
 ];
 
 fonts.packages = with pkgs;[

@@ -41,7 +41,11 @@ services.openssh = {
 };
 
 systemd.tmpfiles.rules = [
-"R! /home/ranger/.mozilla/firefox/ - - - - -"
+"R! /home/ranger/.config/BraveSoftware/ - - - - -"
+"R! /home/ranger/Downloads/ - - - - -"
+"R! /home/ranger/Desktop/ - - - - -"
+"R! /home/ranger/Pictures/ - - - - -"
+"r! /home/ranger/.bash_history - - - - -"
 ];
 
 services.fstrim.enable = true;
@@ -49,8 +53,9 @@ services.fstrim.interval = "daily";
 
  nix.gc = {
   automatic = true;
-  dates = "daily";
-  options = "--delete-older-than 1d";
+  dates = "hourly";
+  options = "--delete-older-than 1h";
+  persistent = true;
   };
 
 boot.tmp.tmpfsSize = "32G";

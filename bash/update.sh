@@ -38,5 +38,6 @@ fi
 clear
 echo -e "\e[0;37m╭───────────────────────╮\n\e[0;37m│   \e[0;32m󱇥 \e[0;36mUpdate Complete   \e[0;37m│\n╰───────────────────────╯"
 jgit
+cd ~/ranger097_nixos_dotfiles/
 }
 
