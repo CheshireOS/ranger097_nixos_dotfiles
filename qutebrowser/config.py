@@ -1,6 +1,6 @@
 config.load_autoconfig(False)  
   
-c.colors.webpage.darkmode.enabled = True  
+#c.colors.webpage.darkmode.enabled = True  
 c.statusbar.show = "in-mode"  
 c.tabs.close_mouse_button = "right"  
 c.url.start_pages = [
@@ -20,7 +20,7 @@ c.colors.tabs.bar.bg = "#101010"
 c.colors.tabs.even.bg = "#101010"
 c.colors.tabs.odd.bg = "#101010"
 c.colors.statusbar.normal.bg = "#101010"
-c.colors.webpage.bg = "#101010"
+#c.colors.webpage.bg = "#101010"
 #c.colors.webpage.darkmode.algorithm = "brightness-rgb"
 #c.colors.webpage.darkmode.contrast = 1.0
 #c.content.user_stylesheets = []

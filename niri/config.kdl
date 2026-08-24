@@ -120,7 +120,7 @@ layout {
     // - "always", the focused column will always be centered.
     // - "on-overflow", focusing a column will center it if it doesn't fit
     //   together with the previously focused column.
-    center-focused-column "always"
+    center-focused-column "never"
 
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
     preset-column-widths {
@@ -282,6 +282,7 @@ blur {
 spawn-at-startup "ghostty"
 spawn-at-startup "elephant"
 spawn-at-startup "qutebrowser"
+spawn-sh-at-startup "steam"
 spawn-sh-at-startup "awww-daemon"
 spawn-sh-at-startup "xwayland-satellite"
 spawn-sh-at-startup "awww-daemon --namespace backdrop"
@@ -345,18 +346,10 @@ window-rule {
     open-floating true
 }
 
-window-rule {
-    match app-id="org.qutebrowser.qutebrowser"
-    opacity 0.7
-    draw-border-with-background false
-    background-effect {
-        blur true
-    }
-}
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
-/-window-rule {
+window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
 
@@ -371,17 +364,19 @@ window-rule {
 window-rule {
     geometry-corner-radius 0
     clip-to-geometry true
+    open-maximized false
+    background-effect {
+    blur true
+    }
+    opacity 0.7
+    draw-border-with-background false
+
 }
 
 // Enable blur behind the Alacritty terminal.
-window-rule {
-    match app-id="com.mitchellh.ghostty"
-    draw-border-with-background false
-    opacity 1.0
-    background-effect {
-        blur true
-    }
-}
+//window-rule {
+//    match app-id="com.mitchellh.ghostty"   
+//}
 
 // Enable blur behind the fuzzel launcher.
 layer-rule {
@@ -444,7 +439,7 @@ binds {
     // You can also move the mouse into the top-left hot corner,
     // or do a four-finger swipe up on a touchpad.
     Mod+O repeat=false { toggle-overview; }
-
+    Mod+Space { toggle-window-rule-opacity; }
     Mod+Q repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }
@@ -581,7 +576,7 @@ binds {
     Mod+Ctrl+9 { move-column-to-workspace 9; }
 
     // Alternatively, there are commands to move just a single window:
-    // Mod+Ctrl+1 { move-window-to-workspace 1; }
+    // Mod+C<S-D-trl+1 { move-window-to-workspace 1; }
 
     // Switches focus between the current and the previous workspace.
     // Mod+Tab { focus-workspace-previous; }
@@ -605,8 +600,8 @@ binds {
     Mod+Ctrl+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
 
-    Mod+F { maximize-column; }
-    Mod+Shift+F { fullscreen-window; }
+    Mod+Shift+F { maximize-column; }
+    Mod+F { fullscreen-window; }
 
     // While maximize-column leaves gaps and borders around the window,
     // maximize-window-to-edges doesn't: the window expands to the edges of the screen.
