@@ -1,7 +1,7 @@
 /* ranger097 */
 
 window#waybar {
-background: radial-gradient(rgba(0,0,0,1));
+background: radial-gradient(rgba(16,16,16,0.7));
 border-top: 1px solid #000000;
 border-radius: 0px;
 }
