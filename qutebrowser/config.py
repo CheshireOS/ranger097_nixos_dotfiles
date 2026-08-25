@@ -23,6 +23,8 @@ c.colors.statusbar.normal.bg = "#101010"
 #c.colors.webpage.bg = "#101010"
 #c.colors.webpage.darkmode.algorithm = "brightness-rgb"
 #c.colors.webpage.darkmode.contrast = 1.0
-#c.content.user_stylesheets = []
+c.content.user_stylesheets = [
+"~/ranger097_nixos_dotfiles/css/firefox_usercontent.css"
+]
 
 

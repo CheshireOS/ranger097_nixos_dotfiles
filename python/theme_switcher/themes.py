@@ -44,4 +44,8 @@ subprocess.run([
 ])
 
 
+subprocess.run([
+"wal", "-i", cat_string_file
+])
+
 
