@@ -2,7 +2,7 @@
 @import url("/home/ranger/.cache/wal/colors-waybar.css");
 
 window#waybar {
-background-color: @background;
+background-color: @color0;
 border-top: 1px solid #000000;
 border-radius: 0px;
 }
@@ -21,4 +21,136 @@ padding-top: 3px;
 padding-bottom: 3px;
 margin: 0px;
 font-family: GeistMono NF;
+font-size: 13px;
+font-weight: 400;
+transition: all 0.4s ease;
+padding-right: 3px;
+padding-left: 3px;
+color: @color4;
+margin-bottom: 3px;
+margin-top: 4px;
+}
 
+#custom-button1 {
+border-radius: 100px 0px 0px 100px;
+padding-left: 13px;
+margin-left: 5px;
+}
+
+#custom-button2,
+#custom-button3,
+#custom-button4,
+#custom-button5,
+#custom-button6,
+#custom-button7,
+#custom-button8,
+#custom-button9 {
+border-radius: 0px 0px 0px 0px;
+}
+
+#custom-button10 {
+border-radius: 0px 100px 100px 0px;
+margin-right: 5px;
+padding-right: 13px;
+}
+
+#mpris,
+#cpu,
+#memory,
+#battery,
+#clock,
+#pulseaudio,
+#bluetooth,
+#network,
+#custom-power,
+#custom-themes,
+#volume {
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 8px;
+padding-right: 8px;
+margin: 0px 1px 0px 0px;
+font-family: GeistMono NF;
+font-size: 14px;
+font-weight: 300;
+color: @foreground;
+border-radius: 100px;
+margin-bottom: 3px;
+margin-top: 4px;
+}
+
+#bluetooth {
+padding-left: 11px;
+padding-right: 11px;
+}
+
+#network {
+padding-left: 9px;
+padding-right: 5px;
+}
+
+#custom-power {
+padding-left: 10px;
+padding-right: 4px;
+background-color: transparent;
+}
+
+#custom-themes {
+padding-left: 9px;
+padding-right: 6px;
+background-color: transparent;
+}
+
+#clock {
+background-color: transparent;
+}
+
+
+#custom-button1,
+#custom-button2,
+#custom-button3,
+#custom-button4,
+#custom-button5,
+#custom-button6,
+#custom-button7,
+#custom-button8,
+#custom-button9,
+#custom-button10,
+#mpris,
+#cpu,
+#memory,
+#battery,
+#clock,
+#pulseaudio,
+#volume,
+#bluetooth, 
+#network,
+#custom-power,
+#custom-themes,
+#clock {
+text-shadow: -2px 2px 5px rgba(0,0,0,0.2);
+color: @foreground;
+border-radius: 0px;
+}
+
+#custom-button1,
+#custom-button2,
+#custom-button3,
+#custom-button4,
+#custom-button5,
+#custom-button6,
+#custom-button7,
+#custom-button8,
+#custom-button9,
+#custom-button10 {
+border-radius: 0px;
+color: @color2;
+}
+
+#custom-button1 {
+border-radius: 5px 0px 0px 5px;
+}
+
+#custom-button10 {
+border-radius: 0px 5px 5px 0px;
+}

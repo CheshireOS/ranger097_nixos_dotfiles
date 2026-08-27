@@ -3,6 +3,7 @@
 
 window#waybar {
 background-color: @background;
+background-color: red;
 border-top: 1px solid #000000;
 border-radius: 0px;
 }

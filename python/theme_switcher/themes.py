@@ -27,7 +27,7 @@ blur_cat_string_file = f"{blur_wallpaper_directory}/{wallpaper_list[x]}"
 
 print(wallpaper_list[x])
 
-subprocess.run(["sudo","wal", "-i", cat_string_file])
+subprocess.run(["wal", "-i", cat_string_file])
 subprocess.run([
 "awww", "img", cat_string_file,
 "--transition-type", "grow",
@@ -42,6 +42,8 @@ subprocess.run([
 "--transition-fps", "50",
 "--namespace", "backdrop"
 ])
+
+subprocess.run(["python3", "/home/ranger/ranger097_nixos_dotfiles/python/waybar_switcher/niri_waybar_switcher.py"])
 
 
 
