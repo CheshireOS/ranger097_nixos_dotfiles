@@ -27,7 +27,7 @@ blur_cat_string_file = f"{blur_wallpaper_directory}/{wallpaper_list[x]}"
 
 print(wallpaper_list[x])
 
-#subprocess.run(["wal", "-i", cat_string_file])
+subprocess.run(["sudo","wal", "-i", cat_string_file])
 subprocess.run([
 "awww", "img", cat_string_file,
 "--transition-type", "grow",
@@ -44,8 +44,5 @@ subprocess.run([
 ])
 
 
-subprocess.run([
-"wal", "-i", cat_string_file
-])
 
 

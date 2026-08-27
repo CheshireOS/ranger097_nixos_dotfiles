@@ -18,14 +18,14 @@ try:
         with open(toggle_file, 'w') as f:
             f.write("1")
 
-    elif x == 1:
-        subprocess.run(["pkill", "waybar"])
-        subprocess.Popen(["waybar", "-c", 
-        "/home/ranger/ranger097_nixos_dotfiles/waybar/niri_bottom.jsonc", "-s", 
-        "/home/ranger/ranger097_nixos_dotfiles/waybar/niri_bottom_opaque.css"
-        ])
-        with open(toggle_file, 'w') as f:
-            f.write("2")
+    #elif x == 1:
+        #subprocess.run(["pkill", "waybar"])
+        #subprocess.Popen(["waybar", "-c", 
+        #"/home/ranger/ranger097_nixos_dotfiles/waybar/niri_bottom.jsonc", "-s", 
+        #"/home/ranger/ranger097_nixos_dotfiles/waybar/niri_bottom_opaque.css"
+        #])
+        #with open(toggle_file, 'w') as f:
+         #   f.write("2")
 
     else:
        subprocess.run(["pkill", "waybar"])

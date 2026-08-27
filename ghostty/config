@@ -1,4 +1,6 @@
+config-file = /home/ranger/.cache/wal/ghostty.conf
 theme = Catppuccin Mocha
+
 
 #custom-shader = /home/ranger/ranger097_nixos_dotfiles/shaders/aurora.glsl
 # custom-shader = /home/ranger/ranger097_nixos_dotfiles/shaders/starfield.glsl
@@ -8,8 +10,6 @@ custom-shader = /home/ranger/ranger097_nixos_dotfiles/shaders/cursor_blaze.glsl
 custom-shader-animation = true
 background-opacity = 1.0
 adjust-cell-height = 10
-background = #101010
-foreground = #A1D9CD
 
 # FONT_SETTINGS
 font-family = Maple Mono NF CN
