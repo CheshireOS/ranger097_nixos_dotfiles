@@ -20,17 +20,17 @@
 
 
   nixosConfigurations = {
-     deoxy = nixpkgs.lib.nixosSystem {
+     cheshire = nixpkgs.lib.nixosSystem {
      specialArgs = { inherit inputs nixvim; };
      modules = [
      { nixpkgs.hostPlatform = "x86_64-linux"; }
-      ./hosts/deoxy/hardware-configuration.nix
+      ./hosts/cheshire/hardware-configuration.nix
       ./configuration.nix
         home-manager.nixosModules.home-manager
 	nixvim.nixosModules.nixvim
 
      ({ pkgs, lib, ... }: {
-        networking.hostName = "deoxy";
+        networking.hostName = "cheshire";
         boot.loader.systemd-boot.enable = lib.mkForce true;
    })
 
